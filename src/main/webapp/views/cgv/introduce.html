@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" cms-page-view cms-about-cgv">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>Giới thiệu CGV</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div class="std">
+                        <div class="title-about-cgv">
+                            <h1>Giới thiệu CGV</h1>
+                        </div>
+                        <div class="col2-set content-seperator">
+                            <iframe height="350" src="//www.youtube.com/embed/e1ZSLVTZ47M?rel=0&amp;wmode=transparent;"
+                                    width="100%"></iframe>
+                            <div class="std content-cms-about-us">
+                                <p><strong>CGV </strong>l&agrave; một trong năm Cụm Rạp Chiếu Phim lớn nhất to&agrave;n
+                                    cầu v&agrave; <strong>CGV Việt Nam</strong> l&agrave; Nh&agrave; Ph&aacute;t H&agrave;nh,
+                                    nh&agrave; quản l&yacute; v&agrave; vận
+                                    h&agrave;nh Cụm Rạp Chiếu Phim CGV Cinemas lớn nhất tại Việt Nam. Mục ti&ecirc;u của
+                                    <strong>CGV Việt Nam</strong> l&agrave; trở th&agrave;nh c&ocirc;ng ty giải tr&iacute;
+                                    điển h&igrave;nh, đ&oacute;ng g&oacute;p
+                                    cho sự ph&aacute;t triển kh&ocirc;ng ngừng của lĩnh vực điện ảnh Việt Nam n&oacute;i
+                                    ri&ecirc;ng v&agrave; c&ocirc;ng nghiệp văn h&oacute;a mang đậm bản sắc Việt Nam n&oacute;i
+                                    chung.</p>
+                                <p><strong>CGV Việt Nam </strong>hội nhập, h&agrave;i h&ograve;a v&agrave; g&oacute;p
+                                    phần tạo n&ecirc;n kh&aacute;i niệm độc đ&aacute;o về việc chuyển đổi cụm rạp chiếu
+                                    phim truyền thống th&agrave;nh tổ hợp văn h&oacute;a&nbsp;<strong>&ldquo;Cultureplex&rdquo;</strong>,
+                                    nơi kh&aacute;n giả kh&ocirc;ng chỉ đến để thưởng thức điện ảnh đa dạng th&ocirc;ng
+                                    qua c&aacute;c c&ocirc;ng nghệ ti&ecirc;n tiến như&nbsp;<strong>SCREENX, IMAX,
+                                        STARIUM, 4DX, Dolby Atmos</strong>, m&agrave; c&ograve;n
+                                    để thưởng thức ẩm thực ho&agrave;n to&agrave;n mới v&agrave; kh&aacute;c biệt với c&aacute;c
+                                    trải nghiệm dịch vụ chất lượng nhất tại&nbsp;Cụm Rạp Chiếu Phim CGV Cinemas.</p>
+                                <p><strong>CGV Việt Nam</strong> hướng sự quan t&acirc;m đến ph&aacute;t triển nội tại
+                                    của c&ocirc;ng nghiệp văn h&oacute;a tại Việt Nam, đồng h&agrave;nh c&ugrave;ng điện
+                                    ảnh nước nh&agrave;. Th&ocirc;ng qua những nỗ
+                                    lực trong việc x&acirc;y dựng&nbsp;<strong>chương tr&igrave;nh Nh&agrave; bi&ecirc;n
+                                        kịch t&agrave;i năng, Dự &aacute;n phim ngắn CJ, Lớp học l&agrave;m phim TOTO,
+                                        CGV ArtHouse, </strong><strong>phối hợp Học Viện Điện Ảnh H&agrave;n Quốc (KAFA)
+                                        tổ chức Kh&oacute;a đ&agrave;o tạo cho c&aacute;c đạo diễn xuất sắc của Dự
+                                        &aacute;n phim ngắn
+                                        CJ,</strong><strong>&nbsp;</strong><strong> </strong><strong>CGV Việt
+                                        Nam</strong> mong muốn sẽ đồng h&agrave;nh v&agrave; hỗ trợ ph&aacute;t triển
+                                    cho c&aacute;c nh&agrave; l&agrave;m phim trẻ t&agrave;i năng của Việt Nam. Ngo&agrave;i
+                                    ra, bằng những <strong>nỗ lực </strong><strong>của doanh nghiệp, </strong>CGV
+                                    Việt Nam đ&atilde; <strong>v&agrave;</strong><strong> đang</strong><strong> phối
+                                        hợp </strong><strong>với c&aacute;c b&ecirc;n li&ecirc;n quan </strong><strong>nhằm
+                                        đưa c&aacute;c t&aacute;c phẩm điện ảnh c&oacute; nội h&agrave;m v&agrave; đậm
+                                        bản sắc </strong><strong>Việt Nam </strong><strong>tham gia c&aacute;c Li&ecirc;n
+                                        Hoan Phim Quốc tế uy t&iacute;n</strong><strong>;</strong><strong> </strong>t&agrave;i
+                                    trợ cho c&aacute;c hoạt động Li&ecirc;n Hoan Phim uy t&iacute;n tổ chức tại Việt Nam
+                                    như&nbsp;<strong>Li&ecirc;n Hoan Phim Quốc tế H&agrave; Nội, Li&ecirc;n Hoan Phim
+                                        Việt Nam,</strong><strong>&hellip;</strong></p>
+                                <p><strong>CGV Việt Nam</strong> tr&ecirc;n h&agrave;nh tr&igrave;nh mang điện ảnh đến
+                                    mọi miền Tổ quốc, cũng tập trung đến đối tượng kh&aacute;n giả ở c&aacute;c khu vực
+                                    &iacute;t c&oacute; điều kiện tiếp cận với điện
+                                    ảnh, bằng c&aacute;ch tạo cơ hội để người d&acirc;n địa phương c&oacute; thể thưởng
+                                    thức những t&aacute;c phẩm điện ảnh chất lượng th&ocirc;ng qua c&aacute;c chương tr&igrave;nh
+                                    v&igrave; cộng đồng như&nbsp;<strong>Trăng
+                                        cười</strong>&nbsp;v&agrave;&nbsp;<strong>Điện ảnh cho mọi
+                                        người.</strong><strong></strong></p>
+                                <p><strong>CGV Việt Nam</strong> cam kết nỗ lực, tiếp tục cuộc h&agrave;nh tr&igrave;nh
+                                    bền bỉ trong việc g&oacute;p phần x&acirc;y dựng một nền c&ocirc;ng nghiệp điện ảnh
+                                    Việt Nam ng&agrave;y c&agrave;ng vững mạnh c&ugrave;ng
+                                    c&aacute;c kh&aacute;ch h&agrave;ng tiềm năng, c&aacute;c nh&agrave; l&agrave;m
+                                    phim, c&aacute;c đối t&aacute;c kinh doanh uy t&iacute;n, v&agrave; c&ugrave;ng to&agrave;n
+                                    thể x&atilde; hội.</p>
+                            </div>
+                            <div class="about-image-cgv">
+                                <ul>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-1.jpg"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-2.PNG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-3.PNG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-4.PNG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-5.PNG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-6.PNG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-7.JPG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-8.JPG"/>
+                                    </a></li>
+                                    <li><a class="large-image-about"
+                                           href="#"> <img
+                                            alt="About us CGV,cgv" src="https://www.cgv.vn/media/wysiwyg/about-9.PNG"/>
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <script type="mce-text/javascript">
+                                // <![CDATA[
+                                jQuery(".large-image-about").colorbox({
+                                    rel: 'group2',
+                                    transition: "fade",
+                                    width: "80%",
+                                    height: "80%"
+                                });
+                                // ]]>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

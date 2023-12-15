@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+
+<body class=" cms-page-view cms-danh-cho-doi-tac">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>Dành cho đối tác</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div class="std">
+                        <p><strong>K&iacute;nh gửi Qu&yacute; Đối T&aacute;c,</strong></p>
+                        <p>Đầu ti&ecirc;n, ch&uacute;ng t&ocirc;i đ&aacute;nh gi&aacute; cao vai tr&ograve; của Qu&yacute;
+                            Đối T&aacute;c trong việc cung cấp c&aacute;c sản phẩm v&agrave; dịch vụ chất lượng cao với
+                            gi&aacute; cả phải chăng. Vai tr&ograve;
+                            của Qu&yacute; Đối T&aacute;c rất quan trọng đối với sự th&agrave;nh c&ocirc;ng của ch&uacute;ng
+                            t&ocirc;i trong việc ho&agrave;n th&agrave;nh c&aacute;c mục ti&ecirc;u kinh doanh.</p>
+                        <p>Để giữ vững vị thế l&agrave; doanh nghiệp h&agrave;ng đầu trong ng&agrave;nh điện ảnh Việt
+                            Nam, CJ CGV kh&ocirc;ng chỉ ch&uacute; trọng đến dịch vụ đẳng cấp m&agrave; c&ograve;n cam
+                            kết tu&acirc;n thủ mọi luật lệ v&agrave;
+                            quy định hiện h&agrave;nh của Việt Nam cũng như Gi&aacute; trị cốt l&otilde;i của ch&uacute;ng
+                            t&ocirc;i. Để đạt được điều đ&oacute;, ch&uacute;ng t&ocirc;i kỳ vọng rằng Qu&yacute; Đối T&aacute;c
+                            sẵn s&agrave;ng duy tr&igrave;
+                            c&aacute;c Gi&aacute; trị cốt l&otilde;i của ch&uacute;ng t&ocirc;i về đạo đức v&agrave; t&iacute;nh
+                            ch&iacute;nh trực. CJ CGV đ&atilde; x&acirc;y dựng Bộ Quy tắc Ứng xử d&agrave;nh cho Nh&agrave;
+                            Cung Cấp để tr&igrave;nh
+                            b&agrave;y r&otilde; những kỳ vọng của ch&uacute;ng t&ocirc;i về sự li&ecirc;m ch&iacute;nh
+                            trong kinh doanh, quyền lợi người lao động, sức khỏe v&agrave; an to&agrave;n, v&agrave;
+                            quản l&yacute; m&ocirc;i trường. Ch&uacute;ng
+                            t&ocirc;i mong muốn Qu&yacute; Đối T&aacute;c đ&aacute;p ứng c&aacute;c ti&ecirc;u chuẩn v&agrave;
+                            th&uacute;c đẩy c&aacute;c nguy&ecirc;n tắc được n&ecirc;u trong Bộ quy tắc n&agrave;y, nhằm
+                            th&uacute;c đẩy cam kết của
+                            CJ CGV Việt Nam đối với tất cả c&aacute;c kh&iacute;a cạnh về t&iacute;nh bền vững</p>
+                        <p>Nếu Qu&yacute; Đối T&aacute;c c&oacute; bất kỳ thắc mắc n&agrave;o về c&aacute;c vấn đề đạo
+                            đức hoặc ph&aacute;t hiện h&agrave;nh vi vi phạm Quy tắc Ứng xử, vui l&ograve;ng li&ecirc;n
+                            hệ ngay với ch&uacute;ng t&ocirc;i th&ocirc;ng
+                            qua bất kỳ phương thức n&agrave;o sau đ&acirc;y:<br/>- Email: ksnb@cgv.vn <br/>- Gửi thư đến
+                            : Ph&ograve;ng kiểm so&aacute;t nội bộ &ndash; C&ocirc;ng ty TNHH CJ CGV Việt Nam<br/>Lầu
+                            02, T&ograve;a nh&agrave; Rivera
+                            Park Saigon, Số 7/28 Th&agrave;nh Th&aacute;i, Quận 10, Th&agrave;nh phố Hồ Ch&iacute; Minh,
+                            Việt Nam</p>
+                        <p>Ch&uacute;ng t&ocirc;i tr&acirc;n trọng chuy&ecirc;n m&ocirc;n, sản phẩm v&agrave; dịch vụ m&agrave;
+                            Qu&yacute; Đối T&aacute;c đ&atilde; cung cấp đến CGV. Cảm ơn Qu&yacute; Đối T&aacute;c v&igrave;
+                            những nỗ lực trong việc đ&aacute;p
+                            ứng c&aacute;c y&ecirc;u cầu kinh doanh của ch&uacute;ng t&ocirc;i với sự ch&iacute;nh trực
+                            kh&ocirc;ng khoan nhượng</p>
+                        <p>Xin vui l&ograve;ng tham khảo Bộ Quy tắc Ứng xử d&agrave;nh cho Nh&agrave; Cung Cấp dưới đ&acirc;y
+                            (file đ&iacute;nh k&egrave;m):</p>
+                        <p><strong>-&nbsp;<a href="#" target="_blank">CGV-Letter
+                            to Suppliers (E-V)</a></strong><br/><strong>-&nbsp;<a
+                                href="#" target="_blank">CGV-Supplier
+                            Code of conduct-EN version</a></strong><br
+                        /><strong>-&nbsp;<a href="#" target="_blank">CGV-Supplier
+                            Code of conduct-VN version</a></strong><br/><br/></p>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/contents/customers-list.html" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/contents" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/form/add-cinema.html" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/form" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/form/add-ticket.html" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/form" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/layouts/layout.html" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/layouts" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/admin/list/customer-list.html" value="file://$PROJECT_DIR$/src/main/webapp/views/admin/list" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/cgv/20231211.html" value="file://$PROJECT_DIR$/src/main/webapp/views/cgv" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/cgv/add-to-cart.html" value="file://$PROJECT_DIR$/src/main/webapp/views/cgv" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/cgv/index.html" value="file://$PROJECT_DIR$/src/main/webapp/views/cgv" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/cgv/layouts/header.html" value="file://$PROJECT_DIR$/src/main/webapp/views/cgv/layouts" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/cgv/login.html" value="file://$PROJECT_DIR$/src/main/webapp/views/cgv" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/page/index.html" value="file://$PROJECT_DIR$/src/main/webapp/views/page" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/user/blog-article.html" value="file://$PROJECT_DIR$/src/main/webapp/views/user" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/user/home.html" value="file://$PROJECT_DIR$/src/main/webapp/views/user" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/user/index.html" value="file://$PROJECT_DIR$/src/main/webapp/views/user" />
+      </map>
+    </option>
+  </component>
+</project>

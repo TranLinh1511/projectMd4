@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" customer-account-edit customer-account">
+
+
+<div class="wrapper">
+    <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br/>
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website. </p>
+            </div>
+        </div>
+    </noscript>
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-account">
+                        <div class="block-title">
+                            <strong><span>Tài khoản CGV</span></strong>
+                        </div>
+                        <div class="block-content">
+                            <ul>
+                                <li class="current"><a href="/account-detail/edit">Chi tiết tài khoản</strong></a></li>
+                                <li class="last"><a href="/account-detail/transition">Lịch sử giao dịch</a></li>
+                                <li class="last"><a href="/logout">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-main">
+                    <div class="my-account">
+                        <div class="page-title">
+                            <h1>Thay đổi thông tin</h1>
+                        </div>
+                        <form th:object="${user}" action="/account-detail/edit" method="post"
+                              enctype="multipart/form-data">
+                            <div class="fieldset edit-account-my-cgv">
+                                <input name="form_key" type="hidden" value="p7nEfOaGbq7n1vQG"/>
+
+                                <input type="hidden" th:field="*{id}"/>
+                                <input type="hidden" th:field="*{age}"/>
+                                <input type="hidden" name="oldemail" id="oldemail" th:field="*{email}"/>
+                                <input type="hidden" name="oldpassword" id="oldpassword" th:field="*{password}"/>
+                                <ul class="form-list edit-info-cgv-left">
+                                    <li class="fields">
+                                        <div class="customer-name">
+                                            <label class="required"><em>*</em>Tên</label>
+                                            <div class="input-box">
+                                                <input type="text" name="fullname" th:field="*{fullName}" title=""
+                                                       placeholder="" maxlength="255" class="input-text required-entry">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="fields phone_user">
+                                        <label for="telephone" class="required"><em>*</em>Điện thoại</label>
+                                        <div class="input-box">
+                                            <input type="tel" autocapitalize="off" autocorrect="off" name="telephone"
+                                                   id="telephone" value="0326473281" title="Phone Number"
+                                                   class="input-text validate-mobile required-entry"
+                                                   th:field="*{phone}"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="required"><em>*</em>Giới tính</label>
+                                        <div class="input-box">
+                                            <input th:field="*{gender}" type="radio" name="gender" value="true"
+                                                   checked="checked">Nam</input>
+                                            <input th:field="*{gender}" type="radio" name="gender"
+                                                   value="false">Nữ</input>
+                                        </div>
+                                    </li>
+                                    <li><label>Tuổi</label>
+                                        <div class="input-box customer-dob" th:text="${user.age}">13</div>
+                                    </li>
+
+                                    <li>
+                                        <label class="required"><em>*</em>Địa chỉ email</label>
+                                        <div class="input-box" th:text="${user.email}">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="check-field-change-pass control">
+                                <input type="checkbox" name="change_password" id="change_password" value="1"
+                                       onclick="setPasswordForm(this.checked)" title="Đổi mật khẩu"
+                                       class="checkbox"/><label class="change-pass-normal" for="change_password">Tôi
+                                muốn thay đổi mật khẩu</label>
+                            </div>
+                            <div class="fieldset cgv-changepass" style="display:none;">
+                                <h2 class="legend">Đổi mật khẩu</h2>
+                                <ul class="form-list">
+                                    <li class="fields">
+                                        <div class="row">
+                                            <label for="current-password" class="required"><em>*</em>Mật khẩu hiện
+                                                tại</label>
+                                            <div class="input-box">
+                                                <input type="password" title="Mật khẩu hiện tại"
+                                                       class="w-100"
+                                                       name="current-password" id="current-password"/>
+                                            </div>
+                                            <small th:if="${cusPass}" style="font-style: italic; color:red;">Mật
+                                                khẩu nhập vào không đúng</small>
+                                        </div>
+                                        <div class="field left">
+                                            <label for="password" class="required"><em>*</em>Mật khẩu mới</label>
+                                            <div class="input-box">
+                                                <input type="password" title="Mật khẩu mới"
+                                                       class="input-text required-entry validate-password"
+                                                       name="new-password" id="password"/>
+                                            </div>
+                                        </div>
+                                        <div class="field right">
+                                            <label for="confirmation" class="required"><em>*</em>Nhập lại mật khẩu
+                                                mới</label>
+                                            <div class="input-box">
+                                                <input type="password" title="Nhập lại mật khẩu mới"
+                                                       class="input-text required-entry validate-cpassword"
+                                                       name="confirmation" id="confirmation"/>
+                                            </div>
+                                            <small th:if="${cfPass}" style="font-style: italic; color:red;">Mật
+                                                khẩu nhập lại không đúng</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="my-cgv-withdraw-save">
+                                <div class="buttons-set cgv-edit-btn">
+                                    <button type="submit" title="Lưu lại" class="button">
+                                        <span><span>Lưu lại</span></span></button>
+                                </div>
+                            </div>
+
+                            <p class="required">* Thông tin bắt buộc</p>
+                            <span id="error-validate"></span>
+                        </form>
+
+                        <div id="reloading-mask" style="left: -2px; top: 0px;">
+                            <p class="loader" id="loading_mask_loader">
+                                <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/ajax-loader.gif"
+                                     alt="Loading...">
+                                <br>Đang tải thông tin... </p>
+                        </div>
+                        <style type="text/css">
+                            #telephone_otp {
+                                height: 30px;
+                                margin-right: 2%;
+                                width: 50%;
+                            }
+
+                            #error-validate {
+                                color: #df280a;
+                                display: inline-block;
+                                padding-bottom: 20px;
+                            }
+
+                            #reloading-mask {
+                                background: transparent url(https://www.cgv.vn/skin/adminhtml/default/enterprise/images/blank.gif) repeat scroll 0% 0%;
+                                position: fixed;
+                                color: #D85909;
+                                font-size: 1.1em;
+                                font-weight: bold;
+                                text-align: center;
+                                opacity: 0.8;
+                                z-index: 500;
+                                width: 100%;
+                                height: 100%;
+                                display: none;
+                            }
+
+                            #reloading-mask .loader {
+                                position: fixed;
+                                top: 45%;
+                                left: 50%;
+                                width: 200px;
+                                margin-left: -105px;
+                                padding: 15px 30px;
+                                background: #FFF none repeat scroll 0% 0%;
+                                border: 2px solid #FFF;
+                                color: #D85909;
+                                font-weight: bold;
+                                text-align: center;
+                                z-index: 1000;
+                            }
+
+                            @media only screen and (max-width: 768px) {
+                                .cgv-option-info select {
+                                    width: 100%
+                                }
+                            }
+                        </style>
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            var dataForm = new VarienForm('form-validate', true);
+
+                            function setPasswordForm(arg) {
+                                $('password').up('.fieldset')[arg ? 'show' : 'hide']();
+                            }
+
+                            jQuery(document).ready(function () {
+                                /*
+     var region = jQuery('#region_id :selected').val();
+     //var curcity='486';
+     var curcity='700';
+     if(region){
+        jQuery.ajax({
+            type: 'post',
+            url: 'https://www.cgv.vn/default/district/ajax/jsonlist/',
+            data: 'region_id='+ region+'&empty=true',
+            success: function(_province_data){
+                jQuery('#city').empty();
+                 for(i=0;i<_province_data.length;i++) {
+                    select='';
+                    if (_province_data[i].label =="Vui lòng chọn..."){
+                        jQuery('#city').append('<option data-id="" value="">'+_province_data[i].label+'</option>');
+                    } else {
+                        if(curcity == _province_data[i].label){
+                            select=' selected';
+                        }
+                        //console.log(_province_data[i].name+'='+curcity);
+                        jQuery('#city').append('<option data-id='+_province_data[i].value+' value="'+_province_data[i].label+'"'+select+'>'+_province_data[i].label+'</option>');
+                    }
+                 }
+                jQuery('#city').attr('disabled', false);
+            }
+        });
+     }
+    */
+                                jQuery('#prefersite').val(jQuery('input[name=hprefersite').val());
+                                jQuery('#prefersite2').val(jQuery('input[name=hprefersite2').val());
+                                jQuery('#prefergenre').val(jQuery('input[name=hprefergenre').val());
+                                jQuery('#prefergenre2').val(jQuery('input[name=hprefergenre2').val());
+                                if (jQuery('.currentmembercard').text() != '') {
+                                    convert = convertToValidPhoneNumber(jQuery('.currentmembercard').text(), '-');
+                                    jQuery('.currentmembercard').text(convert);
+                                }
+                            });
+                            jQuery('.prefersite').on('change', function () {
+                                var site1 = jQuery('#prefersite').find(":selected").val();
+                                var site2 = jQuery('#prefersite2').find(":selected").val();
+                                if (site1 == site2) {
+                                    alert('Prefered sites cannot be same!');
+                                    jQuery(this).val('');
+                                }
+                            })
+                            jQuery('.prefergenre').on('change', function () {
+                                var site1 = jQuery('#prefergenre').find(":selected").val();
+                                var site2 = jQuery('#prefergenre2').find(":selected").val();
+                                if (site1 == site2) {
+                                    alert('Prefered genres cannot be same!');
+                                    jQuery(this).val('');
+                                }
+                            })
+
+                            function convertToValidPhoneNumber(text, symbol) {
+                                var result = [];
+                                text = text.replace(/[^\d]/g, "");
+                                while (text.length >= 6) {
+                                    result.push(text.substring(0, 4));
+                                    text = text.substring(4);
+                                }
+                                if (text.length > 0) result.push(text);
+                                return result.join(symbol);
+                            }
+
+                            function loadDistrict(provinceObj, districtId) {
+                                if (jQuery(provinceObj).val() == '') {
+                                    jQuery('#' + districtId).empty();
+                                    return;
+                                }
+                                jQuery.ajax({
+                                    type: 'post',
+                                    url: 'https://www.cgv.vn/default/district/ajax/jsondistrictlist/',
+                                    data: 'region_id=' + jQuery(provinceObj).val() + '&empty=true',
+                                    success: function (_province_data) {
+                                        jQuery('#city').empty();
+                                        select = '';
+                                        for (i = 0; i < _province_data.length; i++) {
+                                            if (_province_data[i].label == "Vui lòng chọn...") {
+                                                jQuery('#city').append('<option data-id="" value="">' + _province_data[i].label + '</option>');
+                                            } else {
+                                                // if(jQuery(provinceObj).val() == _province_data[i].id+)
+                                                // select=' selected';
+
+                                                jQuery('#city').append('<option data-id=' + _province_data[i].value + ' value="' + _province_data[i].label + '"' + select + '>' + _province_data[i].label + '</option>');
+                                            }
+                                        }
+                                        jQuery('#city').attr('disabled', false);
+                                    }
+                                });
+                                //jQuery('#city').attr('disabled', false);
+                            }
+
+                            function unsubcribe(memberid) {
+                                if (memberid == '') {
+                                    return;
+                                }
+                                /*
+                                jQuery.ajax({
+                                    type: 'post',
+                                    url: 'https://www.cgv.vn/default/loyalty/account/getwithdrawal/',
+                                    data: 'memberid='+ memberid +'&empty=true',
+                                    success: function(_user_data){
+                                        if (_user_data[0].code == 200){
+                                            alert(_user_data[0].message);
+                                            window.location = 'https://www.cgv.vn/default/customer/account/logout/';
+                                        }else{
+                                            alert(_user_data[0].error);
+                                        }
+                                    }
+                                });
+                                */
+                            }
+
+                            jQuery("#delete-button").on("click", function (event) {
+                                if (confirm("Are you sure you want to delete this?")) {
+                                    var msg = '';
+                                    unsubcribe('linhuu8@gmail.com');
+                                } else {
+                                    return false;
+                                }
+                            });
+                            $j("input#fullname").change(function () {
+                                $j('#error-validate').fadeOut('slow');
+                                var fullname = document.getElementById("fullname");
+                                if (fullname.value == "") {
+                                    message = "Fullname is not empty!";
+                                    fullname.classList.add('validation-failed');
+                                    //$j("<p class='error-validate'>"+message+"</p>").insertAfter(fullname);
+
+                                    $j('#error-validate').html(message).insertAfter(fullname);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    fullname.focus();
+                                    return false;
+                                } else if (fullname.value.trim().split(/\s+/).length < 2) {
+                                    message = "Họ tên phải có ít nhất 2 từ";
+
+                                    fullname.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(fullname);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    fullname.focus();
+                                    return false;
+                                } else if (/[^a-zA-Z0-9 \-\/]/.test(nonAccentVietnamese(fullname.value))) {
+                                    message = "Họ tên không bao gồm kí tự đặc biệt và số";
+
+                                    fullname.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(fullname);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    fullname.focus();
+                                    return false;
+                                }
+                            });
+
+                            $j("input#telephone").change(function () {
+                                var newPhone = document.getElementById("telephone");
+                                //var email = document.getElementById("email");
+                                var oldPhone = "0326473281";
+                                var tmpHTML = "";
+                                var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                var number_regex = /^[0-9]+$/;
+
+                                if ($j('.phone_otp')[0]) {
+                                    $j('.phone_otp').remove();
+                                }
+
+                                if (oldPhone != '' && newPhone.value !== oldPhone) {
+                                    message = "Tính năng đổi số điện thoại đang được bảo trì. Vui lòng liên hệ 1900 6017 để được hỗ trợ.";
+
+                                    newPhone.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(newPhone);
+                                    newPhone.focus();
+                                    return false;
+                                    if (newPhone.value == "") {
+                                        // message = "Phone is not empty!";
+                                        // newPhone.classList.add('validation-failed');
+                                        // $j('#error-validate').html(message).insertAfter(newPhone);
+                                        // $j('#error-validate').fadeIn('slow');
+                                        // error_status = true;
+                                        newPhone.focus();
+                                        return false;
+                                    } else if (!newPhone.value.match(number_regex)) {
+                                        // message = "Phone is incorrect format!";
+                                        // newPhone.classList.add('validation-failed');
+                                        // $j('#error-validate').html(message).insertAfter(newPhone);
+                                        // $j('#error-validate').fadeIn('slow');
+                                        // error_status = true;
+                                        newPhone.focus();
+                                        return false;
+                                    } else if (newPhone.value.trim().length < 10) {
+                                        //  message = "Số điện thoại phải ít nhất 10 số";
+                                        // newPhone.classList.add('validation-failed');
+                                        //  $j('#error-validate').html(message).insertAfter(newPhone);
+                                        //  $j('#error-validate').fadeIn('slow');
+                                        //  error_status = true;
+                                        newPhone.focus();
+                                        return false;
+                                    }
+                                    /*if(email.value==""){
+            // message = "Email is not empty!";
+            // email.classList.add('validation-failed');
+            // $j('#error-validate').html(message).insertAfter(email);
+            // $j('#error-validate').fadeIn('slow');
+            // error_status = true;
+            email.focus();
+            return false;
+        }else if(!regex.test(email.value)) {
+            // message = "Email is incorrect format!";
+            // email.classList.add('validation-failed');
+            // $j('#error-validate').html(message).insertAfter(email);
+            // $j('#error-validate').fadeIn('slow');
+            // error_status = true;
+            email.focus();
+            return false;
+        }*/
+                                    $j('#error-validate').fadeOut('slow');
+                                    tmpHTML = "<li class=\"fields phone_otp\"><label for=\"telephone\" class=\"required\"><em>*</em>Get OTP</label><div class=\"input-box\"><input autocapitalize=\"off\" autocorrect=\"off\" name=\"telephone_otp\" id=\"telephone_otp\" value=\"\" title=\"OTP\" class=\"input-text validate-otp required-entry\" /><button type=\"button\" title=\"Get OTP\" class=\"button\" id=\"getotp\">Get OTP</button></div></li>";
+                                    $j(tmpHTML).insertAfter($j('.phone_user'));
+                                } else {
+                                    //$j('#error-validate').fadeOut('slow');
+                                    $j('#error-validate').fadeOut('slow');
+                                }
+                            });
+
+                            $j(document).on('click', 'button#getotp', function (e) {
+                                e.preventDefault();
+
+                                /*  do work */
+                                // Grab all form data
+                                var message = '';
+                                var tmpresetHTML = "";
+                                var data = $j(".cgv-edit-account").serializeArray();
+                                $j.ajax({
+                                    type: 'POST',
+                                    url: "https://www.cgv.vn/default/cinox/account/edituserpost",
+                                    data: data,
+                                    beforeSend: function () {
+                                        $j('#reloading-mask').show();
+                                    }
+                                }).done(function (response, status) {
+                                    console.log(response);
+                                    $j('#reloading-mask').hide();
+                                    $j('#error-validate').hide();
+                                    if (response.success == 200) {
+                                        $j('#getotp').remove();
+                                        alert('OTP has been sent!');
+                                    } else {
+                                        message = response.msg;
+                                        if (response.field) {
+                                            var idfield = document.getElementById(response.field);
+                                            idfield.classList.add('validation-failed');
+                                            $j('#error-validate').html(message).insertAfter(idfield);
+                                            idfield.focus();
+                                            $j('#error-validate').fadeIn('slow');
+                                            $j('#' + response.field).focus();
+                                        }
+                                    }
+                                }, 'json');
+                                isAllowed = false;
+                            });
+                            $j('.cgv-edit-account').submit(function () {
+                                // your code here
+                                var fullname = document.getElementById("fullname");
+                                var phone = document.getElementById("telephone");
+                                //var email = document.getElementById("email");
+                                var password = document.getElementById("current_password");
+                                var city = document.getElementById("region_id");
+                                var prefersite = document.getElementById("prefersite");
+                                var street = document.getElementById("street_1");
+                                var message = "";
+                                var error_status = false;
+                                var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                //var alphaExp = /^[\pL\s]+$/;///^[a-zA-Z]+$/;
+                                var number_regex = /^[0-9]+$/;
+                                if (fullname.value == "") {
+                                    message = "Họ tên chưa nhập";
+                                    fullname.classList.add('validation-failed');
+                                    //$j("<p class='error-validate'>"+message+"</p>").insertAfter(fullname);
+
+                                    $j('#error-validate').html(message).insertAfter(fullname);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    fullname.focus();
+                                    return false;
+                                } else if (fullname.value.trim().split(/\s+/).length < 2) {
+                                    message = "Họ tên phải có ít nhất 2 từ";
+
+                                    fullname.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(fullname);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    fullname.focus();
+                                    return false;
+                                } else if (/[^a-zA-Z0-9 \-\/]/.test(nonAccentVietnamese(fullname.value))) {
+                                    message = "Họ tên không bao gồm kí tự đặc biệt và số";
+
+                                    fullname.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(fullname);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    fullname.focus();
+                                    return false;
+                                }
+
+                                if (phone.value == "") {
+                                    message = "Số điện thoại chưa nhập";
+                                    phone.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(phone);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    phone.focus();
+                                    return false;
+                                } else if (!phone.value.match(number_regex)) {
+                                    message = "Số điện thoại chưa chính xác";
+                                    phone.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(phone);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    phone.focus();
+                                    return false;
+                                } else if (phone.value.trim().length < 10) {
+                                    message = "Số điện thoại phải ít nhất 10 số";
+                                    phone.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(phone);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    phone.focus();
+                                    return false;
+                                }
+                                /*if(email.value==""){
+                                    message = "Email is not empty!";
+                                    email.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(email);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    email.focus();
+                                    return false;
+                                }else if(!regex.test(email.value)) {
+                                    message = "Email is incorrect format!";
+                                    email.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(email);
+                                    $j('#error-validate').fadeIn('slow');
+                                    error_status = true;
+                                    email.focus();
+                                    return false;
+                                }*/
+                                if (password.value == "") {
+                                    message = "Mật khẩu chưa nhập";
+                                    password.classList.add('validation-failed');
+                                    // $j('#error-validate').html(message).insertAfter(password);
+                                    // $j('#error-validate').fadeIn('slow');
+                                    // error_status = true;
+                                    password.focus();
+                                    return false;
+                                } else {
+                                    if (password.value.length < 6) {
+                                        message = "Mật khẩu chứa ít nhất 6 ký tự";
+                                        // password.classList.add('validation-failed');
+                                        // $j('#error-validate').html(message).insertAfter(password);
+                                        // $j('#error-validate').fadeIn('slow');
+                                        // error_status = true;
+                                        password.focus();
+                                        return false;
+                                    }
+                                }
+
+
+                                if (city.value == "") {
+                                    message = "Chưa chọn khu vực";
+                                    city.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(city);
+                                    $j('#error-validate').fadeIn('slow');
+                                    city.focus();
+                                    return false;
+                                } else if (!city.value.match(number_regex)) {
+                                    message = "Region is incorrect format";
+                                    city.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(city);
+                                    $j('#error-validate').fadeIn('slow');
+                                    city.focus();
+                                    return false;
+                                } else {
+                                    if (city.value.length < 2) {
+                                        message = "Region must be 2 numbers at least";
+                                        city.classList.add('validation-failed');
+                                        $j('#error-validate').html(message).insertAfter(city);
+                                        $j('#error-validate').fadeIn('slow');
+                                        city.focus();
+                                        return false;
+                                    }
+                                }
+                                if (prefersite.value == "") {
+                                    message = "Chưa chọn rạp yêu thích";
+                                    prefersite.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(prefersite);
+                                    $j('#error-validate').fadeIn('slow');
+                                    prefersite.focus();
+                                    return false;
+                                } else if (!prefersite.value.match(number_regex)) {
+                                    message = "Prefer site is incorrect format";
+                                    prefersite.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(prefersite);
+                                    $j('#error-validate').fadeIn('slow');
+                                    prefersite.focus();
+                                    return false;
+                                } else {
+                                    if (prefersite.value.length < 2) {
+                                        message = "Prefer site must be 2 numbers at least";
+                                        prefersite.classList.add('validation-failed');
+                                        $j('#error-validate').html(message).insertAfter(prefersite);
+                                        $j('#error-validate').fadeIn('slow');
+                                        prefersite.focus();
+                                        return false;
+                                    }
+                                }
+                                if (street.value.length == 0) {
+                                    message = "Chưa nhập địa chỉ";
+                                    street.classList.add('validation-failed');
+                                    $j('#error-validate').html(message).insertAfter(street);
+                                    $j('#error-validate').fadeIn('slow');
+                                    street.focus();
+                                    return false;
+                                }
+                                if ($j('.validate-otp')[0]) {
+                                    var otp = document.getElementById("telephone_otp");
+                                    if (otp.value.length != 6) {
+                                        // message = "Invalid OTP";
+                                        // otp.classList.add('validation-failed');
+                                        // $j('#error-validate').html(message).insertAfter(otp);
+                                        // $j('#error-validate').fadeIn('slow');
+                                        otp.focus();
+                                        return false;
+                                    }
+                                }
+                                return true;
+                            });
+
+                            function nonAccentVietnamese(str) {
+                                str = str.toLowerCase();
+                                str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+                                str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+                                str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+                                str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+                                str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+                                str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+                                str = str.replace(/đ/g, "d");
+                                // Some system encode vietnamese combining accent as individual utf-8 characters
+                                //str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // Huyền sắc hỏi ngã nặng
+                                //str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // Â, Ê, Ă, Ơ, Ư
+                                return str;
+                            }
+
+                            // function confirmAction()
+                            // {
+                            // jQuery('<div></div>').appendTo('body')
+                            // .html('<div><h6>Are you sure?</h6></div>')
+                            // .dialog({
+                            // modal: true,
+                            // title: 'Delete message',
+                            // zIndex: 10000,
+                            // autoOpen: true,
+                            // width: 'auto',
+                            // resizable: false,
+                            // buttons: {
+                            // Yes: function () {
+                            //$(obj).removeAttr('onclick');
+                            //$(obj).parents('.Parent').remove();
+
+                            // $(this).dialog("close");
+                            // },
+                            // No: function () {
+                            // $(this).dialog("close");
+                            // }
+                            // },
+                            // close: function (event, ui) {
+                            // $(this).remove();
+                            // }
+                            // });
+                            // }
+                            //]]>
+                        </script>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <div class="footer-cgv-container">
+            <div class="footer">
+                <div class="footer-brand-slide">
+                    <div class="sect-smuse">
+                        <ul>
+                            <li><a class="dx" href="https://www.cgv.vn/default/theaters/special/4dx">4DX</a></li>
+                            <li><a class="imax" href="https://www.cgv.vn/default/theaters/special/imax">Imax</a></li>
+                            <li><a class="starium"
+                                   href="https://www.cgv.vn/default/theaters/special/starium">Starium</a></li>
+                            <li><a class="gold-class" href="https://www.cgv.vn/default/theaters/special/gold-class">Goldclass</a>
+                            </li>
+                            <li><a class="lamour" href="https://www.cgv.vn/default/theaters/special/lamour">L'amour</a>
+                            </li>
+                            <li><a class="sweet"
+                                   href="https://www.cgv.vn/default/theaters/special/sweetbox">Sweetbox</a></li>
+                            <li><a class="premium-cinema" href="https://www.cgv.vn/default/theaters/special/premium">Premium
+                                Cinema</a></li>
+                            <li><a class="screenx"
+                                   href="https://www.cgv.vn/default/theaters/special/screenx">Screenx</a></li>
+                            <li><a class="cine-foret" href="https://www.cgv.vn/default/theaters/special/cine-foret">Cine
+                                &amp; Foret</a></li>
+                            <li><a class="cine-livingroom"
+                                   href="https://www.cgv.vn/default/theaters/special/cine-living">Cine &amp; Living
+                                Room</a></li>
+                            <li><a class="cine-suite" href="https://www.cgv.vn/default/theaters/special/cine-suite">Cine
+                                Suite</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-cgv-policy">
+                    <div class="content-cgv-policy">
+                        <div class="cgv-vietnam">
+                            <h3>CGV Việt Nam</h3>
+                            <ul>
+                                <li><a href="https://www.cgv.vn/default/about-cgv/">Giới Thiệu</a></li>
+                                <li><a href="https://www.cgv.vn/default/cgv-online/">Tiện &Iacute;ch Online</a></li>
+                                <li><a href="https://www.cgv.vn/default/gift/">Thẻ Qu&agrave; Tặng</a></li>
+                                <li><a href="https://www.cgv.vn/default/careers/">Tuyển Dụng</a></li>
+                                <li><a href="https://www.cgv.vn/default/contacts/">Li&ecirc;n Hệ Quảng C&aacute;o
+                                    CGV</a></li>
+                                <li><a href="https://www.cgv.vn/default/danh-cho-doi-tac/">D&agrave;nh cho đối t&aacute;c</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cgv-policy">
+                            <h3>Điều khoản sử dụng</h3>
+                            <ul>
+                                <li><a href="https://www.cgv.vn/default/terms-conditions/">Điều Khoản Chung</a></li>
+                                <li><a href="https://www.cgv.vn/default/terms-use/">Điều Khoản Giao Dịch</a></li>
+                                <li><a href="https://www.cgv.vn/default/payment-policy/">Ch&iacute;nh S&aacute;ch Thanh
+                                    To&aacute;n</a></li>
+                                <li><a href="https://www.cgv.vn/default/privacy-policy/">Ch&iacute;nh S&aacute;ch Bảo
+                                    Mật</a></li>
+                                <li><a href="https://www.cgv.vn/default/faq/">C&acirc;u Hỏi Thường Gặp</a></li>
+                            </ul>
+                        </div>
+                        <div class="cgv-follow-us">
+                            <h3>Kết nối với ch&uacute;ng t&ocirc;i</h3>
+                            <ul>
+                                <li><a class="follow-fb" href="https://www.facebook.com/cgvcinemavietnam"
+                                       target="_blank"></a></li>
+                                <li><a class="follow-yt" href="https://www.youtube.com/cgvvietnam" target="_blank"></a>
+                                </li>
+                                <li><a class="follow-instagram" href="http://instagram.com/cgvcinemasvietnam"
+                                       target="_blank"></a></li>
+                                <li><a class="follow-zalo" href="http://zalo.me/1884424922722396289"
+                                       target="_blank"></a></li>
+                            </ul>
+                            <div class="cgv-permision">
+                                <h2><a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=30278"
+                                       target="_blank">cgv</a></h2>
+                            </div>
+                        </div>
+                        <div class="customer-cgv">
+                            <h3>Chăm s&oacute;c kh&aacute;ch h&agrave;ng</h3>
+                            <p style="line-height: 22px;">Hotline: 1900 6017<br/>Giờ l&agrave;m việc: 8:00 - 22:00 (Tất
+                                cả c&aacute;c ng&agrave;y bao gồm cả Lễ Tết)<br/>Email hỗ trợ: <a
+                                        href="mailto:hoidap@cgv.vn">hoidap@cgv.vn</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-cgv-address">
+                    <div class="cgv-address-content">
+                        <div class="logo-footer-cgv">&nbsp;</div>
+                        <div class="text-cgv-address">
+                            <h3>C&Ocirc;NG TY TNHH CJ CGV VIỆT NAM</h3>
+                            <p>Giấy Chứng nhận đăng k&yacute; doanh nghiệp: 0303675393 đăng k&yacute; lần đầu ng&agrave;y
+                                31/7/2008, được cấp bởi Sở Kế hoạch v&agrave; Đầu tư Th&agrave;nh phố Hồ Ch&iacute;
+                                Minh</p>
+                            <p>Địa chỉ: Lầu 2, số 7/28, Đường Th&agrave;nh Th&aacute;i, Phường 14, Quận 10, Th&agrave;nh
+                                phố Hồ Ch&iacute; Minh, Việt Nam</p>
+                            <p>Đường d&acirc;y n&oacute;ng (Hotline): 1900 6017</p>
+                            <p>COPYRIGHT 2017 CJ CGV VIETNAM CO., LTD. ALL RIGHTS RESERVED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facebook Pixel Code -->
+
+
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

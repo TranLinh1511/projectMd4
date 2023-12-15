@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="admin/layouts/head"></th:block>
+
+<body class="vh-100">
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="text-center mb-3">
+                                    <a href="#"><img th:src="@{images/logo-full.png}" alt=""></a>
+                                </div>
+                                <h4 class="text-center mb-4">Sign in your account</h4>
+                                <form th:object="${u}" action="" method="post">
+                                    <div class="form-group">
+                                        <label class="mb-1"><strong>Email</strong></label>
+                                        <input th:field="*{email}" type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1"><strong>Password</strong></label>
+                                        <input th:field="*{password}" type="password" class="form-control" placeholder="Password">
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block th:insert="admin/layouts/script"></th:block>
+
+</body>
+
+
+<!-- Mirrored from tixia.dexignzone.com/xhtml/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Nov 2023 02:56:12 GMT -->
+</html>

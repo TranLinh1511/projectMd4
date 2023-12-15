@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" catalog-product-view catalog-product-view product-chiem-doat">
+    <div class="wrapper">
+        <div class="page">
+            <th:block th:insert="/cgv/layouts/header"></th:block>
+            <div class="main-container col1-layout">
+                <div class="breadcrumbs" itemprop="breadcrumb">
+                    <ul>
+                        <li class="home">
+                            <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                            <span>/ </span>
+                        </li>
+                        <li class="product">
+                            <strong th:text="${schedule.movie.name}"></strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <div class="col-main">
+                        <div style="display: none;">array(0) { }
+                        </div>
+
+
+                        <div id="messages_product_view"></div>
+                        <div class="product-view">
+                            <div class="product-essential">
+                                <div class="page-title product-view">
+                                    <span class="h1">Nội Dung Phim</span>
+                                </div>
+
+                                <div class="product-name-reponsive">
+                                    <h1 th:text="${schedule.movie.name}"></h1>
+                                </div>
+
+                                <div class="product-img-box">
+                                    <div class="product-image product-image-zoom">
+                                        <div class="product-image-gallery">
+                                            <img th:each="i:${schedule.movie.images}" id="image-main" class="gallery-image visible" th:src="@{'/images/'+${i.imageName}}" th:alt-title="${schedule.movie.title}"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="product-shop">
+                                    <div class="product-name">
+                                        <span class="h1"  th:text="${schedule.movie.name}"></span>
+                                    </div>
+
+                                    <!-- Build test -->
+                                    <div class="movie-director movie-info pb-5">
+                                        <label>Đạo diễn: </label>
+                                        <div class="std" th:text="${schedule.movie.director}"></div>
+                                    </div>
+                                    <div class="movie-genre movie-info pb-3">
+                                        <label>Thể loại: </label>
+                                        <span th:each="i:${schedule.movie.genres}" th:text="${i.name} +', '"></span>
+                                    </div>
+                                    <div class="movie-release movie-info pb-3">
+                                        <label>Khởi chiếu: </label>
+                                        <div th:text="${schedule.movie.releaseDate}"></div>
+                                    </div>
+                                    <div class="movie-actress movie-info pb-3">
+                                        <label>Thời lượng: </label>
+                                        <div class="std" th:text="${schedule.movie.duration}" ></div>
+                                    </div>
+                                    <div class="movie-actress movie-info pb-3">
+                                        <label>Chiếu rạp: </label>
+                                        <div class="std" th:text="${schedule.cinema.name}" ></div>
+                                    </div>
+                                    <div class="movie-actress movie-info pb-3">
+                                        <label>Phòng: </label>
+                                        <div class="std" th:text="${schedule.theater.name}" ></div>
+                                    </div>
+                                    <div class="movie-actress movie-info pb-3">
+                                        <label>Thời gian chiếu: </label>
+                                        <div class="std" th:text="${schedule.time}" ></div>
+                                    </div>
+                                    <div class="movie-actress movie-info pb-3">
+                                        <label>Giá vé: </label>
+                                        <div class="std" th:text="${schedule.tickets[0].price} + 'VND'" ></div>
+                                    </div>
+                                </div>
+                                <div class="movie-detail-fb-booking">
+                                    <div class="add-to-cart-wrapper">
+                                        <a
+                                                th:href="@{'/add-to-cart?id=' + ${schedule.id}}"
+                                                type="button"
+                                                title="Mua vé"
+                                                class="button btn-booking"
+                                        >
+                                            <span>Mua vé</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clearer"></div>
+                            </div>
+
+                            <div class="product-collateral toggle-content tabs tabs-format-cgv">
+                                <dl id="collateral-tabs" class="collateral-tabs">
+                                    <dt class="tab"><span>Chi tiết</span></dt>
+                                    <dd class="tab-container">
+                                        <div class="tab-content">
+                                            <h2>Chi tiết</h2>
+                                            <div class="std" th:text="${schedule.movie.detail}"></div>
+                                        </div>
+                                    </dd>
+                                    <dt class="tab"><span>Trailer</span></dt>
+                                    <dd class="tab-container">
+                                        <div class="tab-content">
+                                            <div class="std">
+                                                <h2>Trailer</h2>
+                                                <div class="std product_view_trailer">
+                                                    <iframe width='560' height='315' th:src='${schedule.movie.trailerUrl}' frameborder='0' allowfullscreen></iframe> </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                        </div>
+
+                        <div id="loading-mask" style="left: -2px; top: 0px; display: none;z-index: 999999;">
+                            <p class="loader" id="loading_mask_loader">
+                                <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/ajax-loader.gif" alt="Loading...">
+                                <br>Đang tải thông tin... </p>
+                        </div>
+
+                        <style type="text/css">
+                            #cboxLoadedContent .quick-booking>.tabs-cgv-movie-view-date>* {
+                                padding: 20px;
+                                margin: 0px;
+                            }
+
+                            .yamahawhynot h4,
+                            .lgcinema h4 {
+                                color: red;
+                                font-weight: bold !important;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+              <th:block th:insert="/cgv/layouts/footer"></th:block>
+            <div id="wishlist_edit_action_container"></div>
+        </div>
+    </div>
+</body>
+</html>

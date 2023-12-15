@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" catalog-category-view categorypath-now-showing category-now-showing">
+<th:block th:insert="/cgv/layouts/header"></th:block>
+<div class="theater-container product-view mt-5" th:each="i:${cinemas}">
+    <div class="heater-head">
+        <div class="home-title"><h3>Rạp</h3></div>
+        <div class="page-title theater-title"><h3 th:text="${i.name}"></h3></div>
+    </div>
+    <div class="theater-gallery">
+        <div class="theater-thumb-image">
+            <div class="slideshow-theater slideshow-container">
+                <ul class="slideshow" style="overflow: hidden;">
+                    <li class="cycle-slide cycle-sentinel" th:each="image:${i.images}"
+                        style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden;">
+                        <img th:src="@{'/images/'+${image.imageName}}">
+                    </li>
+                </ul>
+                <span class="slideshow-prev">&nbsp;</span><span class="slideshow-next">&nbsp;</span>
+            </div>
+        </div>
+        <div class="theater-infomation">
+            <div class="left-info-theater">
+                <div class="theater-left-content">
+                    <div class="theater-address" th:text="${i.location}"> </div>
+                    <div class="hotline"><label>Hotline : </label>
+                        <div class="fax-input" style="display: inline;"  th:text="${i.phone}"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-info-theater">
+                <div class="theater-right-content">
+                    <div class="contact-us"><a class="cotact-us-link" href="#">Liên
+                        hệ CGV</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:insert="/cgv/layouts/footer"></th:block>
+</body>
+</html>

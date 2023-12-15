@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" cms-page-view cms-terms-use">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>Điều khoản giao dịch</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div class="std">
+                        <div class="cms-page-title"><span style="color: #ff0000;"> <strong>ĐIỀU KHOẢN GIAO DỊCH</strong> </span>
+                        </div>
+                        <div class="cms-page-content privacy-policy-cms">
+                            <p>Ch&agrave;o mừng Qu&yacute; Kh&aacute;ch H&agrave;ng đến với <strong>C&Ocirc;NG TY TNHH
+                                CJ CGV VIỆT NAM</strong></p>
+                            <p>Ch&uacute;ng t&ocirc;i l&agrave; <strong>C&Ocirc;NG TY TNHH CJ CGV VIỆT NAM</strong>, địa
+                                chỉ trụ sở ch&iacute;nh tại Lầu 2, số 7/28, đường Th&agrave;nh Th&aacute;i, Phường 14,
+                                Quận 10, Th&agrave;nh phố Hồ Ch&iacute; Minh,
+                                Việt Nam (&ldquo;<strong>CGV Việt Nam</strong>&rdquo;), đơn vị sở hữu v&agrave; vận h&agrave;nh
+                                website cgv.vn v&agrave; ứng dụng di động CGV Cinemas (&ldquo;<strong>Ứng Dụng</strong>&rdquo;)
+                            </p>
+                            <p>Khi Qu&yacute; Kh&aacute;ch H&agrave;ng truy cập v&agrave;o Ứng Dụng c&oacute; nghĩa l&agrave;
+                                Qu&yacute; Kh&aacute;ch H&agrave;ng đồng &yacute; với c&aacute;c điều kiện v&agrave;
+                                điều khoản n&agrave;y.</p>
+                            <p>CGV Việt Nam c&oacute; quyền thay đổi, chỉnh sửa, th&ecirc;m hoặc lược bỏ bất kỳ phần n&agrave;o
+                                trong Điều Khoản Giao Dịch, v&agrave;o bất cứ l&uacute;c n&agrave;o. C&aacute;c thay đổi
+                                c&oacute; hiệu lực ngay khi được
+                                đăng tr&ecirc;n Ứng Dụng m&agrave; kh&ocirc;ng cần th&ocirc;ng b&aacute;o trước. V&agrave;
+                                khi Qu&yacute; Kh&aacute;ch H&agrave;ng tiếp tục sử dụng Ứng Dụng, sau khi c&aacute;c
+                                thay đổi về Điều Khoản Giao Dịch được
+                                đăng tải, c&oacute; nghĩa l&agrave; Qu&yacute; Kh&aacute;ch H&agrave;ng chấp nhận với
+                                những thay đổi đ&oacute;. Qu&yacute; kh&aacute;ch H&agrave;ng vui l&ograve;ng kiểm tra
+                                thường xuy&ecirc;n để cập nhật những thay
+                                đổi của CGV Việt Nam.</p>
+                            <p><strong>XIN VUI L&Ograve;NG ĐỌC KỸ TRƯỚC KHI QUYẾT ĐỊNH ĐẶT V&Eacute; TRỰC
+                                TUYẾN.</strong></p>
+                            <h3><strong>1. PHẠM VI &Aacute;P DỤNG</strong></h3>
+                            <p>Điều kiện dưới đ&acirc;y &aacute;p dụng ri&ecirc;ng cho chức năng giao dịch trực tuyến
+                                tại Ứng Dụng. Khi sử dụng chức năng giao dịch trực tuyến, Qu&yacute; Kh&aacute;ch H&agrave;ng
+                                mặc nhi&ecirc;n đ&atilde; chấp thuận v&agrave;
+                                tu&acirc;n thủ tất cả c&aacute;c chỉ dẫn, điều khoản, điều kiện v&agrave; lưu &yacute;
+                                đăng tải tr&ecirc;n Ứng Dụng, bao gồm nhưng kh&ocirc;ng giới hạn bởi Điều Khoản Chung,
+                                Điều Khoản Giao Dịch n&ecirc;u ở đ&acirc;y.</p>
+                            <p>Nếu Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng c&oacute; &yacute; định giao dịch
+                                trực tuyến hay kh&ocirc;ng đồng &yacute; với bất kỳ điều khoản hay điều kiện n&agrave;o
+                                n&ecirc;u trong Điều Khoản Chung, Điều Khoản
+                                Giao Dịch, xin DỪNG VIỆC SỬ DỤNG chức năng n&agrave;y.</p>
+                            <h3><strong>2. ĐIỀU KIỆN SỬ DỤNG </strong><strong>CHỨC NĂNG GIAO DỊCH TRỰC
+                                TUYẾN</strong><strong></strong></h3>
+                            <p>Qu&yacute; Kh&aacute;ch H&agrave;ng phải đăng k&yacute; T&agrave;i Khoản với th&ocirc;ng
+                                tin x&aacute;c thực của Qu&yacute; Kh&aacute;ch H&agrave;ng v&agrave; phải cập nhật nếu
+                                c&oacute; bất kỳ thay đổi n&agrave;o. Mỗi
+                                người truy cập phải <strong>c&oacute; tr&aacute;ch nhiệm với mật khẩu, t&agrave;i khoản
+                                    v&agrave; hoạt động của T&agrave;i Khoản</strong> tr&ecirc;n Ứng Dụng. Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng phải th&ocirc;ng b&aacute;o
+                                đến CGV Việt Nam khi t&agrave;i khoản của Qu&yacute; Kh&aacute;ch H&agrave;ng bị truy
+                                cập tr&aacute;i ph&eacute;p.</p>
+                            <p>CGV Việt Nam kh&ocirc;ng chịu bất kỳ tr&aacute;ch nhiệm n&agrave;o, d&ugrave; trực tiếp
+                                hay gi&aacute;n tiếp, đối với những thiệt hại hoặc mất m&aacute;t g&acirc;y ra do: (i)
+                                Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng
+                                tu&acirc;n thủ quy định, (ii) Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng bảo mật
+                                hoặc tiết lộ th&ocirc;ng tin T&agrave;i Khoản, hoặc (iii) bất kỳ cuộc tấn c&ocirc;ng
+                                mạng c&oacute; chủ đ&iacute;ch hoặc kh&ocirc;ng
+                                chủ đ&iacute;ch n&agrave;o đối với Ứng Dụng v&agrave;/hoặc t&agrave;i khoản cụ thể; (iv)
+                                việc T&agrave;i Khoản của Qu&yacute; Kh&aacute;ch H&agrave;ng bị mất quyền kiểm so&aacute;t,
+                                truy cập hoặc sử dụng tr&aacute;i
+                                ph&eacute;p l&agrave; kết quả của bất kỳ phần mềm, ứng dụng, thiết bị theo d&otilde;i, m&atilde;
+                                h&oacute;a, bẻ kh&oacute;a, điều khiển từ xa, sự x&acirc;m phạm tr&aacute;i ph&eacute;p
+                                mật khẩu n&agrave;o được c&agrave;i
+                                đặt tr&ecirc;n thiết bị c&aacute; nh&acirc;n của Qu&yacute; Kh&aacute;ch H&agrave;ng d&ugrave;
+                                l&agrave; v&ocirc; t&igrave;nh hay cố &yacute;; hoặc (v) bất kỳ sự sử dụng tr&aacute;i
+                                ph&eacute;p n&agrave;o đối với T&agrave;i
+                                Khoản của Qu&yacute; Kh&aacute;ch H&agrave;ng trước thời điểm Qu&yacute; Kh&aacute;ch H&agrave;ng
+                                th&ocirc;ng b&aacute;o đến CGV Việt Nam.</p>
+                            <h3><strong>3. QUY ĐỊNH VỀ THỰC HIỆN GIAO DỊCH TRỰC TUYẾN</strong></h3>
+                            <p>3.1.&nbsp; &nbsp;Chức năng giao dịch trực tuyến để sử dụng Dịch Vụ của CGV Việt Nam (bao
+                                gồm V&eacute; Xem Phim, c&aacute;c sản phẩm v&agrave; dịch vụ kh&aacute;c do CGV Việt
+                                Nam cung cấp tại từng thời điểm) hiện chỉ &aacute;p
+                                dụng cho th&agrave;nh vi&ecirc;n của CGV Việt Nam. Tham khảo th&ocirc;ng tin đăng k&yacute;
+                                th&agrave;nh vi&ecirc;n CGV tại <a
+                                        href="#"
+                                        target="_blank"><strong>Đ&Acirc;Y</strong></a></p>
+                            <p><strong>3.2.&nbsp; &nbsp;Đối với giao dịch trực tuyến để mua V&eacute; Xem Phim:</strong>
+                            </p>
+                            <p>(i)&nbsp; &nbsp; CGV Việt Nam cho ph&eacute;p giao dịch trực tuyến đối với V&eacute; Xem
+                                Phim trước thời điểm Bộ Phim được chiếu v&agrave; trong suốt thời gian Bộ Phim được cấp
+                                quyền phổ biến tại c&aacute;c Cụm Rạp Chiếu
+                                Phim CGV Cinemas, tuy nhi&ecirc;n việc sắp xếp suất chiếu Bộ Phim phụ thuộc v&agrave;o
+                                mỗi Bộ phim, mỗi Cụm Rạp Chiếu Phim CGV Cinemas.</p>
+                            <p>Nếu suất chiếu Qu&yacute; Kh&aacute;ch H&agrave;ng muốn đặt chưa được hiển thị tr&ecirc;n
+                                Ứng Dụng v&agrave;o thời điểm đặt v&eacute;, xin vui l&ograve;ng quay lại sau, hoặc li&ecirc;n
+                                hệ tới số đường d&acirc;y n&oacute;ng:
+                                1900 6017 để biết th&ecirc;m th&ocirc;ng tin chi tiết.</p>
+                            <p>(ii)&nbsp; &nbsp; Thời gian đ&oacute;ng chức năng giao dịch trực tuyến đối với V&eacute;
+                                Xem Phim l&agrave; 30 ph&uacute;t trước giờ chiếu phim hoặc khi suất chiếu đ&atilde;
+                                được b&aacute;n hết v&eacute;. Sau thời gian
+                                n&agrave;y Qu&yacute; Kh&aacute;ch H&agrave;ng c&oacute; thể đến li&ecirc;n hệ trực tiếp
+                                tại Cụm Rạp Chiếu Phim CGV Cinemas cụ thể để mua v&eacute;.</p>
+                            <p>(iii)&nbsp; &nbsp;CGV Việt Nam kh&ocirc;ng cam kết giữ chỗ ngồi cho Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng cho đến khi Qu&yacute; Kh&aacute;ch H&agrave;ng ho&agrave;n tất thanh to&aacute;n
+                                cho đơn h&agrave;ng của m&igrave;nh.</p>
+                            <p><strong>Đối với giao</strong>&nbsp;<strong>dịch trực tuyến để mua c&aacute;c sản phẩm,
+                                dịch vụ kh&aacute;c của CGV Việt Nam</strong><strong></strong></p>
+                            <p>-&nbsp; &nbsp;Đối với c&aacute;c giao dịch mua sản phẩm bắp nước, sản phẩm sẽ phụ thuộc v&agrave;o
+                                mỗi Cụm Rạp Chiếu Phim CGV Cinemas.</p>
+                            <p>-&nbsp; &nbsp;Kh&aacute;ch h&agrave;ng mang theo email x&aacute;c nhận đơn h&agrave;ng
+                                hoặc th&ocirc;ng tin đơn h&agrave;ng tr&ecirc;n ứng dụng để nhận h&agrave;ng tại rạp đ&atilde;
+                                chọn khi đặt h&agrave;ng. M&atilde; Coupon
+                                chỉ được sử dụng 1 lần v&agrave; chỉ c&oacute; gi&aacute; trị sử dụng trong ng&agrave;y
+                                đ&atilde; chọn khi đặt h&agrave;ng. CGV Việt Nam sẽ kh&ocirc;ng chịu tr&aacute;ch nhiệm
+                                khi Coupon qu&aacute; hạn sử dụng. M&atilde;
+                                Coupon sau khi thanh to&aacute;n kh&ocirc;ng được ho&agrave;n trả v&agrave; kh&ocirc;ng
+                                thể quy đổi th&agrave;nh tiền mặt.&nbsp; Những giao dịch đ&atilde; thanh to&aacute;n đổi
+                                vị bắp/nước sẽ kh&ocirc;ng được ho&agrave;n
+                                trả ch&ecirc;nh lệch (nếu c&oacute;) khi kh&aacute;ch h&agrave;ng c&oacute; mong muốn
+                                đổi sang c&aacute;c vị kh&aacute;c khi nhận h&agrave;ng. Giao dịch được t&iacute;ch điểm
+                                th&agrave;nh vi&ecirc;n.</p>
+                            <p>-&nbsp; &nbsp;Đối với thẻ qu&agrave; tặng của CGV Việt Nam, qu&yacute; kh&aacute;ch c&oacute;
+                                thể mua tặng bạn b&egrave; hoặc trực tiếp sử dụng cho c&aacute;c giao dịch thanh to&aacute;n
+                                v&eacute;, sản phẩm bắp nước của
+                                CGV Việt Nam. Bao gồm cả mua v&eacute; tại quầy v&agrave; trực tuyến. Hạn sử dụng l&agrave;
+                                một năm cho thẻ qu&agrave; tặng mới. Qu&yacute; kh&aacute;ch c&oacute; thể gia hạn thẻ
+                                qu&agrave; tặng của CGV Việt Nam bằng
+                                c&aacute;ch nạp th&ecirc;m tiền v&agrave;o t&agrave;i khoản.</p>
+                            <p>-&nbsp; &nbsp;C&aacute;c điều kiện ri&ecirc;ng biệt đối với c&aacute;c sản phẩm, dịch vụ
+                                kh&aacute;c do CGV Việt Nam cung cấp trong tương lai để tăng cường trải nghiệm v&agrave;
+                                h&agrave;i l&ograve;ng của Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng sẽ được CGV Việt Nam cập nhật, bổ sung tại từng thời điểm.</p>
+                            <p>3.3.&nbsp; &nbsp;Khi tiến h&agrave;nh c&aacute;c bước thanh to&aacute;n, Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng cần đọc kĩ c&aacute;c th&ocirc;ng tin m&ocirc; tả Dịch Vụ trước khi ho&agrave;n
+                                tất việc x&aacute;c nhận đơn h&agrave;ng.
+                                <strong>X&aacute;c nhận về Dịch Vụ</strong> sẽ được CGV Việt Nam xuất cho Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng theo th&ocirc;ng tin đơn h&agrave;ng đ&atilde; ho&agrave;n tất thanh to&aacute;n.
+                                X&aacute;c nhận về Dịch
+                                Vụ c&oacute; thể l&agrave; (i) V&eacute; Xem Phim điện tử hoặc m&atilde; đặt chỗ điện
+                                tử; v&agrave;/hoặc (ii) phiếu x&aacute;c nhận th&ocirc;ng tin sản phẩm, dịch vụ kh&aacute;c
+                                của Qu&yacute; Kh&aacute;ch H&agrave;ng
+                                (hoặc bất kỳ t&ecirc;n gọi n&agrave;o kh&aacute;c m&agrave; bản chất l&agrave; để x&aacute;c
+                                nhận sản phẩm, dịch vụ m&agrave; Qu&yacute; Kh&aacute;ch H&agrave;ng đ&atilde; đặt); v&agrave;/hoặc
+                                (iii) l&agrave; sự kết
+                                hợp của (i) v&agrave; (ii), t&ugrave;y từng trường hợp.</p>
+                            <p>3.4.&nbsp; &nbsp;Qu&yacute; Kh&aacute;ch H&agrave;ng phải ho&agrave;n tất thanh to&aacute;n
+                                cho đơn h&agrave;ng theo quy định tại Ch&iacute;nh S&aacute;ch Thanh To&aacute;n (tham
+                                khảo tại <a href="#"
+                                            target="_blank"><strong>Đ&Acirc;Y</strong></a>) trước khi nhận được
+                                <strong>X&aacute;c nhận về Dịch Vụ</strong> của đơn h&agrave;ng đ&oacute;. Khi Qu&yacute;
+                                Kh&aacute;ch H&agrave;ng nhấn (click) vào &ocirc; <strong>&ldquo;Thanh
+                                    toán&rdquo;</strong> để ti&ecirc;́n h&agrave;nh thanh to&aacute;n, c&oacute; nghĩa
+                                là Qu&yacute; Kh&aacute;ch H&agrave;ng x&aacute;c nhận đồng &yacute; với th&ocirc;ng
+                                tin đơn h&agrave;ng; v&agrave; đồng ý Điều Khoản Chung v&agrave; Điều
+                                Khoản Giao Dịch sẽ được &aacute;p dụng cho đơn h&agrave;ng v&agrave; X&aacute;c nhận về
+                                Dịch Vụ trong giao dịch đ&oacute;.</p>
+                            <p>3.5.&nbsp; &nbsp;Qu&yacute; Kh&aacute;ch H&agrave;ng sẽ nhận được thư điện tử x&aacute;c
+                                nhận th&ocirc;ng tin chi tiết đơn h&agrave;ng đ&atilde; thanh to&aacute;n v&agrave;/hoặc
+                                X&aacute;c nhận về Dịch Vụ th&ocirc;ng qua
+                                địa chỉ thư điện tử (email) m&agrave; Qu&yacute; Kh&aacute;ch H&agrave;ng đ&atilde; cung
+                                cấp hoặc th&ocirc;ng qua Ứng Dụng. Email x&aacute;c nhận th&ocirc;ng tin đơn h&agrave;ng
+                                c&oacute; thể đi v&agrave;o hộp thư r&aacute;c
+                                (spam mail) của Qu&yacute; Kh&aacute;ch H&agrave;ng, v&igrave; vậy h&atilde;y kiểm tra
+                                ch&uacute;ng trước khi li&ecirc;n lạc với CGV Việt Nam.</p>
+                            <p>3.6.&nbsp; &nbsp;Qu&yacute; Kh&aacute;ch H&agrave;ng đồng &yacute; rằng, trong những
+                                trường hợp c&oacute; sự thay đổi về Dịch Vụ; trong trường hợp bất khả kh&aacute;ng; hoặc
+                                trong c&aacute;c trường hợp sự cố xảy ra ngo&agrave;i
+                                tầm kiểm so&aacute;t của CGV Việt Nam, CGV Việt Nam c&oacute; quyền:</p>
+                            <p>(i)&nbsp; &nbsp; &nbsp;ho&agrave;n trả lại bất kỳ khoản thanh to&aacute;n cho bất kỳ đơn
+                                h&agrave;ng n&agrave;o từ việc giao dịch trực tuyến qua Ứng Dụng bằng tiền mặt hoặc
+                                Phiếu Đổi V&eacute; Xem Phim, phiếu đổi sản phẩm
+                                với gi&aacute; trị tương đương; hoặc</p>
+                            <p>(ii)&nbsp; &nbsp; theo y&ecirc;u cầu của Qu&yacute; Kh&aacute;ch H&agrave;ng, thực hiện
+                                thay đổi Dịch Vụ của Qu&yacute; Kh&aacute;ch H&agrave;ng th&agrave;nh Dịch Vụ kh&aacute;c
+                                c&oacute; c&ugrave;ng điều kiện, v&agrave;
+                                c&oacute; c&ugrave;ng gi&aacute; trị. Việc đổi th&agrave;nh Dịch Vụ c&oacute; gi&aacute;
+                                trị cao hơn <strong>c&oacute; thể được CGV Việt Nam chấp nhận</strong> t&ugrave;y điều
+                                kiện sẵn c&oacute; của Dịch Vụ được y&ecirc;u
+                                cầu tại thời điểm đ&oacute; với điều kiện Qu&yacute; Kh&aacute;ch H&agrave;ng phải thanh
+                                to&aacute;n phần ch&ecirc;nh lệch. Trong mọi trường hợp, CGV Việt Nam sẽ kh&ocirc;ng ho&agrave;n
+                                trả cho Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng khoản tiền ch&ecirc;nh lệch nếu Qu&yacute; Kh&aacute;ch H&agrave;ng chọn đổi
+                                sang Dịch Vụ c&oacute; gi&aacute; trị thấp hơn gi&aacute; trị m&agrave; Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng đ&atilde; thanh to&aacute;n.</p>
+                            <h3><strong>4. GI&Aacute; V&Eacute;</strong></h3>
+                            <p>4.1.&nbsp; Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u Chuẩn được ni&ecirc;m yết tại Cụm Rạp
+                                Chiếu Phim CGV Cinemas v&agrave; tr&ecirc;n Ứng Dụng l&agrave; Gi&aacute; V&eacute; Xem
+                                Phim Ti&ecirc;u Chuẩn <strong>đ&atilde; bao gồm thuế Gi&aacute; trị gia tăng</strong>.
+                                Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u Chuẩn c&oacute; thể thay đổi t&ugrave;y từng
+                                thời điểm, t&ugrave;y từng chương tr&igrave;nh khuyến mại được &aacute;p dụng v&agrave;
+                                sẽ được hiển thị r&otilde; tại trang Thanh
+                                to&aacute;n khi Qu&yacute; Kh&aacute;ch H&agrave;ng tiến h&agrave;nh đặt h&agrave;ng.
+                            </p>
+                            <p>4.2.&nbsp;&nbsp;<strong>GI&Aacute; V&Eacute; XEM PHIM TI&Ecirc;U CHUẨN KHI THAM GIA GIAO
+                                DỊCH TRỰC TUYẾN TR&Ecirc;N ỨNG DỤNG L&Agrave; GI&Aacute; V&Eacute; XEM PHIM TI&Ecirc;U
+                                CHUẨN &Aacute;P DỤNG ĐỐI VỚI NGƯỜI LỚN</strong>.
+                                Qu&yacute; Kh&aacute;ch H&agrave;ng vui l&ograve;ng thực hiện giao dịch trực tiếp tại c&aacute;c
+                                Cụm Rạp Chiếu Phim CGV Cinemas để được hưởng ưu đ&atilde;i &aacute;p dụng cho đối tượng
+                                được hưởng ưu đ&atilde;i theo
+                                quy định ph&aacute;p luật v&agrave; CGV Việt Nam tại từng thời điểm.</p>
+                            <h3><strong>5. PH&Acirc;N LOẠI PHIM THEO ĐỘ TUỔI</strong></h3>
+                            <p><strong>5.1.&nbsp; Ph&acirc;n loại phim</strong></p>
+                            <p>CGV Việt Nam th&ocirc;ng b&aacute;o ti&ecirc;u ch&iacute; ph&acirc;n loại phim theo độ
+                                tuổi, như sau:</p>
+                            <ul>
+                                <li>T18: Phim được phổ biến đến người xem từ đủ 18 tuổi trở l&ecirc;n (18+).</li>
+                                <li>T16: Phim được phổ biến đến người xem từ đủ 16 tuổi trở l&ecirc;n (16+).</li>
+                                <li>T13: Phim được phổ biến đến người xem từ đủ 13 tuổi trở l&ecirc;n (13+).</li>
+                                <li>K: Phim được phổ biến đến người xem dưới 13 tuổi v&agrave; c&oacute; người gi&aacute;m
+                                    hộ đi k&egrave;m.
+                                </li>
+                                <li>P: Phim được ph&eacute;p phổ biến đến người xem ở mọi độ tuổi.</li>
+                                <li>C: Phim kh&ocirc;ng được ph&eacute;p phổ biến.</li>
+                            </ul>
+                            <p><strong>5.2.&nbsp; Lưu &yacute;</strong></p>
+                            <p>-&nbsp; &nbsp;Qu&yacute; Kh&aacute;ch H&agrave;ng xem phim được ph&acirc;n loại T13, T16,
+                                T18 vui l&ograve;ng mang theo giấy tờ t&ugrave;y th&acirc;n c&oacute; ảnh nhận diện v&agrave;
+                                ng&agrave;y th&aacute;ng năm sinh để
+                                đảm bảo việc tu&acirc;n thủ theo quy định. CGV Việt Nam c&oacute; quyền y&ecirc;u cầu kh&aacute;ch
+                                h&agrave;ng xuất tr&igrave;nh Giấy khai sinh, Căn cước c&ocirc;ng d&acirc;n, Thẻ học
+                                sinh, thẻ sinh vi&ecirc;n, bằng
+                                l&aacute;i xe, hoặc c&aacute;c giấy tờ t&ugrave;y th&acirc;n kh&aacute;c để x&aacute;c
+                                định độ tuổi Qu&yacute; Kh&aacute;ch H&agrave;ng.</p>
+                            <p>-&nbsp; &nbsp;Ban Quản L&yacute; Cụm Rạp Chiếu Phim CGV Cinemas c&oacute; quyền kiểm tra
+                                v&agrave; từ chối Qu&yacute; Kh&aacute;ch H&agrave;ng nếu kh&ocirc;ng tu&acirc;n thủ đ&uacute;ng
+                                quy định về độ tuổi.</p>
+                            <p><strong>5.3.&nbsp; H&igrave;nh thức chế t&agrave;i</strong></p>
+                            <p>Phạt tiền từ 60.000.000 đồng đến 80.000.000 đồng đối với h&agrave;nh vi vi phạm quy
+                                định.</p>
+                            <p><strong>6. QUY ĐỊNH VỀ KHUNG GIỜ CHIẾU PHIM CHO TRẺ EM</strong></p>
+                            <p><strong>6.1.&nbsp; Quy định về Khung giờ chiếu phim cho trẻ em</strong></p>
+                            <p>CGV Việt Nam th&ocirc;ng b&aacute;o &aacute;p dụng quy định về <strong>khung giờ chiếu
+                                phim cho trẻ em*</strong> như sau:</p>
+                            <p>(i)&nbsp; &nbsp;Giờ chiếu phim cho trẻ em dưới 13 tuổi tại Cụm Rạp Chiếu Phim CGV Cinemas
+                                kết th&uacute;c trước 22 giờ.</p>
+                            <p>(ii)&nbsp; Giờ chiếu phim cho trẻ em dưới 16 tuổi tại Cụm Rạp Chiếu Phim CGV Cinemas kết
+                                th&uacute;c trước 23 giờ.</p>
+                            <p><strong>6.2.&nbsp;&nbsp;</strong><strong>Lưu &yacute;</strong></p>
+                            <p>-&nbsp; &nbsp; &nbsp; &nbsp;Để thực hiện theo quy định tr&ecirc;n, CGV Việt Nam c&oacute;
+                                quyền y&ecirc;u cầu kh&aacute;ch h&agrave;ng xuất tr&igrave;nh Giấy khai sinh, Căn cước
+                                c&ocirc;ng d&acirc;n, Thẻ học sinh, thẻ sinh
+                                vi&ecirc;n, bằng l&aacute;i xe, hoặc c&aacute;c giấy tờ t&ugrave;y th&acirc;n kh&aacute;c
+                                để x&aacute;c định độ tuổi Qu&yacute; Kh&aacute;ch H&agrave;ng.</p>
+                            <p>-&nbsp; &nbsp; &nbsp; &nbsp;Ban Quản L&yacute; Cụm Rạp Chiếu Phim CGV Cinemas c&oacute;
+                                quyền kiểm tra v&agrave; từ chối Qu&yacute; Kh&aacute;ch H&agrave;ng nếu kh&ocirc;ng tu&acirc;n
+                                thủ đ&uacute;ng quy định về độ tuổi.<strong></strong></p>
+                            <p><strong>6.3.&nbsp; H&igrave;nh thức chế t&agrave;i</strong></p>
+                            <p>Phạt tiền từ 40.000.000 đồng đến 60.000.000 đồng đối với h&agrave;nh vi vi phạm quy định.<strong></strong>
+                            </p>
+                            <h3><strong>7. GI&Aacute; TRỊ GIAO DỊCH V&Agrave; H&Igrave;NH THỨC THANH
+                                TO&Aacute;N</strong></h3>
+                            <p>7.1.&nbsp; Khi Qu&yacute; Kh&aacute;ch H&agrave;ng thực hiện thao t&aacute;c đặt h&agrave;ng
+                                tr&ecirc;n Ứng Dụng, CGV Việt Nam hiểu rằng Qu&yacute; Kh&aacute;ch H&agrave;ng đ&atilde;
+                                đọc kỹ, hiểu r&otilde;, nắm bắt đầy
+                                đủ th&ocirc;ng tin về Dịch Vụ v&agrave; chấp nhận giao dịch.</p>
+                            <p>7.2.&nbsp; CGV Việt Nam c&oacute; quyền từ chối hoặc hủy đơn h&agrave;ng của Qu&yacute;
+                                Kh&aacute;ch H&agrave;ng v&igrave; bất kỳ l&yacute; do g&igrave; li&ecirc;n quan đến lỗi
+                                kỹ thuật, hệ thống một c&aacute;ch kh&aacute;ch
+                                quan v&agrave;o bất kỳ l&uacute;c n&agrave;o. CGV Việt Nam c&oacute; thể hỏi th&ecirc;m
+                                về số điện thoại v&agrave; địa chỉ của qu&yacute; kh&aacute;ch trước khi nhận đơn h&agrave;ng.</p>
+                            <p>7.3.&nbsp; CGV Việt Nam cam kết sẽ cung cấp th&ocirc;ng tin gi&aacute; cả ch&iacute;nh x&aacute;c
+                                nhất cho kh&aacute;ch h&agrave;ng. Tuy nhi&ecirc;n, đ&ocirc;i l&uacute;c vẫn c&oacute;
+                                sai s&oacute;t xảy ra, v&iacute; dụ
+                                như trường hợp Đơn Gi&aacute; kh&ocirc;ng hiển thị ch&iacute;nh x&aacute;c tr&ecirc;n
+                                Ứng Dụng hoặc sai gi&aacute;, t&ugrave;y theo từng trường hợp CGV Việt Nam sẽ li&ecirc;n
+                                hệ hướng dẫn hoặc th&ocirc;ng b&aacute;o
+                                hủy đơn h&agrave;ng đ&oacute; cho Qu&yacute; Kh&aacute;ch H&agrave;ng. CGV Việt Nam cũng
+                                c&oacute; quyền từ chối hoặc hủy bỏ bất kỳ đơn h&agrave;ng n&agrave;o d&ugrave; đơn h&agrave;ng
+                                đ&oacute; đ&atilde; hay chưa được
+                                x&aacute;c nhận hoặc đ&atilde; thanh to&aacute;n.</p>
+                            <p>7.4.&nbsp; Ứng Dụng được t&iacute;ch hợp c&aacute;c h&igrave;nh thức thanh to&aacute;n kh&ocirc;ng
+                                d&ugrave;ng tiền mặt, bao gồm:</p>
+                            <p>(i)&nbsp; &nbsp; &nbsp;Thẻ Thanh to&aacute;n Quốc tế hoặc thẻ Thanh to&aacute;n Nội
+                                địa;</p>
+                            <p>(ii)&nbsp; &nbsp; V&iacute; điện tử (Momo, Zalopay, ShopeePay, Viettelpay);</p>
+                            <p>(iii)&nbsp; &nbsp;C&aacute;c cổng thanh to&aacute;n Payoo, VNPAY v&agrave; ứng dụng QR
+                                code;</p>
+                            <p>(iv)&nbsp; &nbsp;Thẻ qu&agrave; Tặng CGV Cinemas (CGV Gift cards, CGV E-Gift cards),
+                                Phiếu đổi v&eacute; Xem phim CGV Cinemas (CGV vouchers, CGV E-vouchers);</p>
+                            <p>(v)&nbsp; &nbsp;Thẻ CGVIANS v&agrave; thẻ CJ Members; v&agrave;</p>
+                            <p>(vi)&nbsp; Điểm thưởng t&iacute;ch lũy của Th&agrave;nh vi&ecirc;n CGV Việt Nam theo
+                                chương tr&igrave;nh t&iacute;ch lũy điểm thưởng tại từng thời điểm.</p>
+                            <p>Trừ một số trường hợp c&oacute; ghi ch&uacute; ri&ecirc;ng, th&ocirc;ng thường Qu&yacute;
+                                Kh&aacute;ch H&agrave;ng c&oacute; thể lựa chọn một trong c&aacute;c h&igrave;nh thức
+                                thanh to&aacute;n tr&ecirc;n khi tiến h&agrave;nh
+                                đặt v&eacute;.</p>
+                            <p>7.5. CGV Việt Nam c&oacute; quyền từ chối chấp nhận việc thanh to&aacute;n bằng thẻ t&iacute;n
+                                dụng của Qu&yacute; Kh&aacute;ch H&agrave;ng trong một số trường hợp theo quy&ecirc;́t
+                                định của CGV Việt Nam, miễn l&agrave;
+                                CGV Việt Nam tu&acirc;n thủ c&aacute;c hướng dẫn của ng&acirc;n h&agrave;ng li&ecirc;n
+                                quan.</p>
+                            <p>7.6. Để đảm bảo an to&agrave;n thanh to&aacute;n, Qu&yacute; Kh&aacute;ch H&agrave;ng lưu
+                                &yacute;:</p>
+                            <ul>
+                                <li>Chỉ thực hiện thanh toán trực tuy&ecirc;́n tại cửa sổ li&ecirc;n k&ecirc;́t từ CGV
+                                    Việt Nam chuyển đ&ecirc;́n;
+                                </li>
+                                <li>Sử dụng và bảo quản thẻ và th&ocirc;ng tin tài khoản/th&ocirc;ng tin thẻ cẩn
+                                    thận;
+                                </li>
+                                <li>Kh&ocirc;ng cho người khác mượn hoặc sử dụng T&agrave;i Khoản, thẻ th&agrave;nh vi&ecirc;n
+                                    để giao dịch tr&ecirc;n Ứng Dụng. Ngay khi phát hiện giao dịch phát sinh bất
+                                    thường tại Ứng Dụng, Qu&yacute; Khách Hàng
+                                    cần li&ecirc;n hệ ngay với bộ phận chăm s&oacute;c Khách Hàng của CGV Việt Nam để
+                                    được hỗ trợ kịp thời;
+                                </li>
+                                <li>Trong mọi trường hợp, với Thẻ T&iacute;n Dụng/ Thẻ Ghi Nợ Quốc T&ecirc;́, Qu&yacute;
+                                    Khách H&agrave;ng <strong>KH&Ocirc;NG ĐỂ LỘ</strong> d&atilde;y bảo mật CVV/CVC/CSC
+                                    (là m&atilde; số bảo mật, bộ ba k&iacute; tự
+                                    số được in tr&ecirc;n Thẻ);
+                                </li>
+                                <li>Kiểm tra c&aacute;c ứng dụng thanh to&aacute;n của Qu&yacute; Kh&aacute;ch H&agrave;ng
+                                    thường xuy&ecirc;n để đảm bảo tất cả giao dịch qua Ứng Dụng đều nằm trong tầm kiểm
+                                    so&aacute;t.
+                                </li>
+                            </ul>
+                            <h3><strong>8. ĐIỂM THƯỞNG V&Agrave; ĐỔI ĐIỂM</strong></h3>
+                            <p>Quy định về t&iacute;ch lũy và quy đổi điểm thưởng được thực hiện theo chương tr&igrave;nh
+                                khuyến mại của CGV Việt Nam tại từng thời điểm.</p>
+                            <p>CGV Việt Nam khuy&ecirc;́n kh&iacute;ch Qu&yacute; Khách Hàng đăng ký tài khoản th&agrave;nh
+                                vi&ecirc;n tr&ecirc;n Ứng Dụng để tiện theo d&otilde;i lịch sử giao dịch, nhận th&ocirc;ng
+                                tin cập nhật về h&agrave;ng h&oacute;a,
+                                c&aacute;c chương tr&igrave;nh khuy&ecirc;́n mại, hưởng các ưu đ&atilde;i đối với kh&aacute;ch
+                                h&agrave;ng th&acirc;n thi&ecirc;́t</p>
+                            <h3><strong>9. QUY TR&Igrave;NH GIAO DỊCH TRỰC TUYẾN</strong></h3>
+                            <p>Qu&yacute; Kh&aacute;ch H&agrave;ng khi giao dịch trực tuyến phải đăng nhập T&agrave;i
+                                Khoản v&agrave; thực hiện c&aacute;c thao t&aacute;c theo tr&igrave;nh tự sau:</p>
+                            <ul>
+                                <li>Bước 1: Qu&yacute; Kh&aacute;ch H&agrave;ng lựa chọn Dịch Vụ xem phim hoặc sản phẩm,
+                                    dịch vụ kh&aacute;c của CGV Việt Nam.
+                                </li>
+                                <li>Bước 2:</li>
+                            </ul>
+                            <p>-&nbsp; &nbsp; &nbsp;Nếu Kh&aacute;ch H&agrave;ng lựa chọn Dịch Vụ Xem Phim: Qu&yacute;
+                                Kh&aacute;ch H&agrave;ng lựa chọn Bộ Phim theo suất chiếu hoặc theo Cụm Rạm Chiếu Phim
+                                CGV Cinemas; sau đ&oacute; lựa chọn chỗ ngồi.</p>
+                            <p>-&nbsp; &nbsp; &nbsp;Nếu Kh&aacute;ch H&agrave;ng lựa chọn sản phẩm, Dịch Vụ kh&aacute;c:
+                                Qu&yacute; Kh&aacute;ch H&agrave;ng lựa chọn sản phẩm, dịch vụ theo nhu cầu.</p>
+                            <ul>
+                                <li>Bước 3: Thanh to&aacute;n bằng c&aacute;c h&igrave;nh thức thanh to&aacute;n quy
+                                    định tại Điều 7.
+                                </li>
+                                <li>Bước 4: Qu&yacute; Kh&aacute;ch h&agrave;ng nhận X&aacute;c nhận về Dịch Vụ tại Ứng
+                                    Dụng v&agrave; email.
+                                </li>
+                                <li>Bước 5: Qu&yacute; Kh&aacute;ch h&agrave;ng cung cấp X&aacute;c nhận về Dịch Vụ v&agrave;
+                                    c&aacute;c th&ocirc;ng tin T&agrave;i Khoản d&ugrave;ng đ&atilde; thực hiện giao
+                                    dịch để nhận V&eacute; Xem Phim vật l&yacute;
+                                    v&agrave;/hoặc sản phẩm, dịch vụ kh&aacute;c tại Cụm Rạp Chiếu Phim CGV Cinemas. Qu&yacute;
+                                    Kh&aacute;ch H&agrave;ng chỉ c&oacute; thể sử dụng Dịch Vụ tại Cụm Rạp Chiếu Phim
+                                    CGV Cinemas đ&atilde; lựa chọn. Nếu Qu&yacute;
+                                    Kh&aacute;ch H&agrave;ng kh&ocirc;ng cung cấp được th&ocirc;ng tin T&agrave;i Khoản
+                                    v&agrave;/hoặc X&aacute;c nhận về Dịch Vụ, CGV Việt Nam c&oacute; quyền từ chối cung
+                                    cấp Dịch Vụ li&ecirc;n quan.
+                                </li>
+                            </ul>
+                            <h3><strong>10. </strong><strong>THAY</strong><strong> ĐỔI, HỦY BỎ </strong><strong>GIAO
+                                DỊCH TRỰC TUYẾN TR&Ecirc;N ỨNG DỤNG</strong><strong></strong></h3>
+                            <p>10.1.&nbsp;&nbsp;&nbsp; Hiện tại CGV Việt Nam đ&atilde; ra mắt chức năng &ldquo;Ho&agrave;n
+                                v&eacute; chủ động&rdquo;, qua chức năng n&agrave;y của CGV Việt Nam, Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng c&oacute; thể hủy suất
+                                chiếu đ&atilde; đặt trước v&agrave; đặt lại v&agrave;o dịp kh&aacute;c thuận tiện hơn m&agrave;
+                                kh&ocirc;ng cần phải li&ecirc;n lạc với đội ngũ hỗ trợ kh&aacute;ch h&agrave;ng của CGV
+                                Việt Nam. Kh&aacute;ch h&agrave;ng
+                                c&oacute; thể tham khảo th&ecirc;m về điều kiện v&agrave; quy định <a
+                                        href="#"
+                                        target="_blank"><strong>tại&nbsp;</strong></a><a
+                                        href="#"
+                                        target="_blank"><strong>đ&acirc;y</strong></a>.</p>
+                            <p>CGV Việt Nam chưa hỗ trợ chức năng hủy hoặc thay đổi th&ocirc;ng tin v&eacute; đ&atilde;
+                                thanh to&aacute;n th&agrave;nh c&ocirc;ng nếu Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng
+                                thỏa điều kiện sử dụng chức năng &ldquo;Ho&agrave;n
+                                v&eacute; chủ động&rdquo;.</p>
+                            <p>10.2.&nbsp;&nbsp;&nbsp; Chức năng &ldquo;Ho&agrave;n v&eacute; chủ động&rdquo; chỉ
+                                &aacute;p dụng cho dịch vụ xem phim; đối với c&aacute;c sản phẩm v&agrave; dịch vụ kh&aacute;c
+                                của CGV Việt Nam tr&ecirc;n Ứng Dụng, CGV
+                                Việt Nam hiện chưa hỗ trợ c&aacute;c chức năng n&agrave;y v&agrave; c&aacute;c chức năng
+                                tương tự.</p>
+                            <p><strong>11. XỬ L&Yacute; GIAO DỊCH LỖI</strong></p>
+                            <p>11.1.&nbsp;&nbsp;&nbsp; Ứng Dụng của CGV Việt Nam c&oacute; li&ecirc;n kết với rất nhiều
+                                đối t&aacute;c cung cấp dịch vụ thanh to&aacute;n, bao gồm c&aacute;c ng&acirc;n h&agrave;ng
+                                nội địa v&agrave; c&aacute;c Tổ chức
+                                t&iacute;n dụng quốc tế, c&aacute;c đơn vị cung cấp dịch vụ trung gian thanh to&aacute;n
+                                qua Cổng thanh to&aacute;n, V&iacute; điện tử. Việc thanh to&aacute;n th&agrave;nh c&ocirc;ng
+                                hay kh&ocirc;ng phụ thuộc rất nhiều
+                                v&agrave;o kết nối mạng của Qu&yacute; Kh&aacute;ch H&agrave;ng, việc truyền dẫn, nhận v&agrave;
+                                trả t&iacute;n hiệu của đối t&aacute;c cung cấp dịch vụ thanh to&aacute;n n&ecirc;u tr&ecirc;n.
+                                CGV Việt Nam <strong>chỉ thực hiện ho&agrave;n tiền</strong> trong trường hợp giao dịch,
+                                t&agrave;i khoản của Qu&yacute; Kh&aacute;ch H&agrave;ng đ&atilde; bị trừ tiền nhưng hệ
+                                thống của CGV Việt Nam kh&ocirc;ng ghi nhận Dịch Vụ ph&aacute;t sinh đ&oacute;, v&agrave;
+                                Qu&yacute;
+                                Kh&aacute;ch H&agrave;ng kh&ocirc;ng nhận được X&aacute;c nhận về Dịch Vụ th&agrave;nh c&ocirc;ng.
+                                Khi đ&oacute;, Qu&yacute; Kh&aacute;ch H&agrave;ng vui l&ograve;ng li&ecirc;n hệ đường d&acirc;y
+                                n&oacute;ng: 1900 6017
+                                (từ 8:00 đến 22:00 tất cả c&aacute;c ng&agrave;y trong tuần) hoặc c&oacute; thể li&ecirc;n
+                                hệ với CGV Việt Nam qua địa chỉ email: hoidap@cgv.vn để được hỗ trợ.</p>
+                            <p>11.2.&nbsp;&nbsp;&nbsp; Sau khi đ&atilde; x&aacute;c nhận c&aacute;c th&ocirc;ng tin do
+                                Qu&yacute; Kh&aacute;ch H&agrave;ng cung cấp về giao dịch kh&ocirc;ng th&agrave;nh c&ocirc;ng,
+                                t&ugrave;y theo từng loại t&agrave;i
+                                khoản Qu&yacute; Kh&aacute;ch H&agrave;ng sử dụng m&agrave; việc ho&agrave;n tiền sẽ c&oacute;
+                                thời gian kh&aacute;c nhau:</p>
+                            <ul>
+                                <li>Thẻ Ghi nợ/ Thẻ thanh to&aacute;n Nội địa: ho&agrave;n tiền trong 07-15 ng&agrave;y
+                                    (kh&ocirc;ng t&iacute;nh Ng&agrave;y Thứ Bảy, Ng&agrave;y Chủ Nhật v&agrave; ng&agrave;y
+                                    nghỉ Lễ, Tết theo quy định của ph&aacute;p
+                                    luật Lao động).
+                                </li>
+                                <li>Thẻ T&iacute;n Dụng/ Thẻ Ghi Nợ Quốc Tế, Thẻ Thanh To&aacute;n Quốc tế: ho&agrave;n
+                                    tiền trong 07-30 ng&agrave;y (kh&ocirc;ng t&iacute;nh Ng&agrave;y Thứ Bảy, Ng&agrave;y
+                                    Chủ Nhật v&agrave; ng&agrave;y nghỉ Lễ, Tết
+                                    theo quy định của ph&aacute;p luật Lao động).
+                                </li>
+                                <li>V&iacute; Điện Tử: sẽ được ho&agrave;n trực tiếp v&agrave;o số dư tr&ecirc;n v&iacute;
+                                    trong v&ograve;ng 05-10 ng&agrave;y (kh&ocirc;ng t&iacute;nh Ng&agrave;y Thứ Bảy, Ng&agrave;y
+                                    Chủ Nhật v&agrave; ng&agrave;y nghỉ
+                                    Lễ, Tết theo quy định của ph&aacute;p luật Lao động). C&aacute;c trường hợp thanh to&aacute;n
+                                    bằng v&iacute; nhưng th&ocirc;ng qua li&ecirc;n kết thẻ sẽ tương tự trường hợp Thẻ
+                                    Nội Địa V&agrave; Quốc Tế như tr&ecirc;n.
+                                </li>
+                            </ul>
+                            <h3><strong>12. QUYỀN SỞ HỮU TR&Iacute; TUỆ</strong></h3>
+                            <p>Mọi quyền sở hữu tr&iacute; tuệ (đ&atilde; đăng k&yacute; hoặc chưa đăng k&yacute;), nội
+                                dung th&ocirc;ng tin v&agrave; tất cả c&aacute;c thiết kế, văn bản, đồ họa, phần mềm, h&igrave;nh
+                                ảnh, video, &acirc;m nhạc, &acirc;m
+                                thanh, bi&ecirc;n dịch phần mềm, m&atilde; nguồn v&agrave; phần mềm cơ bản đều l&agrave;
+                                t&agrave;i sản của CGV Việt Nam. To&agrave;n bộ nội dung của Ứng Dụng được bảo vệ theo
+                                ph&aacute;p luật sở hữu tr&iacute; tuệ
+                                của Việt Nam v&agrave; c&aacute;c c&ocirc;ng ước, điều ước quốc tế m&agrave; Việt Nam
+                                tham gia hoặc l&agrave; th&agrave;nh vi&ecirc;n.</p>
+                            <h3><strong>13. LUẬT &Aacute;P DỤNG V&Agrave; GIẢI QUYẾT TRANH CHẤP</strong></h3>
+                            <p>C&aacute;c điều kiện, điều khoản v&agrave; nội dung của Điều Khoản Giao Dịch được điều
+                                chỉnh v&agrave; giải th&iacute;ch theo luật ph&aacute;p Việt Nam. C&aacute;c tranh chấp
+                                ph&aacute;t sinh từ hoặc li&ecirc;n quan đến
+                                (c&aacute;c) giao dịch thực hiện tại Ứng Dụng n&agrave;y sẽ được ưu ti&ecirc;n giải
+                                quyết th&ocirc;ng qua thương lượng, h&ograve;a giải. Trường hợp c&aacute;c b&ecirc;n kh&ocirc;ng
+                                tự giải quyết, tranh chấp sẽ được
+                                đưa ra x&eacute;t xử tại T&ograve;a &aacute;n cấp c&oacute; thẩm quyền của Việt Nam.</p>
+                            <h3><strong>14. QUY ĐỊNH VỀ BẢO MẬT</strong></h3>
+                            <p>CGV Việt Nam coi trọng việc bảo mật th&ocirc;ng tin v&agrave; sử dụng c&aacute;c biện ph&aacute;p
+                                tốt nhất bảo vệ th&ocirc;ng tin v&agrave; việc thanh to&aacute;n của Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng. Th&ocirc;ng tin
+                                của Qu&yacute; Kh&aacute;ch H&agrave;ng trong qu&aacute; tr&igrave;nh thanh to&aacute;n
+                                sẽ được m&atilde; h&oacute;a để đảm bảo an to&agrave;n. Sau khi Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng ho&agrave;n th&agrave;nh qu&aacute;
+                                tr&igrave;nh đặt h&agrave;ng, Qu&yacute; Kh&aacute;ch H&agrave;ng sẽ tho&aacute;t khỏi
+                                chế độ an to&agrave;n.</p>
+                            <p>Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng được sử dụng bất kỳ chương tr&igrave;nh,
+                                c&ocirc;ng cụ hay h&igrave;nh thức n&agrave;o kh&aacute;c để can thiệp v&agrave;o hệ
+                                thống hay l&agrave;m thay đổi cấu tr&uacute;c
+                                dữ liệu. Qu&yacute; Kh&aacute;ch H&agrave;ng <strong>KH&Ocirc;NG ĐƯỢC</strong> ph&aacute;t
+                                t&aacute;n, truyền b&aacute; hay cổ vũ cho bất kỳ hoạt động n&agrave;o nhằm can thiệp,
+                                ph&aacute; hoại hay x&acirc;m nhập v&agrave;o
+                                dữ liệu của hệ thống Ứng Dụng. C&aacute; nh&acirc;n hay tổ chức vi phạm sẽ bị tước bỏ
+                                mọi quyền lợi cũng như sẽ bị truy tố trước ph&aacute;p luật nếu cần thiết. Mọi th&ocirc;ng
+                                tin giao dịch sẽ được bảo mật trừ trường
+                                hợp buộc phải cung cấp theo y&ecirc;u cầu của t&ograve;a &aacute;n, (c&aacute;c) cơ quan
+                                c&oacute; thẩm quyền hoặc theo quy định của ph&aacute;p luật.</p>
+                            <h3><strong>15.</strong> <strong>GIẢI QUYẾT HẬU QUẢ DO LỖI NHẬP SAI TH&Ocirc;NG TIN</strong>
+                            </h3>
+                            <p>Qu&yacute; Kh&aacute;ch h&agrave;ng c&oacute; tr&aacute;ch nhiệm cung cấp th&ocirc;ng tin
+                                đầy đủ v&agrave; ch&iacute;nh x&aacute;c khi tham gia giao dịch tr&ecirc;n Ứng Dụng.
+                                Trong trường hợp Qu&yacute; Kh&aacute;ch H&agrave;ng
+                                nhập sai th&ocirc;ng tin tr&ecirc;n Ứng Dụng, CGV Việt Nam c&oacute; quyền từ chối thực
+                                hiện giao dịch.</p>
+                            <p>Ngo&agrave;i ra, trong mọi trường hợp, Qu&yacute; Kh&aacute;ch H&agrave;ng đều c&oacute;
+                                quyền đơn phương chấm dứt giao dịch nếu đ&atilde; th&ocirc;ng b&aacute;o cho CGV Việt
+                                Nam qua đường d&acirc;y n&oacute;ng: 1900 6017.
+                                Hệ quả của chấm dứt giao dịch sẽ được CGV Việt Nam th&ocirc;ng b&aacute;o r&otilde; đến
+                                Qu&yacute; Kh&aacute;ch H&agrave;ng.</p>
+                            <h3><strong>16. QUY ĐỊNH CHẤM DỨT THỎA THUẬN</strong></h3>
+                            <p>Trong trường hợp c&oacute; bất kỳ thiệt hại n&agrave;o ph&aacute;t sinh do việc vi phạm
+                                quy định sử dụng Ứng Dụng, CGV Việt Nam c&oacute; quyền đ&igrave;nh chỉ hoặc kh&oacute;a
+                                t&agrave;i khoản của Qu&yacute; Kh&aacute;ch
+                                H&agrave;ng vĩnh viễn, t&ugrave;y v&agrave;o mức độ nghi&ecirc;m trọng hoặc mức độ
+                                thường xuy&ecirc;n của vi phạm. Nếu Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng h&agrave;i
+                                l&ograve;ng với Ứng Dụng hoặc bất kỳ
+                                điều khoản, điều kiện, quy tắc, ch&iacute;nh s&aacute;ch, hướng dẫn, hoặc c&aacute;ch
+                                thức vận h&agrave;nh của CGV Việt Nam th&igrave; biện ph&aacute;p khắc phục duy nhất l&agrave;
+                                ngưng sử dụng Dịch Vụ.</p>
+                            <p>&nbsp;</p>
+                            <p><strong>QU&Yacute; KH&Aacute;CH H&Agrave;NG LƯU &Yacute; CHỈ THỰC HIỆN GIAO DỊCH KHI CHẤP
+                                NHẬN V&Agrave; HIỂU R&Otilde; NHỮNG QUY ĐỊNH TR&Ecirc;N. </strong></p>
+                            <p>&nbsp;</p>
+                            <p>Khi cần hỗ trợ th&ecirc;m th&ocirc;ng tin, Qu&yacute; Kh&aacute;ch H&agrave;ng vui l&ograve;ng
+                                tham khảo tại <strong><a href="#"
+                                                         target="_blank">Đ&Acirc;Y</a>.</strong></p>
+                            <div>
+                                <div>
+                                    <div id="_com_1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'ra'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.9.2'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    // commons-io
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+// common-fileupload
+    // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
+    implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.5'
+//  jstl maven 1.2
+    // https://mvnrepository.com/artifact/javax.servlet/jstl
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+// mysql-connector : mở luồng thư viện connection
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+// spring-frameword
+    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.18'
+// thymeleaf
+    // https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring5
+    implementation group: 'org.thymeleaf', name: 'thymeleaf-spring5', version: '3.0.11.RELEASE'
+// mã hoá mật khẩu
+    // https://mvnrepository.com/artifact/org.mindrot/jbcrypt
+    implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
+// vadidation
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+// hibernate validator
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.0.Final'
+// model mapper
+    // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.1'
+// lombok
+    implementation 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+}
+
+test {
+    useJUnitPlatform()
+}

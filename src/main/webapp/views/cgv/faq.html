@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" cms-page-view cms-faq">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>F.A.Q</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div class="std">
+                        <div class="tab-content" id="tabs-1">
+                            <div class="title-faq">
+                                <h2>Phim</h2>
+                            </div>
+                            <div class="accordion">
+                                <h3>Ph&acirc;n loại phim P, K, T13, T16, T18 l&agrave; g&igrave;?</h3>
+                                <div>
+                                    <p>Căn cứ Luật Điện ảnh của Bộ trưởng Bộ Văn H&oacute;a, Thể thao, Du lịch ng&agrave;y
+                                        15/06/2022. CGV th&ocirc;ng b&aacute;o ti&ecirc;u ch&iacute; ph&acirc;n loại
+                                        phim theo lứa tuổi, như sau:</p>
+                                    <p>o P: Phim được ph&eacute;p phổ biến đến người xem ở mọi độ tuổi.</p>
+                                    <p>o K: Phim được phổ biến đến người xem dưới 13 tuổi v&agrave; c&oacute; người bảo
+                                        hộ đi k&egrave;m.</p>
+                                    <p>o C13 (T13): Phim được phổ biến đến người xem từ đủ 13 tuổi trở l&ecirc;n
+                                        (13+).</p>
+                                    <p>o C16 (T16): Phim được phổ biến đến người xem từ đủ 16 tuổi trở l&ecirc;n
+                                        (16+).</p>
+                                    <p>o C18 (T18): Phim được phổ biến đến người xem từ đủ 18 tuổi trở l&ecirc;n
+                                        (18+).</p>
+                                    <p>o C: Phim kh&ocirc;ng được ph&eacute;p phổ biến.</p>
+                                    <p>- Kh&aacute;n giả khi xem phim thuộc c&aacute;c ph&acirc;n loại tr&ecirc;n vui l&ograve;ng
+                                        mang theo giấy tờ t&ugrave;y th&acirc;n c&oacute; ảnh hoặc h&igrave;nh ảnh của
+                                        giấy tờ t&ugrave;y th&acirc;n c&oacute; ảnh
+                                        nhận diện v&agrave; ng&agrave;y th&aacute;ng năm sinh để đảm bảo việc tu&acirc;n
+                                        thủ theo quy định.</p>
+                                    <p>o C13 (T13): Giấy khai sinh, thẻ học sinh, thẻ bảo hiểm, thẻ thư viện, Hộ chiếu,&hellip;
+                                        c&ograve;n hiệu lực.</p>
+                                    <p>o C16 (T16): CCCD, Thẻ học sinh, Hộ chiếu, Thẻ thư viện,&hellip; c&ograve;n hiệu
+                                        lực.</p>
+                                    <p>o C18 (T18): CCCD, Thẻ học sinh sinh vi&ecirc;n, Bằng l&aacute;i xe, Hộ chiếu,&hellip;
+                                        c&ograve;n hiệu lực.</p>
+                                    <p>- Kh&aacute;ch h&agrave;ng vui l&ograve;ng chứng thực được độ tuổi ph&ugrave; hợp
+                                        với phim được ph&acirc;n loại như tr&ecirc;n. CGV c&oacute; quyền từ chối việc b&aacute;n
+                                        v&eacute; hoặc v&agrave;o ph&ograve;ng
+                                        chiếu nếu kh&aacute;ch h&agrave;ng kh&ocirc;ng tu&acirc;n thủ đ&uacute;ng theo
+                                        quy định.</p>
+                                </div>
+                                <h3>L&agrave;m sao để ph&acirc;n biệt phim d&agrave;nh cho mọi lứa tuổi v&agrave; phim
+                                    kh&ocirc;ng d&agrave;nh cho trẻ em dưới 13/16/18 tuổi?</h3>
+                                <p>Tr&ecirc;n &aacute;p ph&iacute;ch quảng c&aacute;o/website, biểu tượng P thể hiện
+                                    phim d&agrave;nh cho mọi lứa tuổi v&agrave; biểu tượng C13/C16/C18 thể hiện phim d&agrave;nh
+                                    cho kh&aacute;ch h&agrave;ng c&oacute; độ
+                                    tuổi tuần tự từ 13/16/18 tuổi trở l&ecirc;n.</p>
+                                <h3>Suất Chiếu Đặc Biệt l&agrave; g&igrave;?</h3>
+                                <p>Suất Chiếu Đặc Biệt l&agrave; những suất chiếu được ra rạp trước ng&agrave;y c&ocirc;ng
+                                    chiếu ch&iacute;nh thức</p>
+                                <h3>Khởi Chiếu Sớm l&agrave; g&igrave;?</h3>
+                                <p>Khởi Chiếu Sớm l&agrave; bộ phim được ch&iacute;nh thức ra rạp trước ng&agrave;y khởi
+                                    chiếu đ&atilde; định</p>
+                            </div>
+                        </div>
+                        <!-- end tabs-1 -->
+                        <div class="tab-content" id="tabs-2">
+                            <div class="title-faq">
+                                <h2>Bắp Nước &amp; Thực Phẩm tại rạp</h2>
+                            </div>
+                            <div class="accordion">
+                                <h3>Thức ăn, đồ uống mua b&ecirc;n ngo&agrave;i c&oacute; được mang v&agrave;o rạp CGV
+                                    kh&ocirc;ng?</h3>
+                                <div>
+                                    <p>Nhằm mục đ&iacute;ch bảo vệ trải nghiệm của kh&aacute;ch h&agrave;ng v&agrave;
+                                        bảo đảm vệ sinh an to&agrave;n thực phẩm, qu&iacute; kh&aacute;ch vui l&ograve;ng
+                                        chỉ sử dụng đồ ăn thức uống mua tại rạp CGV trong
+                                        phạm vi khu vực hoạt động của CGV bao gồm sảnh v&agrave; ph&ograve;ng chiếu.</p>
+                                    <p>Ngo&agrave;i ra, bạn cũng kh&ocirc;ng được h&uacute;t thuốc, d&ugrave;ng kẹo cao
+                                        su, kh&ocirc;ng quay phim, chụp h&igrave;nh, kh&ocirc;ng nghẹ-gọi điện thoại, kh&ocirc;ng
+                                        n&oacute;i chuyện trong rạp chiếu phim.</p>
+                                    <p>Tất cả những qui định tr&ecirc;n để đảm bảo c&aacute;c bạn c&oacute; thể thưởng
+                                        thức phim một c&aacute;ch trọn vẹn v&agrave; tuyệt vời nhất.</p>
+                                </div>
+                                <h3>C&oacute; bao nhi&ecirc;u vị bắp tại CGV?</h3>
+                                <div>
+                                    <p>C&oacute; 3 loại : Ngọt, ph&ocirc; mai v&agrave; caramel. Bạn c&oacute; thể
+                                        thưởng thức vị ngọt, ph&ocirc; mai , caramel hoặc Mix hai vị t&ugrave;y
+                                        chọn.</p>
+                                </div>
+                                <h3>T&ocirc;i c&oacute; thể mua bắp nước trực tuyến được kh&ocirc;ng?</h3>
+                                <div>
+                                    <p>Được. Bạn c&oacute; thể mua My Combo, CGV Combo v&agrave; c&aacute;c sản phẩm bắp
+                                        nước trực tuyến v&agrave; nhận sản phẩm tại rạp v&agrave;o ng&agrave;y xem
+                                        phim.</p>
+                                    <p>Ngo&agrave;i ra, CGV đ&atilde; c&oacute; chức năng mua bắp nước kh&ocirc;ng cần
+                                        mua v&eacute; tại CGV Store.</p>
+                                </div>
+                                <h3>C&oacute; bao nhi&ecirc;u loại k&iacute;ch cỡ bắp v&agrave; nước?</h3>
+                                <div>
+                                    <p>Tại CGV c&aacute;c bạn c&oacute; rất nhiều lựa chọn bắp nước:</p>
+                                    <p>- 2 k&iacute;ch cỡ ly: Lớn (22oz) - Si&ecirc;u lớn (32oz)</p>
+                                    <p>- 2 k&iacute;ch cỡ bắp: Vừa (32oz) v&agrave; Lớn (44oz)</p>
+                                    <p>Ngo&agrave;i ra, CGV c&ograve;n c&oacute; c&aacute;c combo bắp nước ph&ugrave;
+                                        hợp cho c&aacute;c nh&oacute;m kh&aacute;ch h&agrave;ng:</p>
+                                    <p>- My Combo: 1 bắp lớn + 1 nước si&ecirc;u lớn</p>
+                                    <p>- CGV Combo: 1 bắp lớn + 2 nước si&ecirc;u lớn</p>
+                                    <p>- My Snack Combo : 1 bắp lớn + 1 nước si&ecirc;u lớn + 1 Snack</p>
+                                    <p>- CGV Snack Combo : 1 bắp lớn + 2 nước si&ecirc;u lớn + 1 Snack</p>
+                                </div>
+                                <h3>T&ocirc;i muốn n&acirc;ng cấp k&iacute;ch thước của bắp v&agrave; nước trong combo c&oacute;
+                                    được kh&ocirc;ng?</h3>
+                                <div>
+                                    <p>Được. Bạn c&oacute; thể th&ecirc;m tiền tại quầy để n&acirc;ng cấp cho phần bắp
+                                        hoặc nước trong combo l&ecirc;n k&iacute;ch cỡ lớn hơn:</p>
+                                    <p>- Th&ecirc;m 3,000 để n&acirc;ng cấp bắp vừa th&agrave;nh bắp lớn.</p>
+                                    <p>- Th&ecirc;m 3,000 để n&acirc;ng cấp nước lớn th&agrave;nh 2 nước si&ecirc;u lớn
+                                        cho mỗi ly.</p>
+                                </div>
+                                <h3>T&ocirc;i muốn n&acirc;ng cấp bắp ngọt th&agrave;nh vị ph&ocirc; mai/caramel c&oacute;
+                                    được kh&ocirc;ng?</h3>
+                                <div>
+                                    <p>&bull; Được. Bạn c&oacute; thể th&ecirc;m tiền tại quầy để n&acirc;ng cấp bắp vị
+                                        ngọt th&agrave;nh vị ph&ocirc; mai/caramel:</p>
+                                    <p>-Từ bắp vị ngọt sang bắp vị Caramel phụ thu 5.000.</p>
+                                    <p>-Từ bắp vị ngọt sang bắp vị ph&ocirc; mai phụ thu 10.000.</p>
+                                    <p>Khi Mua Online:</p>
+                                    <p>- Đối với CGV&amp;MY Combo: miễn ph&iacute; đổi vị sang bắp Caramel.</p>
+                                    <p>- Đối với Combo C&oacute; Ly Nh&acirc;n Vật: miễn ph&iacute; đổi vị sang bắp
+                                        Caramel.</p>
+                                    <p>Lưu &yacute; : Kh&ocirc;ng &aacute;p dụng chung với c&aacute;c combo khuyến m&atilde;i
+                                        kh&aacute;c.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tabs-2 -->
+                        <div class="tab-content" id="tabs-3">
+                            <div class="title-faq">
+                                <h2>Voucher Phim</h2>
+                            </div>
+                            <div class="accordion">
+                                <h3>CGV c&oacute; c&aacute;c loại voucher n&agrave;o?</h3>
+                                <div>
+                                    <p>CGV ph&aacute;t h&agrave;nh nhiều loại voucher kh&aacute;c nhau:</p>
+                                    <p>- 2D Voucher</p>
+                                    <p>- 3D Voucher</p>
+                                    <p>- 4DX Voucher</p>
+                                    <p>- IMAX Voucher</p>
+                                    <p>- L'amour Voucher</p>
+                                    <p>- Gold Class Voucher</p>
+                                    <p>- Royal Voucher</p>
+                                    <p>- Distribution Voucher</p>
+                                    <p>- Honor Voucher</p>
+                                    <p>Mỗi loại voucher sẽ c&oacute; gi&aacute; trị quy đổi v&agrave; thời hạn sử dụng
+                                        kh&aacute;c nhau. Bạn vui l&ograve;ng đọc kỹ c&aacute;c điều khoản sử dụng ở mặt
+                                        sau voucher để biết th&ecirc;m chi tiết.</p>
+                                </div>
+                                <h3>Việc mua voucher hoặc sử dụng voucher để đổi v&eacute; c&oacute; được t&iacute;ch
+                                    điểm kh&ocirc;ng?</h3>
+                                <div>
+                                    <p>Rất tiếc c&aacute;c giao dịch li&ecirc;n quan đến voucher sẽ kh&ocirc;ng được t&iacute;ch
+                                        điểm.</p>
+                                </div>
+                                <h3>T&ocirc;i c&oacute; thể thanh to&aacute;n trực tuyến bằng voucher kh&ocirc;ng?</h3>
+                                <div>
+                                    <p>C&oacute;. Bạn c&oacute; thể đăng k&yacute; m&atilde; voucher v&agrave; PIN v&agrave;o
+                                        t&agrave;i khoản th&agrave;nh vi&ecirc;n CGV, v&agrave; sử dụng voucher như một
+                                        h&igrave;nh thức thanh to&aacute;n trực tuyến.
+                                        Voucher sau khi được đăng k&yacute; v&agrave;o t&agrave;i khoản th&agrave;nh vi&ecirc;n
+                                        c&oacute; thể sử dụng thẻ th&agrave;nh vi&ecirc;n để quy đổi m&agrave; kh&ocirc;ng
+                                        cần voucher giấy.</p>
+                                </div>
+                                <h3>Định nghĩa về gi&aacute; v&eacute; "ng&agrave;y trong tuần" v&agrave; "ng&agrave;y
+                                    cuối tuần" tại CGV l&agrave; g&igrave;?</h3>
+                                <div>
+                                    <p>Ng&agrave;y trong tuần t&iacute;nh từ thứ 2 tới thứ 5.</p>
+                                    <p>Ng&agrave;y cuối tuần t&iacute;nh từ thứ 6 tới chủ nhật.</p>
+                                </div>
+                                <h3>Mua V&eacute; Nh&oacute;m (Group Sales) l&agrave; g&igrave;?</h3>
+                                <div>
+                                    <p>Mua V&eacute; Nh&oacute;m l&agrave; chương tr&igrave;nh b&aacute;n v&eacute; số
+                                        lượng lớn với gi&aacute; v&eacute; ưu đ&atilde;i so với mua v&eacute; lẻ th&ocirc;ng
+                                        thường (tối thiểu 10 v&eacute;). V&eacute; nh&oacute;m
+                                        được b&aacute;n dưới dạng voucher, hoặc thẻ qu&agrave; tặng,... Bạn c&oacute;
+                                        thể li&ecirc;n hệ&nbsp;<span>bộ phận B&aacute;n V&eacute; Nh&oacute;m (Group Sales) để biết th&ecirc;m th&ocirc;ng tin:&nbsp;</span><strong>+84-028-3822-0333.</strong>
+                                    </p>
+                                    <h3>Kh&aacute;ch h&agrave;ng c&oacute; thể d&ugrave;ng điễm t&iacute;ch lũy mua
+                                        Voucher được kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Rất tiếc, giao dịch mua voucher sẽ kh&ocirc;ng hỗ trợ thanh to&aacute;n bằng
+                                            điểm thưởng</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-3 -->
+                            <div class="tab-content" id="tabs-4">
+                                <div class="title-faq">
+                                    <h2>Thẻ qu&agrave; tặng</h2>
+                                </div>
+                                <div class="accordion">
+                                    <h3>Thẻ qu&agrave; tặng CGV l&agrave; g&igrave; v&agrave; c&oacute; gi&aacute; trị
+                                        sử dụng đến khi n&agrave;o?</h3>
+                                    <div>
+                                        <p>Thẻ qu&agrave; tặng c&oacute; thể được d&ugrave;ng để mua v&eacute; xem phim,
+                                            bắp nước tại c&aacute;c rạp CGV tr&ecirc;n to&agrave;n quốc v&agrave; c&oacute;
+                                            thể d&ugrave;ng để thanh to&aacute;n khi mua v&eacute;
+                                            trực tuyến. Thẻ c&oacute; c&aacute;c mệnh gi&aacute; 300,000 VNĐ, 500,000
+                                            VNĐ hoặc 1,000,000. Bạn c&oacute; thể mua thẻ qu&agrave; tặng tại c&aacute;c
+                                            rạp CGV hoặc tại website với mệnh gi&aacute; thấp nhất
+                                            l&agrave; 300,000 VNĐ v&agrave; c&oacute; gi&aacute; trị sử dụng trong v&ograve;ng
+                                            1 năm kể từ ng&agrave;y k&iacute;ch hoạt. Thẻ c&oacute; thể nạp th&ecirc;m
+                                            tiền để tiếp tục sử dụng v&agrave; gia hạn.</p>
+                                        <p>Tuy nhi&ecirc;n, thẻ qu&agrave; tặng được ho&agrave;n lại khi sử dụng t&iacute;nh
+                                            năng ho&agrave;n v&eacute; chỉ c&oacute; hạn sử dụng 1 th&aacute;ng v&agrave;
+                                            kh&ocirc;ng thể nạp tiền để sử dụng v&agrave; gia
+                                            hạn.</p>
+                                    </div>
+                                    <h3>Thẻ của t&ocirc;i c&oacute; được gia hạn kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Thẻ qu&agrave; tặng c&oacute; thể được nạp th&ecirc;m tiền v&agrave; c&oacute;
+                                            thể gia hạn 1 năm t&iacute;nh từ ng&agrave;y nạp tiền cuối c&ugrave;ng.</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; được t&iacute;ch điểm với thẻ qu&agrave; tặng
+                                        kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>- C&oacute;, nếu bạn sử dụng thẻ qu&agrave; tặng để thanh to&aacute;n v&agrave;
+                                            xuất tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n, hoặc t&iacute;ch điểm tự động
+                                            khi mua v&eacute; trực tuyến.<br/>- Kh&ocirc;ng,
+                                            nếu bạn mua thẻ qu&agrave; tặng hoặc nạp th&ecirc;m tiền v&agrave;o thẻ.</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; thể thanh to&aacute;n trực tuyến bằng thẻ qu&agrave; tặng kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>C&oacute;. Bạn c&oacute; thể đăng k&yacute; m&atilde; thẻ qu&agrave; tặng v&agrave;
+                                            PIN v&agrave;o t&agrave;i khoản th&agrave;nh vi&ecirc;n CGV, v&agrave; sử
+                                            dụng thẻ qu&agrave; tặng như một h&igrave;nh thức
+                                            thanh to&aacute;n trực tuyến. Thẻ qu&agrave; tặng sau khi được đăng k&yacute;
+                                            v&agrave;o t&agrave;i khoản th&agrave;nh vi&ecirc;n c&oacute; thể sử dụng
+                                            thẻ th&agrave;nh vi&ecirc;n để quy đổi m&agrave; kh&ocirc;ng
+                                            cần thẻ cứng.</p>
+                                    </div>
+                                    <h3>Nếu t&ocirc;i kh&ocirc;ng d&ugrave;ng hết số tiền sau khi thẻ qu&agrave; tặng
+                                        hết hạn th&igrave; sao?</h3>
+                                    <div>
+                                        <p>Rất tiếc số dư của thẻ qu&agrave; tặng sẽ bị x&oacute;a ngay sau khi thẻ qu&agrave;
+                                            tặng hết hạn</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; thể xuất h&oacute;a đơn đỏ khi mua thẻ qu&agrave; tặng được
+                                        kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Rất tiếc ch&uacute;ng t&ocirc;i kh&ocirc;ng xuất h&oacute;a đơn đỏ cho c&aacute;c
+                                            giao dịch tại CGV. Qu&yacute; kh&aacute;ch c&oacute; thể y&ecirc;u cầu xuất
+                                            h&oacute;a đơn trong qu&aacute; tr&igrave;nh sử dụng
+                                            thẻ qu&agrave; tặng.</p>
+                                    </div>
+                                    <h3>Kh&aacute;ch h&agrave;ng c&oacute; thể d&ugrave;ng điểm thưởng mua thẻ qu&agrave;
+                                        tặng được kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Rất tiếc, giao dịch mua thẻ qu&agrave; tặng sẽ kh&ocirc;ng hỗ trợ thanh to&aacute;n
+                                            bằng điểm thưởng.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-4 -->
+                            <div class="tab-content" id="tabs-5">
+                                <div class="title-faq">
+                                    <h2>Chương Tr&igrave;nh Th&agrave;nh Vi&ecirc;n</h2>
+                                </div>
+                                <div class="accordion">
+                                    <h3>Chương tr&igrave;nh th&agrave;nh vi&ecirc;n CGV l&agrave; g&igrave;?</h3>
+                                    <div>
+                                        <p>Đ&acirc;y l&agrave; chương tr&igrave;nh mang đến những ưu đ&atilde;i đặc
+                                            quyền d&agrave;nh ri&ecirc;ng cho th&agrave;nh vi&ecirc;n khi trải nghiệm
+                                            dịch vụ giải tr&iacute; điện ảnh tại CGV. Với t&agrave;i khoản
+                                            th&agrave;nh vi&ecirc;n của m&igrave;nh, bạn c&oacute; thể:</p>
+                                        <p>- Đặt v&eacute; v&agrave; thanh to&aacute;n trực tuyến.</p>
+                                        <p>- Nhận combo bắp nước/v&eacute; xem phim v&agrave;o th&aacute;ng sinh
+                                            nhật</p>
+                                        <p>- C&oacute; cơ hội tận hưởng những ưu đ&atilde;i v&agrave; qu&agrave; tặng
+                                            đặc biệt.</p>
+                                        <p>- Nhận bản tin điện ảnh h&agrave;ng tuần về email.</p>
+                                        <p>- B&igrave;nh luận về phim bạn y&ecirc;u th&iacute;ch tại website CGV.</p>
+                                        <p>- Kết nối với những người đam m&ecirc; điện ảnh.</p>
+                                    </div>
+                                    <h3>Thẻ th&agrave;nh vi&ecirc;n CGV được sử dụng như thế n&agrave;o?</h3>
+                                    <div>
+                                        <p>Thẻ th&agrave;nh vi&ecirc;n được sử dụng cho c&aacute;c mục đ&iacute;ch
+                                            sau:</p>
+                                        <p>- T&iacute;ch lũy v&agrave; sử dụng điểm tại c&aacute;c quầy v&eacute; của
+                                            cụm rạp CGV.</p>
+                                        <p>- Tự động ho&agrave;n v&eacute; trực tuyến.</p>
+                                        <p>- Nhận qu&agrave; sinh nhật</p>
+                                        <p>- Sử dụng đặc quyền VIP/VVIP</p>
+                                        <p>- Nhận ưu đ&atilde;i t&iacute;ch hợp trực tiếp tr&ecirc;n thẻ</p>
+                                        <p>- Tham gia c&aacute;c chương tr&igrave;nh khuyến m&atilde;i d&agrave;nh ri&ecirc;ng
+                                            cho th&agrave;nh vi&ecirc;n</p>
+                                        <p>*Lưu &yacute;: Khi mua v&eacute; tại quầy bạn cần xuất tr&igrave;nh thẻ th&agrave;nh
+                                            vi&ecirc;n trước khi ho&agrave;n th&agrave;nh giao dịch để được t&iacute;ch
+                                            điểm.</p>
+                                    </div>
+                                    <h3>L&agrave;m c&aacute;ch n&agrave;o để đăng k&yacute; th&agrave;nh
+                                        vi&ecirc;n?</h3>
+                                    <div>
+                                        <p>Bạn c&oacute; thể đăng k&yacute; th&agrave;nh vi&ecirc;n CGV miễn ph&iacute;
+                                            tại website/app CGV Cinemas. Sau khi điền đầy đủ th&ocirc;ng tin đăng k&yacute;
+                                            thẻ th&agrave;nh vi&ecirc;n, bạn chỉ cần kiểm tra
+                                            email x&aacute;c nhận để k&iacute;ch hoạt t&agrave;i khoản v&agrave; mang
+                                            CMND đến quầy Guest Service tại rạp CGV bất kỳ để được nhận thẻ.</p>
+                                    </div>
+                                    <h3>Thẻ th&agrave;nh vi&ecirc;n CGV c&oacute; hạn sử dụng hay kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>- Hạng thẻ th&agrave;nh vi&ecirc;n CGV VIP/VVIP sẽ c&oacute; gi&aacute; trị
+                                            trong v&ograve;ng 1 năm. Để giữ nguy&ecirc;n cấp độ trong năm kế tiếp, tổng
+                                            chi ti&ecirc;u năm hiện tại của bạn cần đạt hạn mức n&acirc;ng
+                                            hạng thẻ do CGV đưa ra. Hạn mức n&agrave;y thường được c&ocirc;ng bố v&agrave;o
+                                            cuối năm.</p>
+                                        <p>-&nbsp; Thẻ CGV U22 sẽ hết gi&aacute; trị khi bạn bước qua tuổi 23.</p>
+                                        <p>- Hạng thẻ CGV Member kh&ocirc;ng c&oacute; hạn sử dụng.</p>
+                                        <p>- Trong c&aacute;c trường hợp bạn kh&ocirc;ng đạt hạn mức (VIP, VVIP) hoặc
+                                            hết tuổi sử dụng thẻ CGV U22, bạn sẽ được đổi sang hạng thẻ tương ứng với
+                                            mức chi ti&ecirc;u/ độ tuổi của bạn.</p>
+                                    </div>
+                                    <h3>01 số chứng minh nh&acirc;n d&acirc;n/email/số điện thoại c&oacute; thể đăng k&yacute;
+                                        được nhiều t&agrave;i khoản kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Với một số chứng minh nh&acirc;n d&acirc;n/email/số điện thoại, bạn chỉ c&oacute;
+                                            thể đăng k&iacute; được một t&agrave;i khoản CGV. Xin lưu &yacute; CGV kh&ocirc;ng
+                                            thể chuyển nhượng hay cộng gộp điểm t&iacute;ch
+                                            lũy hoặc điểm thưởng giữa c&aacute;c t&agrave;i khoản với nhau.</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; được t&iacute;ch điểm nếu qu&ecirc;n thẻ th&agrave;nh vi&ecirc;n
+                                        kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Trong trường hợp bạn qu&ecirc;n mang thẻ, bạn vui l&ograve;ng cung cấp số
+                                            điện thoại hoặc địa chỉ email cho nh&acirc;n vi&ecirc;n tại rạp để được hỗ
+                                            trợ t&iacute;ch điểm. Xin lưu &yacute; bạn sẽ kh&ocirc;ng
+                                            thể sử dụng điểm để thanh to&aacute;n trong trường hợp n&agrave;y.</p>
+                                    </div>
+                                    <h3>Sau khi thanh to&aacute;n xong, t&ocirc;i c&oacute; được t&iacute;ch điểm lại kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>- Rất tiếc, bạn kh&ocirc;ng thể t&iacute;ch lại điểm sau khi ho&agrave;n tất
+                                            giao dịch (v&eacute; đ&atilde; được in ra). Bạn c&oacute; thể t&iacute;ch
+                                            điểm bằng thẻ th&agrave;nh vi&ecirc;n/APP/SĐT/Email trước
+                                            khi giao dịch được thực hiện.</p>
+                                    </div>
+                                    <h3>Trong trường hợp t&ocirc;i bị mất thẻ, t&ocirc;i n&ecirc;n l&agrave;m
+                                        g&igrave;?</h3>
+                                    <div>
+                                        <p>Bạn vui l&ograve;ng đến rạp CGV gần nhất, th&ocirc;ng b&aacute;o mất thẻ để
+                                            được hỗ trợ l&agrave;m lại thẻ ho&agrave;n to&agrave;n miễn ph&iacute;. Bạn
+                                            vui l&ograve;ng mang theo CMND để nh&acirc;n vi&ecirc;n
+                                            x&aacute;c nhận nhằm đảm bảo tuyệt mật th&ocirc;ng tin.</p>
+                                        <p>Trong trường hợp thẻ th&agrave;nh vi&ecirc;n của bạn c&oacute; nhiều điểm
+                                            thưởng, bạn vui l&ograve;ng li&ecirc;n hệ hotline: 1900 6017 hoặc gửi th&ocirc;ng
+                                            tin đến email:  <a href="#">hoidap@cgv.vn</a> trong thời
+                                            gian sớm nhất để được hỗ trợ kh&oacute;a thẻ v&agrave; bảo to&agrave;n điểm
+                                            thưởng. CGV kh&ocirc;ng thể giải quyết trường hợp điểm thưởng bị thất tho&aacute;t
+                                            trước khi thẻ được kh&oacute;a.</p>
+                                    </div>
+                                    <h3>T&ocirc;i phải l&agrave;m sao nếu qu&ecirc;n mật khẩu?</h3>
+                                    <div>
+                                        <p>Bạn c&oacute; thể lấy lại mật khẩu bằng c&aacute;ch chọn chức năng qu&ecirc;n
+                                            mật khẩu tr&ecirc;n website hoặc app CGV Cinemas v&agrave; l&agrave;m theo c&aacute;c
+                                            bước của hệ thống y&ecirc;u cầu.</p>
+                                    </div>
+                                    <h3>L&agrave;m sao để thay đổi Địa Chỉ email hoặc th&ocirc;ng tin Ng&agrave;y Th&aacute;ng
+                                        Năm Sinh?</h3>
+                                    <div>
+                                        <p>Để thay đổi 2 th&ocirc;ng tin n&agrave;y, bạn vui l&ograve;ng gh&eacute; rạp
+                                            CGV gần nhất để lấy PHIẾU Y&Ecirc;U CẦU THAY ĐỔI TH&Ocirc;NG TIN KH&Aacute;CH
+                                            H&Agrave;NG sau đ&oacute; điền v&agrave; nộp lại cho
+                                            nh&acirc;n vi&ecirc;n tại quầy. Khi đi qu&yacute; kh&aacute;ch nhớ lưu
+                                            &yacute; mang theo: (1) CMND/CCCD v&agrave; (2) Thẻ cứng th&agrave;nh vi&ecirc;n/Ứng
+                                            dụng CGV đ&atilde; đăng nhập t&agrave;i khoản cần
+                                            thay đổi để đối so&aacute;t v&agrave; lưu trữ th&ocirc;ng tin.</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; thể sử dụng thẻ của m&igrave;nh để t&iacute;ch điểm khi mua
+                                        V&eacute; Nh&oacute;m (Group Sales) được kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Chương tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n kh&ocirc;ng được sử dụng với
+                                            c&aacute;c chương tr&igrave;nh ưu đ&atilde;i giảm gi&aacute; kh&aacute;c, v&igrave;
+                                            thế, bạn kh&ocirc;ng thể t&iacute;ch điểm cho
+                                            c&aacute;c V&eacute; Nh&oacute;m. Tuy nhi&ecirc;n, nếu bạn mua v&eacute; với
+                                            số lượng lớn với gi&aacute; thường, bạn c&oacute; thể t&iacute;ch điểm cho m&igrave;nh
+                                            từ giao dịch đ&oacute;, mức tối đa bạn
+                                            c&oacute; thể t&iacute;ch điểm thưởng l&agrave; 1000 điểm/ng&agrave;y.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-5 -->
+                            <div class="tab-content" id="tabs-6">
+                                <div class="title-faq">
+                                    <h2>T&iacute;ch Lũy Điểm Thưởng</h2>
+                                </div>
+                                <div class="accordion">
+                                    <h3>L&agrave;m sao để t&iacute;ch lũy điểm thưởng?</h3>
+                                    <div>
+                                        <p>Khi xuất tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n c&ugrave;ng c&aacute;c giao
+                                            dịch th&agrave;nh c&ocirc;ng, hoặc ho&agrave;n tất giao dịch trực tuyến tại
+                                            website v&agrave; app CGV Cinemas, bạn sẽ nhận được số
+                                            điểm thưởng tương ứng với cấp độ thẻ th&agrave;nh vi&ecirc;n hiện tại:</p>
+                                        <table border="0" style="width: 100%;">
+                                            <tbody>
+                                            <tr>
+                                                <th style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px; width: 31%;">
+                                                    Điểm thưởng
+                                                </th>
+                                                <th style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px; width: 23%;">
+                                                    U22 | Member
+                                                </th>
+                                                <th style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px; width: 23%;">
+                                                    VIP
+                                                </th>
+                                                <th style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px; width: 23%;">
+                                                    VVIP
+                                                </th>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td style="background-color: #fff2df;"><strong>Tại Quầy
+                                                    V&eacute;</strong></td>
+                                                <td style="background-color: #fff2df;"><strong>5%</strong></td>
+                                                <td style="background-color: #fff2df;"><strong>7%</strong></td>
+                                                <td style="background-color: #fff2df;"><strong>10%</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    VD: 100.000 VND
+                                                </td>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    5 Điểm
+                                                </td>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    7 Điểm
+                                                </td>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    10 Điểm
+                                                </td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td style="background-color: #fff2df;"><strong>Quầy Bắp Nước</strong>
+                                                </td>
+                                                <td style="background-color: #fff2df;"><strong>3%</strong></td>
+                                                <td style="background-color: #fff2df;"><strong>4%</strong></td>
+                                                <td style="background-color: #fff2df;"><strong>5%</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    VD: 100.000 VND
+                                                </td>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    3 Điểm
+                                                </td>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    3 Điểm
+                                                </td>
+                                                <td style="background: none repeat scroll 0 0 #eddcc3; border-left: 1px solid #dccab3; padding: 5px 4px;">
+                                                    5 Điểm
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>Khi mua v&eacute; tại quầy, bạn cần xuất tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n
+                                            trước khi ho&agrave;n th&agrave;nh giao dịch để được t&iacute;ch điểm. Khi
+                                            mua v&eacute; trực tuyến, điểm thưởng sẽ được t&iacute;ch
+                                            lũy tự động sau khi ho&agrave;n tất giao dịch.&nbsp;Xin lưu &yacute; rằng
+                                            bạn sẽ được t&iacute;ch lũy tối đa 10 giao dịch v&agrave; 1000 điểm/mỗi ng&agrave;y.</p>
+                                    </div>
+                                    <h3>Tỉ lệ t&iacute;ch lũy điểm thưởng của mỗi hạng thẻ th&agrave;nh vi&ecirc;n như
+                                        thế n&agrave;o?</h3>
+                                    <div>
+                                        <p>- Điểm thưởng tại quầy v&eacute;: U22| Member: 5%; VIP:7%; VVIP: 10%</p>
+                                        <p>- Điểm thưởng tại quầy bắp nước: U22| Member: 3%; VIP:4%; VVIP: 5%</p>
+                                    </div>
+                                    <h3>Điểm thưởng được sử dụng như thế n&agrave;o?</h3>
+                                    <div>
+                                        <p>Mỗi 01 điểm thưởng tương đương với 1.000 VND. Với điểm thưởng n&agrave;y, bạn
+                                            c&oacute; thể sử dụng để mua v&eacute; v&agrave; sản phẩm bắp nước tại CGV.
+                                            Khi sử dụng điểm thưởng tại quầy, bạn vui l&ograve;ng
+                                            xuất tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n để được nh&acirc;n vi&ecirc;n
+                                            hỗ trợ thanh to&aacute;n, hoặc chọn h&igrave;nh thức thanh to&aacute;n bằng
+                                            điểm khi mua v&eacute; trực tuyến.<br/>*Lưu &yacute;:
+                                            <br/>- Điểm thưởng tối thiểu được sử dụng l&agrave; 20 điểm trở
+                                            l&ecirc;n.<br/>- Để n&acirc;ng cao bảo mật t&agrave;i khoản th&agrave;nh vi&ecirc;n:
+                                            <br/>+ Khi sử dụng từ 500 điểm trở l&ecirc;n, vui l&ograve;ng
+                                            xuất tr&igrave;nh CMND hoặc giấy tờ t&ugrave;y th&acirc;n của bạn để x&aacute;c
+                                            nhận ch&iacute;nh chủ sở hữu t&agrave;i khoản. <br/>+ Khi sử dụng từ 1000
+                                            điểm trở l&ecirc;n hệ thống sẽ y&ecirc;u cầu bạn
+                                            nhập mật khẩu với c&uacute; ph&aacute;p l&agrave; ng&agrave;y th&aacute;ng
+                                            năm sinh của bạn: DDMMYYYY (V&iacute; dụ: bạn sinh ng&agrave;y 13/03/1995,
+                                            th&igrave; mật khẩu bảo mật t&agrave;i khoản th&agrave;nh
+                                            vi&ecirc;n của bạn sẽ l&agrave; 13031995).</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; thể mua v&eacute; trực tuyến bằng điểm thưởng được kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Được. Điểm thưởng tối thiểu được sử dụng l&agrave; 20 điểm trở l&ecirc;n, sau
+                                            khi ho&agrave;n tất c&aacute;c bước chọn suất chiếu, bạn c&oacute; thể chọn
+                                            h&igrave;nh thức thanh to&aacute;n bằng điểm t&iacute;ch
+                                            lũy.</p>
+                                    </div>
+                                    <h3>Sự kh&aacute;c nhau giữa điểm thưởng v&agrave; tổng chi ti&ecirc;u (điểm t&iacute;ch
+                                        lũy) l&agrave; g&igrave;?</h3>
+                                    <div>
+                                        <p>Điểm thưởng l&agrave; số điểm bạn t&iacute;ch được theo phần trăm gi&aacute;
+                                            trị giao dịch d&ugrave;ng để đổi c&aacute;c phần qu&agrave; từ CGV.</p>
+                                        <p>Tổng chi ti&ecirc;u (điểm t&iacute;ch lũy) l&agrave; tổng số tiền bạn đ&atilde;
+                                            chi ti&ecirc;u tại CGV, được d&ugrave;ng để x&aacute;c định v&agrave; n&acirc;ng/hạ
+                                            cấp độ th&agrave;nh vi&ecirc;n.</p>
+                                    </div>
+                                    <h3>Điểm thưởng c&oacute; thời hạn sử dụng bao l&acirc;u?</h3>
+                                    <div>
+                                        <p>Điểm thưởng c&oacute; thời hạn sử dụng l&agrave; 01 năm. V&iacute; dụ: Điểm
+                                            của bạn được nhận v&agrave;o 0h00 ng&agrave;y 1/1/2020 sẽ hết hạn sử dụng v&agrave;o
+                                            l&uacute;c 0h00 ng&agrave;y 1/1/2021.</p>
+                                    </div>
+                                    <h3>L&agrave;m sao để kiểm tra điểm thưởng?</h3>
+                                    <div>
+                                        <p>Bạn vui l&ograve;ng đăng nhập v&agrave;o website hoặc app CGV Cinemas, v&agrave;o
+                                            th&ocirc;ng tin t&agrave;i khoản để kiểm tra điểm thưởng của m&igrave;nh</p>
+                                    </div>
+                                    <h3>Sử dụng điểm thưởng để giao dịch tại CGV c&oacute; được t&iacute;ch điểm kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Kh&ocirc;ng. Nếu kh&aacute;ch h&agrave;ng c&oacute; sử dụng kết hợp điểm
+                                            thưởng v&agrave; tiền, kh&aacute;ch h&agrave;ng được t&iacute;ch điểm cho số
+                                            tiền đ&atilde; trả.</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; thể chuyển nhượng hay cộng gộp tổng chi ti&ecirc;u hoặc điểm
+                                        thưởng giữa c&aacute;c t&agrave;i khoản kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Rất tiếc, ch&uacute;ng t&ocirc;i kh&ocirc;ng thể chuyển nhượng hay cộng gộp
+                                            điểm t&iacute;ch lũy hoặc điểm thưởng giữa c&aacute;c t&agrave;i khoản với
+                                            nhau.</p>
+                                    </div>
+                                    <h3>Khi l&ecirc;n hạng thẻ VIP/VVIP th&igrave; điểm thưởng c&oacute; bị mất kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Kh&ocirc;ng, điểm thưởng vẫn giữ nguy&ecirc;n trong t&agrave;i khoản th&agrave;nh
+                                            vi&ecirc;n khi n&acirc;ng hạng VIP/VVIP v&agrave; vẫn c&oacute; hạn sử dụng
+                                            trong 1 năm t&iacute;nh từ ng&agrave;y bắt đầu nhận
+                                            điểm.</p>
+                                    </div>
+                                    <h3>Kh&aacute;ch sử dụng điểm thưởng c&oacute; được t&iacute;ch lũy tổng chi ti&ecirc;u
+                                        hay kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Rất tiếc, khi sử dụng điểm thưởng thanh to&aacute;n cho giao dịch mua v&eacute;
+                                            hoặc bắp nước sẽ kh&ocirc;ng được t&iacute;ch lũy tổng chi ti&ecirc;u.</p>
+                                    </div>
+                                    <h3>Những trường hợp n&agrave;o được t&iacute;ch điểm?</h3>
+                                    <div>
+                                        <p>&Aacute;p dụng khi mua v&eacute; v&agrave; sản phẩm F&amp;B thanh to&aacute;n
+                                            bằng:</p>
+                                        <p>&bull; Tiền mặt</p>
+                                        <p>&bull; Thẻ ng&acirc;n h&agrave;ng</p>
+                                        <p>&bull; V&iacute; điện tử</p>
+                                        <p>&bull; Thẻ qu&agrave; tặng</p>
+                                    </div>
+                                    <h3>Những trường hợp n&agrave;o kh&ocirc;ng được t&iacute;ch điểm?</h3>
+                                    <div>
+                                        <p>&bull; Mua/sử dụng voucher</p>
+                                        <p>&bull; Mua thẻ qu&agrave; tặng</p>
+                                        <p>&bull; Mua v&eacute;/F&amp;B bằng PP card (thẻ CGVian, CJ Membership,
+                                            Premium)</p>
+                                        <p>&bull; Đổi điểm thưởng</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-6 -->
+                            <div class="tab-content" id="tabs-7">
+                                <div class="title-faq">
+                                    <h2>Tổng Chi Ti&ecirc;u &amp; Hạng Thẻ</h2>
+                                </div>
+                                <div class="accordion">
+                                    <h3>Tổng chi ti&ecirc;u l&agrave; g&igrave;?</h3>
+                                    <div>
+                                        <p>Tổng chi ti&ecirc;u (điểm t&iacute;ch lũy) l&agrave; tổng số tiền bạn đ&atilde;
+                                            chi ti&ecirc;u tại CGV, được d&ugrave;ng để x&aacute;c định v&agrave; n&acirc;ng/hạ
+                                            cấp độ th&agrave;nh vi&ecirc;n. Khi mua v&eacute;
+                                            tại quầy, bạn cần xuất tr&igrave;nh thẻ th&agrave;nh vi&ecirc;n trước khi ho&agrave;n
+                                            th&agrave;nh giao dịch để được t&iacute;ch lũy chi ti&ecirc;u. Khi mua v&eacute;
+                                            trực tuyến, chi ti&ecirc;u sẽ được t&iacute;ch
+                                            lũy tự động sau khi ho&agrave;n tất giao dịch."</p>
+                                    </div>
+                                    <h3>Ch&iacute;nh s&aacute;ch n&acirc;ng hạng thẻ của CGV như thế n&agrave;o?</h3>
+                                    <div>
+                                        <p>CGV dựa tr&ecirc;n tổng chi ti&ecirc;u của kh&aacute;ch h&agrave;ng trong một
+                                            năm (từ 1/1 tới 31/12) để c&ocirc;ng bố ch&iacute;nh s&aacute;ch n&acirc;ng
+                                            hạng thẻ cho năm sau v&agrave; tiến h&agrave;nh đổi thẻ
+                                            cho c&aacute;c kh&aacute;ch h&agrave;ng được n&acirc;ng hạng. Th&ocirc;ng
+                                            tin n&agrave;y thường được đưa ra v&agrave;o thời điểm cuối năm.</p>
+                                    </div>
+                                    <h3>Tổng chi ti&ecirc;u c&oacute; bị t&iacute;nh lại từ đầu theo mỗi năm hay kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>C&oacute;. Tổng chi ti&ecirc;u sẽ được t&iacute;nh lại từ đầu sau mỗi
+                                            năm.</p>
+                                    </div>
+                                    <h3>Tại sao t&ocirc;i kh&ocirc;ng thể n&acirc;ng hạng thẻ ngay khi t&ocirc;i đạt
+                                        được tổng chi ti&ecirc;u n&acirc;ng hạng?</h3>
+                                    <div>
+                                        <p>Rất tiếc kh&aacute;ch h&agrave;ng phải đạt đủ mức chi ti&ecirc;u n&acirc;ng
+                                            hạng trước hạn ch&oacute;t của CGV đưa ra hằng năm. Nếu bạn đ&atilde; lỡ dịp
+                                            n&agrave;y của năm ngo&aacute;i, bạn c&oacute; thể tiếp
+                                            tục t&iacute;ch lũy chi ti&ecirc;u đến thời điểm c&ocirc;ng bố ch&iacute;nh
+                                            s&aacute;ch n&acirc;ng hạng tiếp theo.</p>
+                                        <p>*Lưu &yacute;: Ch&iacute;nh s&aacute;ch n&acirc;ng hạng thẻ sẽ thay đổi mỗi
+                                            năm t&ugrave;y v&agrave;o chi ti&ecirc;u của tất cả kh&aacute;ch h&agrave;ng
+                                            tại CGV.</p>
+                                    </div>
+                                    <h3>Nếu được l&ecirc;n hạng thẻ th&igrave; t&ocirc;i sẽ đổi thẻ bằng c&aacute;ch n&agrave;o?</h3>
+                                    <div>
+                                        <p>Bạn vui l&ograve;ng mang CMND v&agrave; thẻ th&agrave;nh vi&ecirc;n hiện tại
+                                            tới cụm rạp CGV bất kỳ để đổi thẻ mới.</p>
+                                    </div>
+                                    <h3>Nếu t&ocirc;i l&agrave; th&agrave;nh vi&ecirc;n CGV U22 v&agrave; đủ ti&ecirc;u
+                                        chuẩn để trở th&agrave;nh VIP/VVIP, CGV c&oacute; &aacute;p dụng ưu đ&atilde;i
+                                        đồng thời cả thẻ U22 v&agrave; VIP/VVIP kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>C&oacute;, bạn vui l&ograve;ng giữ thẻ U22 để nhận ưu đ&atilde;i cho cả hạng
+                                            mức thẻ U22 v&agrave; VIP/VVIP. Nếu bạn đổi sang thẻ VIP/VVIP, ưu đ&atilde;i
+                                            của thẻ U22 sẽ kh&ocirc;ng được &aacute;p dụng.</p>
+                                    </div>
+                                    <h3>Thời hạn sử dụng của c&aacute;c ưu đ&atilde;i của VIP/VVIP l&agrave;
+                                        g&igrave;?</h3>
+                                    <div>
+                                        <p>Các ưu đãi dành cho VIP &amp; VVIP chỉ c&oacute; gi&aacute; trị sử dụng
+                                            trong năm. M&ocirc;̃i ưu đãi chỉ được sử dụng 1 l&acirc;̀n duy nh&acirc;́t.</p>
+                                    </div>
+                                    <h3>Khi t&ocirc;i sử dụng ưu đ&atilde;i d&agrave;nh cho th&agrave;nh vi&ecirc;n
+                                        VIP/VVIP t&ocirc;i c&oacute; được t&iacute;ch điểm kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>Kh&ocirc;ng. Kh&aacute;ch h&agrave;ng sử dụng c&aacute;c ưu đ&atilde;i miễn
+                                            ph&iacute; sẽ kh&ocirc;ng được t&iacute;ch điểm.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-7 -->
+                            <div class="tab-content" id="tabs-8">
+                                <div class="title-faq">
+                                    <h2>Ưu Đ&atilde;i Sinh Nhật</h2>
+                                </div>
+                                <div class="accordion">
+                                    <h3>Ưu đ&atilde;i sinh nhật của CGV l&agrave; g&igrave;?</h3>
+                                    <div>
+                                        <p>L&agrave; qu&agrave; ch&uacute;c mừng sinh nhật từ CGV d&agrave;nh ri&ecirc;ng
+                                            cho kh&aacute;ch h&agrave;ng th&agrave;nh vi&ecirc;n của ch&uacute;ng t&ocirc;i.
+                                            Kh&aacute;ch h&agrave;ng với cấp độ th&agrave;nh
+                                            vi&ecirc;n kh&aacute;c nhau sẽ nhận được qu&agrave; tặng kh&aacute;c nhau
+                                            như sau: <br/> <br/>1. <strong>Th&agrave;nh vi&ecirc;n U22</strong>: 01 CGV
+                                            Birthday Combo. <br/>(+ 1 v&eacute; xem phim 2D/3D
+                                            miễn ph&iacute; cho lần sinh nhật thứ 23). <br/>2. <strong>Th&agrave;nh vi&ecirc;n
+                                                Th&acirc;n Thiết (Member)</strong>: 01 CGV Birthday Combo. <br/>3.
+                                            <strong>Th&agrave;nh vi&ecirc;n VIP</strong>: 01 CGV
+                                            Birthday Combo + 01 v&eacute; xem phim 2D/3D miễn ph&iacute;. <br/>4.
+                                            <strong>Th&agrave;nh vi&ecirc;n VVIP</strong>: 01 CGV Birthday Combo + 02 v&eacute;
+                                            xem phim 2D/3D miễn ph&iacute;.</p>
+                                    </div>
+                                    <h3>Khi n&agrave;o t&ocirc;i c&oacute; thể bắt đầu nhận qu&agrave; sinh nhật từ
+                                        CGV?</h3>
+                                    <div>
+                                        <p>Bạn c&oacute; thể nhận được phần qu&agrave; sinh nhật trong th&aacute;ng sinh
+                                            nhật của m&igrave;nh. V&iacute; dụ, bạn sinh v&agrave;o th&aacute;ng 3 th&igrave;
+                                            thời gian bạn c&oacute; thể nhận qu&agrave; l&agrave;
+                                            từ 01/03/2019 đến 31/03/2019. (*) Không bao gồm các giao dịch phát sinh
+                                            trong tháng sinh nhật năm trước đó của khách hàng.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion">
+                                    <h3>Điều kiện nhận qu&agrave; sinh nhật từ CGV l&agrave; g&igrave;?</h3>
+                                    <div>
+                                        <p>1.Để nhận qu&agrave; sinh nhật, th&agrave;nh vi&ecirc;n phải c&oacute;
+                                            &iacute;t nhất 01 giao dịch trong v&ograve;ng 12 th&aacute;ng trước th&aacute;ng
+                                            sinh nhật. Nếu chưa thỏa điều kiện, kh&aacute;ch h&agrave;ng
+                                            c&oacute; thể thực hiện 01 giao dịch ngay trong th&aacute;ng sinh nhật v&agrave;
+                                            nhận coupon sau đ&oacute; 2 ng&agrave;y, với điều kiện thời điểm đ&oacute;
+                                            vẫn c&ograve;n nằm trong th&aacute;ng sinh nhật..
+                                            <br/>2. Thành vi&ecirc;n mới c&oacute; sinh nhật nằm trong th&aacute;ng
+                                            đăng k&yacute; sẽ nhận coupon sau 72 giờ kể từ ng&agrave;y đăng k&yacute; t&agrave;i
+                                            khoản, với điều kiện cần ph&aacute;t sinh &iacute;t
+                                            nhất 01 giao dịch trước thời điểm nhận qu&agrave; 2 ng&agrave;y v&agrave;
+                                            thời điểm đ&oacute; vẫn c&ograve;n nằm trong th&aacute;ng sinh nhật.<br/>3.
+                                            Khi đến rạp đổi qu&agrave; sinh nhật, kh&aacute;ch h&agrave;ng
+                                            vui l&ograve;ng xuất tr&igrave;nh t&agrave;i khoản th&agrave;nh vi&ecirc;n
+                                            (Thẻ cứng hoặc t&agrave;i khoản online tr&ecirc;n app CGV) v&agrave; CCCD
+                                            (Bản gốc hoặc ảnh chụp) cho nh&acirc;n vi&ecirc;n rạp
+                                            để x&aacute;c thực. Lưu &yacute;: Nh&acirc;n vi&ecirc;n rạp c&oacute; quyền
+                                            từ chối y&ecirc;u cầu đổi qu&agrave; nếu kh&aacute;ch h&agrave;ng qu&ecirc;n
+                                            mang theo CCCD hoặc th&ocirc;ng tin ng&agrave;y th&aacute;ng
+                                            năm sinh tr&ecirc;n CCCD v&agrave; t&agrave;i khoản th&agrave;nh vi&ecirc;n
+                                            CGV kh&ocirc;ng tr&ugrave;ng khớp với nhau.<br/> 4. Để thay đổi th&ocirc;ng
+                                            tin ng&agrave;y th&aacute;ng năm sinh t&agrave;i khoản
+                                            th&agrave;nh vi&ecirc;n, kh&aacute;ch h&agrave;ng vui l&ograve;ng mang theo
+                                            CCCD v&agrave; gh&eacute; rạp CGV gần nhất để được hỗ trợ.</p>
+                                    </div>
+                                    <h3>Ng&agrave;y th&aacute;ng năm sinh tr&ecirc;n CMND v&agrave; t&agrave;i khoản của
+                                        t&ocirc;i kh&ocirc;ng tr&ugrave;ng khớp, t&ocirc;i c&oacute; nhận được qu&agrave;
+                                        sinh nhật từ CGV kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>CGV kh&ocirc;ng thể đổi qu&agrave; cho kh&aacute;ch h&agrave;ng khi ng&agrave;y
+                                            th&aacute;ng năm sinh tr&ecirc;n CMND v&agrave; thẻ th&agrave;nh vi&ecirc;n
+                                            kh&ocirc;ng tr&ugrave;ng khớp.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-8 -->
+                            <div class="tab-content" id="tabs-9">
+                                <div class="title-faq">
+                                    <h2>Mua V&eacute; Trực Tuyến</h2>
+                                </div>
+                                <div class="accordion">
+                                    <h3>L&agrave;m c&aacute;ch n&agrave;o để mua v&eacute; trực tuyến ?</h3>
+                                    <div>
+                                        <p>Để mua v&eacute; trực tuyến, bạn cần c&oacute; t&agrave;i khoản th&agrave;nh
+                                            vi&ecirc;n CGV v&agrave; thẻ ng&acirc;n h&agrave;ng đ&atilde; k&iacute;ch
+                                            hoạt chức năng ng&acirc;n h&agrave;ng điện tử. Xin lưu &yacute;
+                                            hệ thống sẽ ngưng b&aacute;n v&eacute; trực tuyến 30 ph&uacute;t trước suất
+                                            chiếu v&agrave; chỉ mở cho kh&aacute;ch h&agrave;ng mua v&eacute; tại
+                                            quầy.</p>
+                                        <p>C&aacute;ch thức mua v&eacute; trực tuyến như sau:</p>
+                                        <p>- Bước 1: Đăng nhập với t&agrave;i khoản CGV tại website hoặc app CGV
+                                            Cinemas.</p>
+                                        <p>- Bước 2: T&ugrave;y chọn phim, rạp, suất chiếu, số lượng ghế.</p>
+                                        <p>- Bước 3: X&aacute;c nhận đồng &yacute; thanh to&aacute;n bằng thẻ ATM/thanh
+                                            to&aacute;n/t&iacute;n dụng, bạn sẽ được dẫn về trang thanh to&aacute;n
+                                            Onepay để nhập th&ocirc;ng tin thẻ. Lưu &yacute;: bạn c&oacute;
+                                            5 ph&uacute;t để giữ ghế đến khi ho&agrave;n tất giao dịch, nếu v&eacute; kh&ocirc;ng
+                                            được mua sau 5 ph&uacute;t, CGV sẽ hủy giữ ghế để bảo đảm quyền lợi cho tất
+                                            cả kh&aacute;ch h&agrave;ng.</p>
+                                        <p>- Bước 4: Sau khi ho&agrave;n tất thanh to&aacute;n tại cổng Onepay, m&agrave;n
+                                            h&igrave;nh cuối c&ugrave;ng sẽ hiện l&ecirc;n th&ocirc;ng tin m&atilde; đặt
+                                            v&eacute;, đồng thời bạn cũng nhận được email x&aacute;c
+                                            nhận đặt v&eacute; th&agrave;nh c&ocirc;ng.</p>
+                                        <p>*Onepay.vn l&agrave; đối t&aacute;c thanh to&aacute;n li&ecirc;n kết với CGV
+                                            v&agrave; chấp nhận tất cả c&aacute;c loại thẻ Quốc tế v&agrave; của c&aacute;c
+                                            ng&acirc;n h&agrave;ng đối t&aacute;c của Onepay.</p>
+                                    </div>
+                                    <h3>L&agrave;m sao để lấy v&eacute; sau khi đặt v&eacute; th&agrave;nh c&ocirc;ng
+                                        ?</h3>
+                                    <div>
+                                        <p>Sau khi đặt v&eacute; th&agrave;nh c&ocirc;ng, CGV sẽ gửi m&atilde; đặt v&eacute;
+                                            về email của bạn v&agrave; mục &ldquo;V&Eacute; CỦA T&Ocirc;I&rdquo; tr&ecirc;n
+                                            Website &amp; Ứng Dụng CGV. Bạn xuất tr&igrave;nh
+                                            m&atilde; đặt v&eacute; n&agrave;y cho nh&acirc;n vi&ecirc;n tại rạp để được
+                                            in v&eacute; v&agrave; v&agrave;o ph&ograve;ng chiếu.</p>
+                                        <p>Hướng dẫn kiểm tra lịch sử đặt v&eacute;/Lấy m&atilde; v&eacute; sau khi kh&aacute;ch
+                                            h&agrave;ng thực hiện đặt v&eacute;:</p>
+                                        <p>* Tr&ecirc;n ứng dụng CGV:</p>
+                                        <p>- Bước 1: Nhấp v&agrave;o biểu tượng &ldquo;MY TICKETS&rdquo; ở g&oacute;c
+                                            phải m&agrave;n h&igrave;nh, hoặc chọn mục &ldquo;V&Eacute; CỦA T&Ocirc;I&rdquo;
+                                            trong bảng Menu</p>
+                                        <p>- Bước 2: Kiểm tra th&ocirc;ng tin v&eacute; đ&atilde; đặt tại thẻ &ldquo;PHIM
+                                            SẮP XEM&rdquo;</p>
+                                        <p>- Bước 3: Đưa nh&acirc;n vi&ecirc;n &ldquo;M&Atilde; V&Eacute;&rdquo;</p>
+                                        <p></p>
+                                        <p>* Tr&ecirc;n website CGV:</p>
+                                        <p>- Bước 1: Nhấp v&agrave;o mục &ldquo;V&Eacute; CỦA T&Ocirc;I&rdquo;/ &ldquo;MY
+                                            TICKETS&rdquo;</p>
+                                        <p>- Bước 2: Tại &ldquo;LỊCH SỬ GIAO DỊCH&rdquo;, chọn &ldquo;PHIM&rdquo; v&agrave;
+                                            nhấn &ldquo;XEM&rdquo;</p>
+                                        <p>- Bước 3: Chụp ảnh &ldquo;M&Atilde; V&Eacute;&rdquo; v&agrave; đưa nh&acirc;n
+                                            vi&ecirc;n</p>
+                                        <p></p>
+                                        <p>* Trong hộp thư Email (Email kh&aacute;ch h&agrave;ng sử dụng để đăng k&yacute;
+                                            t&agrave;i khoản th&agrave;nh vi&ecirc;n):</p>
+                                        <p>- Bước 1: Mở Email x&aacute;c nhận th&ocirc;ng tin đặt v&eacute; được gửi từ
+                                            CGV VIỆT NAM</p>
+                                        <p>- Bước 2: Chụp m&agrave;n h&igrave;nh chứa &ldquo;M&Atilde; V&Eacute;&rdquo;
+                                            v&agrave; đưa nh&acirc;n vi&ecirc;n</p>
+                                    </div>
+                                    <h3>T&ocirc;i c&oacute; thể đặt v&eacute; qua hotline 1900 6017 được kh&ocirc;ng
+                                        ?</h3>
+                                    <div>
+                                        <p>Rất tiếc, hiện nay CGV kh&ocirc;ng hỗ trợ đặt v&eacute; qua điện thoại.</p>
+                                    </div>
+                                    <h3>V&eacute; đ&atilde; thanh to&aacute;n c&oacute; thể hủy hoặc thay đổi kh&ocirc;ng?</h3>
+                                    <div>
+                                        <p>- Hiện tại CGV đ&atilde; ra mắt chức năng &ldquo;Ho&agrave;n v&eacute; chủ
+                                            động&rdquo;, Qua chức năng n&agrave;y của CGV, kh&aacute;ch h&agrave;ng c&oacute;
+                                            thể hủy suất chiếu của m&igrave;nh đ&atilde; đặt trước
+                                            v&agrave; đặt lại xem v&agrave;o dịp kh&aacute;c thuận tiện hơn m&agrave; kh&ocirc;ng
+                                            cần phải li&ecirc;n lạc với đội ngũ hỗ trợ kh&aacute;ch h&agrave;ng của CGV.
+                                            Kh&aacute;ch h&agrave;ng c&oacute; thể tham
+                                            khảo th&ecirc;m về điều kiện v&agrave; quy định ho&agrave;n v&eacute; <a
+                                                    href="#" target="_blank">tại đ&acirc;y</a>.
+                                        </p>
+                                        <p>- CGV chưa hỗ trợ dịch vụ hủy hoặc thay đổi th&ocirc;ng tin v&eacute; đ&atilde;
+                                            thanh to&aacute;n th&agrave;nh c&ocirc;ng nếu qu&yacute; kh&aacute;ch kh&ocirc;ng
+                                            thỏa điều kiện sử dụng chức năng &ldquo;Ho&agrave;n
+                                            v&eacute; chủ động&rdquo; của CGV.</p>
+                                    </div>
+                                    <h3>T&agrave;i khoản ng&acirc;n h&agrave;ng của t&ocirc;i đ&atilde; bị trừ tiền
+                                        nhưng t&ocirc;i kh&ocirc;ng nhận được m&atilde; đặt v&eacute;, t&ocirc;i phải l&agrave;m
+                                        sao ?</h3>
+                                    <div>
+                                        <p>Trường hợp n&agrave;y, bạn vui l&ograve;ng li&ecirc;n hệ hotline 1900 6017
+                                            (từ 8:00 đến 22:00 tất cả c&aacute;c ng&agrave;y trong tuần) hoặc email về
+                                            địa chỉ hoidap@cgv.vn để được hỗ trợ.</p>
+                                        <p>Sau khi đ&atilde; x&aacute;c nhận giao dịch kh&ocirc;ng th&agrave;nh c&ocirc;ng,
+                                            ng&acirc;n h&agrave;ng sẽ tiến h&agrave;nh ho&agrave;n tiền v&agrave;o t&agrave;i
+                                            khoản của bạn theo thời gian như sau:</p>
+                                        <p>1. Thẻ ATM: ho&agrave;n tiền trong 7 ng&agrave;y l&agrave;m việc.</p>
+                                        <p>2. Thẻ VISA/ MasterCard: ho&agrave;n tiền từ 30 đến 45 ng&agrave;y l&agrave;m
+                                            việc.</p>
+                                        <p>3. Thẻ ATM của ng&acirc;n h&agrave;ng Vietcombank: ho&agrave;n tiền trong v&ograve;ng
+                                            48 giờ l&agrave;m việc.</p>
+                                        <p>*Lưu &yacute;: Thời gian ho&agrave;n tiền kh&ocirc;ng t&iacute;nh c&aacute;c
+                                            ng&agrave;y thứ 7, Chủ nhật v&agrave; Lễ Tết.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tabs-9 -->
+                            <script src="/js/lib/jquery/jquery-ui.js" type="text/javascript"></script>
+                            <script type="text/javascript">
+                                // <![CDATA[
+                                jQuery(document).ready(function () {
+                                    jQuery(".col-main").tabs();
+                                    jQuery(".accordion").accordion({
+                                        heightStyle: "content"
+                                    });
+                                });
+                                // ]]>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

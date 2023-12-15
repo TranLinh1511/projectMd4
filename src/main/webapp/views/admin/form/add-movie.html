@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="admin/layouts/head"></th:block>
+<body>
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<div id="main-wrapper">
+    <th:block th:insert="admin/layouts/layout"></th:block>
+    <!--  todo content-->
+    <div class="content-body">
+        <div class="container-fluid">
+            <!-- row -->
+            <div class="row">
+                <div class="col-xl-12 col-xxl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Movie</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form th:object="${movie}" method="post" action="" enctype="multipart/form-data">
+                                    <div class="row mb-2">
+                                        <div>
+                                            <label class="form-label"
+                                            >Movie Name</label
+                                            >
+                                            <input
+                                                    th:field="*{name}"
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Movie Name"
+                                            />
+                                            <small th:if="${#fields.hasErrors('name')}"
+                                                   th:errors="*{name}"
+                                                   style="color: red ; font-style: italic"></small>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div>
+                                            <label class="form-label"
+                                            >Movie title</label
+                                            >
+                                            <input
+                                                    th:field="*{title}"
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Movie title"
+                                            />
+                                            <small th:if="${#fields.hasErrors('title')}"
+                                                   th:errors="*{title}"
+                                                   style="color: red ; font-style: italic"></small>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label"
+                                            >Director</label
+                                            >
+                                            <input
+                                                    th:field="*{director}"
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Director"
+                                            />
+                                            <small th:if="${#fields.hasErrors('director')}"
+                                                   th:errors="*{director}"
+                                                   style="color: red ; font-style: italic"></small>
+                                        </div>
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label">Duration</label>
+                                            <div class="input-group clockpicker" data-placement="left" data-align="top"
+                                                 data-autobtn-close="true">
+                                                <input th:field="*{duration}" type="text" class="form-control"
+                                                       placeholder="No time has been selected yet">
+                                                <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                <small th:if="${#fields.hasErrors('duration')}"
+                                                       th:errors="*{duration}"
+                                                       style="color: red ; font-style: italic"></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="form-label">Detail</label>
+                                    <textarea th:field="*{detail}" class="form-control" rows="6"
+                                              id="comment"></textarea>
+                                    <div class="row my-2">
+                                        <div>
+                                            <label class="form-label">Release_date</label>
+                                            <input th:field="*{releaseDate}" type="text" class="form-control"
+                                                   placeholder="No time has been selected yet" id="mdate"
+                                                   data-dtp="dtp_AzTGZ">
+                                            <small th:if="${#fields.hasErrors('releaseDate')}"
+                                                   th:errors="*{releaseDate}"
+                                                   style="color: red ; font-style: italic"></small>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label">Image</label>
+                                            <input class="form-control" type="file" id="formFileImage"
+                                                   th:name="uploadImage" multiple>
+                                            <small th:if="${imageNull}" style="color: red ; font-style: italic">Yêu cầu
+                                                nhập tối thiểu 1 ảnh!!</small>
+                                        </div>
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label">Trailer</label>
+                                            <input th:field="*{trailerUrl}" class="form-control" type="text" id="formFileVideo" placeholder="Url Video"
+                                                   >
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <label class="form-label">Genres</label>
+                                        <div class="row">
+                                            <div class="col-xl-3 col-xxl-6 col-3" th:each="item: ${genres}">
+                                                <div class="form-check custom-checkbox mb-3">
+                                                    <input th:field="*{genresId}" th:value="${item.id}" type="checkbox"
+                                                           class="form-check-input">
+                                                    <label class="form-check-label" th:text="${item.name}"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                            type="submit"
+                                            class="btn btn-primary mt-3"
+                                    >
+                                        Add Movie
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">DexignZone</a> 2022</p>
+        </div>
+    </div>
+</div>
+<th:block th:insert="admin/layouts/script"></th:block>
+<th:block th:insert="admin/layouts/picker"></th:block>
+
+</body>
+</html>

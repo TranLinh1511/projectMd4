@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" customer-account-edit customer-account">
+
+
+<div class="wrapper">
+    <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br/>
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website. </p>
+            </div>
+        </div>
+    </noscript>
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-account">
+                        <div class="block-title">
+                            <strong><span>Tài khoản CGV</span></strong>
+                        </div>
+                        <div class="block-content">
+                            <ul>
+                                <li class="current"><a href="/account-detail/edit">Chi tiết tài khoản</strong></a></li>
+                                <li class="last"><a href="/account-detail/transition">Lịch sử giao dịch</a></li>
+                                <li class="last"><a href="/logout">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-main">
+                    <div class="my-account">
+                        <div class="page-title">
+                            <h1>Lịch sử giao dịch</h1>
+                        </div>
+                        <div th:each="ticket: ${tickets}">
+                            <div class="row">
+                                <h3>Tên Phim: <span th:text="${ticket.movieName}"></span></h3>
+                            </div>
+                            <div class="row">
+                                <h3>Tên Rạp: <span th:text="${ticket.cinemaName}"></span></h3>
+                            </div>
+                            <div class="row">
+                                <h3>Phòng chiếu: <span th:text="${ticket.theaterName}"></span></h3>
+                            </div>
+                            <div class="row">
+                                <h3>Số ghế: <span th:text="${ticket.seatNumber}"></span></h3>
+                            </div>
+                            <div class="row">
+                                <h3>Thời gian: <span th:text="${ticket.time}"></span> </h3>
+                            </div>
+                            <hr>
+                        </div>
+                        <style>
+                            .ptype {
+                                background: #7f7f7f;
+                                border-radius: 5px;
+                            }
+
+                            .ptype > span {
+                                border: 0;
+                            }
+
+                            .button.selected {
+                                background: #e71a0f;
+                            }
+
+                            .channel-icon {
+                                display: inline-block;
+                                vertical-align: bottom;
+                            }
+                        </style>
+                        <div class="col-left sidebar"></div>
+                    </div>
+                </div>
+                <th:block th:insert="/cgv/layouts/footer"></th:block>
+
+                <!-- Facebook Pixel Code -->
+
+
+                <div id="wishlist_edit_action_container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

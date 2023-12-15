@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="admin/layouts/head"></th:block>
+<body>
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<div id="main-wrapper">
+    <th:block th:insert="admin/layouts/layout"></th:block>
+    <!--  todo content-->
+    <div class="content-body">
+        <div class="container-fluid">
+            <!-- row -->
+            <div class="row">
+                <div class="col-xl-12 col-xxl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Theater</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form th:object="${theater}"  action="" method="post" enctype="multipart/form-data">
+                                    <div class="row mb-3">
+                                        <div>
+                                            <label class="form-label"
+                                            >Select Cinema</label
+                                            >
+                                            <div
+                                                    class="dropdown bootstrap-select default-select form-control wide dropup"
+                                            >
+                                                <select
+                                                        th:field="*{cinemaId}"
+                                                        class="default-select form-control wide"
+                                                        tabindex="null"
+                                                >
+                                                    <option th:each="item: ${cinemas}" th:value="${item.id}" th:text="${item.name}">
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label"
+                                            >Theater Name</label
+                                            >
+                                            <input
+                                                    th:field="*{name}"
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Theater Name"
+                                            />
+                                            <small th:if="${#fields.hasErrors('name')}"
+                                                   th:errors="*{name}"
+                                                   style="color: red ; font-style: italic"></small>
+                                        </div>
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label"
+                                            >Total Seat</label
+                                            >
+                                            <input
+                                                    th:field="*{totalSeat}"
+                                                    type="number"
+                                                    class="form-control"
+                                                    placeholder="Total Seat"
+                                            />
+                                            <small th:if="${#fields.hasErrors('totalSeat')}"
+                                                   th:errors="*{totalSeat}"
+                                                   style="color: red ; font-style: italic"></small>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-2">
+                                            <label class="form-label">Image</label>
+                                            <input class="form-control" type="file" th:name="uploadImage" multiple>
+                                            <small th:if="${imageNull}" style="color: red ; font-style: italic">Yêu cầu nhập tối thiểu 1 ảnh!!</small>
+                                        </div>
+                                    </div>
+                                    <button
+                                            type="submit"
+                                            class="btn btn-primary mt-3"
+                                    >
+                                        Add Theater
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">DexignZone</a> 2022</p>
+        </div>
+    </div>
+</div>
+<th:block th:insert="admin/layouts/script"></th:block>
+</body>
+</html>

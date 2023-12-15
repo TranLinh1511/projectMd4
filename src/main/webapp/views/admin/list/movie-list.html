@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="admin/layouts/head"></th:block>
+<body>
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<div id="main-wrapper">
+    <th:block th:insert="admin/layouts/layout"></th:block>
+    <!--  todo content-->
+    <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+            <div class="row mb-5 align-items-center">
+                <div class="col-xl-9">
+                    <div class="card m-0 ">
+                        <div class="card-body py-3 py-md-2">
+                            <div class="row align-items-center">
+                                <div class="col-md-5 mb-3 mb-md-0">
+                                    <div class="media align-items-center">
+											<span class="me-2 mb-1 mx-5">
+												                    <i class="fa-solid fa-clapperboard"></i>
+											</span>
+                                        <div class="media-body ms-1">
+                                            <p class="mb-1 fs-14">Total Movies</p>
+                                            <h3 class="mb-0 text-black font-w600 fs-20" th:text="${movies.size()}"></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <div id="example5_wrapper" class="dataTables_wrapper no-footer">
+                            <table id="example5"
+                                   class="display mb-4 table-responsive-xl dataTablesCard fs-14 dataTable text-center no-footer"
+                                   role="grid" aria-describedby="example5_info">
+                                <thead>
+                                <tr role="row">
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Cust.Id: activate to sort column ascending"
+                                        style="width: 72.8194px;">Movie Id
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Date Join: activate to sort column ascending"
+                                        style="width: 70.6389px;">Movie Name
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Ticket Ordered: activate to sort column ascending"
+                                        style="width: 70.111px;">Title
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Location: activate to sort column ascending"
+                                        style="width: 70.028px;">Director
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Location: activate to sort column ascending"
+                                        style="width: 70.028px;">Image
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label=": activate to sort column ascending" style="width: 40.0417px;">
+                                        Action
+                                    </th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr role="row" class="even" th:each="i: ${movies}">
+                                    <td th:text="${i.id}"></td>
+                                    <td th:text="${i.name}"></td>
+                                    <td th:text="${i.title}"></td>
+                                    <td th:text="${i.director}"></td>
+                                    <td>
+                                        <img alt="" th:src="@{'/images/'+${i.images[0].imageName}}"
+                                             style="width: 100px; height: 130px; object-fit: cover">
+                                    </td>
+                                    <td th:text="${i.duration}" class="d-none"></td>
+                                    <td th:text="${i.detail}" class="d-none"></td>
+                                    <td th:text="${i.releaseDate}" class="d-none"></td>
+                                    <td th:text="${i.trailerUrl}" class="d-none"></td>
+                                    <td class="d-none">
+                                        <span th:each="g:${i.genres}" th:text="${g.name} + ', '"></span>
+                                    </td>
+                                    <td class="d-flex justify-content-center">
+                                        <button type="button" id="showInfo" class="mr-5 btn btn-sm btn-outline-info"
+                                                onclick="showMovieInfo(this)">View detail
+                                        </button>
+                                        <div class="mx-3"></div>
+                                        <a type="button" class="btn-sm btn btn-outline-warning"
+                                           th:href="@{'/admin/update-movie?id=' + ${i.id}}">Update</a>
+                                        <div class="mx-3"></div>
+                                        <a type="button" class="btn-sm btn btn-outline-danger"
+                                           th:href="@{'/admin/delete-movie?id=' + ${i.id}}">Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalContent" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Movie Detail</h5>
+                    <button type="button" id="modalClose1" class="btn-close"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Movie ID: <span id="id"></span></p>
+                    <p>Movie Name: <span id="name"></span></p>
+                    <p>Title: <span id="title"></span></p>
+                    <p>Director: <span id="director"></span></p>
+                    <p>Duration: <span id="duration"></span></p>
+                    <p>Detail: <span id="detail"></span></p>
+                    <p>Release Date: <span id="releaseDate"></span></p>
+                    <p>TrailerUrl: <span id="trailerUrl"></span></p>
+                    <p>Genres: <span id="genres"></span></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modalClose" class="btn btn-danger light"
+                            data-bs-dismiss="modal">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">DexignZone</a> 2022</p>
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const modal = document.getElementById('modalContent');
+    const hasClass = modal.classList.contains('show');
+    document.getElementById("modalClose").addEventListener('click', () => {
+        modal.classList.remove('show');
+        modal.style.display = "none";
+    })
+    document.getElementById("modalClose1").addEventListener('click', () => {
+        modal.classList.remove('show');
+        modal.style.display = "none";
+    })
+    /*]]>*/
+</script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    function showMovieInfo(button) {
+        const row = button.closest('tr');
+        const id = row.querySelector('td:nth-child(1)').innerText;
+        const name = row.querySelector('td:nth-child(2)').innerText;
+        const title = row.querySelector('td:nth-child(3)').innerText;
+        const director = row.querySelector('td:nth-child(4)').innerText;
+        const duration = row.querySelector('td:nth-child(6)').innerText;
+        const detail = row.querySelector('td:nth-child(7)').innerText;
+        const releaseDate = row.querySelector('td:nth-child(8)').innerText;
+        const trailerUrl = row.querySelector('td:nth-child(9)').innerText;
+        const genres = row.querySelector('td:nth-child(10)').innerText;
+        document.getElementById("id").innerText = id;
+        document.getElementById("name").innerText = name;
+        document.getElementById("title").innerText = title;
+        document.getElementById("director").innerText = director;
+        document.getElementById("duration").innerText = duration;
+        document.getElementById("detail").innerText = detail;
+        document.getElementById("releaseDate").innerText = releaseDate;
+        document.getElementById("trailerUrl").innerText = trailerUrl;
+        document.getElementById("genres").innerText = genres;
+        modal.classList.add('show');
+        modal.style.display = "block";
+    }
+
+    /*]]>*/
+</script>
+<th:block th:insert="admin/layouts/script"></th:block>
+
+</body>
+</html>

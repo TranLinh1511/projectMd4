@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" cms-page-view cms-cgv-rules">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <header id="header" class="page-header">
+            <div class="page-header-container">
+                <a class="logo" href="#">
+                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png" alt="CGV Cinemas"
+                         class="large"/>
+                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo-small.png" alt="CGV Cinemas"
+                         class="small"/>
+                </a>
+                <!-- Skip Links -->
+                <div class="skip-links">
+                    <a href="#" class="skip-link skip-nav">
+                        <span class="icon"></span>
+                        <span class="label">Menu</span>
+                    </a>
+
+                    <a href="#" class="skip-myticket">
+                        <span class="icon"></span>
+                    </a>
+                    <!--<a href="#" class="skip-link skip-search">
+            <span class="icon"></span>
+            <span class="label">Tìm kiếm</span>
+        </a>-->
+                    <div class="account-cart-wrapper">
+                        <a href="#" data-target-element="#header-account"
+                           class="skip-link skip-account">
+                            <span class="icon"></span>
+                            <span class="label">Đăng nhập/ Đăng ký</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div id="header-nav" class="skip-content">
+                    <nav id="nav">
+                        <ol class="nav-primary">
+                            <li class="level0 nav-1 first last parent"><a href="#"
+                                                                          class="level0 has-children">Phim</a>
+                                <ul class="level0">
+                                    <li class="level1 nav-1-1 first"><a
+                                            href="#" class="level1 ">Phim
+                                        Đang Chiếu</a></li>
+                                    <li class="level1 nav-1-2 last"><a
+                                            href="#" class="level1 ">Phim
+                                        Sắp Chiếu</a></li>
+                                </ul>
+                            </li>
+                            <!--li class="level0 nav-2 first last">
+            <a class="level0" href="#">Lịch Chiếu</a>
+        </li-->
+
+                            <li class="level0 nav-2 parent first last">
+                                <a class="level0 has-children" href="#">Rạp CGV</a>
+                                <ul class="level0">
+                                    <li class="level1 nav-3-1 last">
+                                        <a class="level1" href="#">Tất Cả Các
+                                            Rạp</a>
+                                    </li>
+                                    <li class="level1 nav-3-2 last">
+                                        <a class="level1" href="#">Rạp
+                                            Đặc Biệt</a>
+                                    </li>
+                                    <li class="level1 nav-3-3 last">
+                                        <a class="level1" href="#">Rạp
+                                            3D</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="level0 nav-4 parent first last">
+                                <a class="level0 has-children" href="#">Thành viên</a>
+                                <ul class="level0">
+                                    <li class="level1 nav-4-2 first">
+                                        <!--<a class="level0" href="#">Thành viên</a>-->
+                                        <a class="level1" href="#">Tài
+                                            khoản CGV</a>
+                                    </li>
+                                    <li class="level1 nav-4-3 last">
+                                        <a class="level1" href="#">Quyền lợi</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="level0 nav-5 parent first last">
+                                <a class="level0 has-children" href="#">Cultureplex</a>
+                                <ul class="level0">
+                                    <!--						<li class="level1 nav-5-1 ">
+                        <a class="level1" href="#"></a>
+                    </li>
+                    -->
+                                    <li class="level1 nav-5-1">
+                                        <a class="level1"
+                                           href="#">Quầy
+                                            Online</a>
+                                    </li>
+                                    <li class="level1 nav-5-1">
+                                        <a class="level1" href="#">Thuê Rạp & Vé
+                                            Nhóm</a>
+                                    </li>
+                                    <li class="level1 nav-5-1">
+                                        <a class="level1" href="#">e-CGV</a>
+                                    </li>
+                                    <li class="level1 nav-5-1">
+                                        <a class="level1" href="#">CGV eGift</a>
+                                    </li>
+                                    <li class="level1 nav-5-1">
+                                        <a class="level1" href="#">CGV Rules</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <style type="text/css">
+                        .nav-primary ul.level0 li a:hover {
+                            background: none
+                        }
+
+                        .level1 {
+                            text-transform: capitalize;
+                        }
+                    </style>
+                    <script type="text/javascript">
+                        /*
+                            $j('.nav-1 a').each(function(){
+                                $j(this).attr('href', $j(this).attr('href').replace('cinox','www'));
+                            });
+                        */
+                        $j(document).ready(function () {
+                            //$j('li.level0.nav-1').find('a.has-children').replace('/movie.html','#');
+                            //$j('li.level0.nav-1 a.has-children').href.replace('/movie.html','#');
+                            $j('li.level0.nav-1 a.has-children').attr('href', '#');
+                            $j('.categorypath-movie-voucher.category-movie-voucher li.category11 a,.categorypath-gift-card.category-gift-card li.category11 a').attr('href', '#');
+                            //$j('li.level0.nav-1').find('a.has-children').replace('/movie.html','#');
+                        });
+                    </script>
+                </div>
+                <!-- Search -->
+                <div id="header-search" class="skip-content">
+
+                    <div class="header-search-left">
+                        <p class="kenhcine"><a href="#"
+                                               title="Kênh Cine - Tổng hợp tin tức điện ảnh mới nhất"
+                                               target="_blank"><img alt="kênh Cine"
+                                                                    src="https://www.cgv.vn/media/wysiwyg/2019/AUG/kenhcine.gif"></a>
+                        </p>
+
+                    </div>
+
+                    <div class="header-search-right">
+                        <p> <a href="#"><img alt=""
+                                                                                             src="https://www.cgv.vn/media/wysiwyg/news-offers/mua-ve_ngay.png"/></a>
+                        </p>
+                    </div>
+
+
+                </div>
+                <!-- Account -->
+                <div id="header-account" class="skip-content">
+                    <div class="links">
+                        <ul>
+                            <li class="first"><a href="#" title="Tài khoản">Tài
+                                khoản</a></li>
+                            <li><a href="#" title="Giỏ hàng"
+                                   class="top-link-cart">Giỏ hàng</a></li>
+                            <li><a href="#" title="Thanh toán"
+                                   class="top-link-checkout">Thanh toán</a></li>
+                            <li><a href="#" title="Đăng ký">Đăng
+                                ký</a></li>
+                            <li class=" last"><a
+                                    href="#"
+                                    title="Đăng nhập">Đăng nhập</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-container col1-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>NHỮNG QUY ĐỊNH TẠI RẠP PHIM CGV</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-main">
+                    <div class="std">
+                        <p style="padding-left: 30px; padding-right: 30px;"><em>&nbsp;</em></p>
+                        <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>NHỮNG QUY ĐỊNH TẠI
+                            RẠP PHIM CGV</strong></p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>I. NỘI QUY PH&Ograve;NG
+                            CHIẾU</strong><br/>- Kh&ocirc;ng quay phim, chụp ảnh. <br/>- Tắt chu&ocirc;ng điện thoại.
+                            <br/>- Kh&ocirc;ng h&uacute;t thuốc. <br/>- Kh&ocirc;ng g&acirc;y mất trật tự. <br/>- Kh&ocirc;ng
+                            nhai kẹo cao su. <br/>- Kh&ocirc;ng mang th&uacute; cưng v&agrave;o rạp. <br/>- Bảo quản t&agrave;i
+                            sản c&aacute; nh&acirc;n cẩn thận. <br/>- Chỉ thức ăn v&agrave; nước uống mua tại Cụm Rạp
+                            Chiếu Phim CGV Cinemas mới
+                            được ph&eacute;p mang v&agrave;o rạp. <br/>- Kh&ocirc;ng sử dụng rượu, bia, thức uống c&oacute;
+                            cồn (d&ugrave; với bất kỳ nồng độ cồn n&agrave;o), c&aacute;c chất k&iacute;ch th&iacute;ch
+                            kh&aacute;c trong khu&ocirc;n
+                            vi&ecirc;n Cụm Rạp Chiếu Phim CGV Cinemas.<br/>- Sau 22 giờ Cụm Rạp Chiếu Phim CGV Cinemas
+                            kh&ocirc;ng phục vụ kh&aacute;ch dưới 13 tuổi <br/>- Sau 23 giờ Cụm Rạp Chiếu Phim CGV
+                            Cinemas kh&ocirc;ng phục vụ kh&aacute;ch
+                            dưới 16 tuổi. <br/>- Ban Quản L&yacute; Cụm Rạp Chiếu Phim CGV Cinemas c&oacute; quyền từ
+                            chối kh&ocirc;ng cho Qu&yacute; Kh&aacute;ch v&agrave;o Rạp Chiếu Phim nếu vi phạm. <br/>-
+                            CGV Việt Nam c&oacute; camera an ninh
+                            trong c&aacute;c Cụm Rạp Chiếu Phim CGV Cinemas.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>II.&nbsp;PH&Acirc;N LOẠI PHIM THEO
+                            ĐỘ TUỔI</strong></p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>1. Ph&acirc;n loại Phim</strong></p>
+                        <p style="padding-left: 30px; padding-right: 30px;">CGV Việt Nam th&ocirc;ng b&aacute;o ti&ecirc;u
+                            ch&iacute; ph&acirc;n loại phim theo lứa tuổi như sau:</p>
+                        <table border="1" cellpadding="0" cellspacing="0"
+                               style="margin-right: 15px; margin-left: 15px;">
+                            <tbody style="padding-left: 30px; padding-right: 30px;">
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p style="text-align: center; padding-left: 30px; padding-right: 30px;"><strong>Ph&acirc;n
+                                        loại *</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Định
+                                        nghĩa</strong></p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;">P</p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim được ph&eacute;p
+                                        phổ biến đến người xem ở mọi độ tuổi.</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center"
+                                       style="text-align: center; padding-left: 30px; padding-right: 30px;">K</p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim được
+                                        phổ biến đến người xem dưới 13 tuổi v&agrave; c&oacute; người bảo hộ đi k&egrave;m.</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center"
+                                       style="text-align: center; padding-left: 30px; padding-right: 30px;">T13</p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim được
+                                        phổ biến đến người xem từ đủ 13 tuổi trở l&ecirc;n (13+).</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;">T16</p>
+                                </td>
+                                <td style="text-align: center; padding-left: 30px; padding-right: 30px;" valign="top"
+                                    width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">Phim được phổ biến đến người xem
+                                        từ đủ 16 tuổi trở l&ecirc;n (16+).</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;">T18</p>
+                                </td>
+                                <td style="text-align: center; padding-left: 30px; padding-right: 30px;" valign="top"
+                                    width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">Phim được phổ biến đến người xem
+                                        từ đủ 18 tuổi trở l&ecirc;n (18+).</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;">C</p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="text-align: center; padding-left: 30px; padding-right: 30px;">Phim kh&ocirc;ng
+                                        được ph&eacute;p phổ biến.</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p style="padding-left: 30px; padding-right: 30px;">2. Lưu &yacute;<br/>- Qu&yacute; Kh&aacute;ch
+                            H&agrave;ng xem phim được ph&acirc;n loại T13, T16, T18 vui l&ograve;ng mang theo giấy tờ t&ugrave;y
+                            th&acirc;n c&oacute; ảnh nhận diện v&agrave; ng&agrave;y th&aacute;ng năm sinh
+                            để đảm bảo việc tu&acirc;n thủ theo quy định. CGV Việt Nam c&oacute; quyền y&ecirc;u cầu kh&aacute;ch
+                            h&agrave;ng xuất tr&igrave;nh Giấy khai sinh, Căn cước c&ocirc;ng d&acirc;n, Thẻ học sinh,
+                            thẻ sinh vi&ecirc;n, bằng
+                            l&aacute;i xe, hoặc c&aacute;c giấy tờ t&ugrave;y th&acirc;n kh&aacute;c để x&aacute;c định
+                            độ tuổi Qu&yacute; Kh&aacute;ch H&agrave;ng.<br/>- Ban Quản L&yacute; Cụm Rạp Chiếu Phim CGV
+                            Cinemas c&oacute; quyền kiểm tra
+                            v&agrave; từ chối kh&aacute;ch h&agrave;ng nếu kh&ocirc;ng đ&uacute;ng quy định về độ
+                            tuổi.<br/>3. Chế t&agrave;i<br/>- Phạt tiền từ 60.000.000 đồng đến 80.000.000 đồng đối với h&agrave;nh
+                            vi kh&ocirc;ng đảm bảo người
+                            xem phim đ&uacute;ng độ tuổi theo ph&acirc;n loại phim.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><em>&nbsp;</em></p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>III. QUY ĐỊNH VỀ KHUNG GIỜ CHIẾU
+                            PHIM CHO TRẺ EM</strong><br/>1. Quy định về Khung giờ chiếu phim cho trẻ em<br/>CGV Việt Nam
+                            th&ocirc;ng b&aacute;o &aacute;p dụng quy định về khung giờ chiếu phim cho trẻ em như
+                            sau:<br
+                            />(i) Giờ chiếu phim cho trẻ em dưới 13 tuổi tại Cụm Rạp Chiếu Phim CGV Cinemas kết th&uacute;c
+                            trước 22 giờ.<br/>(ii) Giờ chiếu phim cho trẻ em dưới 16 tuổi tại Cụm Rạp Chiếu Phim CGV
+                            Cinemas kết th&uacute;c trước 23
+                            giờ.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;">2. Lưu &yacute;<br/>- CGV Việt Nam c&oacute;
+                            quyền y&ecirc;u cầu kh&aacute;ch h&agrave;ng xuất tr&igrave;nh Giấy khai sinh, Căn cước c&ocirc;ng
+                            d&acirc;n, Thẻ học sinh, thẻ sinh vi&ecirc;n, bằng l&aacute;i xe, hoặc c&aacute;c
+                            giấy tờ t&ugrave;y th&acirc;n kh&aacute;c để x&aacute;c định độ tuổi Qu&yacute; Kh&aacute;ch
+                            H&agrave;ng.<br/>- Ban Quản L&yacute; Cụm Rạp Chiếu Phim CGV Cinemas c&oacute; quyền kiểm
+                            tra v&agrave; từ chối kh&aacute;ch
+                            h&agrave;ng nếu kh&ocirc;ng đ&uacute;ng quy định về độ tuổi.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;">3. Chế t&agrave;i<br/>- Phạt tiền từ
+                            40.000.000 đồng đến 60.000.000 đồng đối với h&agrave;nh vi vi phạm quy định.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>IV. CH&Iacute;NH S&Aacute;CH GI&Aacute;
+                            V&Eacute; ĐỐI VỚI QU&Yacute; KH&Aacute;CH H&Agrave;NG</strong><br/>1. Định nghĩa<br/>Trừ khi
+                            ngữ cảnh hoặc t&igrave;nh huống c&oacute; quy định kh&aacute;c đi, c&aacute;c từ
+                            v&agrave; cụm từ ngay b&ecirc;n dưới sẽ được hiểu như sau:<br/>a) Trẻ Em: L&agrave; Kh&aacute;ch
+                            H&agrave;ng chưa đủ 16 tuổi;<br/>b) Th&agrave;nh vi&ecirc;n U22: L&agrave; Kh&aacute;ch H&agrave;ng
+                            đ&atilde; đăng k&yacute;
+                            v&agrave; l&agrave; th&agrave;nh vi&ecirc;n chương tr&igrave;nh Th&agrave;nh Vi&ecirc;n U22
+                            của CGV Việt Nam; v&agrave; trong độ tuổi từ đủ 12 tuổi đến dưới 22 tuổi;<br/>c) Sinh Vi&ecirc;n:
+                            l&agrave; đối tượng kh&aacute;ch
+                            h&agrave;ng đang l&agrave; sinh vi&ecirc;n tại thời điểm sử dụng sản phẩm/ dịch vụ của CGV
+                            Việt Nam v&agrave; kh&ocirc;ng thuộc đối tượng Th&agrave;nh Vi&ecirc;n U22;<br/>d) Người Cao
+                            Tuổi: l&agrave; Kh&aacute;ch H&agrave;ng
+                            tr&ecirc;n 55 tuổi;<br/>e) Người C&oacute; C&ocirc;ng Với C&aacute;ch Mạng: l&agrave; Kh&aacute;ch
+                            H&agrave;ng c&oacute; x&aacute;c nhận l&agrave; Người C&oacute; C&ocirc;ng Với C&aacute;ch
+                            Mạng;<br/>f) Người C&oacute;
+                            Ho&agrave;n Cảnh Kh&oacute; Khăn: &agrave; Kh&aacute;ch H&agrave;ng c&oacute; x&aacute;c
+                            nhận l&agrave; Người c&oacute; ho&agrave;n cảnh kh&oacute; khăn (hoặc thỏa m&atilde;n điều
+                            kiện về Chuẩn Hộ Cận Ngh&egrave;o v&agrave;
+                            Chuẩn Hộ Ngh&egrave;o theo quy định ph&aacute;p luật);<br/>g) Người Khuyết Tật Nặng: l&agrave;
+                            Kh&aacute;ch H&agrave;ng khuyết tật nặng hoặc chứng minh được Người khuyết tật nặng: l&agrave;
+                            những người do khuyết tật dẫn
+                            đến một phần hoặc suy giảm chức năng, kh&ocirc;ng tự kiểm so&aacute;t hoặc thực hiện được
+                            một số hoạt động cơ bản;<br/>h) Người Khuyết Tật Đặc Biệt Nặng: &agrave; Kh&aacute;ch H&agrave;ng
+                            khuyết tật đặc biệt nặng hoặc
+                            chứng minh được Người khuyết tật đặc biệt nặng: l&agrave; những người do khuyết tật dẫn đến
+                            mất ho&agrave;n to&agrave;n chức năng, kh&ocirc;ng tự kiểm so&aacute;t hoặc thực hiện được c&aacute;c
+                            hoạt động cơ bản;<br/>i)
+                            Người lớn: l&agrave; Kh&aacute;ch H&agrave;ng kh&ocirc;ng thuộc c&aacute;c đối tượng Trẻ Em,
+                            Th&agrave;nh Vi&ecirc;n U22, Sinh Vi&ecirc;n, Người Cao Tuổi, Người C&oacute; C&ocirc;ng Với
+                            C&aacute;ch Mạng, Người C&oacute;
+                            Ho&agrave;n Cảnh Kh&oacute; Khăn, Người Khuyết Tật Nặng, Người Khuyết Tật Đặc Biệt Nặng.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;">2. Lưu &yacute;<br/>- C&aacute;ch t&iacute;nh
+                            độ tuổi sẽ căn cứ theo quy định của ph&aacute;p luật;<br/>- Để đảm bảo tối ưu quyền lợi của
+                            Qu&yacute; Kh&aacute;ch H&agrave;ng:<br/>&bull; Trường hợp Qu&yacute; Kh&aacute;ch
+                            H&agrave;ng kh&ocirc;ng c&oacute; t&agrave;i liệu v&agrave;/hoặc căn cứ để chứng minh Qu&yacute;
+                            Kh&aacute;ch H&agrave;ng thuộc nh&oacute;m đối tượng Trẻ Em, CGV Việt Nam sẽ &aacute;p dụng
+                            cơ sở chiều cao để x&aacute;c
+                            định. Theo đ&oacute;, Qu&yacute; Kh&aacute;ch H&agrave;ng c&oacute; chiều cao dưới 130
+                            centimet sẽ thuộc đối tượng Trẻ Em;<br/>&bull; Trường hợp Qu&yacute; Kh&aacute;ch H&agrave;ng
+                            kh&ocirc;ng c&oacute; t&agrave;i liệu
+                            v&agrave;/hoặc căn cứ để chứng minh Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc nh&oacute;m
+                            đối tượng Người Khuyết Tật Nặng, CGV Việt Nam sẽ &aacute;p dụng cơ sở quan s&aacute;t trực
+                            quan. Theo đ&oacute;, Qu&yacute; Kh&aacute;ch
+                            H&agrave;ng mất một phần cơ thể hoặc suy giảm chức năng phải sử dụng thiết bị hỗ trợ sẽ
+                            thuộc đối tượng Người Khuyết Tật Nặng;<br/>&bull; Trường hợp Qu&yacute; Kh&aacute;ch H&agrave;ng
+                            kh&ocirc;ng c&oacute; t&agrave;i
+                            liệu v&agrave;/hoặc căn cứ để chứng minh Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc nh&oacute;m
+                            đối tượng Người Khuyết Tật Đặc Biệt Nặng, tuy nhi&ecirc;n, bằng quan s&aacute;t trực quan,
+                            Qu&yacute; Kh&aacute;ch H&agrave;ng
+                            mất một phần cơ thể hoặc suy giảm chức năng phải sử dụng thiết bị hỗ trợ; CGV Việt Nam sẽ
+                            phục vụ Qu&yacute; Kh&aacute;ch H&agrave;ng theo đối tượng Người Khuyết Tật Nặng;</p>
+                        <p style="padding-left: 30px; padding-right: 30px;">3. T&agrave;i liệu x&aacute;c minh<br/>Để
+                            đảm bảo CGV Việt Nam thực hiện Ch&iacute;nh s&aacute;ch gi&aacute; v&eacute; một c&aacute;ch
+                            minh bạch, c&ocirc;ng bằng, đảm bảo quyền lợi của Qu&yacute; Kh&aacute;ch H&agrave;ng,
+                            CGV Việt Nam sẽ y&ecirc;u cầu Qu&yacute; Kh&aacute;ch H&agrave;ng cung cấp cơ sở hợp l&yacute;
+                            để CGV Việt Nam &aacute;p dụng c&aacute;c quyền lợi li&ecirc;n quan đến Qu&yacute; Kh&aacute;ch
+                            H&agrave;ng. Theo đ&oacute;,
+                            CGV Việt Nam c&oacute; quyền y&ecirc;u cầu Qu&yacute; Kh&aacute;ch H&agrave;ng mang theo c&aacute;c
+                            t&agrave;i liệu sau để đối chiếu tại Cụm Rạp Chiếu Phim CGV Cinemas:</p>
+                        <table border="1" cellpadding="0" cellspacing="0"
+                               style="margin-right: 15px; margin-left: 15px;">
+                            <tbody style="padding-left: 30px; padding-right: 30px;">
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p style="text-align: center; padding-left: 30px; padding-right: 30px;"><strong>Trẻ
+                                        Em</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y
+                                        th&acirc;n hoặc t&agrave;i liệu li&ecirc;n quan chứng minh ch&iacute;nh x&aacute;c
+                                        th&ocirc;ng tin hoặc t&igrave;nh trạng của Qu&yacute; Kh&aacute;ch H&agrave;ng;
+                                        c&oacute;
+                                        thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: giấy khai sinh; hộ
+                                        chiếu, căn cước c&ocirc;ng d&acirc;n; m&atilde; số định danh; thẻ học sinh; sổ
+                                        hộ khẩu, sổ tạm tr&uacute;, giấy x&aacute;c nhận
+                                        tạm tr&uacute; c&oacute; ghi nhận ng&agrave;y th&aacute;ng năm sinh.</p>
+                                    <p style="padding-left: 30px; padding-right: 30px;">- Trường hợp Qu&yacute; Kh&aacute;ch
+                                        H&agrave;ng kh&ocirc;ng c&oacute; t&agrave;i liệu v&agrave;/hoặc căn cứ để chứng
+                                        minh Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc nh&oacute;m đối tượng Trẻ Em, CGV
+                                        Việt Nam
+                                        sẽ &aacute;p dụng cơ sở chiều cao để x&aacute;c định. Theo đ&oacute;, Qu&yacute;
+                                        Kh&aacute;ch H&agrave;ng c&oacute; chiều cao dưới 130 centimet sẽ thuộc đối
+                                        tượng Trẻ Em.</p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span>-<span> </span>Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch. Kh&ocirc;ng giới hạn số lượng giao dịch trong một ng&agrave;y.</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Th&agrave;nh</strong><strong>
+                                        <strong>vi&ecirc;n</strong> U22</strong>
+                                    </p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y
+                                        th&acirc;n hoặc t&agrave;i liệu li&ecirc;n quan chứng minh ch&iacute;nh x&aacute;c
+                                        th&ocirc;ng tin của Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave;
+                                        một
+                                        trong c&aacute;c t&agrave;i liệu sau: giấy khai sinh; hộ chiếu; chứng minh nh&acirc;n
+                                        d&acirc;n; căn cước c&ocirc;ng d&acirc;n; m&atilde; số định danh; thẻ học sinh;
+                                        thẻ sinh vi&ecirc;n; sổ hộ khẩu, sổ tạm
+                                        tr&uacute;, giấy x&aacute;c nhận tạm tr&uacute; c&oacute; ghi nhận ng&agrave;y
+                                        th&aacute;ng năm sinh; v&agrave;<br/>- Thẻ U22/ T&agrave;i khoản th&agrave;nh vi&ecirc;n
+                                        online đăng nhập th&ocirc;ng qua ứng
+                                        dụng CGV Cinemas Vietnam.<br/>- Trường hợp muốn mua nhiều v&eacute; 1 l&uacute;c,
+                                        cần xuất tr&igrave;nh th&ecirc;m số lượng CCCD/Thẻ HSSV với tương ứng với số v&eacute;
+                                        muốn mua tại quầy so&aacute;t v&eacute;
+                                        để đối so&aacute;t, đồng thời đảm bảo chủ sở hữu của c&aacute;c CCCD/Thẻ HSSV n&agrave;y
+                                        l&agrave; ch&iacute;nh chủ (Sẽ kiểm tra th&ecirc;m 1 lần tại quầy so&aacute;t v&eacute;
+                                        trước khi v&agrave;o ph&ograve;ng
+                                        chiếu), v&agrave; th&ocirc;ng tin về độ tuổi nằm trong giới hạn quy định.<br/>-
+                                        Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch. Kh&ocirc;ng
+                                        giới hạn số lượng giao dịch trong một ng&agrave;y.</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Sinh Vi&ecirc;n</strong>
+                                    </p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y
+                                        th&acirc;n hoặc t&agrave;i liệu li&ecirc;n quan chứng minh ch&iacute;nh x&aacute;c
+                                        th&ocirc;ng tin của Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave;
+                                        một
+                                        trong c&aacute;c t&agrave;i liệu sau: thẻ học sinh; thẻ sinh vi&ecirc;n vẫn c&ograve;n
+                                        thời hạn sử dụng;<br/>- Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01
+                                        giao dịch. Kh&ocirc;ng giới hạn số
+                                        lượng giao dịch trong một ng&agrave;y.</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Người Cao
+                                        Tuổi</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y
+                                        th&acirc;n c&oacute; ảnh hoặc t&agrave;i liệu li&ecirc;n quan c&oacute; ảnh
+                                        chứng minh ch&iacute;nh x&aacute;c th&ocirc;ng tin hoặc t&igrave;nh trạng của Qu&yacute;
+                                        Kh&aacute;ch
+                                        H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau:
+                                        chứng minh nh&acirc;n d&acirc;n; hộ chiếu; căn cước c&ocirc;ng d&acirc;n, thẻ
+                                        người cao tuổi, thẻ ban ng&agrave;nh chức năng.<br
+                                        />- Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch. Kh&ocirc;ng
+                                        giới hạn số lượng giao dịch trong một ng&agrave;y.</p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Người C&oacute;
+                                        C&ocirc;ng Với C&aacute;ch Mạng</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y th&acirc;n c&oacute; ảnh hoặc t&agrave;i liệu li&ecirc;n quan c&oacute; ảnh chứng minh ch&iacute;nh x&aacute;c th&ocirc;ng tin Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: chứng minh nh&acirc;n d&acirc;n; hộ chiếu; căn cước c&ocirc;ng d&acirc;n; m&atilde; số định danh; v&agrave;</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Xuất tr&igrave;nh chứng nhận hoặc t&agrave;i liệu li&ecirc;n quan chứng minh t&igrave;nh trạng của Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: Thẻ thương binh, bằng khen/giấy chứng nhận người c&oacute; c&ocirc;ng với c&aacute;ch mạng.</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch. Kh&ocirc;ng giới hạn số lượng giao dịch trong một ng&agrave;y.</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Người C&oacute;
+                                        Ho&agrave;n Cảnh Kh&oacute; Khăn</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y th&acirc;n c&oacute; ảnh hoặc t&agrave;i liệu li&ecirc;n quan c&oacute; ảnh chứng minh ch&iacute;nh x&aacute;c th&ocirc;ng tin Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: chứng minh nh&acirc;n d&acirc;n; hộ chiếu; căn cước c&ocirc;ng d&acirc;n; m&atilde; số định danh; v&agrave;</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Xuất tr&igrave;nh chứng nhận hoặc t&agrave;i liệu li&ecirc;n quan chứng minh t&igrave;nh trạng của Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: Đơn x&aacute;c nhận ho&agrave;n cảnh kh&oacute; khăn c&oacute; x&aacute;c nhận của phường/xả.</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch. Kh&ocirc;ng giới hạn số lượng giao dịch trong một ng&agrave;y</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Người
+                                        Khuyết Tật Nặng</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y th&acirc;n c&oacute; ảnh hoặc t&agrave;i liệu li&ecirc;n quan c&oacute; ảnh chứng minh ch&iacute;nh x&aacute;c th&ocirc;ng tin Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: chứng minh nh&acirc;n d&acirc;n; hộ chiếu; căn cước c&ocirc;ng d&acirc;n; m&atilde; số định danh; v&agrave;</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Xuất tr&igrave;nh chứng nhận hoặc t&agrave;i liệu li&ecirc;n quan chứng minh t&igrave;nh trạng của Qu&yacute; Kh&aacute;ch H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: hồ sơ bệnh &aacute;n ghi nhận tỷ lệ thương tật.</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Trường hợp Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng c&oacute; t&agrave;i liệu v&agrave;/hoặc căn cứ để chứng minh Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc nh&oacute;m đối tượng Người Khuyết Tật Nặng, CGV Việt Nam sẽ &aacute;p dụng cơ sở quan s&aacute;t trực quan. Theo đ&oacute;, Qu&yacute; Kh&aacute;ch H&agrave;ng mất một phần cơ thể hoặc suy giảm chức năng phải sử dụng thiết bị hỗ trợ sẽ thuộc đối tượng Người Khuyết Tật Nặng.</span>
+                                    </p>
+                                    <p style="padding-left: 30px; padding-right: 30px;"><span style="font-size: 12px;">- Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch. Kh&ocirc;ng giới hạn số lượng giao dịch trong một ng&agrave;y.</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table border="1" cellpadding="0" cellspacing="0"
+                               style="margin-right: 15px; margin-left: 15px;">
+                            <tbody style="padding-left: 30px; padding-right: 30px;">
+                            <tr style="padding-left: 30px; padding-right: 30px;">
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="96">
+                                    <p align="center" style="padding-left: 30px; padding-right: 30px;"><strong>Người
+                                        Khuyết Tật Đặc Biệt Nặng</strong></p>
+                                </td>
+                                <td style="padding-left: 30px; padding-right: 30px;" valign="top" width="504">
+                                    <p style="padding-left: 30px; padding-right: 30px;">- Xuất tr&igrave;nh giấy tờ t&ugrave;y
+                                        th&acirc;n c&oacute; ảnh hoặc t&agrave;i liệu li&ecirc;n quan c&oacute; ảnh
+                                        chứng minh ch&iacute;nh x&aacute;c th&ocirc;ng tin Qu&yacute; Kh&aacute;ch H&agrave;ng;
+                                        c&oacute;
+                                        thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau: chứng minh nh&acirc;n d&acirc;n;
+                                        hộ chiếu; căn cước c&ocirc;ng d&acirc;n; m&atilde; số định danh; v&agrave;<br/>-
+                                        Xuất tr&igrave;nh chứng nhận hoặc
+                                        t&agrave;i liệu li&ecirc;n quan chứng minh t&igrave;nh trạng của Qu&yacute; Kh&aacute;ch
+                                        H&agrave;ng; c&oacute; thể l&agrave; một trong c&aacute;c t&agrave;i liệu sau:
+                                        hồ sơ bệnh &aacute;n ghi nhận tỷ lệ
+                                        thương tật.<br/>- Trường hợp Qu&yacute; Kh&aacute;ch H&agrave;ng kh&ocirc;ng c&oacute;
+                                        t&agrave;i liệu v&agrave;/hoặc căn cứ để chứng minh Qu&yacute; Kh&aacute;ch H&agrave;ng
+                                        thuộc nh&oacute;m đối tượng
+                                        Người Khuyết Tật Đặc Biệt Nặng, tuy nhi&ecirc;n, bằng quan s&aacute;t trực quan,
+                                        Qu&yacute; Kh&aacute;ch H&agrave;ng mất một phần cơ thể hoặc suy giảm chức năng
+                                        phải sử dụng thiết bị hỗ trợ; CGV Việt Nam
+                                        sẽ phục vụ Qu&yacute; Kh&aacute;ch H&agrave;ng theo đối tượng Người Khuyết Tật
+                                        Nặng.<br/>- Giới hạn &aacute;p dụng: 01 đối tượng/ 01 v&eacute;/ 01 giao dịch.
+                                        Kh&ocirc;ng giới hạn số lượng giao dịch trong
+                                        một ng&agrave;y.</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p style="padding-left: 30px; padding-right: 30px;"></p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>4. Ch&iacute;nh s&aacute;ch gi&aacute;
+                            v&eacute; với Qu&yacute; Kh&aacute;ch H&agrave;ng</strong><br/>- Gi&aacute; V&eacute; Xem
+                            Phim Ti&ecirc;u Chuẩn &aacute;p dụng cho Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc đối
+                            tượng Người Lớn: l&agrave; Gi&aacute; V&eacute; Xem Phim Cơ Sở như được quy định tại từng
+                            Cụm Rạp Chiếu Phim CGV Cinemas. <br/>- Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u Chuẩn
+                            &aacute;p dụng cho Qu&yacute; Kh&aacute;ch
+                            H&agrave;ng thuộc đối tượng Th&agrave;nh Vi&ecirc;n U22: l&agrave; gi&aacute; v&eacute; m&agrave;
+                            CGV Việt Nam c&ocirc;ng bố cho đối tượng kh&aacute;ch h&agrave;ng l&agrave; Th&agrave;nh Vi&ecirc;n
+                            U22 được th&ocirc;ng
+                            b&aacute;o tại từng Cụm Rạp Chiếu Phim CGV Cinemas.<br/>- Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u
+                            Chuẩn &aacute;p dụng cho Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc đối tượng Sinh Vi&ecirc;n:
+                            l&agrave; gi&aacute; v&eacute;
+                            &aacute;p dụng cho kh&aacute;ch h&agrave;ng c&oacute; thẻ sinh vi&ecirc;n nhưng kh&ocirc;ng
+                            phải l&agrave; th&agrave;nh vi&ecirc;n U22 của CGV được th&ocirc;ng b&aacute;o tại từng Cụm
+                            Rạp Chiếu Phim CGV Cinemas.<br/>-
+                            Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u Chuẩn &aacute;p dụng cho Qu&yacute; Kh&aacute;ch H&agrave;ng
+                            thuộc đối tượng Trẻ Em, Người Cao Tuổi, Người C&oacute; C&ocirc;ng Với C&aacute;ch Mạng,
+                            Người C&oacute; Ho&agrave;n
+                            Cảnh Kh&oacute; Khăn: sẽ lu&ocirc;n đảm bảo tỷ lệ tối thiểu thấp hơn 20% so với Gi&aacute; V&eacute;
+                            Xem Phim Cơ Sở &aacute;p dụng cho từng Cụm Rạp Chiếu Phim CGV Cinemas.<br/>- Gi&aacute; V&eacute;
+                            Xem Phim Ti&ecirc;u
+                            Chuẩn &aacute;p dụng cho Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc đối tượng Người Khuyết
+                            Tật Nặng: sẽ lu&ocirc;n đảm bảo tỷ lệ tối thiểu thấp hơn 50% so với Gi&aacute; V&eacute; Xem
+                            Phim Cơ Sở &aacute;p dụng cho từng Cụm
+                            Rạp Chiếu Phim CGV Cinemas.<br/>- Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u Chuẩn &aacute;p
+                            dụng cho Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc đối tượng Người Khuyết Tật Đặc Biệt Nặng:
+                            miễn Gi&aacute; v&eacute;.<br/>Qu&yacute;
+                            Kh&aacute;ch H&agrave;ng lưu &yacute;, Gi&aacute; V&eacute; Xem Phim Ti&ecirc;u Chuẩn sẽ c&oacute;
+                            sự kh&aacute;c biệt giữa c&aacute;c Cụm Rạp Chiếu Phim CGV Cinemas tr&ecirc;n to&agrave;n
+                            quốc.<br/>C&aacute;c ưu đ&atilde;i
+                            đối với Qu&yacute; Kh&aacute;ch H&agrave;ng thuộc đối tượng Th&agrave;nh Vi&ecirc;n U22, Trẻ
+                            Em, Người Cao Tuổi, Sinh Vi&ecirc;n, Người C&oacute; C&ocirc;ng Với C&aacute;ch Mạng, Người
+                            C&oacute; Ho&agrave;n Cảnh Kh&oacute;
+                            Khăn, Người Khuyết Tật Nặng, Người Khuyết Tật Đặc Biệt Nặng SẼ KH&Ocirc;NG ĐƯỢC &Aacute;P
+                            DỤNG khi Qu&yacute; Kh&aacute;ch H&agrave;ng đặt v&eacute; xem phim trực tuyến qua Ứng Dụng
+                            của CGV Việt Nam (website cgv.vn v&agrave;
+                            ứng dụng di động CGV), m&agrave; CHỈ C&Oacute; THỂ ĐƯỢC THỰC HIỆN BẰNG GIAO DỊCH TRỰC TIẾP
+                            TẠI C&Aacute;C CỤM RẠP CHIẾU PHIM CGV CINEMAS tr&ecirc;n to&agrave;n quốc.</p>
+                        <p style="padding-left: 30px; padding-right: 30px;"><strong>&nbsp;</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi" id="top"  xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head" ></th:block>
+<body class=" theaters-special-view">
+
+
+
+
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header" ></th:block>
+        <div class="main-container col1-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Home Page">Home Page</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="3d">
+                        <strong>3D</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-main">
+                    <div id="specialtheater-list" class="specialtheater-list">
+                        <ul class="special-items feature_slide_show">
+                            <li class="item-icon item-sweetbox">
+                                <a title="Sweetbox"
+                                   href="#">Sweetbox</a>
+                            </li>
+                            <li class="item-icon item-4dx">
+                                <a title="4DX�" href="#">4DX�</a>
+                            </li>
+                            <li class="item-icon item-imax">
+                                <a title="IMAX" href="#">IMAX</a>
+                            </li>
+                            <li class="item-icon item-gold-class">
+                                <a title="Gold Class" href="#">Gold
+                                    Class</a>
+                            </li>
+                            <li class="item-icon item-lamour">
+                                <a title="L'amour" href="#">L'amour</a>
+                            </li>
+                            <li class="item-icon item-starium">
+                                <a title="Starium"
+                                   href="#">Starium</a>
+                            </li>
+                            <li class="item-icon item-premium">
+                                <a title="Premium"
+                                   href="#">Premium</a>
+                            </li>
+                            <li class="item-icon item-screenx">
+                                <a title="ScreenX"
+                                   href="#">ScreenX</a>
+                            </li>
+                            <li class="item-icon item-cine-foret">
+                                <a title="Cine & For�t" href="#">Cine
+                                    & For�t</a>
+                            </li>
+                            <li class="item-icon item-cine-living">
+                                <a title="Cine & Living" href="#">Cine
+                                    & Living</a>
+                            </li>
+                            <li class="item-icon item-cine-suite">
+                                <a title="Cine & Suite" href="#">Cine
+                                    & Suite</a>
+                            </li>
+                            <li class="item-icon item-3d actived">
+                                <a title="3D" href="#">3D</a>
+                            </li>
+                        </ul>
+                        <span class="feature_slide_show_prev"><<</span>
+                        <span class="feature_slide_show_next">>></span>
+                    </div>
+                    <div class="specialtheater-content specialtheater-3d">
+                        <div class="page-title special-title">
+                            <h1>3D</h1>
+                        </div>
+                        <div class="std">
+                            <div class="cinema-imax">
+                                <div class="header-imax std">
+                                    <div class="about-content-imax">
+                                        <div class="recent-cgv-special" style="margin-top: 30px;">
+                                            <h3>3D l&agrave; một định dạng điện ảnh đem đến cho kh&aacute;ch h&agrave;ng
+                                                những thước phim sống động, ch&acirc;n thực nhất.</h3>
+                                            <p><strong>Tất cả c&aacute;c rạp của CGV đều c&oacute; định dạng 3D để kh&aacute;ch
+                                                h&agrave;ng thưởng thức điện ảnh trọn vẹn. Chi tiết xem <a
+                                                        href="#" target="_blank">tại
+                                                    đ&acirc;y</a>!</strong></p>
+                                        </div>
+                                        <div class="slide-imax-baner">
+                                            <div class="slideshow-container-dx" style="clear: both;">
+                                                <ul class="slideshow-dx">
+                                                    <li>
+                                                        <div class="image-cinema-imax">
+                                                            <img alt=""
+                                                                 src="https://www.cgv.vn/media/wysiwyg/2022/092022/980x500.jpg"
+                                                            />
+                                                        </div>
+                                                        <div class="text-content-imax ">
+                                                            <h2>K&iacute;nh 3D</h2>
+                                                            <p>Cảm nhận từng thước phim ch&acirc;n thực. Đ&ocirc;i khi
+                                                                bạn c&oacute; thể cảm thấy những cảnh h&agrave;nh động
+                                                                như nhảy ra khỏi m&agrave;n h&igrave;nh!</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <span class="slideshow-prev ">&nbsp;</span> <span
+                                                    class="slideshow-next "><span
+                                                    class="slideshow-next ">&nbsp;<br/></span></span>
+                                                <p><span><strong>ĐẶT V&Eacute; NGAY &gt;&gt;</strong></span></p>
+                                                <p><span><strong></strong><strong>-&nbsp;<a
+                                                        href="#"
+                                                        target="_self ">ĐẶT V&Eacute; THEO PHIM</a></strong></span></p>
+                                                <p><span><strong>- <a href="#">&nbsp;ĐẶT V&Eacute; THEO RẠP</a></strong></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="slide-imax-baner " style="margin-top: 20px; "></div>
+                                    </div>
+                                </div>
+                                <!-- end cinema imax -->
+                                <script type="mce-text/javascript ">// <![CDATA[
+$j(document).ready(function () {
+	$j('.slideshow-container-dx .slideshow-dx')
+		.cycle({
+			slides: '> li',
+				speed: 600,
+				pauseOnHover: true,
+				swipe: true,
+			prev: '.slideshow-prev',
+			next: '.slideshow-next',
+		fx: 'scrollHorz'
+	});
+	});
+// ]]>
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .home-title {
+                            display: none;
+                        }
+
+                        .specialtheater-content .std {
+                            padding: 0 5px;
+                        }
+
+                        .recent-imax img {
+                            max-width: 100%
+                        }
+
+                        .site-list {
+                            width: 100%;
+                        }
+
+                        .site-list li a {
+                            color: #000
+                        }
+
+                        .site-list li a span {
+                            color: #000;
+                        }
+
+                        .specialtheater-list .feature_slide_show {
+                            clear: both;
+                            width: 100%;
+                        }
+
+                        .specialtheater-list {
+                            border-bottom: 2px solid #d2cfc6;
+                            display: inline-block;
+                            padding-bottom: 0;
+                            position: relative;
+                            width: 100%;
+                            padding: 0 4% 0 4%;
+                        }
+
+                        .special-items li {
+                            width: 96px;
+                            margin-left: 8px;
+                            margin-right: 8px;
+                        }
+                    </style>
+                    <script type="text/javascript ">
+                        //<![CDATA[
+                        $j(document).ready(function () {
+                            var highest = 0;
+                            var hi = 0;
+                            $j('.product-info').each(function () {
+                                var h = $j(this).height();
+                                if (h > hi) {
+                                    hi = h;
+                                    highest = h;
+                                }
+                            });
+                            if ($j(window).width() > 320) {
+                                $j('.product-info').css('height', highest + 10 + 'px');
+                            } else {
+                                $j('.products-grid .product-info').css('padding-bottom', '0');
+                            }
+                            $j('li.category3').find('a').contents().unwrap();
+                        });
+                        $j(window).bind("load ", function () {
+                            var width = $j(window).width();
+                            if (width >= 979) {
+                                reinitCycle(8);
+                            } else if (width >= 770) {
+                                reinitCycle(3);
+                            } else if (width >= 479) {
+                                reinitCycle(2);
+                            } else {
+                                reinitCycle(1);
+                            }
+                        });
+                        $j(window).on('resize', function () {
+                            var highest2 = 0;
+                            var hi = 0;
+                            $j('.product-info').each(function () {
+                                var h = $j(this).height();
+                                if (h > hi) {
+                                    hi = h;
+                                    highest2 = h;
+                                }
+                            });
+                            if ($j(window).width() > 320) {
+                                $j('.product-info').css('height', highest2 + 10 + 'px');
+                            } else {
+                                $j('.products-grid .product-info').css('padding-bottom', '0');
+                            }
+                            $j('li.category3').find('a').contents().unwrap();
+
+                            var width = $j(window).width();
+                            $j('.feature_slide_show').cycle('destroy');
+                            if (width >= 979) {
+                                reinitCycle(8);
+                            } else if (width >= 770) {
+                                reinitCycle(3);
+                            } else if (width >= 479) {
+                                reinitCycle(2);
+                            } else {
+                                reinitCycle(1);
+                            }
+                        });
+
+                        function reinitCycle(visibleSlides) {
+                            try {
+                                $j('.feature_slide_show').cycle({
+                                    "carouselSlideDimension ": "120px ",
+                                    "carouselVisible ": visibleSlides,
+                                    "fx ": "carousel ",
+                                    "timeout ": 0,
+                                    "next ": ".feature_slide_show_next ",
+                                    "prev ": ".feature_slide_show_prev ",
+                                    "slideActiveClass ": "active ",
+                                    "slides ": "li ",
+                                    "allowWrap ": false,
+                                });
+                            } catch (err) {
+                                console.log(err.message);
+                            }
+                        }
+
+                        // ADD CSS ELEMENTS
+                        /*
+                        $j('.site-list li a:contains("CGV ")').each(function(){
+                            $j(this).html(
+                                $j(this).html().replace(/CGV/g,'<span>CGV</span>')
+                            );
+                        });
+                        */
+                        //]]>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer" ></th:block>
+        <div id="wishlist_edit_action_container "></div>
+    </div>
+</div>
+</body>
+</html>

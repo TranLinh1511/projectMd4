@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" cinox-site-list">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+
+                    <div class="showtimes-wrap">
+                        <div class="showtimes-container">
+                            <div class="theatre-wrap">
+                                <div class="theatre-list product-view">
+                                    <div class="cgv-showtime-top"></div>
+                                    <div class="theatre-city-tabs cgv-showtime-center">
+                                        <div class="content-list-cinema">
+                                            <div class="title-cgv-cinema">
+                                                <h1>CGV CINEMAS</h1>
+                                            </div>
+                                            <div class="cinemas-area">
+                                                <ul>
+                                                    <li th:each="i:${provinces}" ><a  th:href="@{'/province?id=' + ${i.id}}"  th:text="${i.name}" style="color: wheat"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cgv-showtime-bottom"></div>
+                                </div>
+
+                                <div class="theater-container product-view"></div>
+                            </div>
+                        </div>
+
+                        <div id="loading-mask" style="left: -2px; top: 0px; display: block;">
+                            <p class="loader" id="loading_mask_loader">
+                                <img src="https://www.cgv.vn//skin/frontend/rwd/default/images/ajax-loader.gif"
+                                     alt="Loading...">
+                                <br>Đang tải thông tin... </p>
+                        </div>
+
+                        <style>
+                            .yamahawhynot,
+                            .lgcinema {
+                                color: red;
+                                font-weight: bold !important;
+                            }
+
+                            .cgv-schedule-v2 {
+                                padding: 0 2%;
+                            }
+
+                            .film-right {
+                                padding-left: 1%
+                            }
+
+                            .carousel {
+                                clear: both;
+                                width: 100%;
+                                min-height: 52px;
+                                position: relative;
+                                margin: 1em 0;
+                            }
+
+                            .tabs-format-cgv .datewrapper {
+                                width: 95%;
+                                overflow: hidden;
+                                position: absolute;
+                                top: 0;
+                                min-height: 52px;
+                                margin: 0 32px;
+                            }
+
+                            .tabs-format-cgv .datewrapper ul {
+                                width: 9999px;
+                                position: absolute;
+                                top: 0;
+                            }
+
+                            .tabs-format-cgv .datewrapper ul li {
+                                float: left;
+                                width: 76px;
+                                height: 50px;
+                                margin-right: 5px;
+                                background: #eee;
+                                border-radius: 5px;
+                                box-sizing: border-box;
+                                border: 2px solid #eee;
+                                text-align: center;
+                                font-size: 2em;
+                            }
+
+                            .tabs-format-cgv .datewrapper ul li.active {
+                                border: 2px solid #222;
+                            }
+
+                            .tabs-format-cgv .previous,
+                            .tabs-format-cgv .next {
+                                position: absolute;
+                                width: 32px;
+                                height: 32px;
+                                background: #000;
+                                color: #fff;
+                                text-align: center;
+                                line-height: 32px;
+                                top: 50%;
+                                margin-top: -16px;
+                                z-index: 900;
+                            }
+
+                            .tabs-format-cgv .previous {
+                                left: 0;
+                                border-radius: 50% 0 0 50%;
+                            }
+
+                            .tabs-format-cgv .next {
+                                right: 0;
+                                border-radius: 0 50% 50% 0;
+                            }
+
+                            .cgv-schedule-ticket {
+                                text-align: center;
+                            }
+
+                            .cgv-tab-schedule.tab {
+                                display: inline-block;
+                            }
+
+                            .carousel ul li {
+                                margin-top: 2px;
+                            }
+
+                            .carousel ul li.current {
+                                border: 2px solid #222;
+                            }
+
+                            .cgv-schedule-v2 .carousel {
+                                border-bottom: 2px solid #241d1e;
+                                border-top: 2px solid #241d1e;
+                                float: left;
+                                min-height: 58px;
+                                padding: 12px 0;
+                                width: 100%;
+                            }
+
+                            .film-screen-special {
+                                color: #2e529a
+                            }
+
+                            .nocursor {
+                                cursor: none;
+                                pointer-events: none;
+                            }
+
+                            .tab-showtime li {
+                                width: auto;
+                                margin-right: 0.5em
+                            }
+
+                            @media only screen and (max-width: 640px) {
+                                .film-left {
+                                    width: 25%
+                                }
+
+                                .film-right {
+                                    width: 73%
+                                }
+                            }
+                        </style>
+                        <script type="text/javascript">
+                            $j(window).load(function () {
+                                var city = $j('.cinemas-area li span').filter('.siteactive').attr('id');
+                                $j('.cinemas-list .' + city).show();
+                                $j('#cgv_site_').parent('li').addClass('current');
+                                $j('.cgv-onlyone:first-child').addClass('current');
+                                showtimestabs('tabs-cgv-showtimes');
+                                $j('.iframe').colorbox({
+                                    iframe: true,
+                                    width: "80%",
+                                    height: "80%"
+                                });
+                                $j('.cinemas-area li').click(function () {
+                                    $j('.cinemas-list li').hide();
+                                    $j('.cinemas-list li').removeClass('current');
+                                    $j('.theater-container').html(''); //remove content
+                                    // Current city
+                                    var city = $j(this).find('span').attr('id');
+                                    $j('.cinemas-area li span').removeClass('siteactive');
+                                    $j('.cinemas-area li span#' + city).addClass('siteactive');
+                                    $j('.cinemas-list .' + city).show();
+                                });
+                                $j(".carousel").carousel();
+                                $j('#loading-mask').hide();
+                            });
+
+                            function site(url, obj) {
+                                var msBeforeAjaxCall = new Date().getTime();
+                                $j('.cinemas-list li').removeClass('current');
+                                $j(obj).parent('li').addClass('current');
+                                history.pushState({}, '', url);
+                                $j.ajax({
+                                    url: url,
+                                    beforeSend: function () {
+                                        $j('.slideshow-container .slideshow').cycle('destroy');
+                                        $j('.theater-container').empty();
+                                        $j('#loading-mask').show();
+                                    },
+                                }).done(function (result) {
+                                    var html = $j(result).find('div.theater-container').children();
+                                    if (html.length === 0) {
+                                        location.reload(false);
+                                    }
+                                    $j('.theater-container').html(html);
+                                    // Send warning log message if response took longer than 2 seconds
+                                    // var msAfterAjaxCall = new Date().getTime();
+                                    // var timeTakenInMs = msAfterAjaxCall - msBeforeAjaxCall;
+                                    // if (timeTakenInMs > 2000){
+                                    // }
+                                    $j('.slideshow-container .slideshow').cycle({
+                                        slides: '> li',
+                                        pager: '.slideshow-pager',
+                                        pagerTemplate: '<span class="pager-box"></span>',
+                                        speed: 600,
+                                        pauseOnHover: true,
+                                        swipe: true,
+                                        prev: '.slideshow-prev',
+                                        next: '.slideshow-next',
+                                        fx: 'scrollHorz',
+                                        log: false
+                                    });
+                                    showtimestabs('tabs-format-cgv');
+                                    showtimestabs('tabs-cgv-showtimes');
+                                    $j('.cgv-onlyone:first-child').addClass('current');
+                                    $j(".carousel").carousel();
+                                    $j('.iframe').colorbox({
+                                        iframe: true,
+                                        width: "80%",
+                                        height: "80%"
+                                    });
+                                    $j('#loading-mask').hide();
+                                });
+                            }
+
+                            function showtimestabs(clss) {
+                                $j('.' + clss).each(function () {
+                                    var datewrapper = $j(this);
+                                    var hasTabs = datewrapper.hasClass('tabs');
+                                    var hasAccordion = datewrapper.hasClass('accordion');
+                                    var startOpen = datewrapper.hasClass('open');
+                                    var dl = datewrapper.children('dl:first');
+                                    var dts = dl.children('dt');
+                                    var panes = dl.children('dd');
+                                    var groups = new Array(dts, panes);
+                                    //Create a ul for tabs if necessary.
+                                    // $j('.toggle-tabs').remove();//remove to stop inserting duplicatedly
+                                    if (hasTabs) {
+                                        var ul = $j('<ul class="toggle-tabs"></ul>');
+                                        dts.each(function () {
+                                            var dt = $j(this);
+                                            var li = $j('<li></li>');
+                                            li.html(dt.html());
+                                            ul.append(li);
+                                        });
+                                        ul.insertBefore(dl);
+                                        var lis = ul.children();
+                                        groups.push(lis);
+                                    }
+                                    //Add "last" classes.
+                                    var i;
+                                    for (i = 0; i < groups.length; i++) {
+                                        groups[i].filter(':last').addClass('last');
+                                    }
+
+                                    function toggleClasses(clickedItem, group) {
+                                        var index = group.index(clickedItem);
+                                        var i;
+                                        for (i = 0; i < groups.length; i++) {
+                                            groups[i].removeClass('current');
+                                            groups[i].eq(index).addClass('current');
+                                        }
+                                    }
+
+                                    //Toggle on tab (dt) click.
+                                    dts.on('click', function (e) {
+                                        //They clicked the current dt to close it. Restore the datewrapper to unclicked state.
+                                        if ($j(this).hasClass('current') && datewrapper.hasClass('accordion-open')) {
+                                            datewrapper.removeClass('accordion-open');
+                                        } else {
+                                            //They're clicking something new. Reflect the explicit user interaction.
+                                            datewrapper.addClass('accordion-open');
+                                        }
+                                        toggleClasses($j(this), dts);
+                                    });
+                                    //Toggle on tab (li) click.
+                                    if (hasTabs) {
+                                        lis.on('click', function (e) {
+                                            toggleClasses($j(this), lis);
+                                        });
+                                        //Open the first tab.
+                                        lis.eq(0).trigger('click');
+                                    }
+                                    //Open the first accordion if desired.
+                                    if (startOpen) {
+                                        dts.eq(0).trigger('click');
+                                    }
+                                });
+                            }
+
+                            (function ($j) {
+                                $j.fn.carousel = function (options) {
+                                    var settings = {
+                                        slider: ".datewrapper",
+                                        slide: "li",
+                                        previous: ".previous",
+                                        next: ".next"
+                                    };
+                                    options = $j.extend(settings, options);
+                                    return this.each(function () {
+                                        var $element = $j(this),
+                                            $slider = $element.find(options.slider),
+                                            $slide = $slider.find(options.slide),
+                                            $previous = $element.find(options.previous),
+                                            $next = $element.find(options.next),
+                                            $item_w = (($j('.datewrapper').outerWidth()) / ($slide.eq(0).outerWidth() + 2)),
+                                            $element_count = 0;
+                                        $element.find("> div").css("overflow", "hidden");
+                                        var showSlide = function (direction) {
+                                            var singleWidth = $slide.eq(0).outerWidth() + 2,
+                                                left = (direction == 1) ? "+=" + singleWidth : "-=" + singleWidth;
+
+                                            $slider.stop(true, true).animate({
+                                                scrollLeft: left
+                                            }, 500);
+
+                                        };
+                                        $previous.on("click", function (e) {
+                                            e.preventDefault();
+                                            if ($element_count >= 1) {
+                                                $element_count--;
+                                                showSlide(-1);
+                                            }
+                                        });
+                                        $next.on("click", function (e) {
+                                            e.preventDefault();
+                                            if ((($slide.length - $element_count) + 1) >= $item_w) {
+                                                $element_count++;
+                                                showSlide(1);
+                                            }
+                                        });
+                                    });
+                                };
+                            })(jQuery);
+
+                            function getscheduledate(data, obj) {
+                                //var tempScrollTop = $j(window).scrollTop();
+                                if ($j(obj).hasClass('current')) {
+                                    return;
+                                }
+                                //$j('.cinemas-list li').removeClass('current');
+                                $j('.cgv-onlyone').removeClass('current');
+                                $j(obj).addClass('current');
+                                history.pushState({}, '', $j(location).attr('href'));
+                                $j.ajax({
+                                    type: "POST",
+                                    url: $j(location).attr('href'),
+                                    data: {
+                                        "selecteddate": data
+                                    },
+                                    beforeSend: function () {
+                                        $j('.tabs-cgv-showtimes').empty();
+                                        $j('#loading-mask').show();
+                                        $j('.tab-container.last').removeClass('current');
+                                        $j('ul.toggle-tabs li').not(':first').removeClass('current');
+                                        $j('ul.toggle-tabs li:first').addClass('current');
+                                        $j('.datewrapper li').addClass('nocursor');
+                                    },
+                                }).done(function (result) {
+                                    //$j(window).scrollTop(tempScrollTop);
+                                    var html = $j(result).find('div.tabs-cgv-showtimes').children();
+                                    if (!$j(html).hasClass('film-list')) {
+                                        html = 'No schedules available !';
+                                    }
+                                    $j('.tabs-cgv-showtimes').html(html);
+                                    //showtimestabs('tabs-cgv-showtimes');
+                                    //showtimestabs('tabs-format-cgv');
+                                    //showtimestabs('tabs-cgv-showtimes');
+                                    $j('.tab-container:first').addClass('current');
+                                    $j('li.cgv-onlyone').closest('ul.toggle-tabs').not(':first').remove();
+                                    $j('.tabs-cgv-showtimes li').removeClass('current');
+                                    $j("#" + obj.id).parent('li').addClass('current');
+                                    //$j('.cinemas-list li').removeClass('current');
+                                    //$j("#"+obj.lang).parent('li').addClass('current');
+                                    //$j('.iframe').colorbox({iframe:true, width:"80%", height:"80%"});
+                                    $j('.datewrapper li').removeClass('nocursor');
+                                    $j('#loading-mask').hide();
+                                });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

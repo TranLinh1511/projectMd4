@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="admin/layouts/head"></th:block>
+<body>
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<div id="main-wrapper">
+    <th:block th:insert="admin/layouts/layout"></th:block>
+    <!--  todo content-->
+    <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+            <div class="row mb-5 align-items-center">
+                <div class="col-xl-9">
+                    <div class="card m-0 ">
+                        <div class="card-body py-3 py-md-2">
+                            <div class="row align-items-center">
+                                <div class="col-md-5 mb-3 mb-md-0">
+                                    <div class="media align-items-center">
+											<span class="me-2 mb-1 mx-5">
+                                                <i class="fa-solid fa-person-booth"></i>
+											</span>
+                                        <div class="media-body ms-1">
+                                            <p class="mb-1 fs-14">Total Theater</p>
+                                            <h3 class="mb-0 text-black font-w600 fs-20"
+                                                th:text="${theaters.size()}"></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <div id="example5_wrapper" class="dataTables_wrapper no-footer">
+                            <table id="example5"
+                                   class="display mb-4 table-responsive-xl dataTablesCard fs-14 dataTable text-center no-footer"
+                                   role="grid" aria-describedby="example5_info">
+                                <thead>
+                                <tr role="row">
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Cust.Id: activate to sort column ascending"
+                                        style="width: 72.8194px;">TheaterId
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Date Join: activate to sort column ascending"
+                                        style="width: 70.6389px;">Theater Name
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Ticket Ordered: activate to sort column ascending"
+                                        style="width: 70.111px;">Total seats
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Location: activate to sort column ascending"
+                                        style="width: 70.028px;">Cinema
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label="Location: activate to sort column ascending"
+                                        style="width: 70.028px;">Image
+                                    </th>
+                                    <th tabindex="0" aria-controls="example5" rowspan="1" colspan="1"
+                                        aria-label=": activate to sort column ascending" style="width: 70.0417px;">
+                                        Action
+                                    </th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr role="row" class="even" th:each="i: ${theaters}">
+                                    <td th:text="${i.id}"></td>
+                                    <td th:text="${i.name}"></td>
+                                    <td th:text="${i.seats.size()}"></td>
+                                    <td th:text="${i.cinema.name}"></td>
+                                    <td>
+                                        <img alt="" th:src="@{'/images/'+${i.images[0].imageName}}"
+                                             style="width: 130px; height: 80px; object-fit: cover">
+                                    </td>
+                                    <td class="d-flex justify-content-center">
+                                        <a type="button" id="showInfo" class="mr-5 btn btn-sm btn-outline-warning"
+                                           th:href="@{'/admin/update-theater?id=' + ${i.id}}">Update</a>
+                                        <div class="mx-3"></div>
+                                        <a type="button" class="btn-sm btn btn-outline-danger"
+                                           th:href="@{'/admin/delete-theater?id=' + ${i.id}}">Delete</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">DexignZone</a> 2022</p>
+        </div>
+    </div>
+</div>
+
+
+<th:block th:insert="admin/layouts/script"></th:block>
+
+</body>
+</html>

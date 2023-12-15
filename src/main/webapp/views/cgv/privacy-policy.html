@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" cms-page-view cms-privacy-policy">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>Chính sách bảo mật thông tin</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div class="std">
+                        <div class="cms-page-title"><span style="color: #ff0000;"> <strong>CH&Iacute;NH S&Aacute;CH BẢO MẬT TH&Ocirc;NG TIN C&Aacute; NH&Acirc;N KH&Aacute;CH H&Agrave;NG</strong> </span>
+                        </div>
+                        <div class="cms-page-content privacy-policy-cms">
+                            <div class="cms-tap">
+                                <p>Ch&agrave;o mừng bạn đến với <strong>C&Ocirc;NG TY TNHH CJ CGV VIỆT NAM</strong></p>
+                                <p>Ch&uacute;ng t&ocirc;i, <strong>C&Ocirc;NG TY TNHH CJ CGV VIỆT NAM</strong>, địa chỉ
+                                    trụ sở ch&iacute;nh tại Lầu 2, số 7/28, đường Th&agrave;nh Th&aacute;i, Phường 14,
+                                    Quận 10, Th&agrave;nh phố Hồ Ch&iacute; Minh, Việt
+                                    Nam (&ldquo;<strong>CGV Việt Nam</strong>&rdquo;), đơn vị sở hữu v&agrave; vận h&agrave;nh
+                                    website cgv.vn v&agrave; ứng dụng di động CGV Cinemas (&ldquo;<strong>Ứng
+                                        Dụng</strong>&rdquo;), lu&ocirc;n xem trọng sự
+                                    ri&ecirc;ng tư v&agrave; bảo vệ dữ liệu c&aacute; nh&acirc;n của bạn.</p>
+                                <p>CGV Việt Nam hiểu rằng, bạn cần được biết một c&aacute;ch minh bạch những th&ocirc;ng
+                                    tin dưới đ&acirc;y li&ecirc;n quan đến to&agrave;n bộ c&aacute;ch thức CGV Việt Nam
+                                    xử l&yacute; v&agrave; bảo vệ dữ liệu c&aacute;
+                                    nh&acirc;n của bạn trong khu&ocirc;n khổ ph&aacute;p luật cũng như chuẩn mực bảo mật
+                                    tại CGV Việt Nam. CGV Việt Nam cũng sẽ th&ocirc;ng tin đến bạn c&aacute;c quyền lợi
+                                    hợp ph&aacute;p của bạn, v&agrave; l&agrave;m
+                                    thế n&agrave;o bạn c&oacute; thể li&ecirc;n lạc với CGV Việt Nam.</p>
+                                <p>Khi CGV Việt Nam sử dụng từ &ldquo;Người Sử Dụng&rdquo; c&oacute; nghĩa l&agrave; CGV
+                                    Việt Nam muốn đề cập đến người đăng k&yacute; t&agrave;i khoản th&agrave;nh c&ocirc;ng
+                                    với CGV Việt Nam để sử dụng c&aacute;c Dịch
+                                    Vụ hoặc Ứng Dụng.</p>
+                                <p>Khi n&oacute;i về &ldquo;Dữ Liệu C&aacute; Nh&acirc;n&rdquo;, &ldquo;dữ liệu c&aacute;
+                                    nh&acirc;n&rdquo;, c&oacute; nghĩa l&agrave; CGV Việt Nam muốn đề cập đến th&ocirc;ng
+                                    tin dưới dạng k&yacute; hiệu, chữ viết, chữ
+                                    số, h&igrave;nh ảnh, &acirc;m thanh hoặc dạng tương tự tr&ecirc;n m&ocirc;i trường
+                                    điện tử gắn liền với Người Sử Dụng hoặc gi&uacute;p x&aacute;c định Người Sử Dụng, v&iacute;
+                                    dụ: họ, t&ecirc;n, ng&agrave;y, th&aacute;ng,
+                                    năm sinh, th&ocirc;ng tin li&ecirc;n lạc.</p>
+                                <p>Ch&uacute;ng t&ocirc;i xử l&yacute; dữ liệu c&aacute; nh&acirc;n từ bạn với mục đ&iacute;ch
+                                    đ&uacute;ng đắn, tu&acirc;n thủ y&ecirc;u cầu của ph&aacute;p luật hay c&aacute;c
+                                    mục đ&iacute;ch kh&aacute;c được n&ecirc;u
+                                    tại Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng Tin n&agrave;y.</p>
+                                <p><strong>TRONG TRƯỜNG HỢP BẠN KH&Ocirc;NG THỂ CUNG CẤP DỮ LIỆU C&Aacute; NH&Acirc;N
+                                    CẦN THIẾT ĐỂ CGV VIỆT NAM C&Oacute; THỂ CUNG CẤP SẢN PHẨM V&Agrave;/HOẶC DỊCH VỤ CỦA
+                                    CH&Uacute;NG T&Ocirc;I CHO BẠN, RẤT TIẾC L&Agrave; CGV VIỆT NAM CŨNG SẼ KH&Ocirc;NG
+                                    THỂ CUNG CẤP CHO BẠN C&Aacute;C SẢN PHẨM V&Agrave;/HOẶC DỊCH VỤ Đ&Oacute;.</strong>
+                                </p>
+                                <p>Bằng việc sử dụng c&aacute;c Dịch Vụ, đăng k&yacute; một t&agrave;i khoản với CGV
+                                    Việt Nam hoặc truy cập Ứng Dụng, <strong>BẠN X&Aacute;C NHẬN V&Agrave; ĐỒNG &Yacute;
+                                        RẰNG</strong> bạn chấp nhận c&aacute;c phương ph&aacute;p,
+                                    y&ecirc;u cầu, v&agrave;/hoặc ch&iacute;nh s&aacute;ch được m&ocirc; tả trong Ch&iacute;nh
+                                    S&aacute;ch Bảo Mật Th&ocirc;ng Tin n&agrave;y, v&agrave; theo đ&acirc;y bạn x&aacute;c
+                                    nhận <strong>BẠN Đ&Atilde; BIẾT R&Otilde; V&Agrave; ĐỒNG &Yacute; TO&Agrave;N
+                                        BỘ</strong> cho ph&eacute;p CGV Việt Nam thu thập, sử dụng, tiết lộ v&agrave;/hoặc
+                                    xử l&yacute; dữ liệu c&aacute; nh&acirc;n của bạn như m&ocirc; tả trong đ&acirc;y.
+                                    <strong>NẾU BẠN KH&Ocirc;NG ĐỒNG &Yacute; CHO PH&Eacute;P XỬ L&Yacute; DỮ LIỆU C&Aacute;
+                                        NH&Acirc;N CỦA BẠN NHƯ M&Ocirc; TẢ TRONG CH&Iacute;NH S&Aacute;CH BẢO MẬT TH&Ocirc;NG
+                                        TIN N&Agrave;Y, VUI L&Ograve;NG KH&Ocirc;NG SỬ DỤNG C&Aacute;C DỊCH VỤ CỦA CH&Uacute;NG
+                                        T&Ocirc;I HAY TRUY CẬP ỨNG DỤNG CỦA CGV VIỆT NAM.</strong></p>
+                                <p>Nếu CGV Việt Nam thay đổi Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng Tin, CGV Việt
+                                    Nam sẽ th&ocirc;ng b&aacute;o cho bạn bao gồm cả th&ocirc;ng qua việc đăng tải những
+                                    thay đổi đ&oacute; hoặc Ch&iacute;nh S&aacute;ch
+                                    Bảo Mật Th&ocirc;ng Tin sửa đổi tr&ecirc;n Ứng Dụng. Trong phạm vi ph&aacute;p luật
+                                    cho ph&eacute;p, việc tiếp tục sử dụng c&aacute;c Dịch Vụ hoặc Ứng Dụng, bao gồm
+                                    giao dịch của bạn, <strong>ĐƯỢC XEM L&Agrave; BẠN Đ&Atilde; C&Ocirc;NG NHẬN V&Agrave;
+                                        ĐỒNG &Yacute; VỚI C&Aacute;C THAY ĐỔI TRONG CH&Iacute;NH S&Aacute;CH BẢO MẬT TH&Ocirc;NG
+                                        TIN N&Agrave;Y</strong>.</p>
+                                <p><strong>1. C&Aacute;C LOẠI DỮ LIỆU C&Aacute; NH&Acirc;N M&Agrave; CGV VIỆT NAM SẼ THU
+                                    THẬP V&Agrave; XỬ L&Yacute;</strong></p>
+                                <p>Khi bạn (1) truy cập, li&ecirc;n hệ th&ocirc;ng qua Ứng Dụng hoặc c&aacute;c k&ecirc;nh
+                                    li&ecirc;n hệ/th&ocirc;ng tin ch&iacute;nh thức kh&aacute;c của CGV Việt Nam; (2)
+                                    tham gia v&agrave;o c&aacute;c chương tr&igrave;nh
+                                    khuyến mại, quảng c&aacute;o, marketing v&agrave; c&aacute;c h&igrave;nh thức x&uacute;c
+                                    tiến thương mại kh&aacute;c của CGV Việt Nam; (3) sử dụng Dịch Vụ th&ocirc;ng qua
+                                    Ứng Dụng, c&aacute;c Cụm Rạp Chiếu Phim
+                                    CGV Cinemas; (4) cung cấp Dữ Liệu C&aacute; Nh&acirc;n cho CGV Việt Nam th&ocirc;ng
+                                    qua đăng k&yacute; th&agrave;nh vi&ecirc;n; (5) gửi bất kỳ biểu mẫu n&agrave;o, bao
+                                    gồm đơn đăng k&yacute; hoặc c&aacute;c mẫu
+                                    đơn kh&aacute;c li&ecirc;n quan đến bất kỳ sản phẩm v&agrave; dịch vụ n&agrave;o của
+                                    CGV Việt Nam, bằng h&igrave;nh thức trực tuyến hay dưới h&igrave;nh thức kh&aacute;c;
+                                    (6) k&yacute; kết bất kỳ thỏa thuận n&agrave;o
+                                    hoặc cung cấp c&aacute;c t&agrave;i liệu hoặc th&ocirc;ng tin kh&aacute;c li&ecirc;n
+                                    quan đến tương t&aacute;c giữa bạn với CGV Việt Nam, hoặc khi bạn sử dụng c&aacute;c
+                                    sản phẩm v&agrave; dịch vụ của CGV Việt Nam;
+                                    (7) sử dụng c&aacute;c dịch vụ điện tử của CGV Việt Nam, hoặc tương t&aacute;c với
+                                    CGV Việt Nam qua Ứng Dụng hoặc C&aacute;c Dịch Vụ của ch&uacute;ng t&ocirc;i. Trường
+                                    hợp n&agrave;y bao gồm th&ocirc;ng qua tập
+                                    tin cookie m&agrave; CGV Việt Nam c&oacute; thể triển khai khi bạn tương t&aacute;c
+                                    với c&aacute;c Ứng Dụng; (8) cấp quyền tr&ecirc;n thiết bị của bạn để chia sẻ th&ocirc;ng
+                                    tin với Ứng Dụng; (9) li&ecirc;n kết
+                                    t&agrave;i khoản CGV Việt Nam với t&agrave;i khoản mạng x&atilde; hội của bạn hoặc c&aacute;c
+                                    t&agrave;i khoản b&ecirc;n ngo&agrave;i kh&aacute;c hoặc sử dụng c&aacute;c t&iacute;nh
+                                    năng mạng x&atilde; hội kh&aacute;c,
+                                    ph&ugrave; hợp với c&aacute;c ch&iacute;nh s&aacute;ch của nh&agrave; cung cấp; (10)
+                                    cung cấp &yacute; kiến phản hồi hoặc gửi khiếu nại cho ch&uacute;ng t&ocirc;i; (11)
+                                    gửi dữ liệu c&aacute; nh&acirc;n của bạn cho
+                                    ch&uacute;ng t&ocirc;i v&igrave; bất kỳ l&yacute; do g&igrave;; (12) thực hiện c&aacute;c
+                                    hoạt động kh&aacute;c tr&ecirc;n Ứng Dụng của ch&uacute;ng t&ocirc;i; (13) cung cấp
+                                    Dữ Liệu C&aacute; Nh&acirc;n cho CGV
+                                    Việt Nam th&ocirc;ng qua c&aacute;c h&igrave;nh thức kh&aacute;c, t&ugrave;y từng
+                                    thời điểm; CGV Việt Nam sẽ thu thập v&agrave; xử l&yacute; c&aacute;c Dữ Liệu C&aacute;
+                                    Nh&acirc;n bao gồm:</p>
+                                <p>(i) Họ v&agrave; t&ecirc;n; Ng&agrave;y th&aacute;ng năm sinh; Số điện thoại; Thư
+                                    điện tử (email)</p>
+                                <p>(ii) Giới t&iacute;nh;</p>
+                                <p>(iii) Quốc tịch;</p>
+                                <p>(iv) Địa chỉ thanh to&aacute;n, địa chỉ giao nhận sản phẩm;</p>
+                                <p>(v) T&agrave;i khoản Ng&acirc;n h&agrave;ng, th&ocirc;ng tin thanh to&aacute;n;</p>
+                                <p>(vi) Th&ocirc;ng tin được gửi bởi hoặc li&ecirc;n quan đến (c&aacute;c) thiết bị được
+                                    sử dụng để truy cập v&agrave;o C&aacute;c Dịch vụ hoặc Ứng Dụng;</p>
+                                <p>(vii) Th&ocirc;ng tin về mạng, bao gồm danh s&aacute;ch li&ecirc;n hệ của bạn khi
+                                    đồng &yacute; chia sẻ tr&ecirc;n thiết bị của bạn, v&agrave; những người v&agrave; t&agrave;i
+                                    khoản m&agrave; bạn c&oacute; tương t&aacute;c;</p>
+                                <p>(viii) H&igrave;nh ảnh hoặc &acirc;m thanh hoặc video;</p>
+                                <p>(ix) Dữ liệu truyền th&ocirc;ng hoặc li&ecirc;n lạc, v&iacute; dụ như c&aacute;c t&ugrave;y
+                                    chọn nhận th&ocirc;ng tin quảng c&aacute;o từ ch&uacute;ng t&ocirc;i hoặc c&aacute;c
+                                    b&ecirc;n thứ ba của bạn, t&ugrave;y chọn
+                                    phương tiện li&ecirc;n lạc v&agrave; lịch sử th&ocirc;ng tin li&ecirc;n lạc với ch&uacute;ng
+                                    t&ocirc;i, c&aacute;c nh&agrave; cung cấp dịch vụ của ch&uacute;ng t&ocirc;i, v&agrave;
+                                    c&aacute;c b&ecirc;n thứ ba kh&aacute;c;</p>
+                                <p>(x) Th&ocirc;ng tin sử dụng v&agrave; giao dịch, bao gồm chi tiết về lịch sử t&igrave;m
+                                    kiếm, giao dịch, quảng c&aacute;o v&agrave; nội dung hiển thị m&agrave; tương t&aacute;c
+                                    với Nền Tảng, cũng như c&aacute;c sản
+                                    phẩm v&agrave; dịch vụ c&oacute; li&ecirc;n quan của bạn;</p>
+                                <p>(xi) Dữ liệu về địa điểm;</p>
+                                <p>(xii) Dữ liệu tổng hợp về nội dung người d&ugrave;ng sử dụng.</p>
+                                <p>Một số dữ liệu c&aacute; nh&acirc;n m&agrave; CGV Việt Nam thu thập, xử l&yacute; c&oacute;
+                                    thể l&agrave; dữ liệu c&aacute; nh&acirc;n cơ bản hoặc nhạy cảm theo quy định ph&aacute;p
+                                    luật hay đặc t&iacute;nh tự nhi&ecirc;n.
+                                    Đối với dữ liệu c&aacute; nh&acirc;n nhạy cảm, CGV Việt Nam sẽ xử l&yacute; theo quy
+                                    tr&igrave;nh xử l&yacute; dữ liệu c&aacute; nh&acirc;n nhạy cảm.</p>
+                                <p>Nếu bạn đăng nhập để trở th&agrave;nh Người Sử Dụng c&aacute;c Ứng Dụng của ch&uacute;ng
+                                    t&ocirc;i bằng c&aacute;ch sử dụng t&agrave;i khoản mạng x&atilde; hội của Bạn (&ldquo;<strong>T&agrave;i
+                                        khoản Mạng X&atilde; hội</strong>&rdquo;),
+                                    li&ecirc;n kết t&agrave;i khoản của bạn với T&agrave;i khoản Mạng X&atilde; hội của
+                                    bạn, CGV Việt Nam c&oacute; quyền truy cập th&ocirc;ng tin về bạn m&agrave; bạn đ&atilde;
+                                    cung cấp một c&aacute;ch tự nguy&ecirc;n
+                                    cho nh&agrave; cung cấp dịch vụ T&agrave;i khoản Mạng X&atilde; hội của bạn tu&acirc;n
+                                    theo c&aacute;c ch&iacute;nh s&aacute;ch của c&aacute;c nh&agrave; cung cấp dịch vụ
+                                    n&agrave;y, v&agrave; CGV Việt Nam sẽ quản
+                                    l&yacute;, xử l&yacute; v&agrave; sử dụng c&aacute;c dữ liệu c&aacute; nh&acirc;n n&agrave;y
+                                    của bạn theo c&aacute;c quy định của Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng
+                                    Tin n&agrave;y tại mọi thời điểm.</p>
+                                <p><strong>2. THU THẬP DỮ LIỆU KH&Aacute;C</strong></p>
+                                <p>2.1 Như với hầu hết c&aacute;c trang web v&agrave; c&aacute;c ứng dụng di động kh&aacute;c,
+                                    thiết bị của bạn gửi th&ocirc;ng tin c&oacute; thể gồm c&oacute; dữ liệu về bạn,
+                                    được một m&aacute;y chủ web ghi lại khi bạn
+                                    sử dụng Ứng Dụng. Th&ocirc;ng tin n&agrave;y th&ocirc;ng thường bao gồm nhưng kh&ocirc;ng
+                                    giới hạn địa chỉ IP, hệ điều h&agrave;nh của m&aacute;y t&iacute;nh/thiết bị di
+                                    động, loại tr&igrave;nh duyệt, loại thiết
+                                    bị di động, c&aacute;c đặc điểm của thiết bị di động, m&atilde; định danh thiết bị
+                                    thống nhất (UDID) hoặc m&atilde; định danh thiết bị di động (MEID) của thiết bị di
+                                    động của bạn, địa chỉ tham chiếu của trang web
+                                    (nếu c&oacute;), c&aacute;c trang m&agrave; bạn đ&atilde; truy cập đến tr&ecirc;n
+                                    trang web hoặc ứng dụng di động của CGV Việt Nam v&agrave; thời gian truy cập v&agrave;
+                                    đ&ocirc;i khi l&agrave; "cookie" (c&oacute;
+                                    thể v&ocirc; hiệu h&oacute;a bằng c&aacute;ch sử dụng t&ugrave;y chọn tr&igrave;nh
+                                    duyệt của bạn) để gi&uacute;p trang web ghi nhớ lần truy cập cuối c&ugrave;ng của
+                                    bạn. Nếu bạn đăng nhập, th&ocirc;ng tin n&agrave;y
+                                    được li&ecirc;n kết với t&agrave;i khoản c&aacute; nh&acirc;n của bạn. Th&ocirc;ng
+                                    tin n&agrave;y cũng được đưa v&agrave;o c&aacute;c số liệu thống k&ecirc; ẩn danh để
+                                    gi&uacute;p CGV Việt Nam hiểu được kh&aacute;ch
+                                    truy cập sử dụng Ứng Dụng của ch&uacute;ng t&ocirc;i như thế n&agrave;o.</p>
+                                <p>2.2 C&aacute;c ứng dụng di động của CGV Việt Nam c&oacute; thể thu thập th&ocirc;ng
+                                    tin ch&iacute;nh x&aacute;c về địa chỉ của thiết bị di động của bạn sử dụng c&aacute;c
+                                    c&ocirc;ng nghệ như GPS, Wi-Fi,&hellip;. CGV
+                                    Việt Nam thu thập, sử dụng, c&ocirc;ng bố v&agrave;/hoặc xử l&yacute; c&aacute;c th&ocirc;ng
+                                    tin n&agrave;y cho một hoặc nhiều mục đ&iacute;ch bao gồm nhưng kh&ocirc;ng giới hạn
+                                    c&aacute;c dịch vụ được cung cấp
+                                    dựa tr&ecirc;n vị tr&iacute; m&agrave; bạn y&ecirc;u cầu hoặc chuyển c&aacute;c nội
+                                    dung c&oacute; li&ecirc;n quan đến bạn dựa tr&ecirc;n vị tr&iacute; của bạn hoặc cho
+                                    ph&eacute;p bạn chia sẻ vị tr&iacute; của
+                                    bạn cho c&aacute;c Người sử dụng kh&aacute;c như l&agrave; một phần của c&aacute;c
+                                    Dịch vụ được cung cấp bởi c&aacute;c ứng dụng di động của CGV Việt Nam. Đối với phần
+                                    lớn c&aacute;c thiết bị di động, bạn c&oacute;
+                                    thể r&uacute;t lại sự cho ph&eacute;p để ch&uacute;ng t&ocirc;i được thu thập c&aacute;c
+                                    th&ocirc;ng tin n&agrave;y dựa tr&ecirc;n vị tr&iacute; của bạn th&ocirc;ng qua c&aacute;c
+                                    c&agrave;i đặt tr&ecirc;n thiết
+                                    bị. Nếu bạn c&oacute; c&acirc;u hỏi n&agrave;o về c&aacute;ch thức v&ocirc; hiệu h&oacute;a
+                                    c&aacute;c dịch vụ vị tr&iacute; tr&ecirc;n thiết bị di động của bạn, vui l&ograve;ng
+                                    li&ecirc;n hệ với c&aacute;c nh&agrave;
+                                    cung cấp dịch vụ thiết bị di động hoặc nh&agrave; sản xuất thiết bị của bạn.</p>
+                                <p>2.3. Như khi bạn xem c&aacute;c trang tr&ecirc;n trang web hoặc ứng dụng di động của
+                                    ch&uacute;ng t&ocirc;i, khi bạn xem c&aacute;c nội dung v&agrave; quảng c&aacute;o v&agrave;
+                                    truy cập v&agrave;o phần mềm kh&aacute;c
+                                    tr&ecirc;n Ứng Dụng hoặc th&ocirc;ng qua Dịch Vụ, c&aacute;c th&ocirc;ng tin c&oacute;&nbsp;thể
+                                    được gửi đến cho CGV Việt Nam (bao gồm nhưng kh&ocirc;ng giới hạn, địa chỉ IP, hệ
+                                    điều h&agrave;nh, v.v..); nhưng,
+                                    thay v&igrave; c&aacute;c số lượt xem trang, thiết bị của bạn gửi đến CGV Việt Nam c&aacute;c
+                                    th&ocirc;ng tin về nội dung, quảng c&aacute;o được xem v&agrave;/hoặc phần mềm được
+                                    c&agrave;i đặt bởi c&aacute;c Dịch
+                                    vụ v&agrave; Ứng Dụng v&agrave; thời điểm.</p>
+                                <p><strong>3. COOKIES</strong></p>
+                                <p>Ứng Dụng sử dụng cookie để ph&acirc;n biệt bạn với những người d&ugrave;ng kh&aacute;c.
+                                    Điều n&agrave;y gi&uacute;p CGV Việt Nam cung cấp cho bạn trải nghiệm tốt khi bạn sử
+                                    dụng trang mạng v&agrave; cũng cho ph&eacute;p
+                                    CGV Việt Nam cải thiện trang mạng của m&igrave;nh. Th&ocirc;ng tin n&agrave;y c&ograve;n
+                                    được sử dụng để theo d&otilde;i giỏ h&agrave;ng, để chuyển tải nội dung ph&ugrave;
+                                    hợp với sở th&iacute;ch của bạn, để cho
+                                    ph&eacute;p c&aacute;c đối t&aacute;c cung cấp dịch vụ quảng c&aacute;o cung cấp
+                                    dịch vụ quảng c&aacute;o tr&ecirc;n c&aacute;c trang th&ocirc;ng qua mạng Internet v&agrave;
+                                    để thực hiện ph&acirc;n t&iacute;ch dữ
+                                    liệu v&agrave; hoặc theo d&otilde;i việc sử dụng Dịch vụ. Cookie l&agrave; một tệp
+                                    nhỏ gồm c&aacute;c chữ c&aacute;i v&agrave; số m&agrave; CGV Việt Nam lưu trữ tr&ecirc;n
+                                    tr&igrave;nh duyệt hoặc ổ cứng m&aacute;y
+                                    t&iacute;nh của bạn. Cookie chứa th&ocirc;ng tin được lưu trữ tr&ecirc;n ổ cứng m&aacute;y
+                                    t&iacute;nh của bạn. Bạn c&oacute; khả năng chấp nhận hoặc từ chối cookie bằng c&aacute;ch
+                                    sửa đổi c&agrave;i đặt trong
+                                    tr&igrave;nh duyệt của bạn. Nếu bạn muốn l&agrave;m điều n&agrave;y, xin vui l&ograve;ng
+                                    xem mục trợ gi&uacute;p trong tr&igrave;nh duyệt của bạn.</p>
+                                <p>Bằng c&aacute;ch tiếp tục sử dụng Ứng Dụng, bạn chấp nhận CGV Việt Nam thu thập v&agrave;
+                                    sử dụng c&aacute;c loại cookie ph&ugrave; hợp với mục đ&iacute;ch n&ecirc;u tr&ecirc;n.</p>
+                                <p><strong>4. HỆ THỐNG GI&Aacute;M S&Aacute;T CCTV</strong></p>
+                                <p>Tại c&aacute;c Cụm Rạp Chiếu Phim CGV Cinemas, CGV Việt Nam c&oacute; thể sẽ sử dụng
+                                    hệ thống gi&aacute;m s&aacute;t CCTV (như m&aacute;y quay phim). Những m&aacute;y
+                                    quay phim CCTV của CGV Việt Nam c&oacute; thể được
+                                    đặt tại một v&agrave;i vị tr&iacute; c&ocirc;ng cộng của Cụm Rạp Chiếu Phim CGV
+                                    Cinemas nhằm ghi &acirc;m, ghi h&igrave;nh theo thời gian thực với mục đ&iacute;ch g&oacute;p
+                                    phần bảo vệ trật tự, an to&agrave;n x&atilde;
+                                    hội; bảo vệ quyền v&agrave; lợi &iacute;ch hợp ph&aacute;p của Cụm Rạp Chiếu Phim
+                                    CGV Cinemas, của nh&acirc;n vi&ecirc;n, của CGV Việt Nam v&agrave; của bạn theo quy
+                                    định ph&aacute;p luật; ph&ograve;ng, chống, x&aacute;c
+                                    định v&agrave; điều tra những h&agrave;nh vi vi phạm tại Cụm Rạp Chiếu Phim CGV
+                                    Cinemas.</p>
+                                <p>Bằng c&aacute;ch tiếp tục hoạt động tại Cụm Rạp Chiếu Phim CGV Cinemas, bạn chấp nhận
+                                    để CGV Việt Nam thực hiện gi&aacute;m s&aacute;t qua hệ thống CCTV v&agrave; xử l&yacute;
+                                    dữ liệu theo đ&uacute;ng mục đ&iacute;ch
+                                    đ&atilde; được đề cập ở tr&ecirc;n.</p>
+                                <p><strong>5. THU THẬP TH&Ocirc;NG TIN TRẺ EM</strong></p>
+                                <p>Bạn cần lưu &yacute; c&aacute;c giao dịch trực tuyến tr&ecirc;n Ứng Dụng kh&ocirc;ng
+                                    được chủ &yacute; thiết kế để giao dịch với trẻ em dưới 16 tuổi. C&aacute;c giao
+                                    dịch trực tuyến tr&ecirc;n Ứng Dụng cho việc sử dụng
+                                    Dịch Vụ của trẻ em dưới 16 tuổi do CGV Việt Nam cung cấp sẽ được thực hiện với sự gi&aacute;m
+                                    s&aacute;t cẩn thận của cha/mẹ hoặc người gi&aacute;m hộ v&agrave; thực hiện th&ocirc;ng
+                                    qua cha/mẹ hoặc người gi&aacute;m
+                                    hộ. Theo đ&oacute;, CGV Việt Nam kh&ocirc;ng cố t&igrave;nh thu thập hay lưu giữ bất
+                                    kỳ dữ liệu c&aacute; nh&acirc;n hay th&ocirc;ng tin kh&ocirc;ng nhận dạng c&aacute;
+                                    nh&acirc;n n&agrave;o của bất kỳ ai dưới 16
+                                    tuổi. Cha/mẹ hoặc người gi&aacute;m hộ của trẻ em dưới 16 tuổi vui l&ograve;ng gi&aacute;m
+                                    s&aacute;t v&agrave; đảm bảo th&ocirc;ng tin c&aacute; nh&acirc;n của trẻ dưới 16
+                                    tuổi m&agrave; m&igrave;nh đang gi&aacute;m
+                                    hộ kh&ocirc;ng đăng tải th&ocirc;ng tin c&aacute; nh&acirc;n cho CGV Việt Nam. Trong
+                                    trường hợp th&ocirc;ng tin c&aacute; nh&acirc;n của của trẻ em dưới 16 tuổi do qu&yacute;
+                                    phụ huynh gi&aacute;m hộ được cung cấp
+                                    cho CGV Việt Nam, cha/mẹ hoặc người gi&aacute;m hộ theo đồng &yacute; với việc xử l&yacute;
+                                    th&ocirc;ng tin của trẻ em dưới 16 tuổi c&oacute; li&ecirc;n quan, v&agrave; đồng
+                                    &yacute; chịu sự điều chỉnh của Ch&iacute;nh
+                                    S&aacute;ch Bảo Mật Th&ocirc;ng Tin n&agrave;y thay mặt cho người được gi&aacute;m
+                                    hộ. CGV Việt Nam sẽ kh&oacute;a bất kỳ t&agrave;i khoản n&agrave;o chỉ được sử dụng
+                                    bởi đối tượng trẻ em như vậy v&agrave; sẽ gỡ
+                                    v&agrave;/hoặc x&oacute;a bất kỳ dữ liệu c&aacute; nh&acirc;n n&agrave;o m&agrave;
+                                    ch&uacute;ng t&ocirc;i cho l&agrave; đ&atilde; được gửi bởi bất kỳ trẻ em n&agrave;o
+                                    dưới 16 tuổi.</p>
+                                <p><strong>6. TH&Ocirc;NG TIN THU THẬP BỞI C&Aacute;C B&Ecirc;N THỨ BA</strong></p>
+                                <p>6.1. Nền tảng của ch&uacute;ng t&ocirc;i sử dụng Google Analytics, một dịch vụ ph&acirc;n
+                                    t&iacute;ch web được cung cấp bởi Google, Inc. ("Google"). Google Analytics sử dụng
+                                    cookie, l&agrave; c&aacute;c tập tin văn
+                                    bản tr&ecirc;n thiết bị của bạn, để gi&uacute;p Ứng Dụng ph&acirc;n t&iacute;ch c&aacute;ch
+                                    thức người d&ugrave;ng sử dụng Ứng Dụng của ch&uacute;ng t&ocirc;i. Th&ocirc;ng tin
+                                    được tạo bởi cookie về việc bạn sử
+                                    dụng Ứng Dụng (bao gồm địa chỉ IP của bạn) sẽ được gửi đến v&agrave; lưu bởi Google
+                                    tr&ecirc;n c&aacute;c m&aacute;y chủ tại Hoa Kỳ. Google sẽ sử dụng th&ocirc;ng tin n&agrave;y
+                                    để đ&aacute;nh gi&aacute; việc bạn
+                                    sử dụng Ứng Dụng của ch&uacute;ng t&ocirc;i, soạn b&aacute;o c&aacute;o về hoạt động
+                                    trang web d&agrave;nh cho c&aacute;c nh&agrave; điều h&agrave;nh trang web v&agrave;
+                                    cung cấp c&aacute;c dịch vụ kh&aacute;c li&ecirc;n
+                                    quan đến hoạt động trang web v&agrave; việc sử dụng Internet. Google cũng c&oacute;
+                                    thể gửi th&ocirc;ng tin n&agrave;y cho c&aacute;c b&ecirc;n thứ ba trong trường hợp
+                                    luật ph&aacute;p c&oacute; quy định như thế,
+                                    hoặc trường hợp c&aacute;c b&ecirc;n thứ ba đ&oacute; xử l&yacute; th&ocirc;ng tin
+                                    thay mặt Google. Google sẽ kh&ocirc;ng li&ecirc;n kết địa chỉ IP của bạn với bất kỳ
+                                    dữ liệu n&agrave;o kh&aacute;c m&agrave; Google
+                                    nắm giữ</p>
+                                <p>6.2. CGV Việt Nam, v&agrave; c&aacute;c b&ecirc;n thứ ba, c&oacute; thể trong từng
+                                    thời điểm cung cấp c&aacute;c bản tải về ứng dụng phần mềm cho bạn sử dụng bởi Ứng
+                                    Dụng hoặc th&ocirc;ng qua C&aacute;c Dịch Vụ. Những
+                                    ứng dụng n&agrave;y c&oacute; thể truy cập ri&ecirc;ng, v&agrave; cho ph&eacute;p
+                                    một b&ecirc;n thứ ba xem, th&ocirc;ng tin nhận dạng của bạn, chẳng hạn như t&ecirc;n,
+                                    ID người d&ugrave;ng của bạn, Địa chỉ IP của
+                                    thiết bị của bạn hoặc th&ocirc;ng tin kh&aacute;c chẳng hạn như game bạn đang chơi
+                                    trong bất kỳ phi&ecirc;n truy cập cụ thể n&agrave;o, v&agrave; bất kỳ cookie n&agrave;o
+                                    trước đ&acirc;y bạn c&oacute; thể đ&atilde;
+                                    c&agrave;i đặt hoặc đ&atilde; được c&agrave;i đặt cho bạn bởi một ứng dụng phần mềm
+                                    hoặc trang web của b&ecirc;n thứ ba. Ngo&agrave;i ra, c&aacute;c ứng dụng n&agrave;y
+                                    c&oacute; thể y&ecirc;u cầu bạn cung cấp th&ecirc;m
+                                    th&ocirc;ng tin trực tiếp cho c&aacute;c b&ecirc;n thứ ba. C&aacute;c sản phẩm hoặc
+                                    dịch vụ của b&ecirc;n thứ ba được cung cấp th&ocirc;ng qua c&aacute;c ứng dụng n&agrave;y
+                                    kh&ocirc;ng thuộc sở hữu hay quyền kiểm
+                                    so&aacute;t của CGV Việt Nam. Bạn n&ecirc;n đọc c&aacute;c điều khoản v&agrave; c&aacute;c
+                                    ch&iacute;nh s&aacute;ch kh&aacute;c được c&ocirc;ng bố bởi c&aacute;c b&ecirc;n thứ
+                                    ba đ&oacute; tr&ecirc;n trang web của
+                                    họ hoặc nơi kh&aacute;c.</p>
+                                <p><strong>7. MỤC Đ&Iacute;CH XỬ L&Yacute; DỮ LIỆU C&Aacute; NH&Acirc;N</strong></p>
+                                <p>CGV Việt Nam thu thập, sử dụng, tiết lộ, v&agrave; thực hiện c&aacute;c biện ph&aacute;p
+                                    xử l&yacute; dữ liệu c&aacute; nh&acirc;n của bạn cho c&aacute;c mục đ&iacute;ch sau
+                                    đ&acirc;y:</p>
+                                <p>(i) Định danh, x&aacute;c thực v&agrave; kiểm tra th&ocirc;ng tin của bạn;</p>
+                                <p>(ii) Để giải quyết hoặc tạo điều kiện thuận lợi cho dịch vụ kh&aacute;ch h&agrave;ng,
+                                    thực hiện c&aacute;c chỉ thị của bạn, duy tr&igrave; li&ecirc;n lạc với bạn, hỗ trợ
+                                    cho bạn trong việc sử dụng Ứng Dụng, sử dụng
+                                    Dịch Vụ v&agrave; giải đ&aacute;p thắc mắc của bạn li&ecirc;n quan đến Ứng Dụng,
+                                    Dịch Vụ do CGV Việt Nam cung cấp;</p>
+                                <p>(iii) Để quản l&yacute;, điều h&agrave;nh, cung cấp v&agrave;/hoặc quản l&yacute;
+                                    việc bạn sử dụng v&agrave;/hoặc truy cập C&aacute;c Dịch Vụ v&agrave; Ứng Dụng (bao
+                                    gồm c&aacute;c sở th&iacute;ch của bạn), cũng như
+                                    quan hệ v&agrave; t&agrave;i khoản người d&ugrave;ng của bạn với ch&uacute;ng t&ocirc;i;</p>
+                                <p>(iv) Để đ&aacute;p ứng, xử l&yacute;, giải quyết hoặc ho&agrave;n tất một giao dịch v&agrave;/hoặc
+                                    đ&aacute;p ứng c&aacute;c y&ecirc;u cầu của bạn đối với c&aacute;c sản phẩm v&agrave;
+                                    dịch vụ nhất định v&agrave; th&ocirc;ng
+                                    b&aacute;o cho bạn về c&aacute;c vấn đề dịch vụ v&agrave; c&aacute;c hoạt động t&agrave;i
+                                    khoản bất thường;</p>
+                                <p>(v)&nbsp;Th&ocirc;ng b&aacute;o nhanh ch&oacute;ng v&agrave; kịp thời đến bạn c&aacute;c
+                                    th&ocirc;ng tin của chương tr&igrave;nh khuyến mại, c&aacute;c chương tr&igrave;nh
+                                    ưu đ&atilde;i, th&ocirc;ng tin quảng c&aacute;o
+                                    v&agrave;/hoặc th&ocirc;ng tin của c&aacute;c hoạt động x&uacute;c tiến thương mại
+                                    kh&aacute;c. V&igrave; mục đ&iacute;ch tiếp thị v&agrave; quảng c&aacute;o, trong
+                                    trường hợp n&agrave;y, để gửi cho bạn qua c&aacute;c
+                                    phương tiện v&agrave; phương thức li&ecirc;n lạc kh&aacute;c nhau, th&ocirc;ng tin v&agrave;
+                                    t&agrave;i liệu tiếp thị v&agrave; quảng b&aacute; li&ecirc;n quan đến c&aacute;c
+                                    sản phẩm v&agrave;/hoặc dịch vụ (bao
+                                    gồm, nhưng kh&ocirc;ng giới hạn c&aacute;c sản phẩm v&agrave;/hoặc dịch vụ của c&aacute;c
+                                    b&ecirc;n thứ ba m&agrave;CGV Việt Nam c&oacute; thể hợp t&aacute;c hoặc li&ecirc;n
+                                    kết) m&agrave; CGV Việt Nam (v&agrave;/hoặc
+                                    c&aacute;c b&ecirc;n li&ecirc;n kết hoặc c&ocirc;ng ty c&oacute; li&ecirc;n quan của
+                                    n&oacute;) c&oacute; thể b&aacute;n, tiếp thị hoặc quảng b&aacute;, cho d&ugrave; c&aacute;c
+                                    sản phẩm hoặc dịch vụ đ&oacute; tồn
+                                    tại v&agrave;o l&uacute;c n&agrave;y hoặc được tạo ra trong tương lai. Bạn c&oacute;
+                                    thể hủy đăng k&yacute; nhận c&aacute;c th&ocirc;ng tin tiếp thị tại bất cứ thời điểm
+                                    n&agrave;o bằng c&aacute;ch sử dụng chức
+                                    năng hủy đăng k&yacute; trong c&aacute;c t&agrave;i liệu tiếp thị điện tử. CGV Việt
+                                    Nam c&oacute; thể sử dụng c&aacute;c th&ocirc;ng tin li&ecirc;n hệ của bạn để gửi c&aacute;c
+                                    bản tin v&agrave;/hoặc t&agrave;i
+                                    liệu truyền th&ocirc;ng từ ch&uacute;ng t&ocirc;i hoặc từ c&aacute;c c&ocirc;ng ty c&oacute;
+                                    li&ecirc;n quan của CGV Việt Nam.</p>
+                                <p>(vi) Để duy tr&igrave; v&agrave; quản l&yacute; bất kỳ bản cập nhật phần mềm n&agrave;o
+                                    v&agrave;/hoặc c&aacute;c bản cập nhật kh&aacute;c v&agrave; sự hỗ trợ c&oacute; thể
+                                    được y&ecirc;u cầu t&ugrave;y l&uacute;c nhằm
+                                    đảm bảo C&aacute;c Dịch Vụ của CGV Việt Nam hoạt động su&ocirc;n sẻ;</p>
+                                <p>(vii) Giải quyết c&aacute;c vấn đề ph&aacute;t sinh li&ecirc;n quan đến việc sử dụng
+                                    Ứng Dụng;</p>
+                                <p>(viii)&nbsp;Khảo s&aacute;t thị trường, nghi&ecirc;n cứu v&agrave; ph&aacute;t triển
+                                    sản phẩm, dịch vụ mới, thống k&ecirc; v&agrave; ph&acirc;n t&iacute;ch th&ocirc;ng
+                                    tin kh&aacute;ch h&agrave;ng, th&oacute;i quen
+                                    ti&ecirc;u d&ugrave;ng để hỗ trợ việc vận h&agrave;nh v&agrave; kinh doanh của CGV
+                                    Việt Nam v&agrave; c&aacute;c c&ocirc;ng ty li&ecirc;n kết, c&aacute;c c&ocirc;ng ty
+                                    kh&aacute;c c&ugrave;ng thuộc Tập Đo&agrave;n
+                                    CJ;</p>
+                                <p>(ix) Để cho ph&eacute;p kiểm tra v&agrave; khảo s&aacute;t kh&aacute;c để, ngo&agrave;i
+                                    những hoạt động kh&aacute;c, x&aacute;c thực quy m&ocirc; v&agrave; th&agrave;nh
+                                    phần của đối tượng mục ti&ecirc;u của ch&uacute;ng
+                                    t&ocirc;i, v&agrave; hiểu được trải nghiệm của họ với C&aacute;c Dịch Vụ của CGV
+                                    Việt Nam;</p>
+                                <p>(x) Để lập số liệu thống k&ecirc; v&agrave; nghi&ecirc;n cứu đ&aacute;p ứng y&ecirc;u
+                                    cầu b&aacute;o c&aacute;o v&agrave;/hoặc duy tr&igrave; sổ s&aacute;ch nội bộ hoặc
+                                    theo quy định;</p>
+                                <p>(xi)&nbsp;Lưu trữ, quản l&yacute;, dự ph&ograve;ng cho việc phục hồi sự cố hay cho c&aacute;c
+                                    mục đ&iacute;ch tương tự kh&aacute;c;</p>
+                                <p>(xii) Điều tra tai nạn, giải quyết tranh chấp, khiếu nại v&agrave; c&aacute;c hoạt
+                                    động kh&aacute;c nhằm tu&acirc;n thủ c&aacute;c nghĩa vụ theo quy định của ph&aacute;p
+                                    luật Việt Nam;</p>
+                                <p>(xiii) Để đ&aacute;p ứng bất cứ c&aacute;c mối đe dọa hoặc y&ecirc;u cầu thực tế n&agrave;o
+                                    được khẳng định chống lại CGV Việt Nam hoặc c&aacute;c y&ecirc;u cầu kh&aacute;c li&ecirc;n
+                                    quan đến c&aacute;c nội dung vi
+                                    phạm quy định của c&aacute;c b&ecirc;n thứ ba;</p>
+                                <p>(xiv)&nbsp;Ph&aacute;t hiện, ngăn chặn, điều tra v&agrave; xử l&yacute; những hoạt
+                                    động vi phạm ch&iacute;nh s&aacute;ch, quy định của CGV Việt Nam v&agrave;/hoặc vi
+                                    phạm quy định ph&aacute;p luật Việt Nam;</p>
+                                <p>(xv) Tu&acirc;n thủ c&aacute;c quy định của ph&aacute;p luật, y&ecirc;u cầu của cơ
+                                    quan nh&agrave; nước c&oacute; thẩm quyền bao gồm nhưng kh&ocirc;ng giới hạn nghĩa
+                                    vụ c&ocirc;ng bố th&ocirc;ng tin, b&aacute;o c&aacute;o
+                                    theo quy định ph&aacute;p luật về khuyến mại, lưu trữ hồ sơ, kiểm to&aacute;n;</p>
+                                <p>(xvi)&nbsp;Chia sẻ, truyền, đưa dữ liệu c&aacute; nh&acirc;n cho c&aacute;c b&ecirc;n
+                                    thứ ba kh&aacute;c (cho việc thực hiện c&aacute;c mục đ&iacute;ch n&ecirc;u tr&ecirc;n
+                                    v&agrave; c&aacute;c mục đ&iacute;ch ph&ugrave;
+                                    hợp kh&aacute;c), bao gồm nhưng kh&ocirc;ng giới hạn: c&aacute;c c&ocirc;ng ty li&ecirc;n
+                                    kết, c&aacute;c c&ocirc;ng ty kh&aacute;c c&ugrave;ng thuộc Tập Đo&agrave;n CJ; đối
+                                    t&aacute;c, đại l&yacute;, nh&agrave;
+                                    cung cấp h&agrave;ng h&oacute;a/dịch vụ, nh&agrave; thầu, b&ecirc;n tư vấn của CGV
+                                    Việt Nam; b&ecirc;n thứ ba c&oacute; quyền kh&aacute;c; hoặc theo y&ecirc;u cầu của
+                                    c&aacute;c đơn vị, cơ quan nh&agrave; nước c&oacute;
+                                    thẩm quyền.</p>
+                                <p>(gọi chung l&agrave; &ldquo;<strong>C&aacute;c Mục Đ&iacute;ch</strong>&rdquo;).</p>
+                                <p>V&igrave; C&aacute;c Mục Đ&iacute;ch m&agrave; CGV Việt Nam sẽ/c&oacute; thể thu
+                                    thập, sử dụng, tiết lộ hoặc xử l&yacute; dữ liệu c&aacute; nh&acirc;n của bạn phụ
+                                    thuộc v&agrave;o ho&agrave;n cảnh hiện c&oacute;, mục
+                                    đ&iacute;ch đ&oacute; c&oacute; thể kh&ocirc;ng xuất hiện b&ecirc;n tr&ecirc;n. Tuy
+                                    nhi&ecirc;n, ch&uacute;ng t&ocirc;i sẽ th&ocirc;ng b&aacute;o cho bạn biết mục đ&iacute;ch
+                                    kh&aacute;c tại thời điểm xin sự cho
+                                    ph&eacute;p của bạn, trừ khi việc xử l&yacute; dữ liệu &aacute;p dụng m&agrave; kh&ocirc;ng
+                                    cần sự đồng &yacute; của bạn l&agrave; được ph&eacute;p theo c&aacute;c quy định của
+                                    ph&aacute;p luật.</p>
+                                <p><strong>8. BẢO VỆ V&Agrave; LƯU TRỮ DỮ LIỆU C&Aacute; NH&Acirc;N</strong></p>
+                                <p>Dữ liệu c&aacute; nh&acirc;n của bạn do CGV Việt Nam lưu trữ sẽ được bảo mật bằng
+                                    việc thực hiện c&aacute;c biện ph&aacute;p hợp l&yacute;. Tuy nhi&ecirc;n, <strong>CHẮC
+                                        CHẮN KH&Ocirc;NG THỂ C&Oacute; SỰ ĐẢM BẢO AN NINH TUYỆT ĐỐI</strong>.</p>
+                                <p>Trong phạm vi ph&aacute;p luật cho ph&eacute;p, CGV Việt Nam c&oacute; thể lưu trữ dữ
+                                    liệu c&aacute; nh&acirc;n của bạn trong khoảng thời gian cần thiết để ho&agrave;n th&agrave;nh
+                                    đ&uacute;ng v&agrave; đủ c&aacute;c
+                                    mục đ&iacute;ch xử l&yacute; dữ liệu c&aacute; nh&acirc;n được n&ecirc;u cụ thể
+                                    trong Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng Tin.</p>
+                                <p>CGV Việt Nam <strong>c&oacute; thể phải lưu trữ dữ liệu c&aacute; nh&acirc;n của bạn
+                                    l&acirc;u hơn</strong> dựa tr&ecirc;n nhu cầu thực tế như (i) bất cứ c&aacute;c mối
+                                    đe dọa hoặc y&ecirc;u cầu thực tế n&agrave;o được
+                                    khẳng định chống lại CGV Việt Nam; (ii) Điều tra gian lận nội bộ; (iii) điều tra
+                                    tham nhũng nội bộ; (iv) ph&aacute;t hiện, ngăn chặn, điều tra v&agrave; xử l&yacute;
+                                    những hoạt động vi phạm ch&iacute;nh s&aacute;ch,
+                                    quy định nội bộ của CGV Việt Nam v&agrave;/hoặc vi phạm quy định ph&aacute;p luật
+                                    Việt Nam; (v) y&ecirc;u cầu của ph&aacute;p luật c&oacute; hiệu lực tại từng thời
+                                    điểm như ph&aacute;p luật về Thuế, Ph&ograve;ng,
+                                    chống rửa tiền, hay (vi) nhằm giải quyết tranh chấp, vấn đề ph&aacute;p l&yacute;,
+                                    nếu c&oacute;. <strong>MẶC D&Ugrave; C&Oacute; C&Aacute;C QUY ĐỊNH KH&Aacute;C ĐI,
+                                        BẠN CẦN LƯU &Yacute;, BẠN KH&Ocirc;NG THỂ R&Uacute;T LẠI SỰ ĐỒNG &Yacute;, KH&Ocirc;NG
+                                        THỂ PHẢN ĐỐI XỬ L&Yacute;, KH&Ocirc;NG THỂ HẠN CHẾ XỬ L&Yacute;, HOẶC ĐỀ NGHỊ
+                                        CGV VIỆT NAM X&Oacute;A DỮ LIỆU C&Aacute; NH&Acirc;N CỦA BẠN NẾU DỮ LIỆU C&Aacute;
+                                        NH&Acirc;N CỦA BẠN ĐANG ĐƯỢC SỬ DỤNG CHO C&Aacute;C MỤC Đ&Iacute;CH N&Ecirc;U
+                                        TẠI ĐOẠN N&Agrave;Y.</strong></p>
+                                <p>CGV Việt Nam sẽ hủy hoặc x&oacute;a th&ocirc;ng tin nhận dạng ra khỏi dữ liệu c&aacute;
+                                    nh&acirc;n của bạn khi CGV Việt Nam nhận được y&ecirc;u cầu của bạn ph&ugrave; hợp
+                                    với c&aacute;c quy định ph&aacute;p luật hoặc
+                                    khi CGV Việt Nam c&oacute; l&yacute; do hợp l&yacute; để x&aacute;c định rằng (i)
+                                    việc lưu trữ dữ liệu c&aacute; nh&acirc;n đ&oacute; kh&ocirc;ng c&ograve;n phục vụ
+                                    mục đ&iacute;ch thu thập dữ liệu c&aacute; nh&acirc;n
+                                    đ&oacute; nữa; (ii) việc lưu giữ kh&ocirc;ng c&ograve;n cần thiết cho bất kỳ mục đ&iacute;ch
+                                    hợp ph&aacute;p hay mục đ&iacute;ch kinh doanh n&agrave;o v&agrave; (iii) kh&ocirc;ng
+                                    c&ograve;n c&aacute;c lợi &iacute;ch
+                                    hợp ph&aacute;p n&agrave;o kh&aacute;c để tiếp tục lưu giữ c&aacute;c dữ liệu c&aacute;
+                                    nh&acirc;n n&agrave;y. Nếu bạn ngưng sử dụng Ứng Dụng, hoặc quyền của bạn được sử
+                                    dụng Ứng Dụng v&agrave;/hoặc C&aacute;c Dịch
+                                    Vụ bị chấm dứt hoặc hủy bỏ, CGV Việt Nam c&oacute; thể tiếp tục lưu, sử dụng v&agrave;/hoặc
+                                    tiết lộ dữ liệu c&aacute; nh&acirc;n của bạn tu&acirc;n theo Ch&iacute;nh S&aacute;ch
+                                    Bảo Mật Th&ocirc;ng Tin n&agrave;y
+                                    v&agrave; quy định ph&aacute;p luật. T&ugrave;y thuộc v&agrave;o quy định của ph&aacute;p
+                                    luật, CGV Việt Nam c&oacute; thể ti&ecirc;u hủy dữ liệu c&aacute; nh&acirc;n của bạn
+                                    một c&aacute;ch an to&agrave;n m&agrave;
+                                    kh&ocirc;ng cần th&ocirc;ng b&aacute;o trước cho bạn. <strong>BẠN CŨNG CẦN LƯU
+                                        &Yacute;, CGV VIỆT NAM CŨNG BẢO LƯU QUYỀN TỪ CHỐI X&Oacute;A, PHẢN ĐỐI XỬ L&Yacute;,
+                                        HẠN CHẾ XỬ L&Yacute;, X&Oacute;A DỮ LIỆU C&Aacute; NH&Acirc;N TRONG TRƯỜNG HỢP Y&Ecirc;U
+                                        CẦU CỦA BẠN KH&Ocirc;NG PH&Ugrave; HỢP VỚI QUY ĐỊNH PH&Aacute;P LUẬT, HOẶC MẶC D&Ugrave;
+                                        PH&Ugrave; HỢP NHƯNG THUỘC TRƯỜNG HỢP CGV VIỆT NAM KH&Ocirc;NG ĐƯỢC X&Oacute;A
+                                        THEO QUY ĐỊNH PH&Aacute;P LUẬT.</strong></p>
+                                <p><strong>9. XỬ L&Yacute; DỮ LIỆU C&Aacute; NH&Acirc;N NHẠY CẢM</strong></p>
+                                <p>CGV Việt Nam hiểu r&otilde; dữ liệu c&aacute; nh&acirc;n nhạy cảm gắn liền với quyền
+                                    ri&ecirc;ng tư m&agrave; khi bị x&acirc;m phạm sẽ g&acirc;y ảnh hưởng trực tiếp tới
+                                    quyền, lợi &iacute;ch hợp ph&aacute;p của bạn,
+                                    do đ&oacute; CGV Việt Nam sẽ kh&ocirc;ng tiến h&agrave;nh thu thập, xử l&yacute; dữ
+                                    liệu c&aacute; nh&acirc;n nhạy cảm của bạn nếu chưa được sự đồng &yacute; của bạn.
+                                    Việc thu thập, xử l&yacute; dữ liệu c&aacute;
+                                    nh&acirc;n nhạy cảm của bạn sẽ được thực hiện ri&ecirc;ng biệt v&agrave; từng lần
+                                    cho c&aacute;c mục đ&iacute;ch tại từng thời điểm nếu ph&aacute;t sinh. Tuy nhi&ecirc;n,
+                                    để phục vụ cho qu&aacute; tr&igrave;nh đăng
+                                    nhập Ứng Dụng, kiểm tra, x&aacute;c thực cho qu&aacute; tr&igrave;nh sử dụng Ứng
+                                    Dụng v&agrave;/hoặc x&aacute;c nhận Dịch Vụ, CGV Việt Nam c&oacute; thể truy xuất dữ
+                                    liệu c&aacute; nh&acirc;n nhạy cảm của bạn th&ocirc;ng
+                                    qua c&aacute;c thiết bị c&aacute; nh&acirc;n m&agrave; bạn đang sử dụng Ứng Dụng,
+                                    chẳng hạn như th&ocirc;ng tin li&ecirc;n quan đến định danh sinh trắc học. Mặc d&ugrave;
+                                    vậy, CGV Việt Nam kh&ocirc;ng thu thập,
+                                    xử l&yacute; c&aacute;c dữ liệu c&aacute; nh&acirc;n nhạy cảm n&agrave;y.</p>
+                                <p><strong>10. QUYỀN V&Agrave; NGHĨA VỤ CỦA BẠN</strong></p>
+                                <p>10.1. Quyền của bạn:</p>
+                                <p>a)&nbsp;<strong>Quyền được biết</strong>: bạn được biết về hoạt động Xử L&yacute; Dữ
+                                    Liệu C&aacute; Nh&acirc;n của m&igrave;nh, trừ trường hợp luật c&oacute; quy định kh&aacute;c.
+                                </p>
+                                <p>b)&nbsp;<strong>Quyền đồng &yacute;</strong>: bạn được đồng &yacute; hoặc kh&ocirc;ng
+                                    đồng &yacute; cho ph&eacute;p Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n của m&igrave;nh,
+                                    trừ trường hợp theo quy định của ph&aacute;p
+                                    luật.</p>
+                                <p>c)&nbsp;<strong>Quyền r&uacute;t lại sự đồng &yacute;</strong>: bạn được quyền r&uacute;t
+                                    lại sự đồng &yacute; của m&igrave;nh, trừ trường hợp luật c&oacute; quy định kh&aacute;c.
+                                </p>
+                                <p>d)&nbsp;<strong>Quyền truy cập</strong>: nếu bạn đ&atilde; đăng k&yacute; một t&agrave;i
+                                    khoản với CGV Việt Nam, c&aacute; nh&acirc;n bạn c&oacute; thể truy cập v&agrave;/hoặc
+                                    sửa dữ liệu c&aacute; nh&acirc;n của bạn
+                                    m&agrave; CGV Việt Nam đang lưu giữ hoặc kiểm so&aacute;t th&ocirc;ng qua trang
+                                    Thiết Lập T&agrave;i Khoản tr&ecirc;n Ứng Dụng. Nếu bạn chưa đăng k&yacute; t&agrave;i
+                                    khoản với CGV Việt Nam, c&aacute; nh&acirc;n
+                                    bạn c&oacute; thể y&ecirc;u cầu truy cập v&agrave;/hoặc sửa dữ liệu c&aacute; nh&acirc;n
+                                    của bạn m&agrave; CGV Việt Nam đang lưu giữ hoặc kiểm so&aacute;t bằng c&aacute;ch
+                                    gửi y&ecirc;u cầu bằng văn bản cho CGV
+                                    Việt Nam. CGV Việt Nam sẽ cần c&oacute; đủ th&ocirc;ng tin từ bạn để x&aacute;c định
+                                    danh t&iacute;nh của bạn cũng như bản chất y&ecirc;u cầu của bạn để c&oacute; thể
+                                    giải quyết y&ecirc;u cầu của bạn. Do đ&oacute;,
+                                    vui l&ograve;ng gửi y&ecirc;u cầu bằng văn bản của bạn bằng c&aacute;ch gửi email
+                                    cho Bộ phận Bảo Mật của CGV Việt Nam <strong>tại địa chỉ email</strong><strong>&nbsp;<strong><a
+                                            href="#">Security@cgv.vn</a></strong></strong>.
+                                    CGV Việt Nam c&oacute; thể t&iacute;nh một khoản ph&iacute; hợp l&yacute; cho bạn để
+                                    giải quyết v&agrave; xử l&yacute; y&ecirc;u cầu truy cập dữ liệu c&aacute; nh&acirc;n
+                                    của bạn. Nếu CGV Việt Nam c&oacute; t&iacute;nh
+                                    ph&iacute;, CGV Việt Nam sẽ cung cấp cho bạn ước t&iacute;nh lệ ph&iacute; bằng văn
+                                    bản. Vui l&ograve;ng lưu &yacute; rằng CGV Việt Nam kh&ocirc;ng buộc phải đ&aacute;p
+                                    ứng hay giải quyết y&ecirc;u cầu truy cập
+                                    của bạn trừ phi bạn đ&atilde; đồng &yacute; đ&oacute;ng ph&iacute;.</p>
+                                <p>CGV Việt Nam bảo lưu quyền từ chối sửa dữ liệu c&aacute; nh&acirc;n của bạn theo c&aacute;c
+                                    quy định của ph&aacute;p luật về bảo vệ b&iacute; mật th&ocirc;ng tin c&aacute; nh&acirc;n,
+                                    trường hợp c&aacute;c điều luật
+                                    đ&oacute; y&ecirc;u cầu v&agrave;/hoặc cho ph&eacute;p một tổ chức từ chối sửa dữ
+                                    liệu c&aacute; nh&acirc;n trong c&aacute;c trường hợp như thế.</p>
+                                <p>e)&nbsp;<strong>Quyền x&oacute;a dữ liệu</strong>: bạn được x&oacute;a hoặc y&ecirc;u
+                                    cầu x&oacute;a Dữ Liệu C&aacute; Nh&acirc;n của m&igrave;nh, trừ trường hợp luật c&oacute;
+                                    quy định kh&aacute;c.</p>
+                                <p>f)&nbsp;&nbsp;<strong>Quyền hạn chế xử l&yacute; dữ liệu</strong>: bạn được y&ecirc;u
+                                    cầu hạn chế xử l&yacute; Dữ Liệu C&aacute; Nh&acirc;n của m&igrave;nh, trừ trường
+                                    hợp luật c&oacute; quy định kh&aacute;c;</p>
+                                <p>g)&nbsp;<strong>Quyền cung cấp dữ liệu</strong>: bạn được y&ecirc;u cầu cung cấp cho
+                                    bản th&acirc;n Dữ Liệu C&aacute; Nh&acirc;n của m&igrave;nh, trừ trường hợp luật c&oacute;
+                                    quy định kh&aacute;c. CGV Việt Nam c&oacute;
+                                    thể t&iacute;nh một khoản ph&iacute; hợp l&yacute; cho bạn để giải quyết v&agrave;
+                                    xử l&yacute; y&ecirc;u cầu cung cấp dữ liệu c&aacute; nh&acirc;n của bạn. Nếu CGV
+                                    Việt Nam c&oacute; t&iacute;nh ph&iacute;, ch&uacute;ng
+                                    t&ocirc;i sẽ cung cấp cho bạn ước t&iacute;nh lệ ph&iacute; bằng văn bản t&ugrave;y
+                                    thuộc v&agrave;o từng trường hợp cụ thể. Vui l&ograve;ng gửi y&ecirc;u cầu cho Bộ
+                                    phận Bảo Mật của CGV Việt Nam <strong>tại địa chỉ email&nbsp;<strong>&nbsp;<a
+                                            href="#">Security@cgv.vn</a></strong></strong>.</p>
+                                <p>h)&nbsp;<strong>Quyền phản đối xử l&yacute; dữ liệu</strong>: bạn được phản đối việc
+                                    Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n, trừ trường hợp luật c&oacute; quy định kh&aacute;c;
+                                </p>
+                                <p>i)&nbsp;<strong>Quyền khiếu nại, tố c&aacute;o, khởi kiện</strong>: bạn c&oacute;
+                                    quyền khiếu nại, tố c&aacute;o hoặc khởi kiện theo quy định của ph&aacute;p luật.
+                                </p>
+                                <p>j)&nbsp;<strong>Quyền y&ecirc;u cầu bồi thường thiệt hại</strong>: bạn c&oacute;
+                                    quyền y&ecirc;u cầu bồi thường thiệt hại theo quy định của ph&aacute;p luật khi xảy
+                                    ra vi phạm quy định về bảo vệ Dữ Liệu C&aacute; Nh&acirc;n
+                                    của m&igrave;nh, trừ trường hợp c&aacute;c b&ecirc;n c&oacute; thỏa thuận kh&aacute;c
+                                    hoặc ph&aacute;p luật c&oacute; quy định kh&aacute;c.</p>
+                                <p>k)&nbsp;<strong>Quyền tự bảo vệ</strong>: bạn c&oacute; quyền tự bảo vệ theo quy định
+                                    của ph&aacute;p luật li&ecirc;n quan, hoặc y&ecirc;u cầu cơ quan, tổ chức c&oacute;
+                                    thẩm quyền thực hiện c&aacute;c phương thức bảo
+                                    vệ quyền d&acirc;n sự theo quy định của ph&aacute;p luật li&ecirc;n quan.</p>
+                                <p>10.2. &nbsp;&nbsp; Nghĩa vụ của Bạn</p>
+                                <p>a) Tự bảo vệ Dữ Liệu C&aacute; Nh&acirc;n của m&igrave;nh; y&ecirc;u cầu c&aacute;c
+                                    tổ chức, c&aacute; nh&acirc;n kh&aacute;c c&oacute; li&ecirc;n quan bảo vệ Dữ Liệu C&aacute;
+                                    Nh&acirc;n của m&igrave;nh.</p>
+                                <p>b) T&ocirc;n trọng, bảo vệ Dữ Liệu C&aacute; Nh&acirc;n của người kh&aacute;c.</p>
+                                <p>c) Cung cấp đầy đủ, ch&iacute;nh x&aacute;c Dữ Liệu C&aacute; Nh&acirc;n khi đồng
+                                    &yacute; cho ph&eacute;p xử l&yacute; Dữ Liệu C&aacute; Nh&acirc;n.</p>
+                                <p>d) Tham gia tuy&ecirc;n truyền, phổ biến kỹ năng bảo vệ Dữ Liệu C&aacute;
+                                    Nh&acirc;n.</p>
+                                <p>e) Thực hiện quy định của ph&aacute;p luật về bảo vệ Dữ Liệu C&aacute; Nh&acirc;n v&agrave;
+                                    tham gia ph&ograve;ng, chống c&aacute;c h&agrave;nh vi vi phạm quy định về bảo vệ Dữ
+                                    Liệu C&aacute; Nh&acirc;n.</p>
+                                <p><strong>11. SỰ ĐỒNG &Yacute; CHO TIẾP THỊ, GIỚI THIỆU SẢN PHẨM, QUẢNG C&Aacute;O V&Agrave;
+                                    KHUYẾN MẠI</strong></p>
+                                <p>Theo y&ecirc;u cầu của ph&aacute;p luật, CGV Việt Nam sẽ cần bạn đồng &yacute; trước
+                                    khi xử l&yacute; dữ liệu c&aacute; nh&acirc;n để gửi đến bạn th&ocirc;ng tin tiếp
+                                    thị, giới thiệu, quảng c&aacute;o v&agrave; khuyến
+                                    mại li&ecirc;n quan đến c&aacute;c sản phẩm được c&aacute; nh&acirc;n h&oacute;a
+                                    (điều m&agrave; bạn c&oacute; thể thấy th&uacute; vị, hoặc được thiết kế d&agrave;nh
+                                    ri&ecirc;ng cho sở th&iacute;ch của bạn) theo
+                                    nguy&ecirc;n tắc bạn biết r&otilde; nội dung, phương thức, h&igrave;nh thức, tần
+                                    suất giới thiệu sản phẩm ph&ugrave; hợp với từng loại sản phẩm, chương tr&igrave;nh,
+                                    chiến dịch tương ứng v&agrave; quy định ph&aacute;p
+                                    luật c&oacute; li&ecirc;n quan. CGV Việt Nam, đối t&aacute;c kinh doanh của CGV Việt
+                                    Nam, v&agrave; đối t&aacute;c tiếp thị vẫn sẽ sử dụng c&aacute;c loại dữ liệu đ&atilde;
+                                    thu thập từ bạn để xử l&yacute; nhằm mục
+                                    đ&iacute;ch tiếp thị, giới thiệu sản phẩm, quảng c&aacute;o v&agrave; khuyến mại qua
+                                    h&igrave;nh thức c&aacute;c b&agrave;i đăng về c&aacute;c sản phẩm v&agrave; dịch vụ
+                                    của CGV Việt Nam v&agrave; c&aacute;c b&ecirc;n
+                                    thứ ba được lựa chọn cẩn thận. Theo thời gian, CGV Việt Nam, đối t&aacute;c kinh
+                                    doanh của CGV Việt Nam, v&agrave; đối t&aacute;c tiếp thị c&oacute; thể gửi th&ecirc;m
+                                    th&ocirc;ng tin chi tiết về sản phẩm, dịch
+                                    vụ v&agrave; c&aacute;c ưu đ&atilde;i đặc biệt cho bạn qua c&aacute;c phương tiện
+                                    điện tử v&agrave;/hoặc phi điện tử. CGV Việt Nam sẽ chỉ l&agrave;m điều n&agrave;y
+                                    nếu bạn đồng &yacute; cho ch&uacute;ng t&ocirc;i
+                                    li&ecirc;n lạc với bạn bằng phương thức ph&ugrave; hợp. Bạn c&oacute; đầy đủ c&aacute;c
+                                    quyền v&agrave; nghĩa vụ đối với dữ liệu c&aacute; nh&acirc;n bạn đ&atilde; cung cấp
+                                    cho ch&uacute;ng t&ocirc;i theo Ch&iacute;nh
+                                    S&aacute;ch Bảo Mật Th&ocirc;ng Tin n&agrave;y. V&agrave;, trường hợp bạn thay đổi
+                                    &yacute; định v&agrave;/hoặc bạn muốn từ chối nhận th&ocirc;ng tin tiếp thị, giới
+                                    thiệu sản phẩm, quảng c&aacute;o v&agrave; khuyến
+                                    mại, bạn c&oacute; thể cho ch&uacute;ng t&ocirc;i biết bất kỳ l&uacute;c n&agrave;o
+                                    bằng việc gửi y&ecirc;u cầu theo một trong c&aacute;c t&ugrave;y chọn trong mục Li&ecirc;n
+                                    hệ với ch&uacute;ng t&ocirc;i.</p>
+                                <p><strong>12. R&Uacute;T LẠI SỰ ĐỒNG &Yacute;, Y&Ecirc;U CẦU HẠN CHẾ XỬ L&Yacute;, V&Agrave;
+                                    PHẢN ĐỐI XỬ L&Yacute; DỮ LIỆU C&Aacute; NH&Acirc;N</strong></p>
+                                <p>Bạn c&oacute; thể r&uacute;t lại sự đồng &yacute; cho ph&eacute;p, y&ecirc;u cầu hạn
+                                    chế, phản đối trong việc thu thập, xử l&yacute;, sử dụng v&agrave;/hoặc tiết lộ dữ
+                                    liệu c&aacute; nh&acirc;n của bạn m&agrave; ch&uacute;ng
+                                    t&ocirc;i đang lưu giữ hoặc kiểm so&aacute;t bằng c&aacute;ch gửi email cho Bộ phận
+                                    Bảo Mật của CGV Việt Nam <strong>tại địa chỉ email&nbsp;<a
+                                            href="#">Security@cgv.vn</a></strong><a
+                                            href="#"
+                                            id="_anchor_3" name="_msoanchor_3"></a>, v&agrave; ch&uacute;ng t&ocirc;i sẽ
+                                    xử l&yacute; c&aacute;c y&ecirc;u cầu n&agrave;y theo Ch&iacute;nh S&aacute;ch Bảo
+                                    Mật Th&ocirc;ng Tin cũng như quy định ph&aacute;p luật
+                                    c&oacute; li&ecirc;n quan.</p>
+                                <p>Tuy nhi&ecirc;n, việc bạn r&uacute;t lại sự cho ph&eacute;p, y&ecirc;u cầu hạn chế,
+                                    phản đối xử l&yacute; dữ liệu c&aacute; nh&acirc;n của bạn c&oacute; thể đồng nghĩa
+                                    với việc CGV Việt Nam sẽ kh&ocirc;ng thể tiếp tục
+                                    cung cấp c&aacute;c Dịch vụ đến bạn v&agrave; CGV Việt Nam c&oacute; thể cần phải
+                                    chấm dứt mối quan hệ hiện tại giữa bạn v&agrave;/hoặc hợp đồng m&agrave; bạn c&oacute;
+                                    với CGV Việt Nam.</p>
+                                <p><strong>13. CHUYỂN TH&Ocirc;NG TIN RA NƯỚC NGO&Agrave;I</strong></p>
+                                <p>Th&ocirc;ng tin v&agrave;/hoặc dữ liệu c&aacute; nh&acirc;n của bạn c&oacute; thể
+                                    được chuyển ra nước ngo&agrave;i, lưu trữ hoặc xử l&yacute; b&ecirc;n ngo&agrave;i
+                                    quốc gia của bạn cho một hoặc nhiều Mục đ&iacute;ch.
+                                    CGV Việt Nam sẽ chỉ chuyển dữ liệu c&aacute; nh&acirc;n của bạn ra nước ngo&agrave;i
+                                    khi ph&ugrave; hợp với c&aacute;c quy định của ph&aacute;p luật về bảo vệ dữ liệu c&aacute;
+                                    nh&acirc;n.</p>
+                                <p><strong>14. HẬU QUẢ, THIỆT HẠI KH&Ocirc;NG MONG MUỐN C&Oacute; THỂ XẢY RA</strong>
+                                </p>
+                                <p>Như đ&atilde; đề cập tại&nbsp;Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng Tin n&agrave;y,
+                                    bạn c&oacute; những quyền theo luật định v&agrave; y&ecirc;u cầu ch&uacute;ng t&ocirc;i
+                                    thực hiện trong khi đang xử l&yacute;
+                                    dữ liệu c&aacute; nh&acirc;n của bạn. L&uacute;c n&agrave;y, CGV Việt Nam c&oacute;
+                                    thể cần thời gian hợp l&yacute; (t&ugrave;y thuộc v&agrave;o mức độ phức tạp v&agrave;
+                                    sự ảnh hưởng của y&ecirc;u cầu của bạn đối
+                                    với mối quan hệ giữa ch&uacute;ng t&ocirc;i v&agrave; bạn) để xử l&yacute; y&ecirc;u
+                                    cầu của bạn v&agrave;/hoặc để th&ocirc;ng b&aacute;o cho bạn biết hậu quả, thiệt hại
+                                    kh&ocirc;ng mong muốn c&oacute; thể xảy ra
+                                    nếu y&ecirc;u cầu của bạn được thực hiện.</p>
+                                <p><strong>CGV Việt Nam mong bạn lưu &yacute; rằng</strong>:</p>
+                                <p>-&nbsp; Căn cứ v&agrave;o bản chất v&agrave; phạm vi y&ecirc;u cầu của bạn, ch&uacute;ng
+                                    t&ocirc;i c&oacute; thể sẽ kh&ocirc;ng thể tiếp tục cung cấp Dịch Vụ cho bạn, v&agrave;
+                                    theo y&ecirc;u cầu của ph&aacute;p luật
+                                    t&ugrave;y từng trường hợp, ch&uacute;ng t&ocirc;i cũng sẽ th&ocirc;ng b&aacute;o
+                                    cho bạn trước khi ho&agrave;n tất việc xử l&yacute; y&ecirc;u cầu của bạn.</p>
+                                <p>-&nbsp; Trong một số trường hợp nhất định, ch&uacute;ng t&ocirc;i kh&ocirc;ng thể
+                                    chấp nhận y&ecirc;u cầu của bạn. V&iacute; dụ như c&aacute;c trường hợp quy định tại
+                                    Điều 8 Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng
+                                    Tin n&agrave;y, hoặc v&iacute; dụ nếu bạn y&ecirc;u cầu CGV Việt Nam x&oacute;a dữ
+                                    liệu c&aacute; nh&acirc;n, giao dịch trong khi về mặt ph&aacute;p l&yacute;, CGV
+                                    Việt Nam c&oacute; nghĩa vụ phải lưu trữ hồ sơ
+                                    về c&aacute; nh&acirc;n, hợp đồng, giao dịch đ&oacute; để tu&acirc;n thủ v&agrave;
+                                    cung cấp theo quy định ph&aacute;p luật.</p>
+                                <p>-&nbsp; Hay như trong trường hợp CGV Việt Nam kh&ocirc;ng thể thực hiện y&ecirc;u cầu
+                                    r&uacute;t lại sự đồng &yacute; của bạn trong khi CGV Việt Nam đang thực hiện nghĩa
+                                    vụ theo hợp đồng giữa CGV Việt Nam với bạn; hay
+                                    cần xử l&yacute; ngay dữ liệu c&aacute; nh&acirc;n c&oacute; li&ecirc;n quan để bảo
+                                    vệ t&iacute;nh mạng, sức khỏe của chủ thể dữ liệu hoặc người kh&aacute;c theo luật
+                                    định.</p>
+                                <p><strong>Khi xử l&yacute; dữ liệu của bạn, </strong>CGV Việt Nam sử dụng c&aacute;c
+                                    biện ph&aacute;p bảo vệ v&agrave; xử l&yacute; dữ liệu c&aacute; nh&acirc;n của bạn
+                                    theo quy định của ph&aacute;p luật. Trong trường
+                                    hợp hạn hữu, những h&agrave;nh vi vi phạm khi xử l&yacute; dữ liệu c&aacute; nh&acirc;n
+                                    (như sự mất m&aacute;t, ph&aacute; hủy hoặc thiệt hại do sự cố, sử dụng c&aacute;c
+                                    biện ph&aacute;p kỹ thuật) c&oacute; thể
+                                    xảy ra, v&agrave; n&oacute; ho&agrave;n to&agrave;n kh&ocirc;ng phải những điều m&agrave;
+                                    CGV Việt Nam mong muốn. Trong khu&ocirc;n khổ ph&aacute;p luật, CGV Việt Nam sẽ tiến
+                                    h&agrave;nh th&ocirc;ng b&aacute;o h&agrave;nh
+                                    vi vi phạm đến c&aacute;c b&ecirc;n li&ecirc;n quan trong thời hạn luật định. Việc
+                                    bồi thường thiệt hại, nếu c&oacute;, khi xảy ra h&agrave;nh vi vi phạm quy định về
+                                    bảo vệ dữ liệu c&aacute; nh&acirc;n cũng sẽ được
+                                    thực hiện theo thỏa thuận hoặc theo luật định.</p>
+                                <p><strong>15. C&Aacute;CH THỨC XỬ L&Yacute; DỮ LIỆU C&Aacute; NH&Acirc;N</strong></p>
+                                <p>T&ugrave;y từng thời điểm v&agrave; t&ugrave;y theo từng mục đ&iacute;ch kể tr&ecirc;n,
+                                    CGV Việt Nam sẽ thực hiện một hoặc nhiều hoạt động t&aacute;c động tới Dữ Liệu C&aacute;
+                                    Nh&acirc;n, như: thu thập, ghi, ph&acirc;n
+                                    t&iacute;ch, x&aacute;c nhận, lưu trữ, chỉnh sửa, c&ocirc;ng khai, kết hợp, truy
+                                    cập, truy xuất, thu hồi, m&atilde; h&oacute;a, giải m&atilde;, sao ch&eacute;p, chia
+                                    sẻ, truyền đưa, cung cấp, chuyển giao, x&oacute;a,
+                                    hủy Dữ Liệu C&aacute; Nh&acirc;n hoặc c&aacute;c h&agrave;nh động kh&aacute;c c&oacute;
+                                    li&ecirc;n quan.</p>
+                                <p>C&aacute;c hoạt động Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n c&oacute; thể được CGV
+                                    Việt Nam thực hiện theo c&aacute;ch thức tự động hoặc kh&ocirc;ng tự động, bằng c&aacute;c
+                                    phương tiện điện tử hoặc c&aacute;c c&aacute;ch
+                                    thức thủ c&ocirc;ng hoặc bất kỳ c&aacute;ch thức n&agrave;o kh&aacute;c m&agrave;
+                                    CGV Việt Nam cho l&agrave; ph&ugrave; hợp.</p>
+                                <p>CGV Việt Nam &aacute;p dụng triệt để c&aacute;c biện ph&aacute;p bảo vệ, bảo mật
+                                    trong qu&aacute; tr&igrave;nh Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n, bao gồm cả
+                                    việc bảo vệ trước c&aacute;c h&agrave;nh vi vi phạm
+                                    quy định về bảo vệ Dữ Liệu C&aacute; Nh&acirc;n v&agrave; ph&ograve;ng, chống sự mất
+                                    m&aacute;t, ph&aacute; hủy hoặc thiệt hại do sự cố, sử dụng c&aacute;c biện ph&aacute;p
+                                    kỹ thuật. Tuy nhi&ecirc;n, xin lưu &yacute;
+                                    rằng, CGV Việt Nam kh&ocirc;ng thể loại bỏ ho&agrave;n to&agrave;n c&aacute;c rủi ro
+                                    bảo mật li&ecirc;n quan đến việc Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n.</p>
+                                <p><strong>16. DỮ LIỆU CỦA BẠN C&Oacute; THỂ ĐƯỢC CHIA SẺ VỚI AI</strong></p>
+                                <p>CGV Việt Nam kh&ocirc;ng tiết lộ cho b&ecirc;n thứ ba th&ocirc;ng tin c&aacute; nh&acirc;n
+                                    của bạn, cũng như th&ocirc;ng tin c&aacute; nh&acirc;n v&agrave; nh&acirc;n khẩu học
+                                    kết hợp, hoặc th&ocirc;ng tin về việc sử
+                                    dụng Ứng Dụng của bạn (chẳng hạn c&aacute;c khu vực bạn gh&eacute; thăm, hay c&aacute;c
+                                    dịch vụ m&agrave; bạn truy cập), trừ c&aacute;c trường hợp sau đ&acirc;y:</p>
+                                <p>(i) CGV Việt Nam c&oacute; thể tiết lộ th&ocirc;ng tin như vậy cho c&aacute;c b&ecirc;n
+                                    thứ ba nếu bạn đồng &yacute;.</p>
+                                <p>(ii) CGV Việt Nam c&oacute; thể tiết lộ th&ocirc;ng tin như vậy cho c&aacute;c c&ocirc;ng
+                                    ty v&agrave; c&aacute; nh&acirc;n m&agrave; CGV Việt Nam thu&ecirc; để thay mặt ch&uacute;ng
+                                    t&ocirc;i thực hiện c&aacute;c chức
+                                    năng của c&ocirc;ng ty. V&iacute; dụ, việc lưu giữ c&aacute;c m&aacute;y chủ web, ph&acirc;n
+                                    t&iacute;ch dữ liệu, cung cấp c&aacute;c trợ gi&uacute;p về marketing, xử l&yacute;
+                                    thẻ t&iacute;n dụng hoặc c&aacute;c
+                                    h&igrave;nh thức thanh to&aacute;n kh&aacute;c, v&agrave; dịch vụ cho kh&aacute;ch h&agrave;ng.
+                                    Những c&ocirc;ng ty v&agrave; c&aacute; nh&acirc;n n&agrave;y sẽ truy cập tới th&ocirc;ng
+                                    tin c&aacute; nh&acirc;n
+                                    của bạn khi cần để thực hiện c&aacute;c chức năng của họ, nhưng kh&ocirc;ng chia sẻ
+                                    th&ocirc;ng tin đ&oacute; với bất kỳ b&ecirc;n thứ ba n&agrave;o kh&aacute;c.</p>
+                                <p>(iii) Ch&uacute;ng t&ocirc;i c&oacute; thể tiết lộ th&ocirc;ng tin như vậy nếu c&oacute;
+                                    y&ecirc;u cầu ph&aacute;p l&yacute;, hay từ một cơ quan ch&iacute;nh phủ hoặc nếu ch&uacute;ng
+                                    t&ocirc;i tin rằng h&agrave;nh
+                                    động đ&oacute; l&agrave; cần thiết nhằm: (a) tu&acirc;n theo c&aacute;c y&ecirc;u
+                                    cầu ph&aacute;p l&yacute; hoặc chiếu theo quy tr&igrave;nh của luật ph&aacute;p; (b)
+                                    bảo vệ c&aacute;c quyền hay t&agrave;i sản của
+                                    CGV Việt Nam, hoặc c&aacute;c c&ocirc;ng ty đối t&aacute;c; (c) ngăn chặn tội phạm
+                                    hoặc bảo vệ an ninh quốc gia; hoặc (d) bảo vệ an to&agrave;n c&aacute; nh&acirc;n
+                                    của những người sử dụng hay c&ocirc;ng ch&uacute;ng</p>
+                                <p>(iv) CGV Việt Nam c&oacute; thể tiết lộ v&agrave; chuyển th&ocirc;ng tin như vậy tới
+                                    một nh&oacute;m thứ ba, đối tượng mua lại to&agrave;n bộ hay phần lớn c&ocirc;ng
+                                    việc kinh doanh của CGV Việt Nam, bằng c&aacute;ch
+                                    li&ecirc;n kết, hợp nhất hoặc mua to&agrave;n bộ hay phần lớn c&aacute;c t&agrave;i
+                                    sản của CGV Việt Nam. Ngo&agrave;i ra, trong t&igrave;nh huống CGV Việt Nam trở th&agrave;nh
+                                    đối tượng của một vụ khởi kiện ph&aacute;
+                                    sản, d&ugrave; tự nguyện hay miễn cưỡng, th&igrave; CGV Việt Nam hay người được uỷ
+                                    th&aacute;c c&oacute; thể b&aacute;n, cho ph&eacute;p hoặc tiết lộ th&ocirc;ng tin
+                                    như vậy theo c&aacute;ch kh&aacute;c trong qu&aacute;
+                                    tr&igrave;nh chuyển giao được to&agrave; &aacute;n về ph&aacute; sản đồng
+                                    &yacute;.</p>
+                                <p>(v) CGV Việt Nam c&oacute; thể d&ugrave;ng t&ecirc;n bạn, hay th&ocirc;ng tin kh&aacute;c
+                                    về hoặc từ c&aacute;c quảng c&aacute;o tuyển dụng hoặc t&agrave;i khoản xem hồ sơ
+                                    ứng vi&ecirc;n của bạn cho bất kỳ hay tất cả
+                                    c&aacute;c mục đ&iacute;ch tiếp thị của CJ Group (hay Nền tảng của CJ Groups).</p>
+                                <p>CGV Việt Nam cũng c&oacute; thể chia sẻ th&ocirc;ng tin đ&atilde; khử định danh về kh&aacute;ch
+                                    gh&eacute; thăm một trong c&aacute;c Ứng Dụng của c&ocirc;ng ty với c&aacute;c kh&aacute;ch
+                                    h&agrave;ng, đối t&aacute;c
+                                    v&agrave; b&ecirc;n thứ ba kh&aacute;c để họ c&oacute; thể hiểu về c&aacute;c loại
+                                    kh&aacute;ch tới thăm Ứng Dụng của CGV Việt Nam v&agrave; c&aacute;ch họ sử dụng
+                                    site.</p>
+                                <p><strong>17. THỜI GIAN BẮT ĐẦU V&Agrave; KẾT TH&Uacute;C QU&Aacute; TR&Igrave;NH XỬ L&Yacute;
+                                    DỮ LIỆU C&Aacute; NH&Acirc;N</strong></p>
+                                <p>CGV Việt Nam sẽ bắt đầu việc Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n ngay khi nhận
+                                    được Dữ Liệu C&aacute; Nh&acirc;n cho đến khi Dữ Liệu C&aacute; Nh&acirc;n được x&oacute;a,
+                                    hủy theo c&aacute;c quy định của ph&aacute;p
+                                    luật v&agrave;/hoặc quy định, quyết định tại từng thời điểm của CGV Việt Nam.</p>
+                                <p><strong>18. TỔ CHỨC CHỊU TR&Aacute;CH NHIỆM CH&Iacute;NH VỀ BẢO VỆ DỮ LIỆU C&Aacute;
+                                    NH&Acirc;N</strong></p>
+                                <p><strong>C&Ocirc;NG TY TNHH CJ CGV VIỆT NAM</strong></p>
+                                <p>MST: 0303675393</p>
+                                <p>Địa chỉ: Lầu 2, Số 7/28, đường Th&agrave;nh Th&aacute;i, Phường 14, Quận 10, Th&agrave;nh
+                                    phố Hồ Ch&iacute; Minh, Việt Nam</p>
+                                <p>Điện thoại: 028. 3636 5757</p>
+                                <p>Email:&nbsp; <a href="#">hoidap@cgv.vn</a></p>
+                                <p><strong>18. LI&Ecirc;N HỆ</strong></p>
+                                <ul>
+                                    <li>Gọi cho đường d&acirc;y n&oacute;ng của CGV Việt Nam: 1900 6017</li>
+                                    <li>Gửi thư điện tử cho CGV Việt Nam theo địa chỉ:  <a href="#">hoidap@cgv.vn</a>
+                                    </li>
+                                    <li>Hoặc li&ecirc;n hệ trực tiếp với CGV Việt Nam tại văn ph&ograve;ng: Lầu 2, Số
+                                        7/28, đường Th&agrave;nh Th&aacute;i, Phường 14, Quận 10, Th&agrave;nh phố Hồ Ch&iacute;
+                                        Minh, Việt Nam.
+                                    </li>
+                                    <li>Nếu bạn muốn ngừng nhận quảng c&aacute;o từ CGV Việt Nam, vui l&ograve;ng nhấn v&agrave;o
+                                        đường link <strong>Unsubscribe </strong>ở dưới c&ugrave;ng trong mọi email quảng
+                                        c&aacute;o.
+                                    </li>
+                                </ul>
+                                <p><strong>19. BỘ PHẬN PHỤ TR&Aacute;CH BẢO MẬT TH&Ocirc;NG TIN</strong></p>
+                                <p>Người phụ tr&aacute;ch ch&iacute;nh:&nbsp;IT Security</p>
+                                <p>Email:&nbsp;<strong> <a href="#">Security@cgv.vn</a></strong></p>
+                                <p>Điện thoại:&nbsp;028.36365757</p>
+                                <p>Địa chỉ: Lầu 2, Số 7/28, đường Th&agrave;nh Th&aacute;i, Phường 14, Quận 10, Th&agrave;nh
+                                    phố Hồ Ch&iacute; Minh, Việt Nam.</p>
+                                <p><strong>THỰC HIỆN DƯỚI SỰ ỦY QUYỀN V&Agrave; CHỈ ĐỊNH TỪ TỔNG GI&Aacute;M ĐỐC C&Ocirc;NG
+                                    TY TNHH CJ CGV VIỆT NAM</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+</html>

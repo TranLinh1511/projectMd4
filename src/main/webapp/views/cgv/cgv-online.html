@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Cgv Online</title>
+    <meta name="keywords"
+          content="cgv, cgv cinemas vietnam, rap chieu phim, lich chieu, phim moi nhat, trailer phim, phim sap chieu"/>
+    <meta name="title" content="Cgv Online"/>
+    <meta name="description"
+          content="Trải nghiệm điện ảnh chất lượng nhất tại cụm rạp CGV trên toàn quốc. Trang thông tin tổng hợp lịch chiếu, trailers phim mới nhất tại CGV Cinemas Việt Nam."/>
+    <meta name="author" content="CGV Cinemas Vietnam"/>
+    <meta name="publisher" content="CGV Cinemas Vietnam"/>
+    <meta property="fb:app_id" content="1711898955707825"/>
+    <meta property="fb:pages" content="395143205624"/>
+    <meta property="og:site_name" content="Cgv.vn"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Cgv Online"/>
+    <meta property="og:description"
+          content="Trải nghiệm điện ảnh chất lượng nhất tại cụm rạp CGV trên toàn quốc. Trang thông tin tổng hợp lịch chiếu, trailers phim mới nhất tại CGV Cinemas Việt Nam."/>
+    <link rel="canonical" href="#"/>
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <meta name="google-site-verification" content="UEWWiNkGp-8XEvn-Ya15ciNeBKn3WECih18dJ5ZRUlY"/>
+    <link rel="shortcut icon" href="#"
+          type="image/x-icon"/>
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+        //<![CDATA[
+    var BLANK_URL = 'https://www.cgv.vn/js/blank.html';
+    var BLANK_IMG = 'https://www.cgv.vn/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <script type="text/javascript" src="https://www.cgv.vn/js/prototype/prototype.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/lib/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/lib/jquery/noconflict.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/lib/ccard.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/prototype/validation.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/builder.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/effects.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/dragdrop.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/controls.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/scriptaculous/slider.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/varien/js.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/varien/form.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/mage/translate.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/mage/cookies.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/js/google/ga.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/selectivizr.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/matchMedia.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/matchMedia.addListener.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/enquire.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/cgv.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/app.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/jquery.cycle2.min.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/jquery.cycle2.swipe.min.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/jquery.cycle2.carousel.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/slideshow.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/lib/imagesloaded.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/enterprise/js/scripts.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/minicart.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="https://www.cgv.vn/skin/frontend/cgv/default/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/enterprise/js/enterprise/catalogevent.js"></script>
+    <script type="text/javascript"
+            src="https://www.cgv.vn/skin/frontend/cgv/enterprise/js/enterprise/wishlist.js"></script>
+    <link rel="stylesheet" href="#"/>
+    <link href="#"
+          title="Tin Khuyến Mãi Và Ưu Đãi Hấp Dẫn Tại CGV Cinemas Việt Nam" rel="alternate" type="application/rss+xml"/>
+    <!--[if  (lte IE 8) & (!IEMobile)]>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <![endif]-->
+    <!--[if (gte IE 9) | (IEMobile)]><!-->
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <link rel="stylesheet" type="text/css" href="#"
+          media="all"/>
+    <!--<![endif]-->
+
+    <script type="text/javascript">
+        //<![CDATA[
+        Mage.Cookies.path = '/';
+        Mage.Cookies.domain = '.cgv.vn';
+        //]]>
+    </script>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        optionalZipCountries = ["HK", "IE", "MO", "PA"];
+        //]]>
+    </script>
+    <script type="text/javascript">
+        //<![CDATA[
+        var Translator = new Translate({
+            "HTML tags are not allowed": "kh\u00f4ng ch\u1ea5p nh\u1eadn th\u1ebb HTML",
+            "Please select an option.": "Ph\u1ea3i ch\u1ecdn m\u1ed9t gi\u00e1 tr\u1ecb.",
+            "This is a required field.": "Ph\u1ea3i nh\u1eadp th\u00f4ng tin.",
+            "Please enter a valid email address. For example johndoe@domain.com.": "Vui l\u00f2ng nh\u1eadp \u0111\u00fang \u0111\u1ecba ch\u1ec9 email. V\u00ed d\u1ee5: johndoe@domain.com",
+            "Please enter 6 or more characters without leading or trailing spaces.": "Vui l\u00f2ng nh\u1eadp 6 k\u00fd t\u1ef1 tr\u1edf l\u00ean, kh\u00f4ng kho\u1ea3ng tr\u1eafng ho\u1eb7c d\u1ea5u c\u00e1ch d\u1eabn",
+            "Please make sure your passwords match.": "Vui l\u00f2ng \u0111\u1ea3m b\u1ea3o m\u1eadt kh\u1ea9u ph\u00f9 h\u1ee3p.",
+            "Please select one of the above options.": "Ph\u1ea3i ch\u1ecdn m\u1ed9t gi\u00e1 tr\u1ecb.",
+            "Please select one of the options.": "Ph\u1ea3i ch\u1ecdn m\u1ed9t gi\u00e1 tr\u1ecb.",
+            "This date is a required value.": "Ph\u1ea3i nh\u1eadp th\u00f4ng tin.",
+            "Please enter a valid full date": "Vui l\u00f2ng nh\u1eadp \u0111\u00fang \u0111\u1ecbnh d\u1ea1ng ng\u00e0y sinh",
+            "Complete": "Ho\u00e0n T\u1ea5t",
+            "Please specify shipping method.": "B\u1ea1n ph\u1ea3i ch\u1ecdn ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n.",
+            "Please specify payment method.": "B\u1ea1n ph\u1ea3i ch\u1ecdn ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n.",
+            "Add to Cart": "\u0110\u1eb7t mua",
+            "In Stock": "C\u00f2n h\u00e0ng",
+            "Out of Stock": "H\u1ebft h\u00e0ng",
+            "Save": "L\u01b0u l\u1ea1i",
+            "Cancel": "H\u1ee7y",
+            "Add to Wishlist": "L\u01b0u l\u1ea1i"
+        });
+        //]]>
+    </script>
+    <script>
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+            return "unknown";
+        }
+
+        var field = 'deeplink';
+        var dl_url = window.location.href;
+        var dl_now = new Date().valueOf();
+        if (dl_url.indexOf('?' + field + '=') != -1) {
+            var lastUrl = '',
+                append_src = '';
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const cgvdl = urlParams.get('deeplink');
+            if (dl_url.includes('?') && dl_url.includes('&')) {
+                append_src = queryString.slice(queryString.indexOf('&'));
+            }
+            const getPathFromUrl = dl_url.split("?")[0];
+            lastUrl += getPathFromUrl + '?source=web' + append_src;
+            if (getMobileOperatingSystem() === 'Android') {
+                setTimeout(function () {
+                    if (new Date().valueOf() - dl_now > 100) return;
+                    window.location = lastUrl;
+                }, 10);
+                window.location = atob(decodeURIComponent(cgvdl)) + append_src;
+            } else if (getMobileOperatingSystem() === 'iOS') {
+                setTimeout(function () {
+                    window.location = lastUrl;
+                }, 10);
+                window.location = atob(decodeURIComponent(cgvdl)) + append_src;
+            }
+        }
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-55803327-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    <!-- Viet tracking -->
+    <script src='//cdnt.netcoresmartech.com/smartechclient.js'></script>
+    <script>
+        smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96A9NS1B3N9HRR3983R33HRONTL6G');
+        smartech('register', 'd072e0b5f30e44990b34dec62fde4fe1');
+        smartech('identify', '');
+        smartech('dispatch', 'Page Browse', {
+            'url': "https://www.cgv.vn/default/cgv-online"
+        });
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-messaging.js"></script>
+</head>
+
+<body class="page-empty  cms-page-view cms-cgv-online">
+<div>
+    <div class="std">
+        <div class="microsite-cgv-online">
+            <div class="cgv-online cgv-online-app cgv-online-app-vn">
+                <div class="conten-cgv-online">
+                    <div class="app-link-top">
+                        <ul>
+                            <li class="app-link-android"><a
+                                    href="#"
+                                    target="_blank"><img alt=""
+                                                         src="https://www.cgv.vn/media/wysiwyg/mobile-app/app-android-play.png"/></a>
+                            </li>
+                            <li class="app-link-ios"><a href="#"
+                                                        target="_blank"><img alt=""
+                                                                             src="https://www.cgv.vn/media/wysiwyg/mobile-app/app-ios-store.png"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cgv-online cgv-online-app cgv-online-photo-vn">
+                <div class="conten-cgv-online format-content-cgv-online"><a
+                        href="#" target="_blank"> <img alt=""
+                                                                                                       src="https://www.cgv.vn/media/wysiwyg/banner/vn-microsite-photo.png"
+                    /> </a></div>
+            </div>
+            <div class="cgv-online cgv-online-app cgv-online-kiosk-vn">
+                <div class="conten-cgv-online format-content-cgv-online"><a
+                        href="#" target="_blank"> <img alt=""
+                                                                                                 src="https://www.cgv.vn/media/wysiwyg/banner/vn-microsite-kiosk.png"
+                    /> </a></div>
+            </div>
+            <div class="cgv-online cgv-online-app cgv-online-payment-vn">
+                <div class="conten-cgv-online format-content-cgv-online">
+                    <div class="cgv-payment-online">
+                        <ul>
+                            <li class="cgv-payment-credit"><img alt=""
+                                                                src="https://www.cgv.vn/media/wysiwyg/banner/cgv-visa-online.png"
+                            />
+                            </li>
+                            <li class="cgv-payment-membership "><a href="#"
+                                                                   target="_blank "> <img alt=" "
+                                                                                          src="https://www.cgv.vn/media/wysiwyg/banner/cgv-member-online.png "
+                                /> </a>
+                            </li>
+                            <li class="cgv-payment-giftcard"><a
+                                    href="#" target="_blank">
+                                <img alt="" src="https://www.cgv.vn/media/wysiwyg/banner/cgv-giftcard-online.png"/>
+                            </a></li>
+                            <li class="cgv-payment-voucher"><a
+                                    href="#" target="_blank">
+                                <img alt="" src="https://www.cgv.vn/media/wysiwyg/banner/cgv-vourche-online.png"/>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wishlist_edit_action_container"></div>
+</div>
+</body>
+
+</html>

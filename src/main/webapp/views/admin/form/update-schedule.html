@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="admin/layouts/head"></th:block>
+<body>
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<div id="main-wrapper">
+    <th:block th:insert="admin/layouts/layout"></th:block>
+    <!--  todo content-->
+    <div class="content-body">
+        <div class="container-fluid">
+            <!-- row -->
+            <div class="row">
+                <div class="col-xl-12 col-xxl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Schedule</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form id="yourFormId"  method="post"  th:object="${schedule}" action="/admin/add-schedule" enctype="multipart/form-data">
+                                    <input type="hidden" id="theaterIdInput" name="theaterId" value="">
+                                    <input th:field="*{id}" class="d-none">
+                                    <div class="row mb-2">
+                                        <div>
+                                            <label class="form-label"
+                                            >Movie Name</label
+                                            >
+                                            <input
+                                                    th:field="*{showName}"
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Show Name"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-2">
+                                            <label class="form-label">Select Movie</label>
+                                            <select  th:field="*{movieId}" class="default-select form-control wide" tabindex="null">
+                                                <option th:each="item : ${movies}" th:text="${item.name}"
+                                                        th:value="${item.id}"></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label">Select Cinema</label>
+                                            <select th:field="*{cinemaId}" class="default-select form-control wide" tabindex="null"
+                                                    id="cinema-option" onchange="updateTheaters()">
+                                                <option th:each="item : ${cinemas}" th:text="${item.name}"
+                                                        th:value="${item.id}" ></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 mb-2">
+                                            <label class="form-label">Select theater</label>
+                                            <select th:field="*{cinemaId}" class=" form-control wide" tabindex="null"
+                                                    id="theater-option">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div>
+                                            <label class="form-label">Show time</label>
+                                            <input th:field="*{showTime}" type="text" id="date-format" class="form-control"
+                                                   placeholder="No time has been selected yet" data-dtp="dtp_PJQIy">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div>
+                                            <label class="form-label">Price ticket</label>
+                                            <input th:field="*{price}" name="ticket-price"  type="text"  class="form-control">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-3" onclick="onSubmitForm()">Add Schedule</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">DexignZone</a> 2022</p>
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    const cinemaTheaters = /*[[${cinemaTheaters}]]*/ {};
+    const cinemaDropdown = document.getElementById('cinema-option');
+    const theaterDropdown = document.getElementById('theater-option');
+    function updateTheaters() {
+        const selectedCinemaId = cinemaDropdown.value;
+        theaterDropdown.innerHTML = '';
+        let dom = '';
+        cinemaTheaters[selectedCinemaId].forEach(function (theater) {
+            dom += '<option value="' + theater.id + '">' + theater.name + '</option>';
+        });
+        theaterDropdown.innerHTML = dom;
+        const firstTheaterId = cinemaTheaters[selectedCinemaId].length > 0 ? cinemaTheaters[selectedCinemaId][0].id : '';
+        document.getElementById('theaterIdInput').value = firstTheaterId;
+    }
+    function onSubmitForm() {
+        const selectedTheaterId = theaterDropdown.value;
+        document.getElementById('theaterIdInput').value = selectedTheaterId;
+        document.getElementById('yourFormId').submit();
+    }
+    updateTheaters()
+</script>
+<th:block th:insert="admin/layouts/script"></th:block>
+<th:block th:insert="admin/layouts/picker"></th:block>
+</body>
+</html>

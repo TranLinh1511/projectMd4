@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+
+<body class=" customer-account-login">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+
+                    <div class="account-wrap">
+                        <div class="col2-set">
+                            <div class="cgv-login-register-form">
+                                <div class="r-login">
+                                    <h2><span id="form-login-content" class="active">Đăng nhập</span><span
+                                            id="form-register-content"><a
+                                            href="/register">Đăng ký</a></span>
+                                    </h2>
+                                    <div class="cgvfc form-login-content">
+                                        <form class="cgv-login-form" th:object="${user}" action="/login" method="post" id="cgv-login-form">
+                                            <small th:if="${lg}" style="font-style: italic; color: red">Tài khoản hoặc mật khẩu không chính xác, yêu cầu đăng nhập lại </small>
+                                            <div id="correct"></div>
+                                            <label for="fname">Email</label>
+                                            <input type="text" id="fname" name="login[username]"
+                                                   class="input-text required-entry"
+                                                   placeholder="Email hoặc số điện thoại" autocomplete="off" th:field="*{email}">
+
+                                            <label for="lname">Mật khẩu</label>
+                                            <input type="password" id="lname" name="login[password]"
+                                                   class="input-text required-entry" placeholder="Mật khẩu"
+                                                   autocomplete="off" th:field="*{password}">
+
+                                            <input type="submit" id="cgv-btnlogin" value="Đăng nhập">
+                                            <div class="cgv-login-forgotp-link"><a
+                                                    href="#"
+                                                    class="forgot-pwd required-entry">Bạn muốn tìm lại mật khẩu?</a>
+                                            </div>
+                                            <div><input name="form_key" type="hidden" value="TaaiFrJkEaEzzykQ"/></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="banner-login-page">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reloading">Loading</div>
+                    <style type="text/css">
+                        #correct {
+                            background: #FFF0F0;
+                            color: #e71a0f;
+                            margin: 0 0 1.5em;
+                            padding: 1em 1em;
+                            display: none;
+                        }
+
+                        #seconds,
+                        .cgv-resendOtp {
+                            text-align: center;
+                            padding: 20px
+                        }
+
+                        .btn2 {
+                            background-color: #008CBA;
+                        }
+
+                        /* Blue */
+
+                        .btn2 {
+                            display: inline-block;
+                            border-radius: 4px;
+                            background-color: #008CBA;
+                            border: none;
+                            color: #FFFFFF;
+                            text-align: center;
+                            padding: 10px;
+                            width: 120px;
+                            transition: all 0.5s;
+                            cursor: pointer;
+                            margin: 5px;
+                        }
+
+                        .btn2 span:after {
+                            content: '\00bb';
+                            position: absolute;
+                            opacity: 0;
+                            top: 0;
+                            right: -20px;
+                            transition: 0.5s;
+                        }
+
+                        .btn2 span {
+                            cursor: pointer;
+                            display: inline-block;
+                            position: relative;
+                            transition: 0.5s;
+                        }
+
+                        .l-login {
+                            border-left: 1px solid #ccc;
+                            float: right;
+                            padding: 0;
+                            width: 45%;
+                        }
+
+                        .r-login {
+                            float: left;
+                            width: 54%;
+                        }
+
+                        .l-login .mySlides {
+                            display: none
+                        }
+
+                        .l-login img {
+                            vertical-align: middle;
+                            max-width: 100%;
+                        }
+
+                        .l-login #slider-container {
+                            max-width: 1000px;
+                            position: relative;
+                            margin: auto;
+                            text-align: center;
+                        }
+
+                        /* Next & previous buttons */
+
+                        .l-login .prev,
+                        .l-login .next {
+                            cursor: pointer;
+                            position: absolute;
+                            top: 50%;
+                            width: auto;
+                            padding: 16px;
+                            margin-top: -22px;
+                            color: #cc977d;
+                            font-weight: bold;
+                            font-size: 18px;
+                            transition: 0.6s ease;
+                            border-radius: 0 3px 3px 0;
+                            user-select: none;
+                        }
+
+                        .l-login .prev {
+                            left: 0;
+                        }
+
+                        /* Position the "next button" to the right */
+
+                        .l-login .next {
+                            right: 0;
+                            border-radius: 3px 0 0 3px;
+                        }
+
+                        /* On hover, add a black background color with a little bit see-through */
+
+                        .l-login .prev:hover,
+                        .l-login .next:hover {
+                            background-color: rgba(0, 0, 0, 0.8);
+                            color: #fff;
+                        }
+
+                        /* Caption text */
+
+                        .l-login .text {
+                            color: #ffffff;
+                            font-size: 15px;
+                            padding: 8px 12px;
+                            position: absolute;
+                            bottom: 8px;
+                            width: 100%;
+                            text-align: center;
+                        }
+
+                        /* Number text (1/3 etc) */
+
+                        .l-login .numbertext {
+                            color: #ffffff;
+                            font-size: 12px;
+                            padding: 8px 12px;
+                            position: absolute;
+                            top: 0;
+                        }
+
+                        .l-login .cgv-dots {
+                            text-align: center;
+                        }
+
+                        /* The dots/bullets/indicators */
+
+                        .l-login .dot {
+                            cursor: pointer;
+                            height: 15px;
+                            width: 15px;
+                            margin: 0 2px;
+                            background-color: #999999;
+                            border-radius: 50%;
+                            display: inline-block;
+                            transition: background-color 0.6s ease;
+                        }
+
+                        .l-login .active,
+                        .l-login .dot:hover {
+                            background-color: #e71a0f;
+                        }
+
+                        /* Fading animation */
+
+                        .l-login .fade {
+                            -webkit-animation-name: fade;
+                            -webkit-animation-duration: 1.5s;
+                            animation-name: fade;
+                            animation-duration: 1.5s;
+                        }
+
+                        @-webkit-keyframes fade {
+                            from {
+                                opacity: .4
+                            }
+                            to {
+                                opacity: 1
+                            }
+                        }
+
+                        @keyframes fade {
+                            from {
+                                opacity: .4
+                            }
+                            to {
+                                opacity: 1
+                            }
+                        }
+
+                        /* On smaller screens, decrease text size */
+
+                        @media only screen and (max-width: 300px) {
+                            .l-login .prev,
+                            .l-login .next,
+                            .l-login .text {
+                                font-size: 11px
+                            }
+                        }
+
+                        /* Absolute Center Spinner */
+
+                        .reloading {
+                            position: fixed;
+                            z-index: 9999;
+                            display: none;
+                            height: 2em;
+                            width: 2em;
+                            margin: auto;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                        }
+
+                        /* Transparent Overlay */
+
+                        .reloading:before {
+                            content: '';
+                            display: block;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+                            background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+                        }
+
+                        /* :not(:required) hides these rules from IE9 and below */
+
+                        .reloading:not(:required) {
+                            /* hide "loading..." text */
+                            color: transparent;
+                            text-shadow: none;
+                            background-color: transparent;
+                            border: 0;
+                        }
+
+                        .reloading:not(:required):after {
+                            content: '';
+                            display: block;
+                            font-size: 10px;
+                            width: 1em;
+                            height: 1em;
+                            margin-top: -0.5em;
+                            -webkit-animation: spinner 150ms infinite linear;
+                            -moz-animation: spinner 150ms infinite linear;
+                            -ms-animation: spinner 150ms infinite linear;
+                            -o-animation: spinner 150ms infinite linear;
+                            animation: spinner 150ms infinite linear;
+                            border-radius: 0.5em;
+                            -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+                            box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+                        }
+
+                        /* Animation */
+
+                        @-webkit-keyframes spinner {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                                -moz-transform: rotate(0deg);
+                                -ms-transform: rotate(0deg);
+                                -o-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                                -moz-transform: rotate(360deg);
+                                -ms-transform: rotate(360deg);
+                                -o-transform: rotate(360deg);
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        @-moz-keyframes spinner {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                                -moz-transform: rotate(0deg);
+                                -ms-transform: rotate(0deg);
+                                -o-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                                -moz-transform: rotate(360deg);
+                                -ms-transform: rotate(360deg);
+                                -o-transform: rotate(360deg);
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        @-o-keyframes spinner {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                                -moz-transform: rotate(0deg);
+                                -ms-transform: rotate(0deg);
+                                -o-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                                -moz-transform: rotate(360deg);
+                                -ms-transform: rotate(360deg);
+                                -o-transform: rotate(360deg);
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        @keyframes spinner {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                                -moz-transform: rotate(0deg);
+                                -ms-transform: rotate(0deg);
+                                -o-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                                -moz-transform: rotate(360deg);
+                                -ms-transform: rotate(360deg);
+                                -o-transform: rotate(360deg);
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        .cgv-login-form,
+                        .cgv-signup-form,
+                        .cgv-new-password {
+                            padding: 20px 20px 5px;
+                        }
+
+                        .r-login input {
+                            width: 100%;
+                            padding: 10px;
+                            margin: 8px 0;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            border-radius: 2px;
+                            box-sizing: border-box;
+                        }
+
+                        .r-login select {
+                            width: 100%;
+                            padding: 5px 5px;
+                            margin: 8px 0;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            border-radius: 2px;
+                            box-sizing: border-box;
+                        }
+
+                        .r-login label {
+                            display: block;
+                        }
+
+                        .r-login select.r-birthday {
+                            width: 22%;
+                        }
+
+                        .form-login-content .cgv-reset-password,
+                        .form-login-content .cgv-verify-otp,
+                        .cgv-new-otp,
+                        .cgv-confirm-new-otp {
+                            padding: 20px 20px 5px;
+                        }
+
+                        .form-login-content label[for=forgot-password] {
+                        }
+
+                        .r-login input[type=submit] {
+                            width: 100%;
+                            background-color: #e71a0f;
+                            color: white;
+                            padding: 14px 20px;
+                            margin: 8px 0;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            text-transform: uppercase;
+                        }
+
+                        .r-login input[type=submit]:hover {
+                            background-color: #e71a0f;
+                        }
+
+                        .confirm_text {
+                            text-align: center;
+                        }
+
+                        .form-register-content .cgv-confirm-new-otp input[type="submit"],
+                        .form-register-content .cgv-confirm-new-otp button#cancelotp {
+                            background-color: #008CBA;
+                            border: none;
+                            padding: 10px;
+                            font: inherit;
+                            cursor: pointer;
+                            outline: inherit;
+                            width: auto;
+                            margin: 20px 5px;
+                        }
+
+                        .r-login #form-register-content a,
+                        .r-login #form-login-content a {
+                            color: #ddd;
+                            padding: 18px 18px 10px;
+                        }
+
+                        .cgv-login-captcha {
+                            padding: 20px 20px 10px;
+                            text-align: center;
+                        }
+
+                        .cgv-login-captcha span {
+                            color: #e71a0f;
+                            font-style: italic;
+                        }
+
+                        .cgv-login-forgotp-link {
+                            padding: 0 20px 20px;
+                            text-align: center;
+                        }
+
+                        .cgv-login-forgotp-link a:link,
+                        .cgv-login-forgotp-link a:visited {
+                            color: #4896fa;
+                            font-size: 12px;
+                        }
+
+                        #captcha_user_login {
+                            width: 80%;
+                        }
+
+                        .cgv-signup-form span {
+                            color: #e71a0f;
+                        }
+
+                        .cgv-register-requirement {
+                            color: #e71a0f
+                        }
+
+                        /* Inner */
+
+                        .cgv-login-register-form {
+                            max-width: 100%;
+                            width: 100%;
+                            padding: 0;
+                            background: #fdfcf0;
+                            z-index: 99999;
+                            float: left;
+                        }
+
+                        .cgv-login-register-form h2 {
+                            background-color: #e71a0f;
+                            color: #fff;
+                            font-size: 15px;
+                            font-weight: 600;
+                            padding: 20px 20px 10px;
+                            text-align: left;
+                        }
+
+                        .r-login h2 span {
+                            color: #ddd;
+                            cursor: pointer;
+                            margin: 0 20px;
+                            padding: 20px 15px 8px;
+                            text-transform: uppercase;
+                        }
+
+                        .r-login h2 span.active {
+                            border-bottom: 3px solid #fff;
+                            color: #fff;
+                        }
+
+                        .r-login h2 span:hover {
+                            color: #fff;
+                        }
+
+                        .cgv-login-form .captcha-image,
+                        .cgv-signup-form .captcha-image {
+                            float: right;
+                            padding-top: 8px;
+                            width: 160px;
+                        }
+
+                        .hide_content {
+                            display: none;
+                        }
+
+                        .show_content {
+                            display: block;
+                        }
+
+                        #captcha-input-box-user_login {
+                            margin-top: 20px;
+                        }
+
+                        .captcha-input-container,
+                        .captcha-img-container {
+                            float: left;
+                            clear: none;
+                        }
+
+                        .captcha-img-container {
+                            margin-top: 20px;
+                        }
+
+                        /* Extra small devices (phones, 600px and down) */
+
+                        @media only screen and (max-width: 600px) {
+                            .l-login,
+                            .r-login {
+                                width: 100%;
+                                border: none;
+                            }
+
+                            .l-login {
+                                display: none;
+                            }
+                        }
+
+                        /* Small devices (portrait tablets and large phones, 600px and up) */
+
+                        @media only screen and (min-width: 600px) {
+                        }
+
+                        /* Medium devices (landscape tablets, 768px and down) */
+
+                        @media only screen and (max-width: 768px) {
+                            .l-login,
+                            .r-login {
+                                width: 100%;
+                                border: none
+                            }
+
+                            .r-login h2 span {
+                                font-size: 3.7vw;
+                                margin: 0
+                            }
+
+                            .cgvfc fieldset label,
+                            .cgvfc fieldset input,
+                            #error-validate {
+                                font-size: 3.7vw;
+                            }
+                        }
+
+                        /* Medium devices (landscape tablets, 768px and up) */
+
+                        @media only screen and (min-width: 768px) {
+                        }
+
+                        /* Large devices (laptops/desktops, 992px and up) */
+
+                        @media only screen and (min-width: 992px) {
+                        }
+
+                        /* Extra large devices (large laptops and desktops, 1200px and up) */
+
+                        @media only screen and (min-width: 1200px) {
+                        }
+                    </style>
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        var dataForm = new VarienForm('cgv-login-form', true);
+                        //]]>
+                        var isAllowed = true;
+                        var countAllowed = tempAllowed = 4;
+                        var resendAllowed = 2;
+                        //khai báo biến slideIndex đại diện cho slide hiện tại
+                        var slideIndex = 0;
+
+                        // KHai bào hàm hiển thị slide
+                        function showSlides() {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("dot");
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slideIndex++;
+
+                            if (slideIndex > slides.length) {
+                                slideIndex = 1;
+                            }
+                            slides[slideIndex - 1].style.display = "block";
+                            dots[slideIndex - 1].className += " active";
+                            setTimeout(showSlides, 5000);
+                        }
+
+                        showSlides(slideIndex = 0);
+
+                        // Next/previous controls
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        /*https://www.w3schools.com/howto/howto_js_slideshow.asp*/
+                        $j(document).ready(function () {
+
+                            //Change the label of $btn
+                            //$j('input#cgv-btnlogin[type="submit"]').val($j('input#cgv-btnlogin[type="submit"]').val()+' ('+countAllowed+')');
+                        });
+                        $j(document).on('click', 'input#cgv-btnlogin[type=submit]', function (e) {
+                            e.preventDefault();
+                            /* $j('input#cgv-btnlogin[type="submit"]').val($j('input#cgv-btnlogin[type="submit"]').val().replace(countAllowed,countAllowed-1));
+        countAllowed--;
+        if(countAllowed==0) {
+            return !$j('input#cgv-btnlogin[type="submit"]').attr('disabled','disabled');
+        }*/
+
+                            var usernameObj = document.getElementById("login[username]");
+                            var passwordObj = document.getElementById("login[password]");
+                            var captchaObj = document.getElementById("captcha_user_login");
+
+                            var message = "";
+                            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                            var number_regex = /^[0-9]+$/;
+                            if (usernameObj.value == "") {
+                                message = "Vui lòng nhập Email hoặc Số điện thoại";
+                                usernameObj.focus();
+                                usernameObj.classList.add('validation-failed');
+                                $j('#correct').show();
+                                $j('#correct').html(message);
+                                $j('#correct').fadeIn('slow');
+                                return false;
+                            } else {
+                                if (!regex.test(usernameObj.value)) {
+                                    if (!usernameObj.value.match(number_regex)) {
+                                        message = "Thông tin đăng nhập không đúng";
+                                        usernameObj.focus();
+                                        usernameObj.classList.add('validation-failed');
+                                        $j('#correct').show();
+                                        $j('#correct').html(message);
+                                        $j('#correct').fadeIn('slow');
+                                        return false;
+                                    } else if (usernameObj.value.length < 10) {
+                                        message = "Số điện thoại phải ít nhất 10 số";
+                                        usernameObj.focus();
+                                        usernameObj.classList.add('validation-failed');
+                                        $j('#correct').show();
+                                        $j('#correct').html(message);
+                                        $j('#correct').fadeIn('slow');
+                                        return false;
+                                    }
+                                }
+                            }
+                            if (passwordObj.value == "") {
+                                message = "Mật khẩu chưa nhập";
+                                passwordObj.focus();
+                                passwordObj.classList.add('validation-failed');
+                                $j('#correct').show();
+                                $j('#correct').html(message);
+                                $j('#correct').fadeIn('slow');
+                                return false;
+                            } else {
+                                if (passwordObj.value.length < 6) {
+                                    message = "Mật khẩu chứa ít nhất 6 ký tự";
+                                    passwordObj.focus();
+                                    passwordObj.classList.add('validation-failed');
+                                    $j('#correct').show();
+                                    $j('#correct').html(message);
+                                    $j('#correct').fadeIn('slow');
+                                    return false;
+                                }
+                            }
+                            if (captchaObj.value == "") {
+                                message = "Sai mã bảo mật.";
+                                captchaObj.focus();
+                                $j('#correct').show();
+                                $j('#correct').html(message);
+                                $j('#correct').fadeIn('slow');
+                                return false;
+                            }
+                            /*  do work */
+                            // Grab all form data
+                            var tmpresetHTML = "";
+                            //$j.post("https://www.cgv.vn/default/cinox/account/loginuserpost", $j(".cgv-login-form").serialize(),  function(response,status) {
+                            $j.ajax({
+                                type: 'POST',
+                                url: "https://www.cgv.vn/default/cinox/account/loginuserpost",
+                                data: $j(".cgv-login-form").serialize(),
+                                beforeSend: function () {
+                                    $j('.reloading').show();
+                                }
+                            }).done(function (response) {
+                                $j('.reloading').hide();
+                                if (response.success == 200) {
+                                    $j('#correct').html('Đăng nhập thành công');
+                                    $j('#correct').fadeIn('slow');
+                                    //history.go();
+                                    window.location.replace(document.referrer);
+                                    return false;
+                                } else {
+                                    $j('#captcha_user_login').val('');
+                                    $j('#captcha-reload').click();
+                                    message = response.msg;
+                                    if (response.field == 'captcha_user_login') {
+                                        var idfield = document.getElementById(response.field);
+                                        idfield.focus();
+                                    }
+                                }
+                                $j('#correct').show();
+                                $j('#correct').html(message);
+                                $j('#correct').fadeIn('slow');
+                            });
+                            isAllowed = false;
+                        });
+
+                        function IsEmail(email) {
+                            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                            if (!regex.test(email)) {
+                                return false;
+                            } else {
+                                return true;
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+
+<body class=" cms-page-view cms-terms-conditions">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="cms_page">
+                        <strong>ĐIỀU KHOẢN CHUNG</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div class="std">
+                        <div style="text-align: center;"><span
+                                style="color: #ff0000;"> <strong>ĐIỀU KHOẢN CHUNG</strong> </span></div>
+                        <div class="term-condition-content content">
+                            <!-- <div class="icon-title-term-condition"><img alt="" src="https://www.cgv.vn/media/wysiwyg/Terms_and_Conditions.png" /> -->
+                            <ul>
+                                <li>
+                                    <p>Ch&agrave;o mừng bạn đến với <strong>website</strong><strong> cgv.vn</strong> v&agrave;
+                                        <strong>ứng dụng di động</strong><strong> CGV Cinemas</strong> (&ldquo;<strong>Ứng
+                                            Dụng</strong>&rdquo;), được thiết lập v&agrave;
+                                        sở hữu bởi C&Ocirc;NG TY TNHH CJ CGV VIỆT NAM (&ldquo;<strong>CGV Việt
+                                            Nam</strong>&rdquo;, &ldquo;<strong>ch&uacute;ng t&ocirc;i</strong>&rdquo;).
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-show-term-condition content">
+                            <p>Trước khi sử dụng Ứng Dụng hoặc tạo t&agrave;i khoản để trải nghiệm c&aacute;c sản phẩm,
+                                dịch vụ do CGV Việt Nam cung cấp (&ldquo;<strong>T&agrave;i Khoản</strong>&rdquo;), vui
+                                l&ograve;ng tham khảo v&agrave; chắc chắn
+                                rằng bạn đ&atilde; hiểu r&otilde; <strong>Điều Khoản Chung </strong>để hiểu r&otilde;
+                                quyền lợi v&agrave; nghĩa vụ của m&igrave;nh trong tương quan với CGV Việt Nam.</p>
+                            <p>Sản phẩm v&agrave; dịch vụ do CGV Việt Nam cung cấp đến bạn bao gồm: (i) Ứng Dụng; (ii)
+                                Dịch vụ chiếu phim; (iii) Dịch vụ quảng c&aacute;o; (iv) Dịch vụ ăn uống th&ocirc;ng qua
+                                c&aacute;c quầy h&agrave;ng thực phẩm tại
+                                Cụm Rạp Chiếu Phim CGV Cinemas Việt Nam; (v) B&aacute;n Phiếu Đổi V&eacute; Xem Phim v&agrave;
+                                Thẻ Qu&agrave; Tặng; (vi) C&aacute;c sản phẩm v&agrave; dịch vụ kh&aacute;c tại từng
+                                thời điểm; (vi) c&aacute;c dịch vụ
+                                được cung cấp bởi Ứng Dụng v&agrave; bởi phần mềm d&agrave;nh cho kh&aacute;ch h&agrave;ng
+                                của CGV Việt Nam c&oacute; sẵn tr&ecirc;n Ứng Dụng, v&agrave; tất cả c&aacute;c th&ocirc;ng
+                                tin, đường dẫn, t&iacute;nh năng,
+                                dữ liệu, văn bản, h&igrave;nh ảnh, biểu đồ, &acirc;m nhạc, &acirc;m thanh, video (bao
+                                gồm cả c&aacute;c đoạn video được đăng tải trực tiếp theo thời gian thực (livestream),
+                                tin nhắn, c&aacute;c tags được gắn, nội dung,
+                                chương tr&igrave;nh, phần mềm, ứng dụng (bao gồm bất kỳ ứng dụng dịch vụ di động n&agrave;o)
+                                hoặc c&aacute;c t&agrave;i liệu kh&aacute;c c&oacute; sẵn tr&ecirc;n Ứng Dụng
+                                (&ldquo;<strong>Nội Dung</strong>&rdquo;). Bất
+                                kỳ t&iacute;nh năng mới n&agrave;o được bổ sung hoặc mở rộng đối với sản phẩm v&agrave;
+                                dịch vụ đều thuộc phạm vi điều chỉnh của Điều Khoản Chung n&agrave;y. <strong>ĐIỀU KHOẢN
+                                    CHUNG N&Agrave;Y ĐIỀU CHỈNH VIỆC BẠN SỬ DỤNG ỨNG DỤNG, SẢN PHẨM V&Agrave; DỊCH VỤ
+                                    CUNG CẤP BỞI CGV VIỆT NAM</strong>.</p>
+                            <p>CGV Việt Nam bảo lưu quyền thay đổi, chỉnh sửa, tạm ngưng hoặc chấm dứt tất cả hoặc bất
+                                kỳ phần n&agrave;o của Ứng Dụng hoặc bất kỳ sản phẩm, dịch vụ n&agrave;o được CGV Việt
+                                Nam cung cấp v&agrave;o bất cứ thời điểm n&agrave;o.
+                                Phi&ecirc;n bản thử nghiệm hoặc t&iacute;nh năng thử nghiệm tr&ecirc;n Ứng Dụng hoặc c&aacute;c
+                                sản phẩm, dịch vụ do CGV Việt Nam cung cấp c&oacute; thể kh&ocirc;ng ho&agrave;n to&agrave;n
+                                giống với phi&ecirc;n bản
+                                cuối c&ugrave;ng.</p>
+                            <p>CGV Việt Nam bảo lưu quyền từ chối y&ecirc;u cầu mở T&agrave;i Khoản hoặc c&aacute;c truy
+                                cập của bạn tới Ứng Dụng theo quy định ph&aacute;p luật v&agrave; quy định của CGV Việt
+                                Nam.</p>
+                            <p>CGV Việt Nam y&ecirc;u cầu trước khi trở th&agrave;nh Người Sử Dụng của Ứng Dụng, bạn cần
+                                đọc v&agrave; chấp nhận mọi điều khoản v&agrave; điều kiện được quy định trong, v&agrave;
+                                dẫn chiếu đến Điều Khoản Chung được dẫn
+                                chiếu theo đ&acirc;y.</p>
+                            <p><strong>BẰNG VIỆC SỬ DỤNG ỨNG DỤNG, TẠO T&Agrave;I KHOẢN TẠI ỨNG DỤNG HAY THAM GIA GIAO
+                                DỊCH VỚI CGV VIỆT NAM</strong>, BẠN Đ&Atilde; CHẤP NHẬN V&Agrave; ĐỒNG &Yacute; VỚI
+                                NHỮNG ĐIỀU KHOẢN DỊCH VỤ N&Agrave;Y V&Agrave; CH&Iacute;NH
+                                S&Aacute;CH BỔ SUNG ĐƯỢC DẪN CHIẾU THEO Đ&Acirc;Y. NẾU BẠN KH&Ocirc;NG ĐỒNG &Yacute; VỚI
+                                NHỮNG ĐIỀU KHOẢN CHUNG N&Agrave;Y, VUI L&Ograve;NG KH&Ocirc;NG SỬ DỤNG HOẶC TRUY CẬP V&Agrave;O
+                                ỨNG DỤNG HOẶC CHẤM DỨT GIAO DỊCH.</p>
+                            <p><strong>1. </strong><strong>ĐIỀU KHOẢN CHUNG</strong></p>
+                            <p>Khi đề cập đến Điều Khoản Chung l&agrave; đề cập đến Điều Khoản Chung như quy định tại đ&acirc;y
+                                v&agrave;</p>
+                            <p>(i) Điều Khoản Giao Dịch (truy cập tại <a href="#"
+                                                                         target="_blank"><strong>Đ&Acirc;Y</strong></a>);
+                            </p>
+                            <p>(ii) Ch&iacute;nh S&aacute;ch Thanh To&aacute;n (truy cập tại <a
+                                    href="#"
+                                    target="_blank"><strong>Đ&Acirc;Y</strong></a>);</p>
+                            <p>(iii) Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng Tin (truy cập tại <a
+                                    href="#"
+                                    target="_blank"><strong>Đ&Acirc;Y</strong></a>); v&agrave;</p>
+                            <p>Khi dẫn chiếu đến Điều Khoản Chung l&agrave; dẫn chiếu đến to&agrave;n bộ nội dung hoặc
+                                bất kỳ phần n&agrave;o của nội dung như được quy định ngay b&ecirc;n tr&ecirc;n (t&ugrave;y
+                                thuộc v&agrave;o ngữ cảnh y&ecirc;u cầu);
+                                v&agrave; bất kỳ sửa đổi, bổ sung n&agrave;o của n&oacute; tại từng thời điểm.</p>
+                            <p><strong>2. TUY&Ecirc;N BỐ MIỄN TRỪ TR&Aacute;CH NHIỆM TỪ</strong><strong> NGƯỜI SỬ
+                                DỤNG</strong></p>
+                            <p>Khi truy cập v&agrave;o Ứng Dụng, Người Sử Dụng đồng &yacute; chấp nhận mọi rủi ro. CGV
+                                Việt Nam v&agrave; c&aacute;c b&ecirc;n đối t&aacute;c kh&aacute;c kh&ocirc;ng chịu tr&aacute;ch
+                                nhiệm về bất kỳ tổn thất n&agrave;o
+                                do những hậu quả trực tiếp, t&igrave;nh cờ hay gi&aacute;n tiếp; những thất tho&aacute;t,
+                                chi ph&iacute; (bao gồm chi ph&iacute; ph&aacute;p l&yacute;, chi ph&iacute; tư vấn hoặc
+                                c&aacute;c khoản chi ti&ecirc;u kh&aacute;c)
+                                c&oacute; thể ph&aacute;t sinh trực tiếp hoặc gi&aacute;n tiếp do việc truy cập Ứng Dụng
+                                hoặc khi tải dữ liệu về thiết bị c&aacute; nh&acirc;n; những tổn hại gặp phải do virus;
+                                h&agrave;nh động ph&aacute; hoại trực
+                                tiếp hay gi&aacute;n tiếp của hệ thống m&aacute;y t&iacute;nh kh&aacute;c; đường d&acirc;y
+                                điện thoại; phần cứng, phần mềm, lỗi chương tr&igrave;nh; c&aacute;c phần mềm gi&aacute;n
+                                điệp; c&aacute;c phần mềm thu thập
+                                th&ocirc;ng tin kh&ocirc;ng hợp ph&aacute;p; c&aacute;c h&agrave;nh vi tấn c&ocirc;ng
+                                mạng c&oacute; chủ đ&iacute;ch nhằm v&agrave;o CGV Việt Nam hay bất kỳ chủ thể n&agrave;o
+                                được thực hiện th&ocirc;ng qua Ứng Dụng
+                                hoặc mạng m&aacute;y t&iacute;nh; hoặc bất k&igrave; c&aacute;c lỗi n&agrave;o kh&aacute;c;
+                                đường truyền dẫn của m&aacute;y t&iacute;nh hoặc nối kết mạng bị chậm; v&agrave; c&aacute;c
+                                vấn đề c&oacute; t&iacute;nh chất
+                                tương tự.</p>
+                            <p><strong>3</strong><strong>. </strong><strong>NỘI DUNG</strong><strong>
+                                TR&Ecirc;N </strong><strong>ỨNG DỤNG</strong></p>
+                            <p>Tất cả những th&ocirc;ng tin ở đ&acirc;y được cung cấp cho bạn một c&aacute;ch trung thực
+                                như bản th&acirc;n sự việc. CGV Việt Nam v&agrave; c&aacute;c b&ecirc;n li&ecirc;n quan
+                                kh&ocirc;ng bảo đảm, hay c&oacute; bất kỳ
+                                tuy&ecirc;n bố n&agrave;o li&ecirc;n quan đến t&iacute;nh ch&iacute;nh x&aacute;c, tin
+                                cậy của việc sử dụng hay kết quả của việc sử dụng nội dung tr&ecirc;n Ứng Dụng n&agrave;y.
+                                Nội Dung tr&ecirc;n Ứng Dụng được cung
+                                cấp v&igrave; lợi &iacute;ch của cộng đồng v&agrave; c&oacute; t&iacute;nh phi thương
+                                mại. C&aacute;c c&aacute; nh&acirc;n v&agrave; tổ chức kh&ocirc;ng được ph&eacute;p sử
+                                dụng nội dung tr&ecirc;n Ứng Dụng n&agrave;y
+                                với mục đ&iacute;ch thương mại m&agrave; kh&ocirc;ng c&oacute; sự đồng thuận của CGV
+                                Việt Nam bằng văn bản. Mặc d&ugrave; CGV Việt Nam lu&ocirc;n cố gắng cập nhật thường xuy&ecirc;n
+                                c&aacute;c Nội Dung tại Ứng Dụng,
+                                CGV Việt Nam kh&ocirc;ng bảo đảm rằng c&aacute;c th&ocirc;ng tin đ&oacute; l&agrave; mới
+                                nhất, ch&iacute;nh x&aacute;c hay đầy đủ. Tất cả c&aacute;c Nội Dung tr&ecirc;n Ứng Dụng
+                                c&oacute; thể được thay đổi bất kỳ l&uacute;c
+                                n&agrave;o.</p>
+                            <p><strong>4</strong><strong>.</strong><strong> </strong><strong>QUYỀN SỞ HỮU TR&Iacute;
+                                TUỆ</strong></p>
+                            <p><strong>Đối với Ứng Dụng</strong>: CGV Việt Nam l&agrave; chủ sở hữu v&agrave; l&agrave;
+                                b&ecirc;n c&oacute; quyền sở hữu tr&iacute; tuệ ph&aacute;t sinh từ v&agrave;/hoặc li&ecirc;n
+                                quan đến Ứng Dụng;</p>
+                            <p><strong>Đối với Nội Dung đăng tải tr&ecirc;n Ứng Dụng</strong>: CGV Việt Nam v&agrave; l&agrave;
+                                b&ecirc;n c&oacute; quyền sở hữu tr&iacute; tuệ ph&aacute;t sinh từ v&agrave;/hoặc li&ecirc;n
+                                quan đến Nội Dung đăng tải tại
+                                Ứng Dụng, hoặc được cấp quyền sử dụng hợp ph&aacute;p đối với Nội Dung đăng tải tại Ứng
+                                Dụng.</p>
+                            <p>Việc chỉnh sửa trang, nội dung, v&agrave; sắp xếp thuộc về thẩm quyền tuyệt đối v&agrave;
+                                duy nhất của CGV Việt Nam. Sự chỉnh sửa, thay đổi, ph&acirc;n phối hoặc t&aacute;i sử
+                                dụng những Nội Dung trong Ứng Dụng n&agrave;y
+                                v&igrave; bất k&igrave; mục đ&iacute;ch n&agrave;o kh&aacute;c được xem như vi phạm
+                                quyền lợi hợp ph&aacute;p của CGV Việt Nam.</p>
+                            <p><strong>5</strong><strong>. </strong><strong>S</strong><strong>Ử DỤNG TH&Ocirc;NG
+                                TIN</strong></p>
+                            <p>5.1. CGV Việt Nam sẽ kh&ocirc;ng sử dụng th&ocirc;ng tin c&aacute; nh&acirc;n của Người
+                                Sử Dụng tr&ecirc;n Ứng Dụng nếu kh&ocirc;ng được ph&eacute;p. Nếu Người Sử Dụng đồng
+                                &yacute; cung cấp th&ocirc;ng tin c&aacute; nh&acirc;n,
+                                th&ocirc;ng tin n&agrave;y sẽ được bảo vệ v&agrave; xử l&yacute; theo quy định ph&aacute;p
+                                luật, Ch&iacute;nh S&aacute;ch Bảo Mật Th&ocirc;ng Tin. Th&ocirc;ng tin của Người Sử
+                                Dụng sẽ được sử dụng ph&ugrave; hợp với
+                                mục đ&iacute;ch Xử L&yacute; Dữ Liệu C&aacute; Nh&acirc;n như quy định tại Ch&iacute;nh
+                                S&aacute;ch Bảo Mật Th&ocirc;ng Tin. Th&ocirc;ng tin c&aacute; nh&acirc;n của Người Sử
+                                Dụng sẽ kh&ocirc;ng được gửi cho bất kỳ
+                                b&ecirc;n thứ ba n&agrave;o, ngoại trừ CGV Việt Nam, C&ocirc;ng ty mẹ, C&ocirc;ng ty li&ecirc;n
+                                quan, C&ocirc;ng ty li&ecirc;n kết, c&aacute;c C&ocirc;ng ty con của CGV Việt Nam v&agrave;
+                                những mở rộng cần thiết để
+                                Người Sử Dụng c&oacute; thể tham gia v&agrave;o Ứng Dụng (những nh&agrave; cung cấp dịch
+                                vụ, đối t&aacute;c, c&aacute;c c&ocirc;ng ty quảng c&aacute;o, c&aacute;c b&ecirc;n thứ
+                                ba bất kỳ m&agrave; việc sử dụng th&ocirc;ng
+                                tin l&agrave; cần thiết để duy tr&igrave; t&iacute;nh ổn định v&agrave; li&ecirc;n tục
+                                của Ứng Dụng v&agrave; bất kỳ sản phẩm, dịch vụ n&agrave;o được CGV Việt Nam cung cấp) v&agrave;
+                                y&ecirc;u cầu cung cấp bởi luật
+                                ph&aacute;p (&ldquo;<strong>B&ecirc;n Nhận Được Cấp Quyền</strong>&rdquo;).</p>
+                            <p>5.2.&nbsp;Nếu CGV Việt Nam chia sẻ th&ocirc;ng tin c&aacute; nh&acirc;n của Người Sử Dụng
+                                cho B&ecirc;n Nhận Được Cấp Quyền, th&igrave; CGV Việt Nam cũng y&ecirc;u cầu họ bảo vệ
+                                th&ocirc;ng tin c&aacute; nh&acirc;n của
+                                Người Sử Dụng ở mức độ tối thiểu như c&aacute;ch CGV Việt Nam thực hiện. Khoản n&agrave;y
+                                kh&ocirc;ng &aacute;p dụng trong trường hợp CGV Việt Nam cung cấp th&ocirc;ng tin c&aacute;
+                                nh&acirc;n của Người Sử Dụng cho
+                                Cơ quan Nh&agrave; nước c&oacute; thẩm quyền theo y&ecirc;u cầu của những cơ quan n&agrave;y.</p>
+                            <p>5.3. CGV Việt Nam <strong>CAM KẾT KH&Ocirc;NG THAM GIA V&Agrave;O</strong> c&aacute;c
+                                giao dịch b&aacute;n, chuyển nhượng, chuyển giao, trao đổi để nhận lại lợi &iacute;ch kh&aacute;c,
+                                hoặc thực hiện c&aacute;c h&agrave;nh
+                                vi nhằm chuyển quyền sở hữu th&ocirc;ng tin c&aacute; nh&acirc;n của Người Sử Dụng trong
+                                mọi trường hợp.</p>
+                            <p><strong>6</strong><strong>. </strong><strong>TẢI DỮ LIỆU</strong></p>
+                            <p>Nếu Người Sử Dụng tải về thiết bị c&aacute; nh&acirc;n những Nội Dung từ Ứng Dụng, th&igrave;
+                                Nội Dung tải về vẫn thuộc quyền sở hữu hoặc quyền sử dụng hợp ph&aacute;p của CGV Việt
+                                Nam v&agrave; CGV Việt Nam cấp cho Người
+                                Sử Dụng quyền sử dụng kh&ocirc;ng độc quyền v&agrave; c&oacute; thể hủy ngang tại bất kỳ
+                                thời điểm n&agrave;o. D&ugrave; cho c&oacute; bất kỳ nội dung n&agrave;o hay điều khoản
+                                n&agrave;o từ Điều Khoản Chung quy định
+                                tr&aacute;i ngược lại, <strong>KH&Ocirc;NG C&Oacute; BẤT KỲ ĐIỀU KHOẢN N&Agrave;O THỂ
+                                    HIỆN RẰNG</strong><strong> </strong>CGV Việt Nam đồng &yacute;<strong> </strong>chuyển
+                                giao quyền sở hữu (bao gồm Quyền Sở Hữu Tr&iacute;
+                                Tuệ) của Nội Dung do Người Sử Dụng tải về. Người Sử Dụng kh&ocirc;ng được ph&eacute;p b&aacute;n,
+                                chuyển nhượng, ph&acirc;n phối, ph&acirc;n phối lại, bẻ kh&oacute;a, m&atilde; h&oacute;a,
+                                ph&aacute;t triển, mở rộng,
+                                dịch ngược m&atilde;, giải m&atilde;, hoặc thực hiện bất kỳ h&agrave;nh vi n&agrave;o kh&aacute;c
+                                đối với Nội Dung được tải về m&agrave; kh&ocirc;ng c&oacute; sự đồng &yacute; của CGV
+                                Việt Nam.</p>
+                            <p>Mọi h&agrave;nh động vi phạm Điều n&agrave;y l&agrave; x&acirc;m phạm quyền sở hữu v&agrave;
+                                quyền sở hữu tr&iacute; tuệ của CGV Việt Nam v&agrave; Người Sử Dụng đồng &yacute; rằng
+                                h&agrave;nh vi vi phạm c&aacute;c quy
+                                định n&agrave;y kh&ocirc;ng thể được bồi thường một c&aacute;ch thỏa đ&aacute;ng v&agrave;
+                                to&agrave;n bộ bằng vật chất v&agrave; v&igrave; vậy, CGV Việt Nam v&agrave; bất kỳ b&ecirc;n
+                                c&oacute; li&ecirc;n quan n&agrave;o
+                                được quyền, ngo&agrave;i bất kỳ quyền hoặc biện ph&aacute;p khắc phục kh&aacute;c c&oacute;
+                                sẵn theo Điều Khoản Chung hoặc theo ph&aacute;p luật, khắc phục một c&aacute;ch hợp l&yacute;
+                                bao gồm một lệnh cấm h&agrave;nh
+                                vi vi phạm hoặc đe dọa vi phạm v&agrave;/hoặc việc thực hiện cụ thể bất kỳ quy định n&agrave;o
+                                của Điều Khoản Chung n&agrave;y.</p>
+                            <p><strong>7</strong><strong>.</strong><strong> THAY ĐỔI NỘI DUNG</strong></p>
+                            <p>CGV Việt Nam giữ quyền thay đổi, chỉnh sửa v&agrave; loại bỏ những th&ocirc;ng tin hợp ph&aacute;p
+                                v&agrave;o bất kỳ thời điểm n&agrave;o v&igrave; bất kỳ l&yacute; do n&agrave;o. C&aacute;c
+                                thay đổi c&oacute; hiệu lực
+                                ngay khi được đăng tr&ecirc;n Ứng Dụng m&agrave; kh&ocirc;ng cần th&ocirc;ng b&aacute;o
+                                trước. V&agrave; khi Người Sử Dụng tiếp tục sử dụng Ứng Dụng sau khi c&aacute;c thay đổi
+                                n&agrave;y được đăng tải, c&oacute; nghĩa
+                                l&agrave; Người Sử Dụng chấp nhận với những thay đổi đ&oacute;. Người Sử Dụng vui l&ograve;ng
+                                kiểm tra thường xuy&ecirc;n để cập nhật những thay đổi của CGV Việt Nam.</p>
+                            <p><strong>8</strong><strong>.</strong><strong> LI&Ecirc;N KẾT VỚI C&Aacute;C TRANG KH&Aacute;C</strong>
+                            </p>
+                            <p>Mặc d&ugrave; Ứng Dụng n&agrave;y c&oacute; thể được li&ecirc;n kết với những trang kh&aacute;c,
+                                CGV Việt Nam kh&ocirc;ng trực tiếp hoặc gi&aacute;n tiếp t&aacute;n th&agrave;nh, tổ
+                                chức, t&agrave;i trợ, đứng sau hoặc s&aacute;p
+                                nhập với những trang đ&oacute;, trừ khi điều n&agrave;y được tuy&ecirc;n bố một c&aacute;ch
+                                minh thị v&agrave; r&otilde; r&agrave;ng. Khi truy cập v&agrave;o trang web li&ecirc;n
+                                kết, Người Sử Dụng chấp nhận rằng CGV
+                                Việt Nam kh&ocirc;ng thể kiểm so&aacute;t tất cả những trang li&ecirc;n kết với Ứng Dụng
+                                v&agrave; cũng kh&ocirc;ng chịu tr&aacute;ch nhiệm cho nội dung của những trang li&ecirc;n
+                                kết.</p>
+                            <p><strong>9</strong><strong>.</strong><strong> ĐƯA TH&Ocirc;NG TIN
+                                L&Ecirc;N </strong><strong>ỨNG DỤNG</strong></p>
+                            <p>Người Sử Dụng kh&ocirc;ng được cấp quyền để đưa bất kỳ th&ocirc;ng tin, hoặc chuyển tải l&ecirc;n
+                                Ứng Dụng bất kỳ th&ocirc;ng tin n&agrave;o; bao gồm nhưng kh&ocirc;ng giới hạn tất cả
+                                những h&igrave;nh ảnh, từ ngữ khi&ecirc;u
+                                d&acirc;m, th&ocirc; tục, x&uacute;c phạm, phỉ b&aacute;ng, b&ocirc;i nhọ, đe dọa, những
+                                th&ocirc;ng tin kh&ocirc;ng hợp ph&aacute;p hoặc những th&ocirc;ng tin c&oacute; thể đưa
+                                đến việc vi phạm ph&aacute;p luật, tr&aacute;ch
+                                nhiệm ph&aacute;p l&yacute;.</p>
+                            <p>CGV Việt Nam v&agrave; tất cả c&aacute;c b&ecirc;n c&oacute; li&ecirc;n quan đến việc x&acirc;y
+                                dựng v&agrave; quản l&yacute; Ứng Dụng kh&ocirc;ng chịu tr&aacute;ch nhiệm hoặc c&oacute;
+                                nghĩa vụ ph&aacute;p l&yacute; đối
+                                với những ph&aacute;t sinh từ nội dung do Người Sử Dụng tải l&ecirc;n Ứng Dụng.</p>
+                            <p><strong>10</strong><strong>. </strong><strong>LUẬT &Aacute;P DỤNG</strong></p>
+                            <p>Điều Khoản Chung sẽ được điều chỉnh bởi v&agrave; diễn giải theo luật ph&aacute;p của
+                                Việt Nam.</p>
+                            <p>Bất kỳ tranh chấp, khiếu nại hoặc sự bất đồng dưới bất cứ h&igrave;nh thức n&agrave;o ph&aacute;t
+                                sinh từ hoặc li&ecirc;n quan đến c&aacute;c Điều Khoản Chung n&agrave;y, chống lại hoặc
+                                li&ecirc;n quan đến CGV Việt Nam
+                                hoặc bất kỳ B&ecirc;n Được Bồi Thường n&agrave;o thuộc đối tượng của Điều Khoản Chung sẽ
+                                được giải quyết bằng T&ograve;a &aacute;n c&oacute; thẩm quyền tại Th&agrave;nh phố Hồ
+                                Ch&iacute; Minh.</p>
+                            <p><strong>11. T&Iacute;NH RI&Ecirc;NG LẺ</strong></p>
+                            <p>Nếu bất k&igrave; điều khoản n&agrave;o trong Điều Khoản Chung n&agrave;y kh&ocirc;ng hợp
+                                ph&aacute;p, bị b&atilde;i bỏ, hoặc v&igrave; bất kỳ l&yacute; do n&agrave;o kh&ocirc;ng
+                                thể thực thi theo ph&aacute;p luật, th&igrave;
+                                điều khoản đ&oacute; sẽ được t&aacute;ch ra khỏi c&aacute;c điều khoản v&agrave; điều
+                                kiện n&agrave;y v&agrave; sẽ kh&ocirc;ng ảnh hưởng tới hiệu lực cũng như t&iacute;nh thi
+                                h&agrave;nh của bất kỳ điều khoản c&ograve;n
+                                lại n&agrave;o cũng như kh&ocirc;ng ảnh hưởng tới hiệu lực cũng như t&iacute;nh thi h&agrave;nh
+                                của điều khoản sẽ được xem x&eacute;t theo luật.</p>
+                            <p><strong>12. BỒI THƯỜNG</strong></p>
+                            <p>Người Sử Dụng đồng &yacute; bồi thường, bảo vệ v&agrave; kh&ocirc;ng g&acirc;y hại cho
+                                CGV Việt Nam, c&aacute;c th&agrave;nh vi&ecirc;n, cổ đ&ocirc;ng, c&ocirc;ng ty con, c&ocirc;ng
+                                ty li&ecirc;n kết, gi&aacute;m đốc, vi&ecirc;n
+                                chức, đại l&yacute;, đồng sở hữu thương hiệu hoặc đối t&aacute;c, v&agrave; nh&acirc;n
+                                vi&ecirc;n của CGV Việt Nam (gọi chung l&agrave; &ldquo;<strong>B&ecirc;n Được Bồi
+                                    Thường</strong>&rdquo;) li&ecirc;n quan đến khiếu
+                                nại, h&agrave;nh động, thủ tục tố tụng, v&agrave; c&aacute;c vụ kiện cũng như nghĩa vụ,
+                                tổn thất, thanh to&aacute;n, khoản phạt, tiền phạt, chi ph&iacute; v&agrave; ph&iacute;
+                                tổn c&oacute; li&ecirc;n quan (bao gồm
+                                chi ph&iacute; giải quyết tranh chấp) do B&ecirc;n Được Bồi Thường g&aacute;nh chịu, ph&aacute;t
+                                sinh từ (a) giao dịch được thực hiện tr&ecirc;n Ứng Dụng, hoặc tranh chấp li&ecirc;n
+                                quan đến giao dịch đ&oacute; (trừ
+                                trường hợp CGV Việt Nam hoặc c&aacute;c c&ocirc;ng ty li&ecirc;n kết của CGV Việt Nam l&agrave;
+                                Người B&aacute;n đối với giao dịch li&ecirc;n quan đến khiếu nại), (b) c&aacute;c ch&iacute;nh
+                                s&aacute;ch, quy định v&agrave;
+                                bảo đảm của CGV Việt Nam, (c) việc tổ chức, hoạt động, quản trị v&agrave;/hoặc điều h&agrave;nh
+                                c&aacute;c được thực hiện bởi hoặc đại diện cho CGV Việt Nam, (d) vi phạm hoặc kh&ocirc;ng
+                                tu&acirc;n thủ bất kỳ điều khoản
+                                n&agrave;o trong c&aacute;c Điều Khoản Chung n&agrave;y hoặc bất kỳ ch&iacute;nh s&aacute;ch
+                                hoặc hướng dẫn n&agrave;o được tham chiếu theo đ&acirc;y, (e) việc Người Sử Dụng sử dụng
+                                hoặc sử dụng kh&ocirc;ng đ&uacute;ng
+                                sản phẩm, dịch vụ, hoặc (f) vi phạm của Người Sử Dụng đối với bất kỳ luật hoặc bất kỳ c&aacute;c
+                                quyền của b&ecirc;n thứ ba n&agrave;o, hoặc (g) bất kỳ Nội Dung n&agrave;o được đăng tải
+                                bởi Người Sử Dụng.</p>
+                            <p><strong>13. LOẠI TRỪ TR&Aacute;CH NHIỆM V&Agrave; GIỚI HẠN TR&Aacute;CH NHIỆM</strong>
+                            </p>
+                            <p>13.1. DỊCH VỤ ĐƯỢC CUNG CẤP NHƯ &lsquo;SẴN C&Oacute;&rsquo; V&Agrave; KH&Ocirc;NG C&Oacute;
+                                BẤT KỲ SỰ ĐẢM BẢO, KHIẾU NẠI HOẶC KHẲNG ĐỊNH N&Agrave;O TỪ CGV VIỆT NAM VỀ BẤT KỲ NỘI
+                                DUNG N&Agrave;O ĐƯỢC THỂ HIỆN, NGỤ &Yacute;
+                                HOẶC BẮT BUỘC ĐỐI VỚI DỊCH VỤ, BAO GỒM VIỆC ĐẢM BẢO VỀ CHẤT LƯỢNG, VIỆC THỰC HIỆN, KH&Ocirc;NG
+                                VI PHẠM, VIỆC MUA B&Aacute;N, HAY SỰ PH&Ugrave; HỢP CHO MỘT MỤC Đ&Iacute;CH CỤ THỂ, CŨNG
+                                NHƯ KH&Ocirc;NG C&Oacute; BẤT KỲ
+                                SỰ ĐẢM BẢO N&Agrave;O ĐƯỢC TẠO RA TRONG QU&Aacute; TR&Igrave;NH GIAO DỊCH, THỰC HIỆN,
+                                MUA B&Aacute;N HOẶC SỬ DỤNG SẢN PHẨM SAU KHI MUA.</p>
+                            <p>13.2. NGƯỜI SỬ DỤNG THỪA NHẬN RẰNG MỌI RỦI RO PH&Aacute;T SINH NGO&Agrave;I VIỆC SỬ DỤNG
+                                HOẶC VẬN H&Agrave;NH CỦA ỨNG DỤNG SẼ THUỘC VỀ NGƯỜI SỬ DỤNG TRONG GIỚI HẠN TỐI ĐA PH&Aacute;P
+                                LUẬT CHO PH&Eacute;P.</p>
+                            <p>13.3 CGV VIỆT NAM KH&Ocirc;NG KIỂM SO&Aacute;T V&Agrave; KH&Ocirc;NG ĐẢM BẢO HOẶC CHẤP
+                                NHẬN TR&Aacute;CH NHIỆM ĐỐI VỚI C&Aacute;C TRANH CHẤP LI&Ecirc;N QUAN ĐẾN MỘT HOẶC NHIỀU
+                                NGƯỜI SỬ DỤNG, NGƯỜI SỬ DỤNG ĐỒNG &Yacute;
+                                TỰ GIẢI QUYẾT TRANH CHẤP TRỰC TIẾP VỚI NHAU V&Agrave; MIỄN TRỪ CGV VIỆT NAM KHỎI KHIẾU
+                                NẠI, Y&Ecirc;U CẦU V&Agrave; TỔN THẤT PH&Aacute;T SINH HOẶC LI&Ecirc;N QUAN ĐẾN TRANH
+                                CHẤP.</p>
+                            <p>13.4 CGV VIỆT NAM KH&Ocirc;NG CHỊU TR&Aacute;CH NHIỆM PH&Aacute;T SINH TỪ</p>
+                            <p>(I) TỔN THẤT VỀ SỬ DỤNG; TỔN THẤT VỀ LỢI NHUẬN; TỔN THẤT VỀ DOANH THU; TỔN THẤT VỀ DỮ
+                                LIỆU; TỔN THẤT VỀ UY T&Iacute;N; HOẶC KH&Ocirc;NG THỰC HIỆN ĐƯỢC C&Aacute;C BIỆN PH&Aacute;P
+                                NGUY CẤP DỰ TR&Ugrave;, ĐỐI VỚI TỪNG TRƯỜNG
+                                HỢP D&Ugrave; TRỰC TIẾP HOẶC GI&Aacute;N TIẾP; HOẶC</p>
+                            <p>(II) THIỆT HẠI GI&Aacute;N TIẾP, NGẪU NHI&Ecirc;N, ĐẶC BIỆT HOẶC MANG T&Iacute;NH HỆ QUẢ
+                                N&Agrave;O (GỒM BẤT KỲ MẤT M&Aacute;T N&Agrave;O VỀ DỮ LIỆU, GI&Aacute;N ĐOẠN DỊCH VỤ, M&Aacute;Y
+                                T&Iacute;NH, ĐIỆN THOẠI HOẶC C&Aacute;C
+                                THIẾT BỊ DI ĐỘNG KH&Aacute;C) PH&Aacute;T SINH TỪ HOẶC LI&Ecirc;N QUAN ĐẾN VIỆC SỬ DỤNG
+                                ỨNG DỤNG HOẶC DỊCH VỤ, BAO GỒM THIỆT HẠI PH&Aacute;T SINH TỪ Đ&Oacute;, NGAY CẢ KHI CGV
+                                VIỆT NAM Đ&Atilde; ĐƯỢC TH&Ocirc;NG BÁO
+                                VỀ KHẢ NĂNG CỦA C&Aacute;C THIỆT HẠI Đ&Oacute; HOẶC ĐƯỢC GỢI &Yacute; PHẢI CHỊU TR&Aacute;CH
+                                NHIỆM.</p>
+                            <p>13.5 NGƯỜI SỬ DỤNG CÓ QUY&Ecirc;̀N Y&Ecirc;U CẦU CHẤM DỨT T&Agrave;I KHOẢN CỦA NGƯỜI SỬ
+                                DỤNG V&Agrave;/HOẶC DỪNG SỬ DỤNG DỊCH VỤ TRONG TRƯỜNG HỢP KH&Ocirc;NG THỎA MÃN VỚI
+                                DỊCH VỤ.</p>
+                            <p>13.6 TRƯỜNG HỢP CGV VIỆT NAM, THEO PH&Aacute;N QUYẾT CỦA T&Ograve;A &Aacute;N C&Oacute;
+                                THẨM QUYỀN, PHẢI CHỊU TR&Aacute;CH NHIỆM TRONG GIỚI HẠN TỐI ĐA PH&Aacute;P LUẬT CHO PH&Eacute;P
+                                (BAO GỒM ĐỐI VỚI LỖI BẤT CẨN KH&Ocirc;NG
+                                Đ&Aacute;NG KỂ) TH&Igrave; TR&Aacute;CH NHIỆM CỦA CGV VIỆT NAM ĐỐI VỚI NGƯỜI SỬ DỤNG
+                                HOẶC BẤT KỲ B&Ecirc;N THỨ BA N&Agrave;O CHỈ GIỚI HẠN TRONG MỨC THẤP HƠN GIỮA (A) GI&Aacute;
+                                TRỊ CỦA (05) GIAO DỊCH GẦN NHẤT VỚI CGV
+                                VIỆT NAM CỦA NGƯỜI SỬ DỤNG; HOẶC (B) KHOẢN TIỀN KH&Aacute;C NHƯ X&Aacute;C ĐỊNH CỤ THỂ
+                                TRONG PH&Aacute;N QUYẾT CHUNG THẨM CỦA T&Ograve;A &Aacute;N C&Oacute; THẨM QUYỀN.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>

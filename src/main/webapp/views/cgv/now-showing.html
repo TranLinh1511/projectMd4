@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" catalog-category-view categorypath-now-showing category-now-showing">
+<div class="wrapper">
+
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col1-layout">
+            <div class="breadcrumbs" itemprop="breadcrumb">
+                <ul>
+                    <li class="home">
+                        <a href="#" title="Trở về trang chủ">Trang chủ</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="category3">
+                        <a href="#" title="">Phim</a>
+                        <span>/ </span>
+                    </li>
+                    <li class="category5">
+                        <strong>Phim Đang Chiếu</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="col-main">
+
+                    <div class="page-title category-title">
+                        <h1>Phim Đang Chiếu</h1>
+                        <div class="dropdown-sub-category">
+                            <button onclick="myFunction()" class="dropbtn">
+                                <span class="icon">+</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-products cgv-movies">
+                        <ul class="products-grid products-grid--max-4-col">
+                            <li class="film-lists item last" th:each="i:${schedules}">
+                                <div class="product-images">
+                                    <a th:href="@{'/movie-detail?id=' + ${i.id}}" th:title="${i.movie.name}"
+                                       class="product-image">
+                                        <img id="product-collection-image-5571"
+                                             th:src="@{'/images/'+${i.movie.images[0].imageName}}"
+                                             th:alt-title="${i.movie.title}"/>
+                                    </a>
+                                </div>
+
+                                <div class="product-info">
+                                    <h2 class="product-name"><a th:href="@{'/movie-detail?id=' + ${i.id}}"
+                                                                th:alt-title="${i.movie.title}"></a></h2>
+
+                                    <div class="cgv-movie-info">
+                                        <span class="cgv-info-bold">Thể loại: </span>
+                                        <span class="cgv-info-normal" th:each="m:${i.movie.genres}" th:text="${m.name} + ', '"></span>
+                                    </div>
+
+                                    <div class="cgv-movie-info">
+                                        <span class="cgv-info-bold">Thời lượng: </span>
+                                        <span class="cgv-info-normal" th:text="${i.movie.duration}"></span>
+                                    </div>
+
+                                    <div class="cgv-movie-info">
+                                        <span class="cgv-info-bold">Khởi chiếu: </span>
+                                        <span class="cgv-info-normal" th:text="${i.movie.releaseDate}"></span>
+                                    </div>
+                                </div>
+
+                                <ul class="add-to-links">
+                                    <li>
+                                        <a th:href="@{'/movie-detail?id=' + ${i.id}}" type="button" title="Mua vé" class="button btn-booking"><span><span>Xem chi tiết</span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <script type="text/javascript">
+                            decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])
+                        </script>
+                    </div>
+
+                    <div id="loading-mask" style="left: -2px; top: 0px; display: none;z-index: 999999;">
+                        <p class="loader" id="loading_mask_loader">
+                            <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/ajax-loader.gif"
+                                 alt="Loading...">
+                            <br>Đang tải thông tin... </p>
+                    </div>
+
+                    <style type="text/css">
+                        #cboxLoadedContent .quick-booking > .tabs-cgv-movie-view-date > * {
+                            padding: 20px;
+                            margin: 0px;
+                        }
+
+                        .yamahawhynot h4,
+                        .lgcinema h4 {
+                            color: red;
+                            font-weight: bold !important;
+                        }
+                    </style>
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        $j(window).bind('load', function () {
+                            (function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+                        });
+
+                        function equalizeHeights(selector) {
+                            var heights = new Array();
+
+                            // Loop to get all element heights
+                            $j(selector).each(function () {
+                                // Need to let sizes be whatever they want so no overflow on resize
+                                $j(this).css('min-height', '0');
+                                $j(this).css('max-height', 'none');
+                                $j(this).css('height', 'auto');
+
+                                // Then add size (no units) to array
+                                heights.push($j(this).height());
+                            });
+
+                            // Find max height of all elements
+                            var max = Math.max.apply(Math, heights);
+
+                            // Set all heights to max height
+                            $j(selector).each(function () {
+                                $j(this).css('height', max + 'px');
+                            });
+                        }
+
+                        $j(window).load(function () {
+                            // Fix heights on page load
+                            equalizeHeights('.product-info');
+                            $j('li.category3').find('a').contents().unwrap();
+                            // Fix heights on window resize
+                            var iv = null;
+                            $j(window).resize(function () {
+                                if (iv !== null) window.clearTimeout(iv);
+
+                                // Needs to be a timeout function so it doesn't fire every ms of resize
+                                iv = setTimeout(function () {
+                                    equalizeHeights('.product-info');
+                                }, 120);
+                                $j('li.category3').find('a').contents().unwrap();
+                            });
+                        });
+
+                        function Quickbooking(obj) {
+                            $j.ajax({
+                                type: 'post',
+                                url: 'https://www.cgv.vn/default/cinemas/product/ajaxschedule/',
+                                data: 'id=' + obj,
+                                //dataType: 'json',
+                                beforeSend: function () {
+                                    // $j.colorbox();
+                                    $j('#loading-mask').show();
+                                },
+                            }).done(function (result) {
+                                var html = '<div class="product-collateral toggle-content tabs tabs-cgv-movie-view-date">';
+                                html += '<dl id="collateral-tabs" class="collateral-tabs">';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231126\');">';
+                                html += '<span>11</span>';
+                                html += '<em>Sun</em>';
+                                html += '<strong>26</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += result;
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231127\');">';
+                                html += '<span>11</span>';
+                                html += '<em>Mon</em>';
+                                html += '<strong>27</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231128\');">';
+                                html += '<span>11</span>';
+                                html += '<em>Tue</em>';
+                                html += '<strong>28</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231129\');">';
+                                html += '<span>11</span>';
+                                html += '<em>Wed</em>';
+                                html += '<strong>29</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231130\');">';
+                                html += '<span>11</span>';
+                                html += '<em>Thu</em>';
+                                html += '<strong>30</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231201\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Fri</em>';
+                                html += '<strong>01</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231202\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sat</em>';
+                                html += '<strong>02</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231203\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sun</em>';
+                                html += '<strong>03</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231204\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Mon</em>';
+                                html += '<strong>04</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231205\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Tue</em>';
+                                html += '<strong>05</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231206\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Wed</em>';
+                                html += '<strong>06</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231207\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Thu</em>';
+                                html += '<strong>07</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231208\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Fri</em>';
+                                html += '<strong>08</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231209\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sat</em>';
+                                html += '<strong>09</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231210\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sun</em>';
+                                html += '<strong>10</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231211\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Mon</em>';
+                                html += '<strong>11</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231212\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Tue</em>';
+                                html += '<strong>12</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231213\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Wed</em>';
+                                html += '<strong>13</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231214\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Thu</em>';
+                                html += '<strong>14</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231215\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Fri</em>';
+                                html += '<strong>15</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231216\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sat</em>';
+                                html += '<strong>16</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231217\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sun</em>';
+                                html += '<strong>17</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231218\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Mon</em>';
+                                html += '<strong>18</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231219\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Tue</em>';
+                                html += '<strong>19</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231220\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Wed</em>';
+                                html += '<strong>20</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231221\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Thu</em>';
+                                html += '<strong>21</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231222\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Fri</em>';
+                                html += '<strong>22</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231223\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sat</em>';
+                                html += '<strong>23</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231224\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Sun</em>';
+                                html += '<strong>24</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '<dt class="tab">';
+                                html += '<div class="day" onclick="getSelectDay(' + obj + ', \'20231225\');">';
+                                html += '<span>12</span>';
+                                html += '<em>Mon</em>';
+                                html += '<strong>25</strong>';
+                                html += '</div>';
+                                html += '</dt>';
+
+                                html += '<dd class="tab-container">';
+                                html += '<div class="tab-content showtimes">';
+                                html += '</div>';
+                                html += '</dd>';
+                                html += '</dl>';
+                                html += '</div>';
+
+                                $j.colorbox({
+                                    html: '<div class="product-view quick-booking cgv-schedule-popup">' + html + '</div>',
+                                    width: "88%",
+                                    height: "88%",
+                                    fixed: true,
+                                    modal: false
+                                });
+                                togglecontent('cgv-schedule-popup .tabs-cgv-movie-view-date');
+                                togglecontent('cgv-schedule-popup .tabs-cgv-movie-cites');
+                                togglecontent('cgv-schedule-popup .tabs-cgv-movie-type');
+                                $j('#loading-mask').hide();
+                            });
+                        }
+
+                        function getSelectDay(id, dy) {
+                            $j.ajax({
+                                type: 'post',
+                                url: 'https://www.cgv.vn/default/cinemas/product/ajaxschedule/',
+                                data: 'id=' + id + '&dy=' + dy,
+                                beforeSend: function () {
+                                    $j('#loading-mask').show();
+                                    $j('dd.current .showtimes').empty();
+                                },
+                            }).done(function (result) {
+                                $j('dd.current .showtimes').html(result);
+                                togglecontent('cgv-schedule-popup .tabs-cgv-movie-cites');
+                                togglecontent('cgv-schedule-popup .tabs-cgv-movie-type');
+                                $j('#loading-mask').hide();
+                            });
+                        }
+
+                        //]]>
+                    </script>
+                    <!--
+<style>
+.dropdown-content-cgv{
+display:none;
+}
+</style>
+-->
+                    <script>
+                        /* When the user clicks on the button,
+                        toggle between hiding and showing the dropdown content */
+
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+
+                        /*
+                        // Close the dropdown if the user clicks outside of it
+                        window.onclick = function(event) {
+                          if (event.target.matches('.dropbtn')) {
+
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                              var openDropdown = dropdowns[i];
+                              if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                              }
+                            }
+                          }
+                        }
+                        */
+                    </script>
+                </div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+</html>

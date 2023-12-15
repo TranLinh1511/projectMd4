@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi" id="top" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:insert="/cgv/layouts/head"></th:block>
+<body class=" contacts-index-index">
+<div class="wrapper">
+    <div class="page">
+        <th:block th:insert="/cgv/layouts/header"></th:block>
+        <div class="main-container col2-left-layout">
+            <div class="main">
+                <div class="col-left sidebar col-left-first">
+                    <div class="block block-cms-menu">
+                        <div class="block-content">
+                            <ul>
+                                <li> <a href="#"><span>Giới thiệu</span></a></li>
+                                <li> <a href="#"><span>Li&ecirc;n Hệ CGV</span></a>
+                                </li>
+                                <li> <a href="#"><span>Điều khoản chung</span></a>
+                                </li>
+                                <li>
+                                     <a href="#"><span>Điều khoản giao dich</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch thanh to&aacute;n</span></a>
+                                </li>
+                                <li> <a href="#"><span>Ch&iacute;nh s&aacute;ch bảo mật</span></a>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>C&acirc;u hỏi thường gặp</span></a>
+                                        </span>
+                                </li>
+                                <li><span><a
+                                        href="#"><span>Dành cho đối tác</span></a>
+                                        </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        // <![CDATA[
+                        $j(".block-cms-menu li").each(function () {
+                            var self = this;
+                            href = $j(this).find('a');
+                            for (var i = 0; i < href.length; i++) {
+                                var harray = $j(href[i]).attr('href').split("/");
+                                var charray = window.location.href.split("/");
+                                if (harray[harray.length - 2] == charray[charray.length - 2]) {
+                                    $j(self).addClass('active');
+                                    break;
+                                }
+                            }
+                        });
+                        // ]]>
+                    </script>
+                </div>
+                <div class="col-main">
+                    <div></div>
+                    <div class="location-ho-cgv">
+                        <div class="page-title title-contact-cgv">
+                            <h1>Liên hệ với chúng tôi</h1>
+                        </div>
+                        <div class="map_container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.552607459233!2d106.66360041480064!3d10.768922192326624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf16ffaa20e46e87f!2sCJ+CGV+Vi%E1%BB%87t+Nam!5e0!3m2!1svi!2s!4v1523007701926"
+                                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="contact-cgv">
+                        <div class="show-address-contact-cgv">
+                            <div class="theater-name">
+                                <h2>Trụ sở ch&iacute;nh</h2>
+                            </div>
+                            <div class="address-contact-cgv-block">
+                                <div class="address-contact-cgv-block-content">
+                                    <div class="address-contact-cgv">
+                                        <div class="add-contact-cgv">
+                                            <p>Tầng 2, Rivera Park Saigon - Số 7/28 Th&agrave;nh Th&aacute;i, P.14,
+                                                Q.10, Th&agrave;nh phố Hồ Ch&iacute; Minh.</p>
+                                            <p style="color: #636363; padding-bottom: 4px; border-bottom: 1px solid #636363; float: left; font-size: 18px !important; text-transform: uppercase; width: 100%; margin: 20px 0px 10px;">
+                                                Dịch vụ kh&aacute;ch h&agrave;ng</p>
+                                            <p>Hotline: 1900 6017</p>
+                                            <p>Giờ l&agrave;m việc: 8:00 - 22:00</p>
+                                            <p>Tất cả c&aacute;c ng&agrave;y bao gồm cả Lễ Tết</p>
+                                            <p>Email hỗ trợ:  <a href="#">hoidap@cgv.vn</a></p>
+                                        </div>
+                                        <div class="contact-media-sale">
+                                            <h3>Li&ecirc;n hệ quảng c&aacute;o</h3>
+                                            <p>Ph&ograve;ng kinh doanh:&nbsp;+84-28-3636 57 57</p>
+                                            <p>Ext: 278 (Ms. Th&uacute;y An)&nbsp;</p>
+                                            <p>Hotline: 0335400414</p>
+                                            <p>Email:&nbsp; <a href="#">ad.cgv@cj.net</a></p>
+                                        </div>
+                                        <div class="contact-media-sale">
+                                            <h3>Li&ecirc;n hệ Mua V&eacute; Nh&oacute;m, Thẻ Qu&agrave; Tặng, Tổ Chức Sự
+                                                Kiện, Thu&ecirc; Rạp,&hellip; Tham Gia Chương Tr&igrave;nh Gi&aacute;o
+                                                Dục C&ugrave;ng Điện Ảnh</h3>
+                                            <p>Ph&ograve;ng Kinh Doanh:</p>
+                                            <p>- Miền Bắc:  <a href="#">Li&ecirc;n
+                                                hệ&nbsp;<strong>Tại đ&acirc;y!</strong></a></p>
+                                            <p>(Lan Anh/Diệu Linh)</p>
+                                            <p>Email:  <a href="#">sale.cinema@cgv.vn</a></p>
+                                            <br/>
+                                            <p>- Miền Nam:</p>
+                                            <p>Tele: 038 395 3114 (Ms Uy&ecirc;n)</p>
+                                            <p>Email:  <a href="#">uyen.nguyen1@cj.net</a></p>
+                                            <br/>
+                                            <p>- Miền Trung:</p>
+                                            <p></p>
+                                            <p>Tele: 0974464212(Mr Xuan Huy)</p>
+                                            <p>Email:  <a href="#">huy.vu@cj.net</a></p>
+                                        </div>
+                                        <div class="contact-page-cgv-cinemas">
+                                            <h3>Li&ecirc;n Hệ Hợp T&aacute;c Truyền Th&ocirc;ng &amp; T&agrave;i
+                                                Trợ</h3>
+                                            <p>Ph&ograve;ng truyền th&ocirc;ng:&nbsp;+84-28-3636-5757</p>
+                                            <p>Ext: 168 (Ms. Linh)</p>
+                                            <p>Email:&nbsp;<span> <a href="#">dieulinh.tran@cj.net</a></span>
+                                            </p>
+                                        </div>
+                                        <div class="contact-page-cgv-cinemas">
+                                            <h3>Li&ecirc;n Hệ Hợp T&aacute;c Tiếp Thị Truyền Th&ocirc;ng Thương
+                                                Hiệu</h3>
+                                            <p>Ph&ograve;ng Cinema Marketing:&nbsp;+84-28-3636 57 57</p>
+                                            <p>Ext: 302 (Mr. Cường)</p>
+                                            <p>Email: <a
+                                                    href="#">phuccuong.nguyen@cj.net</a>
+                                            </p>
+                                        </div>
+                                        <div class="contact-page-cgv-cinemas">
+                                            <h3>Về c&aacute;c rạp CGV</h3>
+                                            <p>Chi tiết về c&aacute;c rạp CGV (địa chỉ, gi&aacute; v&eacute;), vui l&ograve;ng
+                                                nhấn v&agrave;o  <a href="#">đ&acirc;y.</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-form-contact-cgv">
+                            <div id="messages_product_view"></div>
+                            <form action="https://www.cgv.vn/default/contacts/index/post/" id="contactForm"
+                                  method="post" class="scaffold-form">
+                                <div class="fieldset">
+                                    <h2 class="legend">Thông tin liên hệ</h2>
+                                    <p class="required">* Phải nhập thông tin</p>
+                                    <ul class="form-list">
+                                        <li class="fields">
+                                            <div class="field">
+                                                <label for="name" class="required"><em>*</em>Tên</label>
+                                                <div class="input-box">
+                                                    <input name="name" id="name" title="Tên" value=""
+                                                           class="input-text required-entry" type="text"/>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label for="email" class="required"><em>*</em>Email</label>
+                                                <div class="input-box">
+                                                    <input name="email" id="email" title="Email" value=""
+                                                           class="input-text required-entry validate-email" type="email"
+                                                           autocapitalize="off" autocorrect="off" spellcheck="false"/>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label for="telephone">Điện thoại</label>
+                                            <div class="input-box">
+                                                <input name="telephone" id="telephone" title="Điện thoại" value=""
+                                                       class="input-text" type="tel"/>
+                                            </div>
+                                        </li>
+                                        <li class="wide">
+                                            <label for="comment" class="required"><em>*</em>Nội dung cần liên hệ</label>
+                                            <div class="input-box">
+                                                <textarea name="comment" id="comment" title="Nội dung cần liên hệ"
+                                                          class="required-entry input-text" cols="5"
+                                                          rows="3"></textarea>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="buttons-set">
+                                    <input type="text" name="hideit" id="hideit" value=""
+                                           style="display:none !important;"/>
+                                    <button type="submit" title="Gửi đi" class="button"><span><span>Gửi đi</span></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <style>
+                        .title-contact-cgv {
+                            overflow: hidden;
+                        }
+
+                        .map_container {
+                            position: relative;
+                            padding-bottom: 56.25%;
+                            /* 16:9 */
+                            padding-top: 25px;
+                            height: 0;
+                            max-width: 100%;
+                            margin: 0 auto;
+                        }
+
+                        .map_container iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    </style>
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        var message = 'vui lòng cung cấp thông tin rạp, email và số điện thoại thành viên mà bạn đã dùng để đặt vé.';
+                        var contactForm = new VarienForm('contactForm', true);
+                        var hoadd = $j('.address-contact-cgv-block-content').html();
+                        var holocation = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25615.906364793133!2d106.70663701731654!3d10.78025381605616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf16ffaa20e46e87f!2sCJ+CGV+Vietnam!5e0!3m2!1sen!2s!4v1459915713967';
+                        $j('.location-ho-cgv iframe').attr('src', holocation);
+
+                        function inquiriyf(obj) {
+                            if ($j(obj).find('option:selected').attr('data-value') == 2) {
+                                $j('#comment').attr('placeholder', message);
+                            } else {
+                                $j('#comment').attr('placeholder', '');
+                            }
+                        }
+
+                        //]]>
+                    </script>
+                </div>
+                <div class="col-left sidebar"></div>
+            </div>
+        </div>
+        <th:block th:insert="/cgv/layouts/footer"></th:block>
+        <div id="wishlist_edit_action_container"></div>
+    </div>
+</div>
+</body>
+
+</html>
